@@ -4228,3 +4228,40 @@ Rendered devise/shared/_links.erb (1.3ms)
 Rendered shared/_topbar.html.haml (8.7ms)
 Rendered devise/registrations/new.html.haml within layouts/application (77.9ms)
 Completed 200 OK in 89ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 28 23:17:44 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (9.0ms)
+Rendered welcome/index.html.haml within layouts/application (58.9ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Sun Aug 28 23:17:46 -0500 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (40.1ms)
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered devise/registrations/new.html.haml within layouts/application (80.2ms)
+Completed 200 OK in 92ms (Views: 84.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 28 23:17:47 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (53.9ms)
+Rendered welcome/index.html.haml within layouts/application (67.6ms)
+Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 28 23:17:48 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (13.3ms)
+Rendered welcome/index.html.haml within layouts/application (27.7ms)
+Completed 200 OK in 32ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 28 23:17:51 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (14.0ms)
+Rendered welcome/index.html.haml within layouts/application (27.8ms)
+Completed 200 OK in 74ms (Views: 32.1ms | ActiveRecord: 0.0ms)
