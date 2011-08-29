@@ -3,7 +3,8 @@
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  #TODO update mailer email
+  config.mailer_sender = "bradreid20@gmail.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -22,7 +23,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-   config.authentication_keys = [ :username ]
+  config.authentication_keys = [ :login ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -34,12 +35,12 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [ :username ]
+  config.case_insensitive_keys = [ :login ]
   
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [ :username ]
+  config.strip_whitespace_keys = [ :login ]
 
   # Tell if authentication through request.params is enabled. True by default.
   # config.params_authenticatable = true
@@ -64,7 +65,7 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "d9d5fdb94d1ce42c8c5cc3c857c92fee46b914b308f6d3b0eb9d4ad7f0c378fcdc0133ae3bcd5a328570d50ada6f5106ca1d54a860e25d637e71648121e05ed5"
+  # config.pepper = "94c2df39d555100b8d8422490af227ac1664352fa83dc90c315476a05775bb2e7eea4b17fdf9b75915ec2fda37bcf755de1c76fa46c97f1de5c4a26f4360073d"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time

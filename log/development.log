@@ -4265,3 +4265,193 @@ Started GET "/" for 127.0.0.1 at Sun Aug 28 23:17:51 -0500 2011
 Rendered shared/_topbar.html.haml (14.0ms)
 Rendered welcome/index.html.haml within layouts/application (27.8ms)
 Completed 200 OK in 74ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:27:04 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (67.4ms)
+Rendered welcome/index.html.haml within layouts/application (82.8ms)
+Completed 200 OK in 88ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110829134430)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "username" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "username" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110829134430)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (37.8ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "username" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110829134430')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:48:27 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (9.4ms)
+Rendered welcome/index.html.haml within layouts/application (23.5ms)
+Completed 200 OK in 66ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Mon Aug 29 08:48:29 -0500 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/sessions/new.html.haml within layouts/application (42.3ms)
+Completed 500 Internal Server Error in 77ms
+
+ActionView::Template::Error (undefined method `login' for #<User:0x103144a48>):
+    6: 
+    7:   %p= f.label :login
+    8:   %br
+    9:   = f.text_field :login
+    10: 
+    11:   %p= f.label :password
+    12:   %br
+  app/views/devise/sessions/new.html.haml:9:in `_app_views_devise_sessions_new_html_haml__1225487336_2172942760_0'
+  app/views/devise/sessions/new.html.haml:5:in `_app_views_devise_sessions_new_html_haml__1225487336_2172942760_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:13 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered welcome/index.html.haml within layouts/application (24.1ms)
+Completed 200 OK in 67ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Mon Aug 29 08:52:16 -0500 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (42.9ms)
+Rendered shared/_topbar.html.haml (9.9ms)
+Rendered devise/registrations/new.html.haml within layouts/application (91.6ms)
+Completed 200 OK in 103ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Aug 29 08:52:21 -0500 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"BCptLJe6hK3AJoXbSUGbXbjR+36rvYvyA1hFMQIePdI=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"brad", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."email" = 'bradreid20@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("updated_at", "created_at", "reset_password_token", "email", "remember_created_at", "current_sign_in_at", "sign_in_count", "username", "last_sign_in_ip", "encrypted_password", "current_sign_in_ip", "reset_password_sent_at", "last_sign_in_at") VALUES ('2011-08-29 13:52:22.033319', '2011-08-29 13:52:22.033319', NULL, 'bradreid20@gmail.com', NULL, NULL, 0, 'brad', NULL, '$2a$10$S3T3rT.flyrHbrUOCVyEwOf1sN5EQpwBTA18l2Czy1w6Rk6BQVLfC', NULL, NULL, NULL)[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "users" SET "updated_at" = '2011-08-29 13:52:22.103273', "current_sign_in_at" = '2011-08-29 13:52:22.061443', "sign_in_count" = 1, "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-08-29 13:52:22.061443' WHERE "users"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 279ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:22 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (60.0ms)
+Rendered welcome/index.html.haml within layouts/application (74.4ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Mon Aug 29 08:52:24 -0500 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:24 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (14.7ms)
+Rendered welcome/index.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Mon Aug 29 08:52:25 -0500 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered devise/sessions/new.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 50ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Mon Aug 29 08:52:26 -0500 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"CawRJ3N9+X4JoixMfjvLo12jwUakPp78PKrRpRRK6x8=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "login"=>"brad", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (lower(username) = 'brad' OR lower(email) = 'brad') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "updated_at" = '2011-08-29 13:52:26.677833', "sign_in_count" = 2, "current_sign_in_at" = '2011-08-29 13:52:26.677346' WHERE "users"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 114ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:26 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (65.1ms)
+Rendered welcome/index.html.haml within layouts/application (79.3ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:27 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (22.2ms)
+Rendered welcome/index.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:29 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (23.8ms)
+Rendered welcome/index.html.haml within layouts/application (38.3ms)
+Completed 200 OK in 89ms (Views: 88.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:30 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (22.8ms)
+Rendered welcome/index.html.haml within layouts/application (79.8ms)
+Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 08:52:30 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (66.0ms)
+Rendered welcome/index.html.haml within layouts/application (80.3ms)
+Completed 200 OK in 85ms (Views: 84.6ms | ActiveRecord: 0.2ms)
