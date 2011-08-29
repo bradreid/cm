@@ -83,7 +83,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  devise (= 1.2.1)
+  devise
   haml
   jquery-rails
   rails (= 3.0.9)
