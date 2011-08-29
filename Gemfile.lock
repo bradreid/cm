@@ -31,7 +31,7 @@ GEM
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
-    devise (1.4.2)
+    devise (1.2.1)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
@@ -83,7 +83,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  devise
+  devise (= 1.2.1)
   haml
   jquery-rails
   rails (= 3.0.9)
