@@ -4562,3 +4562,15 @@ Started GET "/" for 127.0.0.1 at Mon Aug 29 09:14:15 -0500 2011
 Rendered shared/_topbar.html.haml (7.5ms)
 Rendered welcome/index.html.haml within layouts/application (21.9ms)
 Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 09:27:52 -0500 2011
+  Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 29 09:27:58 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered welcome/index.html.haml within layouts/application (63.1ms)
+Completed 200 OK in 68ms (Views: 67.9ms | ActiveRecord: 0.0ms)
