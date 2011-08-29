@@ -4167,3 +4167,5 @@ Started GET "/" for 127.0.0.1 at Sun Aug 28 22:45:24 -0500 2011
 Rendered shared/_topbar.html.haml (8.8ms)
 Rendered welcome/index.html.haml within layouts/application (23.3ms)
 Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" ORDER BY users.id DESC LIMIT 1
