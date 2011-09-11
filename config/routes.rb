@@ -52,6 +52,7 @@ Cm::Application.routes.draw do
   namespace :admin do
     resources :tools
   end
+  resources :admin
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
