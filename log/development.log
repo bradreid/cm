@@ -4574,3 +4574,84 @@ Started GET "/" for 127.0.0.1 at Mon Aug 29 09:27:58 -0500 2011
 Rendered shared/_topbar.html.haml (8.2ms)
 Rendered welcome/index.html.haml within layouts/application (63.1ms)
 Completed 200 OK in 68ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 16:15:12 -0500 2011
+  Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 16:15:15 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (46.1ms)
+Rendered welcome/index.html.haml within layouts/application (72.5ms)
+Completed 200 OK in 129ms (Views: 128.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 16:15:45 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered welcome/index.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 16:15:48 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered welcome/index.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 16:15:49 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (48.0ms)
+Rendered welcome/index.html.haml within layouts/application (61.8ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 11 16:15:54 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 16:21:04 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin/tools"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 16:21:36 -0500 2011
+
+LoadError (Expected /Users/breid/code/cm/app/controllers/admin/tools_controller.rb to define Admin::ToolsController):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 16:21:51 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+Rendered shared/_topbar.html.haml (49.3ms)
+Rendered admin/tools/index.html.haml within layouts/application (64.0ms)
+Completed 200 OK in 73ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 16:23:05 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+Rendered shared/_topbar.html.haml (45.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (61.0ms)
+Completed 200 OK in 67ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 16:23:44 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (47.1ms)
+Rendered welcome/index.html.haml within layouts/application (61.3ms)
+Completed 200 OK in 66ms (Views: 65.8ms | ActiveRecord: 0.0ms)
