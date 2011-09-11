@@ -6882,3 +6882,28 @@ Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 18:21:05 -0500 2011
 Rendered shared/_topbar.html.haml (7.9ms)
 Rendered admin/tools/index.html.haml within layouts/application (37.1ms)
 Completed 200 OK in 105ms (Views: 42.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 18:24:26 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (23.1ms)
+Rendered welcome/index.html.haml within layouts/application (78.7ms)
+Completed 200 OK in 83ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 11 18:24:31 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered admin/index.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 86ms (Views: 73.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 18:24:33 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered admin/tools/index.html.haml within layouts/application (81.8ms)
+Completed 200 OK in 106ms (Views: 87.5ms | ActiveRecord: 0.4ms)
