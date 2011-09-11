@@ -1,0 +1,9 @@
+*.swp
+public/tmp/*
+db/schema.rb
+public/stylesheets/*.css
+log/**/*.log
+log/*.log*
+tmp/**/*
+tmp/*
+
