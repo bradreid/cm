@@ -1,0 +1,13 @@
+%div.actions
+  %strong
+    Quick Links:
+  = action_images [:admin, @tool], :exclude => [:edit] 
+
+%h2
+  = "Edit Tool: #{@tool.name}"
+    
+    
+  
+.clear
+%div.actions_footer.clear
+  = action_links [:admin, @tool], :exclude => [:edit] 

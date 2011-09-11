@@ -1,3 +1,27 @@
 %h2
   Tools
 =link_to "Create A New Tool", new_admin_tool_path
+
+
+%table.data
+  %thead
+    %th
+      ID
+    %th
+      Name
+    %th
+      Actions
+  %tbody
+    -@tools.each do |tool|
+      %tr
+        %td
+          =tool.id
+        %td
+          =tool.name
+        %td
+          =action_images [:admin, tool], :exclude => [:index]
+  %tfoot
+    - if @tools.size > 25  
+      %tr
+        %td{:colspan => 3}
+          = will_paginate @tools

@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'haml'
 gem "jquery-rails"
 gem 'devise'
+gem 'will_paginate', '~> 3.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
