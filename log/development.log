@@ -7836,3 +7836,135 @@ Rendered shared/_topbar.html.haml (15.4ms)
 Rendered shared/_flashes.html.haml (2.7ms)
 Rendered welcome/index.html.haml within layouts/application (79.1ms)
 Completed 200 OK in 84ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 19:22:39 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (58.2ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered welcome/index.html.haml within layouts/application (76.2ms)
+Completed 200 OK in 81ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sun Sep 11 19:22:41 -0500 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (42.1ms)
+Rendered shared/_topbar.html.haml (9.8ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (75.4ms)
+Completed 200 OK in 93ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 19:22:43 -0500 2011
+  Processing by WelcomeController#index as HTML
+Rendered shared/_topbar.html.haml (59.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered welcome/index.html.haml within layouts/application (77.4ms)
+Completed 200 OK in 82ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 19:29:49 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+Completed   in 6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sun Sep 11 19:29:49 -0500 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 93ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sun Sep 11 19:29:52 -0500 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"uyElJzEZTgWFBaYF8rj+lajSzhC7HYqD1m0R2CmPjBY=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "login"=>"bradreid20@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (lower(username) = 'bradreid20@gmail.com' OR lower(email) = 'bradreid20@gmail.com') LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "updated_at" = '2011-09-12 00:29:52.693935', "current_sign_in_at" = '2011-09-12 00:29:52.693419', "sign_in_count" = 4, "last_sign_in_at" = '2011-09-12 00:02:20.956829' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/admin/tools
+Completed 302 Found in 159ms
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 19:29:52 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (50.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (89.1ms)
+Completed 200 OK in 113ms (Views: 94.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/5" for 127.0.0.1 at Sun Sep 11 19:29:56 -0500 2011
+  Processing by Admin::ToolsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uyElJzEZTgWFBaYF8rj+lajSzhC7HYqD1m0R2CmPjBY=", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.2ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 5 LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "tools" WHERE "tools"."id" = 5
+Completed 500 Internal Server Error in 34ms
+
+ActionView::MissingTemplate (Missing template admin/tools/destroy with {:handlers=>[:rxml, :erb, :haml, :rjs, :rhtml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/Users/breid/code/cm/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.4.2/app/views"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 19:30:11 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (45.2ms)
+Completed 200 OK in 68ms (Views: 50.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/4" for 127.0.0.1 at Sun Sep 11 19:30:14 -0500 2011
+  Processing by Admin::ToolsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uyElJzEZTgWFBaYF8rj+lajSzhC7HYqD1m0R2CmPjBY=", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.2ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 4 LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "tools" WHERE "tools"."id" = 4[0m
+Redirected to http://localhost:3000/admin/tools
+Completed 302 Found in 29ms
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 19:30:14 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (43.8ms)
+Completed 200 OK in 108ms (Views: 49.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 19:30:41 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered shared/_flashes.html.haml (45.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (87.8ms)
+Completed 200 OK in 111ms (Views: 93.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/3" for 127.0.0.1 at Sun Sep 11 19:30:44 -0500 2011
+  Processing by Admin::ToolsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uyElJzEZTgWFBaYF8rj+lajSzhC7HYqD1m0R2CmPjBY=", "id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.2ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "tools" WHERE "tools"."id" = 3
+Redirected to http://localhost:3000/admin/tools
+Completed 302 Found in 29ms
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 11 19:30:44 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (44.0ms)
+Completed 200 OK in 112ms (Views: 49.7ms | ActiveRecord: 1.0ms)
