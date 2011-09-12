@@ -36,4 +36,11 @@ class Admin::ToolsController < AdminController
     end
   end
   
+  def destroy
+    @tool = Tool.find(params[:id])
+    @tool.destroy
+    flash[:notice] = "You successfully deleted teh tool named: #{@tool.name}"
+    redirect_to admin_tools_path
+  end
+  
 end
