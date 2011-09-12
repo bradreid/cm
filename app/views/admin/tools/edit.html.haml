@@ -4,9 +4,18 @@
   = action_images [:admin, @tool], :exclude => [:edit] 
 
 %h2
-  = "Edit Tool: #{@tool.name}"
+  = "Tool Edit Form: #{@tool.name}"
     
-    
+%div.form
+  - form_for [:admin, @tool], :builder => CmFormBuilder do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %br
+    = submit_tag "Update", :class => "btn green"
+
+    = link_to "Cancel", admin_tools_path, :class => "btn red"
+%br
+%br    
   
 .clear
 %div.actions_footer.clear

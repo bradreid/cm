@@ -3,3 +3,17 @@
     = form.label :name
     .input
       = form.text_field :name, :maxlength=> 50
+  .clearfix
+    =form.label :reading_level
+    .input
+      =form.select :reading_level, FormConstants.reading_levels.map{|r| [r,r]}, :include_blank => 'Please select a reading level'   
+  .clearfix
+    =form.label :jargon
+    .input
+      =form.select :jargon, FormConstants.jargon.map{|r| [r,r]}, :include_blank => 'How much jargon is used?'   
+  .clearfix
+    =form.label :steps
+    .input
+      =form.select :steps, FormConstants.steps.map{|r| [r,r]}, :include_blank => 'How many steps to complete?'   
+      
+      

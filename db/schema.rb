@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110911220243) do
+ActiveRecord::Schema.define(:version => 20110911232850) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -43,6 +43,9 @@ ActiveRecord::Schema.define(:version => 20110911220243) do
     t.text     "expertise_needed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "reading_level"
+    t.string   "jargon"
+    t.string   "steps"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"

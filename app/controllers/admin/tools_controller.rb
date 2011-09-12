@@ -12,6 +12,16 @@ class Admin::ToolsController < AdminController
     @tool = Tool.find(params[:id])
   end
   
+  def update
+    @tool = Tool.find(params[:id])
+    if @tool.update_attributes(params[:tool])
+      flash[:notice] = "You successfully update the tool named #{@tool.name}"
+      redirect_to admin_tool_path(@tool)
+    else
+      render 'edit'
+    end
+  end
+  
   def new
     @tool = Tool.new
   end

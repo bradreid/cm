@@ -3,6 +3,10 @@
 
 $(document).ready(function(){
 
+  $('ul.tabs a, ul.pills a, .pagination a, .well .btn, .actions .btn, .alert-message .btn, a.close').click(function(e) {
+    e.preventDefault();
+    $('.alert-message').hide();
+  });
 
   // Dropdown example for topbar nav
   // ===============================
