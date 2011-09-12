@@ -7968,3 +7968,12 @@ Rendered shared/_topbar.html.haml (8.7ms)
 Rendered shared/_flashes.html.haml (2.8ms)
 Rendered admin/tools/index.html.haml within layouts/application (44.0ms)
 Completed 200 OK in 112ms (Views: 49.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 11 19:31:26 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (22.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered welcome/index.html.haml within layouts/application (40.8ms)
+Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.1ms)
