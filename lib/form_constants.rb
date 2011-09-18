@@ -10,5 +10,9 @@ class FormConstants
   
   def self.steps
     ['Just ONE', 'A few', 'Some', 'A lot', "It's a process!"]
+  end  
+  
+  def self.time_units
+    ['Days', 'Weeks', 'Months', 'Years']
   end    
 end
