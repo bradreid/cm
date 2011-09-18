@@ -13445,3 +13445,2109 @@ Rendered shared/_topbar.html.haml (8.0ms)
 Rendered shared/_flashes.html.haml (2.6ms)
 Rendered admin/tools/show.html.haml within layouts/application (137.1ms)
 Completed 200 OK in 167ms (Views: 143.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:54:02 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (122.3ms)
+Completed 200 OK in 150ms (Views: 127.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:54:07 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (135.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2190754820_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/edit.html.haml within layouts/application (266.2ms)
+Completed 200 OK in 362ms (Views: 339.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:54:15 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (142.0ms)
+Completed 200 OK in 171ms (Views: 147.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:54:24 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (75.3ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (122.8ms)
+Completed 200 OK in 150ms (Views: 128.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:55:24 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered admin/tools/index.html.haml within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 54ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.to_formatted_s):
+    25:         %td
+    26:           =tool.author
+    27:         %td
+    28:           =tool.date_created.to_formatted_s(:short_with_year)
+    29:         %td
+    30:           =action_images [:admin, tool], :exclude => [:index]
+    31:   %tfoot
+  app/views/admin/tools/index.html.haml:28:in `_app_views_admin_tools_index_html_haml___709956947_2188817620_0'
+  app/views/admin/tools/index.html.haml:19:in `_app_views_admin_tools_index_html_haml___709956947_2188817620_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.2ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:55:41 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (125.6ms)
+Completed 200 OK in 152ms (Views: 130.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:56:32 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (73.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (127.2ms)
+Completed 200 OK in 224ms (Views: 132.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:56:53 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (125.5ms)
+Completed 200 OK in 151ms (Views: 130.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:56:54 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/tools/index.html.haml within layouts/application (130.6ms)
+Completed 200 OK in 158ms (Views: 136.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:56:55 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (129.9ms)
+Completed 200 OK in 157ms (Views: 135.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:57:07 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (83.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (131.0ms)
+Completed 200 OK in 157ms (Views: 136.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:58:09 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (7.8ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (57.3ms)
+Completed 200 OK in 158ms (Views: 62.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 15:58:27 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (151.1ms)
+Completed 200 OK in 177ms (Views: 156.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 15:59:07 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (56.2ms)
+Completed 200 OK in 167ms (Views: 61.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:00:06 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (90.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (136.6ms)
+Completed 200 OK in 162ms (Views: 141.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:00:07 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (57.3ms)
+Completed 200 OK in 169ms (Views: 62.4ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:02:42 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:3)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (109.5ms)
+Completed 200 OK in 133ms (Views: 115.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:02:43 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (54.2ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (105.0ms)
+Completed 200 OK in 137ms (Views: 110.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools/new" for 127.0.0.1 at Sun Sep 18 16:02:50 -0500 2011
+  Processing by Admin::ToolsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (113.8ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_new_html_haml___1363054653_2170533460_0 at /Users/breid/code/cm/app/views/admin/tools/new.html.haml:3)
+Rendered shared/_topbar.html.haml (56.6ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/new.html.haml within layouts/application (215.9ms)
+Completed 200 OK in 288ms (Views: 265.9ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:04:59 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:00 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:17 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:18 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:19 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:49 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:49 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:50 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:05:51 -0500 2011
+
+ActionController::RoutingError (undefined method `paginates_per' for Admin::ToolsController:Class):
+  app/controllers/admin/tools_controller.rb:2
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:06:37 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:3)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+Rendered admin/tools/index.html.haml within layouts/application (39.8ms)
+Completed 500 Internal Server Error in 143ms
+
+ActionView::Template::Error (undefined method `will_paginate' for #<#<Class:0x102e88160>:0x102e85550>):
+    30:           =action_images [:admin, tool], :exclude => [:index]
+    31:       %tr
+    32:         %td{:colspan => 5}
+    33:           = will_paginate @tools
+  app/views/admin/tools/index.html.haml:33:in `_app_views_admin_tools_index_html_haml___709956947_2171870080_0'
+  app/views/admin/tools/index.html.haml:19:in `_app_views_admin_tools_index_html_haml___709956947_2171870080_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.4ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:06:58 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (50.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (215.4ms)
+Completed 200 OK in 284ms (Views: 222.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:07:21 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.7ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (72.3ms)
+Completed 200 OK in 145ms (Views: 78.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:07:34 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (111.9ms)
+Completed 200 OK in 140ms (Views: 119.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:07:35 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (53.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (113.6ms)
+Completed 200 OK in 142ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:08:19 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 82ms
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+NoMethodError (undefined method `paginate' for #<Class:0x10614af80>):
+  app/controllers/admin/tools_controller.rb:4:in `index'
+
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:08:20 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 23ms
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+NoMethodError (undefined method `paginate' for #<Class:0x105f2c668>):
+  app/controllers/admin/tools_controller.rb:4:in `index'
+
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:09:11 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:2)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (108.0ms)
+Completed 200 OK in 131ms (Views: 113.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:09:29 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:09:37 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed   in 6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sun Sep 18 16:09:37 -0500 2011
+  Processing by Devise::SessionsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sun Sep 18 16:09:37 -0500 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/_topbar.html.haml (9.0ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 97ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sun Sep 18 16:09:44 -0500 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tfKrSXVkPpkiqomBDiwiC/C6PIdigAU7MXQ5w3c733s=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "login"=>"brad", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (lower(username) = 'brad' OR lower(email) = 'brad') LIMIT 1[0m
+Completed   in 103ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tfKrSXVkPpkiqomBDiwiC/C6PIdigAU7MXQ5w3c733s=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "login"=>"brad", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 125ms (Views: 37.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sun Sep 18 16:09:54 -0500 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tfKrSXVkPpkiqomBDiwiC/C6PIdigAU7MXQ5w3c733s=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "login"=>"brad", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE (lower(username) = 'brad' OR lower(email) = 'brad') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-09-18 21:09:54.883459', "last_sign_in_at" = '2011-09-17 01:03:57.308619', "sign_in_count" = 6, "updated_at" = '2011-09-18 21:09:54.883956' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/admin/tools?page=2
+Completed 302 Found in 115ms
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:09:54 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (9.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (57.4ms)
+Completed 200 OK in 127ms (Views: 62.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:10:05 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (53.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (101.3ms)
+Completed 200 OK in 127ms (Views: 106.5ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:15:11 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:2)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (109.2ms)
+Completed 200 OK in 131ms (Views: 114.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:15:30 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (52.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (102.6ms)
+Completed 200 OK in 130ms (Views: 108.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:15:39 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (104.3ms)
+Completed 200 OK in 132ms (Views: 110.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:16:00 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (105.7ms)
+Completed 200 OK in 134ms (Views: 111.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:16:27 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (57.8ms)
+Completed 200 OK in 133ms (Views: 63.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:16:29 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (104.3ms)
+Completed 200 OK in 130ms (Views: 110.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:16:31 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (7.6ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (108.0ms)
+Completed 200 OK in 135ms (Views: 113.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:17:02 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (109.3ms)
+Completed 200 OK in 137ms (Views: 114.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:17:03 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (7.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (107.3ms)
+Completed 200 OK in 133ms (Views: 113.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:17:04 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.7ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (7.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (54.7ms)
+Completed 200 OK in 137ms (Views: 59.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:18:45 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (63.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (114.0ms)
+Completed 200 OK in 141ms (Views: 119.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:18:49 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (7.7ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (112.3ms)
+Completed 200 OK in 139ms (Views: 118.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:18:51 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (59.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (113.4ms)
+Completed 200 OK in 199ms (Views: 118.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:19:03 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.6ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (68.1ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (119.0ms)
+Completed 200 OK in 145ms (Views: 124.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:20:09 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (60.6ms)
+Completed 200 OK in 150ms (Views: 66.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:20:10 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (9.2ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (121.0ms)
+Completed 200 OK in 148ms (Views: 126.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:20:11 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/tools/index.html.haml within layouts/application (122.3ms)
+Completed 200 OK in 151ms (Views: 128.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:20:17 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (123.0ms)
+Completed 200 OK in 150ms (Views: 128.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:20:18 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (72.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (124.2ms)
+Completed 200 OK in 152ms (Views: 129.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:20:18 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.6ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (61.0ms)
+Completed 200 OK in 155ms (Views: 133.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:21:24 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (9.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (125.4ms)
+Completed 200 OK in 152ms (Views: 131.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:21:28 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (56.1ms)
+Completed 200 OK in 149ms (Views: 61.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:21:30 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (74.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (122.2ms)
+Completed 200 OK in 148ms (Views: 127.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:21:36 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (9.1ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (132.9ms)
+Completed 200 OK in 160ms (Views: 138.1ms | ActiveRecord: 0.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:25:33 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:2)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (109.5ms)
+Completed 200 OK in 132ms (Views: 115.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:25:34 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (53.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (105.2ms)
+Completed 200 OK in 133ms (Views: 110.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:25:54 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (61.2ms)
+Completed 200 OK in 134ms (Views: 112.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:25:55 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (9.1ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (105.5ms)
+Completed 200 OK in 133ms (Views: 111.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:25:55 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (60.7ms)
+Completed 200 OK in 136ms (Views: 66.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:25:56 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (109.6ms)
+Completed 200 OK in 136ms (Views: 114.9ms | ActiveRecord: 0.9ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:26:21 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:2)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (109.0ms)
+Completed 200 OK in 131ms (Views: 114.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:26:21 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.6ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (52.3ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (103.9ms)
+Completed 200 OK in 131ms (Views: 109.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:26:22 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.9ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (62.0ms)
+Completed 200 OK in 135ms (Views: 113.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:26:23 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (9.3ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (110.2ms)
+Completed 200 OK in 138ms (Views: 115.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:26:33 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered admin/tools/index.html.haml within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 108ms
+
+ActionView::Template::Error (NotImplementedError):
+    32:     %tr
+    33:       %td{:colspan => 5}
+    34:         = page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'
+    35:         = page_navigation_links @tools
+  app/helpers/application_helper.rb:10:in `page_number'
+  app/helpers/application_helper.rb:23:in `page_navigation_links'
+  app/views/admin/tools/index.html.haml:35:in `_app_views_admin_tools_index_html_haml___709956947_2172773360_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:28:53 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:2)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered admin/tools/index.html.haml within layouts/application (82.3ms)
+Completed 500 Internal Server Error in 105ms
+
+ActionView::Template::Error (NotImplementedError):
+    32:     %tr
+    33:       %td{:colspan => 5}
+    34:         = page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'
+    35:         = page_navigation_links @tools
+  app/helpers/application_helper.rb:10:in `page_number'
+  app/helpers/application_helper.rb:23:in `page_navigation_links'
+  app/views/admin/tools/index.html.haml:35:in `_app_views_admin_tools_index_html_haml___709956947_2170889580_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:29:04 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (104.5ms)
+Completed 200 OK in 132ms (Views: 110.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/tools?page=2" for 127.0.0.1 at Sun Sep 18 16:29:07 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "tools"
+Rendered shared/_topbar.html.haml (53.8ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (102.6ms)
+Completed 200 OK in 129ms (Views: 108.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:29:09 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tools"[0m
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (102.2ms)
+Completed 200 OK in 129ms (Views: 107.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:29:44 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered admin/tools/_search.html.haml (0.6ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (112.3ms)
+Completed 200 OK in 140ms (Views: 118.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:32:30 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2196527780_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (3.2ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (115.7ms)
+Completed 200 OK in 143ms (Views: 121.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:32:40 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2196866280_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (115.8ms)
+Completed 200 OK in 195ms (Views: 121.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:33:26 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2195669000_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.9ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (117.7ms)
+Completed 200 OK in 145ms (Views: 123.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:33:38 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2195467980_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (9.0ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (118.2ms)
+Completed 200 OK in 146ms (Views: 123.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?page=1" for 127.0.0.1 at Sun Sep 18 16:33:46 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2195853600_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (120.0ms)
+Completed 200 OK in 205ms (Views: 125.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:33:48 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2196446340_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (116.6ms)
+Completed 200 OK in 143ms (Views: 122.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:33:50 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2194928340_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (117.0ms)
+Completed 200 OK in 203ms (Views: 122.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:33:51 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2193989040_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (120.0ms)
+Completed 200 OK in 147ms (Views: 125.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the&commit=Search" for 127.0.0.1 at Sun Sep 18 16:35:39 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2196968160_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (3.2ms)
+  [1m[36mTool Load (0.2ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0[0m
+SQLite3::SQLException: near "%": syntax error: SELECT  "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0
+Rendered admin/tools/index.html.haml within layouts/application (72.4ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (SQLite3::SQLException: near "%": syntax error: SELECT  "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0):
+    17:     %th
+    18:       Actions
+    19:   %tbody
+    20:     -@tools.each do |tool|
+    21:       %tr
+    22:         %td
+    23:           =tool.id
+  app/views/admin/tools/index.html.haml:20:in `_app_views_admin_tools_index_html_haml___709956947_2193420960_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[35mTool Load (0.1ms)[0m  SELECT "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0
+SQLite3::SQLException: near "%": syntax error: SELECT  "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0
+  [1m[36mTool Load (0.1ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0[0m
+SQLite3::SQLException: near "%": syntax error: SELECT  "tools".* FROM "tools" WHERE (name like (%'the'%)) LIMIT 25 OFFSET 0
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the&commit=Search" for 127.0.0.1 at Sun Sep 18 16:36:10 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2193054340_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.8ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%the%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (124.6ms)
+Completed 200 OK in 152ms (Views: 130.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:36:14 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2193715220_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.8ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (68.8ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (122.5ms)
+Completed 200 OK in 150ms (Views: 128.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:39:26 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2192750000_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (64.1ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.8ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (124.3ms)
+Completed 200 OK in 152ms (Views: 130.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=first&commit=Search" for 127.0.0.1 at Sun Sep 18 16:39:32 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"first"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2193423920_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.3ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%first%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (119.4ms)
+Completed 200 OK in 208ms (Views: 124.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=tool&commit=Search" for 127.0.0.1 at Sun Sep 18 16:39:36 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"tool"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2192262400_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%tool%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (121.5ms)
+Completed 200 OK in 148ms (Views: 126.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:39:40 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (9.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/show.html.haml within layouts/application (453.9ms)
+Completed 200 OK in 484ms (Views: 460.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:39:52 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2194492360_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (3.0ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (134.8ms)
+Completed 200 OK in 163ms (Views: 141.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=here&commit=Search" for 127.0.0.1 at Sun Sep 18 16:39:54 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"here"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2191178940_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.3ms)
+  [1m[36mTool Load (0.2ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%here%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (105.7ms)
+Completed 200 OK in 134ms (Views: 112.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=here&commit=Search" for 127.0.0.1 at Sun Sep 18 16:40:22 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"here"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2190412500_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.7ms)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%here%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (80.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/tools/index.html.haml within layouts/application (111.5ms)
+Completed 200 OK in 139ms (Views: 117.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 16:40:26 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (138.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2190272140_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (82.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/edit.html.haml within layouts/application (343.8ms)
+Completed 200 OK in 373ms (Views: 349.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:40:40 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"Brad Reid", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"This is a teest.\r\n\r\nblah\r\n\r\nWhat is going on here", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "tools" SET "updated_at" = '2011-09-18 21:40:40.691000', "description" = 'This is a teest.
+
+blah
+
+What is going on here' WHERE "tools"."id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 55ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:40:40 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (9.3ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (147.0ms)
+Completed 200 OK in 178ms (Views: 153.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tools/" for 127.0.0.1 at Sun Sep 18 16:40:45 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2194619720_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.9ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (138.7ms)
+Completed 200 OK in 166ms (Views: 144.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=bla&commit=Search" for 127.0.0.1 at Sun Sep 18 16:40:48 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"bla"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2190765020_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%bla%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (73.1ms)
+Rendered admin/tools/index.html.haml within layouts/application (108.9ms)
+Completed 200 OK in 137ms (Views: 114.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:40:51 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"blah"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2189388340_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%blah%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (81.5ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/tools/index.html.haml within layouts/application (112.4ms)
+Completed 200 OK in 140ms (Views: 118.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:40:54 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2188970280_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (139.9ms)
+Completed 200 OK in 167ms (Views: 145.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=test&commit=Search" for 127.0.0.1 at Sun Sep 18 16:40:59 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"test"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2192018320_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%test%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (61.2ms)
+Completed 200 OK in 165ms (Views: 67.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=test+the&commit=Search" for 127.0.0.1 at Sun Sep 18 16:41:02 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"test the"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2188841600_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.2ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%test the%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (80.7ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (110.3ms)
+Completed 200 OK in 137ms (Views: 115.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:41:04 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2188321620_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (140.6ms)
+Completed 200 OK in 168ms (Views: 146.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the&commit=Search" for 127.0.0.1 at Sun Sep 18 16:41:09 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2192589120_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.7ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%the%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (61.2ms)
+Completed 200 OK in 165ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:41:15 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2188362020_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (82.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (136.5ms)
+Completed 200 OK in 163ms (Views: 141.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=testing+the&commit=Search" for 127.0.0.1 at Sun Sep 18 16:41:20 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"testing the"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2187369840_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%testing the%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (116.2ms)
+Completed 200 OK in 143ms (Views: 121.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:42:04 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2193074420_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.8ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (144.8ms)
+Completed 200 OK in 172ms (Views: 150.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=bla&commit=Search" for 127.0.0.1 at Sun Sep 18 16:42:06 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"bla"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2187426880_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.3ms)
+  [1m[36mTool Load (0.2ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%bla%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (113.8ms)
+Completed 200 OK in 141ms (Views: 119.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:42:09 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"blah"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2186919980_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (name like '%blah%') LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (88.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (119.7ms)
+Completed 200 OK in 147ms (Views: 125.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:43:02 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"blah"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools"[0m
+Completed 500 Internal Server Error in 44ms
+
+NoMethodError (undefined method `where' for #<Array:0x104b0cc00>):
+  app/controllers/admin/tools_controller.rb:55:in `search_tools'
+  app/controllers/admin/tools_controller.rb:54:in `each'
+  app/controllers/admin/tools_controller.rb:54:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (87.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:44:06 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"blah"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/admin/tools_controller.rb:53:in `paginate'
+  app/controllers/admin/tools_controller.rb:53:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:44:07 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"blah"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 121ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/admin/tools_controller.rb:53:in `paginate'
+  app/controllers/admin/tools_controller.rb:53:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:44:21 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"blah"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2234003320_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE ((name like '%blah%') OR (description like '%blah%')) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (148.9ms)
+Completed 200 OK in 177ms (Views: 154.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the&commit=Search" for 127.0.0.1 at Sun Sep 18 16:44:25 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2234435960_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE ((name like '%the%') OR (description like '%the%')) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (93.1ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (144.4ms)
+Completed 200 OK in 171ms (Views: 149.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:44:29 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2233662660_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (89.9ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (150.5ms)
+Completed 200 OK in 178ms (Views: 156.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:44:33 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2234457440_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE ((name like '%the%') OR (description like '%the%')) AND ((name like '%testing%') OR (description like '%testing%')) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/index.html.haml within layouts/application (37.4ms)
+Completed 200 OK in 153ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:47:31 -0500 2011
+
+SyntaxError (/Users/breid/code/cm/app/controllers/admin/tools_controller.rb:60: syntax error, unexpected kEND, expecting ')'
+/Users/breid/code/cm/app/controllers/admin/tools_controller.rb:62: syntax error, unexpected kEND, expecting ')'):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:47:47 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 4) in: ((name like ?) OR (description like ?)) OR ((name like ?) OR (description like ?))):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.4ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:48:05 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+RuntimeError (["%the%", "%the%", "%testing%", "%testing%"]):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.9ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:48:24 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 110ms
+
+RuntimeError ("((name like ?) OR (description like ?)) OR ((name like ?) OR (description like ?))"):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:48:43 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 21ms
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 4) in: ((name like ?) OR (description like ?)) OR ((name like ?) OR (description like ?))):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  [1m[36mTool Load (0.7ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (122.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (126.5ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:49:32 -0500 2011
+
+SyntaxError (/Users/breid/code/cm/app/controllers/admin/tools_controller.rb:61: syntax error, unexpected ')', expecting ']'
+...lause.join(" OR "), variables)])
+                              ^):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:49:50 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 4) in: ((name like ?) OR (description like ?)) OR ((name like ?) OR (description like ?))):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.7ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.4ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.9ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:50:02 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 23ms
+
+RuntimeError (["%the%", "%the%", "%testing%", "%testing%"]):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.5ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:50:18 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 114ms
+
+RuntimeError (4):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.7ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:00 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+RuntimeError (4):
+  app/controllers/admin/tools_controller.rb:61:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (122.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (127.1ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:08 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+NoMethodError (undefined method `where' for nil:NilClass):
+  app/controllers/admin/tools_controller.rb:62:in `search_tools'
+  app/controllers/admin/tools_controller.rb:5:in `index'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[36mTool Load (0.7ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=the+testing&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:16 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"the testing"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2231059260_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (((name like '%the%') OR (description like '%the%')) OR ((name like '%testing%') OR (description like '%testing%'))) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (105.4ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (160.5ms)
+Completed 200 OK in 189ms (Views: 166.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=first&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:22 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"first"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2232895640_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (((name like '%first%') OR (description like '%first%'))) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (60.2ms)
+Completed 200 OK in 183ms (Views: 65.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:24 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2229838960_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (105.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (157.5ms)
+Completed 200 OK in 184ms (Views: 162.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=test&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:28 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"test"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2229095960_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (104.3ms)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (((name like '%test%') OR (description like '%test%'))) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (7.8ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/index.html.haml within layouts/application (163.9ms)
+Completed 200 OK in 192ms (Views: 169.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=test+blah&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:32 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"test blah"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2229935880_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.3ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE (((name like '%test%') OR (description like '%test%')) OR ((name like '%blah%') OR (description like '%blah%'))) LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (102.4ms)
+Rendered admin/tools/index.html.haml within layouts/application (162.9ms)
+Completed 200 OK in 292ms (Views: 168.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at Sun Sep 18 16:52:38 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2228643460_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (168.3ms)
+Completed 200 OK in 197ms (Views: 174.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools/new" for 127.0.0.1 at Sun Sep 18 16:53:04 -0500 2011
+  Processing by Admin::ToolsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (171.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_new_html_haml___1363054653_2228017780_0 at /Users/breid/code/cm/app/views/admin/tools/new.html.haml:3)
+Rendered shared/_topbar.html.haml (115.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/new.html.haml within layouts/application (439.5ms)
+Completed 200 OK in 468ms (Views: 445.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools/new" for 127.0.0.1 at Sun Sep 18 16:53:30 -0500 2011
+  Processing by Admin::ToolsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (273.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_new_html_haml___1363054653_2227895260_0 at /Users/breid/code/cm/app/views/admin/tools/new.html.haml:3)
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/new.html.haml within layouts/application (432.4ms)
+Completed 200 OK in 460ms (Views: 438.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools/new" for 127.0.0.1 at Sun Sep 18 16:53:34 -0500 2011
+  Processing by Admin::ToolsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (283.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_new_html_haml___1363054653_2228108120_0 at /Users/breid/code/cm/app/views/admin/tools/new.html.haml:3)
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/new.html.haml within layouts/application (339.8ms)
+Completed 200 OK in 370ms (Views: 345.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools/new" for 127.0.0.1 at Sun Sep 18 16:54:06 -0500 2011
+  Processing by Admin::ToolsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (279.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_new_html_haml___1363054653_2228376480_0 at /Users/breid/code/cm/app/views/admin/tools/new.html.haml:3)
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/new.html.haml within layouts/application (333.8ms)
+Completed 200 OK in 363ms (Views: 340.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools/new" for 127.0.0.1 at Sun Sep 18 16:54:52 -0500 2011
+  Processing by Admin::ToolsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (279.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_new_html_haml___1363054653_2228025080_0 at /Users/breid/code/cm/app/views/admin/tools/new.html.haml:3)
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/new.html.haml within layouts/application (335.3ms)
+Completed 200 OK in 365ms (Views: 341.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 18 16:55:03 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (127.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered welcome/index.html.haml within layouts/application (145.9ms)
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 16:55:07 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (7.7ms)
+Rendered shared/_flashes.html.haml (108.2ms)
+Rendered admin/index.html.haml within layouts/application (133.4ms)
+Completed 200 OK in 152ms (Views: 137.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 16:55:09 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2227199880_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (9.4ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (171.9ms)
+Completed 200 OK in 199ms (Views: 177.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 16:56:01 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2231566600_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (170.4ms)
+Completed 200 OK in 196ms (Views: 175.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:56:08 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (176.3ms)
+Completed 200 OK in 206ms (Views: 182.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:57:42 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (120.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (182.0ms)
+Completed 200 OK in 327ms (Views: 187.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:58:22 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (181.8ms)
+Completed 200 OK in 320ms (Views: 187.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:58:23 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (178.8ms)
+Completed 200 OK in 206ms (Views: 184.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:59:05 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (186.2ms)
+Completed 200 OK in 328ms (Views: 192.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:59:23 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (117.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (300.4ms)
+Completed 200 OK in 328ms (Views: 306.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:59:24 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (187.9ms)
+Completed 200 OK in 216ms (Views: 193.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:59:37 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (180.6ms)
+Completed 200 OK in 210ms (Views: 186.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 16:59:44 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (305.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2224898100_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (366.3ms)
+Completed 200 OK in 396ms (Views: 372.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 16:59:49 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2224878300_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (125.4ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (178.8ms)
+Completed 200 OK in 207ms (Views: 184.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 16:59:52 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (191.7ms)
+Completed 200 OK in 221ms (Views: 197.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 16:59:54 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2224252340_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.5ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (123.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/index.html.haml within layouts/application (178.1ms)
+Completed 200 OK in 206ms (Views: 183.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools/2/edit" for 127.0.0.1 at Sun Sep 18 16:59:56 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 2 LIMIT 1
+Rendered admin/tools/_form.html.haml (307.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2223721020_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (126.0ms)
+Rendered admin/tools/edit.html.haml within layouts/application (493.8ms)
+Completed 200 OK in 523ms (Views: 499.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 16:59:57 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2223400840_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.4ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (9.3ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (180.0ms)
+Completed 200 OK in 207ms (Views: 185.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tools?utf8=%E2%9C%93&search=first&commit=Search" for 127.0.0.1 at Sun Sep 18 17:00:03 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  Parameters: {"commit"=>"Search", "utf8"=>"✓", "search"=>"first"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2230636420_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE (((name like '%first%') OR (description like '%first%'))) LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (180.2ms)
+Completed 200 OK in 207ms (Views: 185.6ms | ActiveRecord: 0.5ms)
