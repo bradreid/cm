@@ -1,11 +1,15 @@
 .show_list {
   list-style: none; }
   .show_list li {
+    display: block;
     padding: 2px; }
     .show_list li div.label {
       font-weight: bold;
       float: left;
       width: 200px; }
+    .show_list li div.description {
+      display: block;
+      float: left; }
 
 div.actions {
   float: right;

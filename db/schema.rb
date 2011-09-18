@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110918184432) do
+ActiveRecord::Schema.define(:version => 20110918200746) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -74,6 +74,16 @@ ActiveRecord::Schema.define(:version => 20110918184432) do
     t.boolean  "who_social_enterprise"
     t.boolean  "who_company"
     t.boolean  "who_community_economic_development_organization"
+    t.string   "author"
+    t.date     "date_created"
+    t.string   "language"
+    t.string   "relevant_pages"
+    t.integer  "total_pages"
+    t.text     "description"
+    t.string   "source_document_file_name"
+    t.string   "source_document_content_type"
+    t.integer  "source_document_file_size"
+    t.datetime "source_document_updated_at"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"
