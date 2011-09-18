@@ -1,8 +1,11 @@
 %fieldset
   .clearfix
-    = form.label :name
+    = form.label :name, "Tool Title"
     .input
-      = form.text_field :name, :maxlength=> 50
+      = form.text_field :name, :maxlength=> 255
+%fieldset
+  %legend
+    Complexity
   .clearfix
     =form.label :reading_level
     .input
@@ -14,6 +17,213 @@
   .clearfix
     =form.label :steps
     .input
-      =form.select :steps, FormConstants.steps.map{|r| [r,r]}, :include_blank => 'How many steps to complete?'   
+      =form.select :steps, FormConstants.steps.map{|r| [r,r]}, :include_blank => 'How many steps to complete?'  
       
       
+%fieldset      
+  %legend
+    Where (What types of communities can this tool be used to benefit?) 
+  .clearfix
+    .input
+      %ul.inputs-list
+        %li
+          %label
+            =form.check_box :where_regional
+            %span
+              =form.label :where_regional, 'Regional', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :where_local
+            %span
+              =form.label :where_local, 'Local', :style => 'display:inline'      
+        %li
+          %label
+            =form.check_box :where_rural
+            %span
+              =form.label :where_rural, 'Rural', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :where_urban
+            %span
+              =form.label :where_urban, 'Urban', :style => 'display:inline'  
+        %li
+          %label
+            =form.check_box :where_urban_centre
+            %span
+              =form.label :where_urban_centre, 'Urban centre', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :where_neighbourhood
+            %span
+              =form.label :where_neighbourhood, 'Neighbourhood', :style => 'display:inline'            
+  .clearfix
+    =form.label :where, 'This tool was made in'
+    .input
+      =form.text_field :where
+      
+      
+%fieldset      
+  %legend
+    When (At what stage of the CED project cycle is this tool most useful?) 
+  .clearfix
+    .input
+      %ul.inputs-list
+        %li
+          %label
+            =form.check_box :when_info_gathering
+            %span
+              =form.label :when_info_gathering, 'Info Gathering', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :when_review
+            %span
+              =form.label :when_review, 'Review', :style => 'display:inline'      
+        %li
+          %label
+            =form.check_box :when_planning
+            %span
+              =form.label :when_planning, 'Planning', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :when_implementing
+            %span
+              =form.label :when_implementing, 'Implementing', :style => 'display:inline'  
+        %li
+          %label
+            =form.check_box :when_analyzing
+            %span
+              =form.label :when_analyzing, 'Analyzing', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :when_organizing
+            %span
+              =form.label :when_organizing, 'Organizing', :style => 'display:inline'            
+  
+
+
+%fieldset      
+  %legend
+    Why (What is the purpose of using this particular tool?)
+  .clearfix
+    .input
+      %ul.inputs-list
+        %li
+          %label
+            =form.check_box :why_collective_visioning, :style => 'display:inline'
+            %span
+              =form.label :why_collective_visioning, 'Collective Visioning', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :why_solution_building
+            %span
+              =form.label :why_solution_building, 'Solution Building', :style => 'display:inline'      
+        %li
+          %label
+            =form.check_box :why_action_planning
+            %span
+              =form.label :why_action_planning, 'Action Planning', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :why_community_building
+            %span
+              =form.label :why_community_building, 'Community Building', :style => 'display:inline'  
+        %li
+          %label
+            =form.check_box :why_needs_analysis
+            %span
+              =form.label :why_needs_analysis, 'Needs Analysis', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :why_budgeting
+            %span
+              =form.label :why_budgeting, 'Budgeting', :style => 'display:inline' 
+        %li
+          %label
+            =form.check_box :why_leadership_building
+            %span
+              =form.label :why_leadership_building, 'Leadership Building', :style => 'display:inline'  
+        %li
+          %label
+            =form.check_box :why_team_building
+            %span
+              =form.label :why_team_building, 'Team Building', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :why_asset_mapping
+            %span
+              =form.label :why_asset_mapping, 'Asset Mapping', :style => 'display:inline'  
+              
+              
+%fieldset      
+  %legend
+    How (What resources and or instructions are needed to use the tool?)
+  .clearfix
+    = form.label :cost_to_obtain
+    .input
+      = form.text_field :cost_to_obtain, :maxlength=> 20
+  .clearfix
+    = form.label :cost_to_use
+    .input
+      = form.text_field :cost_to_use, :maxlength=> 20     
+  .clearfix
+    = form.label :time_to_use
+    .input
+      = form.text_field :time_to_use, :maxlength=> 20   
+      = form.select :time_to_use_type, FormConstants.time_units.map{|r| [r,r]}
+  .clearfix
+    = form.label :electronics_equipment
+    .input
+      = form.text_field :electronics_equipment, :maxlength=> 255  
+  .clearfix
+    = form.label :software
+    .input
+      = form.text_field :software, :maxlength=> 255         
+  .clearfix
+    = form.label :method_of_access
+    .input
+      = form.text_field :method_of_access, :maxlength=> 255  
+  .clearfix
+    = form.label :other_resources_needed
+    .input
+      = form.text_field :other_resources_needed, :maxlength=> 255      
+  .clearfix
+    = form.label :activities_involved
+    .input
+      = form.text_field :activities_involved, :maxlength=> 255  
+  .clearfix
+    = form.label :expertise_needed
+    .input
+      = form.text_field :expertise_needed, :maxlength=> 255      
+      
+      
+%fieldset      
+  %legend
+    Who (What types of organizations can this tool be used to benefit?)
+  .clearfix
+    .input
+      %ul.inputs-list
+        %li
+          %label
+            =form.check_box :who_charity
+            %span
+              =form.label :who_charity, 'Charity', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :who_non_profit
+            %span
+              =form.label :who_non_profit, 'Non-profit', :style => 'display:inline'      
+        %li
+          %label
+            =form.check_box :who_social_enterprise
+            %span
+              =form.label :who_social_enterprise, 'Social Enterprise', :style => 'display:inline'
+        %li
+          %label
+            =form.check_box :who_company
+            %span
+              =form.label :who_company, 'Company', :style => 'display:inline'  
+        %li
+          %label
+            =form.check_box :who_community_economic_development_organization
+            %span
+              =form.label :who_community_economic_development_organization, 'Community Economic Development Organization', :style => 'display:inline'

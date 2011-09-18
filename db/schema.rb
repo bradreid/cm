@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110911232850) do
+ActiveRecord::Schema.define(:version => 20110918184432) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -46,6 +46,34 @@ ActiveRecord::Schema.define(:version => 20110911232850) do
     t.string   "reading_level"
     t.string   "jargon"
     t.string   "steps"
+    t.string   "where"
+    t.boolean  "where_regional"
+    t.boolean  "where_local"
+    t.boolean  "where_rural"
+    t.boolean  "where_urban"
+    t.boolean  "where_urban_centre"
+    t.boolean  "where_neighbourhood"
+    t.boolean  "when_info_gathering"
+    t.boolean  "when_review"
+    t.boolean  "when_planning"
+    t.boolean  "when_implementing"
+    t.boolean  "when_analyzing"
+    t.boolean  "when_organizing"
+    t.boolean  "why_collective_visioning"
+    t.boolean  "why_solution_building"
+    t.boolean  "why_action_planning"
+    t.boolean  "why_community_building"
+    t.boolean  "why_needs_analysis"
+    t.boolean  "why_budgeting"
+    t.boolean  "why_leadership_building"
+    t.boolean  "why_team_building"
+    t.boolean  "why_asset_mapping"
+    t.string   "time_to_use_type"
+    t.boolean  "who_charity"
+    t.boolean  "who_non_profit"
+    t.boolean  "who_social_enterprise"
+    t.boolean  "who_company"
+    t.boolean  "who_community_economic_development_organization"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"

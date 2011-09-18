@@ -1,3 +1,12 @@
+.show_list {
+  list-style: none; }
+  .show_list li {
+    padding: 2px; }
+    .show_list li div.label {
+      font-weight: bold;
+      float: left;
+      width: 200px; }
+
 div.actions {
   float: right;
   border: #63bdee "1px solid";

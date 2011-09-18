@@ -4,7 +4,100 @@
   = action_images [:admin, @tool], :exclude => [:show] 
 
 %h2
-  = "Tool: #{@tool.name}"
+  = "#{@tool.name}"
+  
+%h4 Complexity
+%ul.show_list
+  %li
+    .label Reading Level
+    =@tool.reading_level 
+  %li 
+    .label Jargon Used
+    =@tool.jargon
+  %li
+    .label Steps
+    =@tool.steps
+    
+%h4 Where (What types of communities can this tool be used to benefit?)
+%ul.show_list
+  %li
+    .label
+    -@tool.where?.each do |w|
+      =w.humanize
+      %br
+    %br
+  %li
+    .label This tool was made in
+    =@tool.where
+      
+%h4 When (At what stage of the CED project cycle is this tool most useful?)
+%ul.show_list
+  %li
+    .label
+    -@tool.when?.each do |w|
+      =w.humanize
+      %br
+      
+%h4 Why (What is the purpose of using this particular tool?)
+%ul.show_list
+  %li
+    .label
+    -@tool.why?.each do |w|
+      =w.humanize
+      %br 
+      
+%h4 How (What resources and or instructions are needed to use the tool?)
+%ul.show_list
+  %li
+    .label  Cost To Obtain
+    =@tool.cost_to_obtain  
+    &nbsp;
+  %li
+    .label Cost To Use
+    =@tool.cost_to_use    
+  %li
+    .label Time To Use
+    =@tool.time_to_use   
+    =@tool.time_to_use_type
+  %li
+    .label Electronics Equipment
+    =@tool.electronics_equipment
+    &nbsp;    
+  %li
+    .label Software
+    =@tool.software
+    &nbsp;    
+  %li
+    .label Method Of Access
+    =@tool.method_of_access
+    &nbsp;    
+  %li
+    .label Other Resources Needed
+    =@tool.other_resources_needed
+    &nbsp;
+  %li
+    .label Activities Involved
+    =@tool.activities_involved
+    &nbsp;    
+  %li
+    .label Expertise Needed
+    =@tool.expertise_needed
+    &nbsp;    
+
+   
+%h4 Who (What types of organizations can this tool be used to benefit?)
+%ul.show_list
+  %li
+    .label
+    -@tool.who?.each do |w|
+      =w.humanize
+      %br      
+      
+      
+      
+
+        
+
     
     
   
