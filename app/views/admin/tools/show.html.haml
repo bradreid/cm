@@ -6,6 +6,43 @@
 %h2
   = "#{@tool.name}"
   
+%h4 Description
+%ul.show_list
+  %li
+    .label Author
+    =@tool.author 
+  %li 
+    .label Date Created
+    =@tool.date_created.to_formatted_s(:short_with_year)
+  %li
+    .label Language
+    =@tool.language
+  %li
+    .label Relevant Pages
+    =@tool.relevant_pages
+    &nbsp;
+  %li
+    .label Total Pages
+    =@tool.total_pages
+    &nbsp;
+  %li
+    .label Source Document
+    =link_to 'Source Document', @tool.source_document.url
+  %li
+    .label File Size
+    =@tool.source_document_file_size
+    KB
+    &nbsp;
+  %li
+    .label File Format
+    =@tool.source_document_content_type
+  %li
+    .label Description
+    .description
+      =simple_format @tool.description    
+    &nbsp;
+%br
+  
 %h4 Complexity
 %ul.show_list
   %li

@@ -1,6 +1,8 @@
 class Tool < ActiveRecord::Base
   
-  validates_presence_of :name, :reading_level, :jargon, :steps, :cost_to_obtain, :cost_to_use, :time_to_use
+  has_attached_file :source_document, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => "/:style/:filename"
+  
+  validates_presence_of :name, :reading_level, :jargon, :steps, :cost_to_obtain, :cost_to_use, :time_to_use, :author, :date_created, :language
   validates_numericality_of :cost_to_obtain, :cost_to_use, :time_to_use
   validates_uniqueness_of :name
   validate :where_required, :when_required, :why_required, :who_required

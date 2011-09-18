@@ -11901,3 +11901,1547 @@ Rendered shared/_topbar.html.haml (9.2ms)
 Rendered shared/_flashes.html.haml (2.9ms)
 Rendered admin/tools/show.html.haml within layouts/application (106.4ms)
 Completed 200 OK in 132ms (Views: 111.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:03:21 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (100.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2173584680_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/tools/edit.html.haml within layouts/application (204.1ms)
+Completed 200 OK in 231ms (Views: 209.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:03:34 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool - Testing", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool - Testing') AND ("tools".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "tools" SET "why_action_planning" = 't', "updated_at" = '2011-09-18 20:03:34.879255', "why_collective_visioning" = 't', "why_solution_building" = 't', "why_community_building" = 't' WHERE "tools"."id" = 1
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 97ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:03:34 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (9.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (112.1ms)
+Completed 200 OK in 139ms (Views: 118.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:06:03 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (105.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2172396680_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (9.3ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/edit.html.haml within layouts/application (211.1ms)
+Completed 200 OK in 238ms (Views: 217.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:10:01 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool - Testing", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool - Testing') AND ("tools".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 45ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:10:01 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (9.2ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered admin/tools/show.html.haml within layouts/application (110.8ms)
+Completed 200 OK in 137ms (Views: 116.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/tools/" for 127.0.0.1 at Sun Sep 18 15:10:15 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (9.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/index.html.haml within layouts/application (53.7ms)
+Completed 200 OK in 125ms (Views: 59.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:10:18 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (103.6ms)
+Completed 200 OK in 130ms (Views: 109.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:10:25 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (151.7ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2172808560_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (209.7ms)
+Completed 200 OK in 236ms (Views: 215.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:10:29 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "tools" SET "updated_at" = '2011-09-18 20:10:29.799879', "name" = 'The First Tool ' WHERE "tools"."id" = 1[0m
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 93ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:10:29 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (106.0ms)
+Completed 200 OK in 133ms (Views: 112.2ms | ActiveRecord: 1.3ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110911213028)
+Migrating to AddUsernameToUsers (20110911213712)
+Migrating to CreateComplexAttributeTables (20110911232850)
+Migrating to AddWhereAttributes (20110917014942)
+Migrating to AddWhenAttributes (20110917022941)
+Migrating to AddWhyAttributes (20110918172835)
+Migrating to AddHowAttributes (20110918174109)
+Migrating to AddWhoAttributes (20110918184432)
+Migrating to AddWhatAttributes (20110918190216)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110918190216')[0m
+Migrating to AddToolDescriptionAttributes (20110918200746)
+  [1m[35mSQL (0.4ms)[0m  ALTER TABLE "tools" ADD "author" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "date_created" date[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "language" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "relevent_page" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "total_pages" integer
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "description" text[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "source_document_file_name" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "source_document_content_type" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "source_document_file_size" integer
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "source_document_updated_at" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110918200746')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("models")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_models_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_models_on_email')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("tools")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_tools_on_name')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:19:00 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 20ms
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x102f931e0>):
+  app/models/tool.rb:3
+  app/controllers/admin/tools_controller.rb:8:in `show'
+
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:19:09 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (106.5ms)
+Completed 200 OK in 131ms (Views: 112.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:19:12 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (105.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2174044280_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/edit.html.haml within layouts/application (215.9ms)
+Completed 200 OK in 290ms (Views: 221.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:20:56 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (104.4ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2170616800_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (59.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/edit.html.haml within layouts/application (261.5ms)
+Completed 200 OK in 289ms (Views: 267.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:21:18 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"1tet", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "tools" SET "updated_at" = '2011-09-18 20:21:19.099941', "author" = '1tet' WHERE "tools"."id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 138ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:21:19 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (113.5ms)
+Completed 200 OK in 143ms (Views: 120.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:21:21 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (105.9ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2172868940_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (60.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/edit.html.haml within layouts/application (218.1ms)
+Completed 200 OK in 296ms (Views: 224.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:22:48 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (108.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2169699740_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (54.0ms)
+Rendered admin/tools/edit.html.haml within layouts/application (269.2ms)
+Completed 200 OK in 297ms (Views: 275.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:24:07 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (119.3ms)
+Rendered admin/tools/edit.html.haml within layouts/application (198.2ms)
+Completed 500 Internal Server Error in 226ms
+
+ActionView::Template::Error (undefined method `language' for FormConstants:Class):
+    244:   .clearfix
+    245:     = form.label :language
+    246:     .input
+    247:       = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => 'Please select a reading level'    
+  app/views/admin/tools/_form.html.haml:247:in `_app_views_admin_tools__form_html_haml__672070167_2171003280_898910'
+  app/views/admin/tools/edit.html.haml:12:in `_app_views_admin_tools_edit_html_haml__1209453219_2169697300_0'
+  app/views/admin/tools/edit.html.haml:10:in `_app_views_admin_tools_edit_html_haml__1209453219_2169697300_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:25:07 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (112.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2194408560_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (224.7ms)
+Completed 200 OK in 307ms (Views: 230.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:25:53 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (168.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2194012320_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/edit.html.haml within layouts/application (228.1ms)
+Completed 200 OK in 255ms (Views: 233.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:26:34 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"1tet", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+Rendered admin/tools/_form.html.haml (173.7ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2192782040_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (216.0ms)
+Completed 200 OK in 274ms (Views: 222.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:26:40 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"1tet", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "tools" SET "date_created" = '2011-09-18', "language" = 'English', "updated_at" = '2011-09-18 20:26:40.627079' WHERE "tools"."id" = 1
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 81ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:26:40 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/show.html.haml within layouts/application (118.1ms)
+Completed 200 OK in 146ms (Views: 123.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:29:10 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (63.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (118.6ms)
+Completed 200 OK in 146ms (Views: 124.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:29:12 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (124.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (157.1ms)
+Completed 500 Internal Server Error in 242ms
+
+ActionView::Template::Error (undefined method `relevant_pages' for #<Tool:0x105a0db50>):
+    248:   .clearfix
+    249:     = form.label :relevant_pages
+    250:     .input
+    251:       = form.text_field :relevant_pages, :maxlength=> 255 
+    252:   .clearfix
+    253:     = form.label :total_pages
+    254:     .input
+  app/views/admin/tools/_form.html.haml:251:in `_app_views_admin_tools__form_html_haml__672070167_2192818020_898910'
+  app/views/admin/tools/edit.html.haml:12:in `_app_views_admin_tools_edit_html_haml__1209453219_2194680820_0'
+  app/views/admin/tools/edit.html.haml:10:in `_app_views_admin_tools_edit_html_haml__1209453219_2194680820_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (65.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (71.4ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to AddToolDescriptionAttributes (20110918200746)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255), "source_document_file_size" integer, "source_document_updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.5ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255), "source_document_file_size" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255), "source_document_file_size" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer, "description" text) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255), "total_pages" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevent_page" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255)) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110918200746'[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("models")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_models_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_models_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20110911213028)
+Migrating to AddUsernameToUsers (20110911213712)
+Migrating to CreateComplexAttributeTables (20110911232850)
+Migrating to AddWhereAttributes (20110917014942)
+Migrating to AddWhenAttributes (20110917022941)
+Migrating to AddWhyAttributes (20110918172835)
+Migrating to AddHowAttributes (20110918174109)
+Migrating to AddWhoAttributes (20110918184432)
+Migrating to AddWhatAttributes (20110918190216)
+Migrating to AddToolDescriptionAttributes (20110918200746)
+  [1m[36mSQL (0.4ms)[0m  [1mALTER TABLE "tools" ADD "author" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "date_created" date
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "language" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "relevant_page" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "total_pages" integer[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "description" text
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "source_document_file_name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "source_document_content_type" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "source_document_file_size" integer[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "source_document_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110918200746')[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("models")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_models_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_models_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:29:55 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (178.8ms)
+Rendered admin/tools/edit.html.haml within layouts/application (209.3ms)
+Completed 500 Internal Server Error in 239ms
+
+ActionView::Template::Error (undefined method `relevant_pages' for #<Tool:0x10558f5b0>):
+    248:   .clearfix
+    249:     = form.label :relevant_pages
+    250:     .input
+    251:       = form.text_field :relevant_pages, :maxlength=> 255 
+    252:   .clearfix
+    253:     = form.label :total_pages
+    254:     .input
+  app/views/admin/tools/_form.html.haml:251:in `_app_views_admin_tools__form_html_haml__672070167_2191547880_898910'
+  app/views/admin/tools/edit.html.haml:12:in `_app_views_admin_tools_edit_html_haml__1209453219_2192318260_0'
+  app/views/admin/tools/edit.html.haml:10:in `_app_views_admin_tools_edit_html_haml__1209453219_2192318260_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:29:56 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (122.4ms)
+Rendered admin/tools/edit.html.haml within layouts/application (154.3ms)
+Completed 500 Internal Server Error in 241ms
+
+ActionView::Template::Error (undefined method `relevant_pages' for #<Tool:0x105a5a2c0>):
+    248:   .clearfix
+    249:     = form.label :relevant_pages
+    250:     .input
+    251:       = form.text_field :relevant_pages, :maxlength=> 255 
+    252:   .clearfix
+    253:     = form.label :total_pages
+    254:     .input
+  app/views/admin/tools/_form.html.haml:251:in `_app_views_admin_tools__form_html_haml__672070167_2192804200_898910'
+  app/views/admin/tools/edit.html.haml:12:in `_app_views_admin_tools_edit_html_haml__1209453219_2194833400_0'
+  app/views/admin/tools/edit.html.haml:10:in `_app_views_admin_tools_edit_html_haml__1209453219_2194833400_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (71.1ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:29:56 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (184.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (216.1ms)
+Completed 500 Internal Server Error in 246ms
+
+ActionView::Template::Error (undefined method `relevant_pages' for #<Tool:0x1055ce080>):
+    248:   .clearfix
+    249:     = form.label :relevant_pages
+    250:     .input
+    251:       = form.text_field :relevant_pages, :maxlength=> 255 
+    252:   .clearfix
+    253:     = form.label :total_pages
+    254:     .input
+  app/views/admin/tools/_form.html.haml:251:in `_app_views_admin_tools__form_html_haml__672070167_2191445680_898910'
+  app/views/admin/tools/edit.html.haml:12:in `_app_views_admin_tools_edit_html_haml__1209453219_2192439680_0'
+  app/views/admin/tools/edit.html.haml:10:in `_app_views_admin_tools_edit_html_haml__1209453219_2192439680_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.7ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:29:56 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (127.6ms)
+Rendered admin/tools/edit.html.haml within layouts/application (219.7ms)
+Completed 500 Internal Server Error in 248ms
+
+ActionView::Template::Error (undefined method `relevant_pages' for #<Tool:0x10529f170>):
+    248:   .clearfix
+    249:     = form.label :relevant_pages
+    250:     .input
+    251:       = form.text_field :relevant_pages, :maxlength=> 255 
+    252:   .clearfix
+    253:     = form.label :total_pages
+    254:     .input
+  app/views/admin/tools/_form.html.haml:251:in `_app_views_admin_tools__form_html_haml__672070167_2192888380_898910'
+  app/views/admin/tools/edit.html.haml:12:in `_app_views_admin_tools_edit_html_haml__1209453219_2190784400_0'
+  app/views/admin/tools/edit.html.haml:10:in `_app_views_admin_tools_edit_html_haml__1209453219_2190784400_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to AddToolDescriptionAttributes (20110918200746)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255), "source_document_file_size" integer, "source_document_updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.5ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255), "source_document_file_size" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255), "source_document_file_size" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255), "source_document_content_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text, "source_document_file_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer, "description" text) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255), "total_pages" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255), "relevant_page" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255), "date_created" date) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255)) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean, "author" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_tools_on_name" ON "altered_tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "tools"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "tools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cost_to_obtain" float, "cost_to_use" float, "time_to_use" integer, "other_resources_needed" text, "electronics_equipment" text, "software" text, "method_of_access" text, "activities_involved" text, "expertise_needed" text, "created_at" datetime, "updated_at" datetime, "reading_level" varchar(255), "jargon" varchar(255), "steps" varchar(255), "where" varchar(255), "where_regional" boolean, "where_local" boolean, "where_rural" boolean, "where_urban" boolean, "where_urban_centre" boolean, "where_neighbourhood" boolean, "when_info_gathering" boolean, "when_review" boolean, "when_planning" boolean, "when_implementing" boolean, "when_analyzing" boolean, "when_organizing" boolean, "why_collective_visioning" boolean, "why_solution_building" boolean, "why_action_planning" boolean, "why_community_building" boolean, "why_needs_analysis" boolean, "why_budgeting" boolean, "why_leadership_building" boolean, "why_team_building" boolean, "why_asset_mapping" boolean, "time_to_use_type" varchar(255), "who_charity" boolean, "who_non_profit" boolean, "who_social_enterprise" boolean, "who_company" boolean, "who_community_economic_development_organization" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_tools_on_name')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_tools_on_name" ON "tools" ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_tools"
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110918200746'[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("models")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_models_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_models_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20110911213028)
+Migrating to AddUsernameToUsers (20110911213712)
+Migrating to CreateComplexAttributeTables (20110911232850)
+Migrating to AddWhereAttributes (20110917014942)
+Migrating to AddWhenAttributes (20110917022941)
+Migrating to AddWhyAttributes (20110918172835)
+Migrating to AddHowAttributes (20110918174109)
+Migrating to AddWhoAttributes (20110918184432)
+Migrating to AddWhatAttributes (20110918190216)
+Migrating to AddToolDescriptionAttributes (20110918200746)
+  [1m[36mSQL (0.4ms)[0m  [1mALTER TABLE "tools" ADD "author" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "date_created" date
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "language" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "relevant_pages" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "total_pages" integer[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "description" text
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "source_document_file_name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "source_document_content_type" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "tools" ADD "source_document_file_size" integer[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "tools" ADD "source_document_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110918200746')[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("models")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_models_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_models_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tools")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_tools_on_name')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:30:16 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (185.8ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2192491600_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (245.7ms)
+Completed 200 OK in 274ms (Views: 251.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:30:39 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (184.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2191520120_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (7.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/edit.html.haml within layouts/application (243.0ms)
+Completed 200 OK in 271ms (Views: 248.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:32:00 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (133.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2191070320_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/edit.html.haml within layouts/application (318.5ms)
+Completed 200 OK in 349ms (Views: 324.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:32:01 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (133.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2190786420_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (74.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/edit.html.haml within layouts/application (323.2ms)
+Completed 200 OK in 353ms (Views: 328.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:32:17 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (132.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2192997340_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/edit.html.haml within layouts/application (259.8ms)
+Completed 200 OK in 353ms (Views: 265.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:32:45 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "source_document"=>"TIC - Asset Map.pdf", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (195.8ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2189933180_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/edit.html.haml within layouts/application (238.4ms)
+Completed 200 OK in 298ms (Views: 244.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:33:09 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "source_document"=>"TIC - Asset Map.pdf", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"Brad Reid", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "tools" SET "relevant_pages" = '', "updated_at" = '2011-09-18 20:33:09.350212', "author" = 'Brad Reid', "date_created" = '2011-09-18', "description" = '', "language" = 'English' WHERE "tools"."id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 56ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:33:09 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (131.4ms)
+Completed 200 OK in 160ms (Views: 137.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:35:07 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (74.5ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (130.8ms)
+Completed 200 OK in 160ms (Views: 136.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:35:24 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (7.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (129.7ms)
+Completed 200 OK in 220ms (Views: 135.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:35:34 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.1ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (130.4ms)
+Completed 200 OK in 159ms (Views: 136.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:35:48 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (129.6ms)
+Completed 200 OK in 157ms (Views: 135.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:36:39 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (129.9ms)
+Completed 200 OK in 158ms (Views: 135.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:36:51 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/show.html.haml within layouts/application (39.0ms)
+Completed 500 Internal Server Error in 137ms
+
+ActionView::Template::Error (undefined method `relavent_pages' for #<Tool:0x105104180>):
+    19:     =@tool.language
+    20:   %li
+    21:     .label Relavent Pages
+    22:     =@tool.relavent_pages
+    23:     &nbsp;
+    24:   %li
+    25:     .label Total Pages
+  app/views/admin/tools/show.html.haml:22:in `_app_views_admin_tools_show_html_haml__1063622378_2189907300_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:37:28 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (133.4ms)
+Completed 200 OK in 162ms (Views: 139.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:39:05 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (76.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (135.6ms)
+Completed 200 OK in 232ms (Views: 141.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:39:16 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (7.7ms)
+Rendered shared/_flashes.html.haml (72.5ms)
+Rendered admin/tools/show.html.haml within layouts/application (207.1ms)
+Completed 200 OK in 234ms (Views: 212.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/source_documents/original/missing.png" for 127.0.0.1 at Sun Sep 18 15:39:17 -0500 2011
+
+ActionController::RoutingError (No route matches "/source_documents/original/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:40:03 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:3)
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (79.3ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (707.1ms)
+Completed 200 OK in 736ms (Views: 712.7ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:40:25 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:3)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (162.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2172243560_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/edit.html.haml within layouts/application (224.3ms)
+Completed 200 OK in 249ms (Views: 230.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:40:37 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "source_document"=>"TIC - Asset Map.pdf", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"Brad Reid", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 307ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:40:37 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/tools/show.html.haml within layouts/application (119.4ms)
+Completed 200 OK in 148ms (Views: 125.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/source_documents/original/missing.png" for 127.0.0.1 at Sun Sep 18 15:40:42 -0500 2011
+
+ActionController::RoutingError (No route matches "/source_documents/original/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:41:51 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:3)
+  [1m[36mTool Load (0.4ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (53.9ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (372.6ms)
+Completed 200 OK in 398ms (Views: 378.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:41:55 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+Rendered admin/tools/_form.html.haml (118.9ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2175753100_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/edit.html.haml within layouts/application (230.6ms)
+Completed 200 OK in 305ms (Views: 282.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:42:06 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "source_document"=>"TIC - Asset Map.pdf", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"Brad Reid", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTool Load (0.3ms)[0m  [1mSELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 108ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:42:06 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (128.4ms)
+Completed 200 OK in 158ms (Views: 134.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/source_documents/original/missing.png" for 127.0.0.1 at Sun Sep 18 15:42:08 -0500 2011
+
+ActionController::RoutingError (No route matches "/source_documents/original/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:3)
+  [1m[36mTool Load (0.7ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 1[0m
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:43:42 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (175.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2195845740_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/edit.html.haml within layouts/application (235.8ms)
+Completed 200 OK in 319ms (Views: 241.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:43:43 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (123.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2196064500_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/edit.html.haml within layouts/application (240.0ms)
+Completed 200 OK in 323ms (Views: 246.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:43:54 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "source_document"=>#<ActionDispatch::Http::UploadedFile:0x105c1f2b8 @original_filename="TIC - Asset Map.pdf", @headers="Content-Disposition: form-data; name=\"tool[source_document]\"; filename=\"TIC - Asset Map.pdf\"\r\nContent-Type: application/pdf\r\n", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20110918-5747-c14oay-0>, @content_type="application/pdf">, "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"Brad Reid", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "tools" SET "source_document_file_name" = 'TIC - Asset Map.pdf', "updated_at" = '2011-09-18 20:43:54.248115', "source_document_content_type" = 'application/pdf', "source_document_updated_at" = '2011-09-18 20:43:54.236569', "source_document_file_size" = 605337 WHERE "tools"."id" = 1
+[paperclip] Saving attachments.
+[paperclip] saving /original/TIC - Asset Map.pdf
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 9819ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:44:03 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (7.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (120.9ms)
+Completed 200 OK in 196ms (Views: 126.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:45:38 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (7.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (122.5ms)
+Completed 200 OK in 150ms (Views: 128.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:46:21 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (142.8ms)
+Completed 200 OK in 171ms (Views: 148.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1/edit" for 127.0.0.1 at Sun Sep 18 15:46:23 -0500 2011
+  Processing by Admin::ToolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/_form.html.haml (182.6ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools_edit_html_haml__1209453219_2194843280_0 at /Users/breid/code/cm/app/views/admin/tools/edit.html.haml:10)
+Rendered shared/_topbar.html.haml (8.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/edit.html.haml within layouts/application (243.2ms)
+Completed 200 OK in 272ms (Views: 249.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:46:34 -0500 2011
+  Processing by Admin::ToolsController#update as HTML
+  Parameters: {"commit"=>"Update", "tool"=>{"name"=>"The First Tool ", "steps"=>"Just ONE", "when_review"=>"1", "why_collective_visioning"=>"1", "cost_to_use"=>"100.0", "who_community_economic_development_organization"=>"0", "where_rural"=>"0", "where_urban_centre"=>"0", "author"=>"Brad Reid", "total_pages"=>"", "where_neighbourhood"=>"0", "why_community_building"=>"1", "why_needs_analysis"=>"0", "why_leadership_building"=>"0", "why_asset_mapping"=>"1", "time_to_use"=>"1", "expertise_needed"=>"", "who_charity"=>"1", "who_non_profit"=>"1", "jargon"=>"None", "date_created(1i)"=>"2011", "language"=>"English", "relevant_pages"=>"", "where_regional"=>"1", "why_solution_building"=>"1", "cost_to_obtain"=>"12.78", "method_of_access"=>"", "activities_involved"=>"", "date_created(2i)"=>"9", "where_urban"=>"1", "when_planning"=>"0", "when_analyzing"=>"0", "why_action_planning"=>"1", "time_to_use_type"=>"Weeks", "date_created(3i)"=>"18", "reading_level"=>"Grade 5/6", "when_implementing"=>"0", "why_budgeting"=>"0", "other_resources_needed"=>"", "who_company"=>"0", "description"=>"This is a teest.\r\n\r\n\r\nWhat is going on here", "where"=>"Winnipeg, Manitoba", "when_info_gathering"=>"1", "when_organizing"=>"0", "why_team_building"=>"0", "software"=>"", "who_social_enterprise"=>"0", "where_local"=>"1", "electronics_equipment"=>"none"}, "authenticity_token"=>"Dyelqqk+bOSdKZ3KVVMTmzRhF5+TSB/DC6pxBjBjy4M=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "tools" WHERE ("tools"."name" = 'The First Tool ') AND ("tools".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "tools" SET "description" = 'This is a teest.
+
+
+What is going on here', "updated_at" = '2011-09-18 20:46:34.885718' WHERE "tools"."id" = 1
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/tools/1
+Completed 302 Found in 66ms
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:46:34 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (129.3ms)
+Completed 200 OK in 158ms (Views: 135.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:47:00 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/show.html.haml within layouts/application (125.8ms)
+Completed 200 OK in 154ms (Views: 131.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:47:14 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (130.6ms)
+Completed 200 OK in 162ms (Views: 136.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:47:15 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (69.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (135.7ms)
+Completed 200 OK in 228ms (Views: 142.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:47:34 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (136.3ms)
+Completed 200 OK in 227ms (Views: 142.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:48:14 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/show.html.haml within layouts/application (133.9ms)
+Completed 200 OK in 164ms (Views: 140.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:48:49 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (133.2ms)
+Completed 200 OK in 226ms (Views: 139.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:48:59 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (69.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (133.1ms)
+Completed 200 OK in 227ms (Views: 139.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:49:00 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (71.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (137.3ms)
+Completed 200 OK in 231ms (Views: 143.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:49:01 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.4ms)
+Rendered shared/_flashes.html.haml (67.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (204.0ms)
+Completed 200 OK in 233ms (Views: 210.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:49:51 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (71.5ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/tools/show.html.haml within layouts/application (135.4ms)
+Completed 200 OK in 231ms (Views: 141.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:50:22 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (71.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (135.7ms)
+Completed 200 OK in 233ms (Views: 141.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:50:42 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (135.3ms)
+Completed 200 OK in 166ms (Views: 141.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:51:02 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (74.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/tools/show.html.haml within layouts/application (138.6ms)
+Completed 200 OK in 239ms (Views: 144.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:51:03 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (75.3ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (142.4ms)
+Completed 200 OK in 241ms (Views: 148.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:51:12 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.3ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/tools/show.html.haml within layouts/application (140.9ms)
+Completed 200 OK in 234ms (Views: 212.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 15:51:35 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/tools/show.html.haml within layouts/application (137.1ms)
+Completed 200 OK in 167ms (Views: 143.2ms | ActiveRecord: 0.5ms)

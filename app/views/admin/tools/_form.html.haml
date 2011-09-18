@@ -227,3 +227,38 @@
             =form.check_box :who_community_economic_development_organization
             %span
               =form.label :who_community_economic_development_organization, 'Community Economic Development Organization', :style => 'display:inline'
+
+
+
+%fieldset      
+  %legend
+    Tool Description
+  .clearfix
+    = form.label :author
+    .input
+      = form.text_field :author, :maxlength=> 255
+  .clearfix
+    = form.label :date_created
+    .input
+      = form.date_select :date_created
+  .clearfix
+    = form.label :language
+    .input
+      = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => 'Please select the language in which the tool is written'    
+  .clearfix
+    = form.label :relevant_pages
+    .input
+      = form.text_field :relevant_pages, :maxlength=> 255 
+  .clearfix
+    = form.label :total_pages
+    .input
+      = form.text_field :total_pages, :maxlength=> 255          \ 
+  .clearfix
+    = form.label :source_document
+    .input
+      = form.file_field :source_document
+  .clearfix
+    = form.label :description
+    .input
+      = form.text_area :description,:class => 'xxlarge'
+      

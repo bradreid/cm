@@ -7,7 +7,7 @@
   = "Tool Edit Form: #{@tool.name}"
     
 %div.form
-  - form_for [:admin, @tool], :builder => CmFormBuilder do |f|
+  - form_for [:admin, @tool], :builder => CmFormBuilder, :html => { :multipart => true }  do |f|
     = f.error_messages
     = render :partial => "form", :object => f
     %br
