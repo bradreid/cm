@@ -1,3 +1,4 @@
+log/development.log
 *.swp
 public/tmp/*
 db/schema.rb

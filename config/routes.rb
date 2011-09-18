@@ -50,6 +50,7 @@ Cm::Application.routes.draw do
   #   end
   
   namespace :admin do
+    root :to => 'admin#index'
     resources :tools
   end
   resources :admin
