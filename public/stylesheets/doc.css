@@ -3,7 +3,7 @@
   .show_list li {
     display: block;
     padding: 2px; }
-    .show_list li div.label {
+    .show_list li div.label_for_list {
       font-weight: bold;
       float: left;
       width: 200px; }

@@ -1,14 +1,19 @@
 %h2
   Tools
 =link_to "Submit A New Tool", new_admin_tool_path
-
-
+%br
+%br
+=render :partial => 'search'
 %table.data
   %thead
     %th
       ID
     %th
-      Name
+      Title
+    %th
+      Author
+    %th
+      Date Created
     %th
       Actions
   %tbody
@@ -19,9 +24,12 @@
         %td
           =tool.name
         %td
+          =tool.author
+        %td
+          =tool.date_created.try(:to_formatted_s,:short_with_year)
+        %td
           =action_images [:admin, tool], :exclude => [:index]
-  %tfoot
-    - if @tools.size > 25  
-      %tr
-        %td{:colspan => 3}
-          = will_paginate @tools
+    %tr
+      %td{:colspan => 5}
+        = page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'
+        = will_paginate @tools

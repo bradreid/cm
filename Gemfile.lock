@@ -94,7 +94,7 @@ GEM
     tzinfo (0.3.29)
     warden (1.0.4)
       rack (>= 1.0)
-    will_paginate (3.0.0)
+    will_paginate (3.0.1)
     xml-simple (1.1.0)
 
 PLATFORMS
