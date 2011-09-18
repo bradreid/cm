@@ -4,6 +4,9 @@
       %h3
         =link_to 'The Choice Matrix', root_path
       %ul
+        -if current_user
+          %li
+            =link_to 'Admin', admin_root_path
         %li
           =link_to 'About', root_path(:anchor => 'about')
         %li
