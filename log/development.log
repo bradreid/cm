@@ -16454,3 +16454,298 @@ Rendered shared/_topbar.html.haml (143.8ms)
 Rendered shared/_flashes.html.haml (3.0ms)
 Rendered admin/index.html.haml within layouts/application (165.2ms)
 Completed 200 OK in 184ms (Views: 169.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 18 17:20:21 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (16.0ms)
+Rendered welcome/index.html.haml within layouts/application (170.7ms)
+Completed 500 Internal Server Error in 175ms
+
+ActionView::Template::Error (No route matches {:controller=>"admins", :action=>"create"}):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2222650820_2688030'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2218257900_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 18 17:20:57 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (159.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (177.1ms)
+Completed 200 OK in 182ms (Views: 181.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/welcome" for 127.0.0.1 at Sun Sep 18 17:20:59 -0500 2011
+
+ActionController::RoutingError (uninitialized constant Admin::WelcomesController):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/welcome" for 127.0.0.1 at Sun Sep 18 17:21:27 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin/welcome"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/welcome" for 127.0.0.1 at Sun Sep 18 17:21:27 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin/welcome"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/welcome" for 127.0.0.1 at Sun Sep 18 17:21:27 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin/welcome"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/welcome" for 127.0.0.1 at Sun Sep 18 17:21:40 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin/welcome"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/welcome" for 127.0.0.1 at Sun Sep 18 17:21:54 -0500 2011
+  Processing by Admin::WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (142.7ms)
+Rendered admin/welcome/index.html.haml within layouts/application (154.0ms)
+Completed 500 Internal Server Error in 167ms
+
+ActionView::Template::Error (No route matches {:controller=>"admin/welcome", :action=>"show"}):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2217664300_2688030'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2217902720_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:22:40 -0500 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for AdminController):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:04 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (7.7ms)
+Rendered admin/index.html.haml within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (No route matches {:controller=>"admin/welcome", :action=>"show"}):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2220004860_2688030'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2220877020_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:05 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (8.2ms)
+Rendered admin/index.html.haml within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 170ms
+
+ActionView::Template::Error (No route matches {:controller=>"admin/welcome", :action=>"show"}):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2220544520_2688030'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2221432260_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:06 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.0ms)
+Rendered admin/index.html.haml within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 171ms
+
+ActionView::Template::Error (No route matches {:controller=>"admin/welcome", :action=>"show"}):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2221355900_2688030'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2221124640_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:20 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (7.8ms)
+Rendered admin/index.html.haml within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (No route matches {:controller=>"admin/welcome", :action=>"show"}):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2220037780_2688030'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2220866740_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:29 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (57.6ms)
+Rendered admin/index.html.haml within layouts/application (74.5ms)
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (undefined local variable or method `admin_welcome_path' for #<#<Class:0x102d62830>:0x102d5c250>):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2170825060_2573310'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2171237340_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:30 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (15.3ms)
+Rendered admin/index.html.haml within layouts/application (33.1ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (undefined local variable or method `admin_welcome_path' for #<#<Class:0x1033c91d8>:0x1033c2310>):
+    6:       %ul
+    7:         -if current_user
+    8:           %li
+    9:             =link_to 'Admin', admin_welcome_path
+    10:         %li
+    11:           =link_to 'About', root_path(:anchor => 'about')
+    12:         %li
+  app/views/shared/_topbar.html.haml:9:in `_app_views_shared__topbar_html_haml__1259899780_2173516780_2573310'
+  app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___13809626_2174598380_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:45 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (51.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/index.html.haml within layouts/application (70.5ms)
+Completed 200 OK in 89ms (Views: 75.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 17:23:47 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/cm/app/models/tool.rb:2)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2175294940_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.7ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/tools/index.html.haml within layouts/application (113.4ms)
+Completed 200 OK in 140ms (Views: 118.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:48 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (9.1ms)
+Rendered shared/_flashes.html.haml (2.3ms)
+Rendered admin/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 46ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:48 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (9.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/index.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 47ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 17:23:49 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/index.html.haml within layouts/application (29.7ms)
+Completed 200 OK in 95ms (Views: 33.9ms | ActiveRecord: 0.2ms)
