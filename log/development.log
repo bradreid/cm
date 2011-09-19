@@ -19947,3 +19947,377 @@ Rendered shared/_topbar.html.haml (4.6ms)
 Rendered shared/_flashes.html.haml (76.1ms)
 Rendered admin/index.html.haml within layouts/application (91.5ms)
 Completed 200 OK in 114ms (Views: 95.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 18 19:03:19 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (19.4ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered welcome/index.html.haml within layouts/application (34.8ms)
+Completed 200 OK in 39ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 18 19:03:20 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (96.7ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered welcome/index.html.haml within layouts/application (110.7ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Sep 18 19:06:55 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (19.2ms)
+Rendered shared/_flashes.html.haml (78.7ms)
+Rendered welcome/index.html.haml within layouts/application (109.9ms)
+Completed 200 OK in 114ms (Views: 113.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 19:06:56 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (4.7ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/index.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 38ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 19:06:58 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2193541320_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[35mTool Load (0.5ms)[0m  SELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0
+Rendered shared/_topbar.html.haml (4.7ms)
+Rendered shared/_flashes.html.haml (2.2ms)
+Rendered admin/tools/index.html.haml within layouts/application (52.7ms)
+Completed 200 OK in 154ms (Views: 58.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 19:07:01 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered admin/tools/show.html.haml within layouts/application (42.9ms)
+Completed 500 Internal Server Error in 146ms
+
+ActionView::Template::Error (undefined method `file_name' for #<Paperclip::Attachment:0x1050b96a8>):
+    27:     &nbsp;
+    28:   %li
+    29:     .label_for_list Source Document
+    30:     =link_to @tool.source_document.file_name, @tool.source_document.url
+    31:   %li
+    32:     .label_for_list File Size
+    33:     =@tool.source_document_file_size
+  app/views/admin/tools/show.html.haml:30:in `_app_views_admin_tools_show_html_haml__1063622378_2197112720_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/admin/tools/1" for 127.0.0.1 at Sun Sep 18 19:07:11 -0500 2011
+  Processing by Admin::ToolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTool Load (0.4ms)[0m  SELECT "tools".* FROM "tools" WHERE "tools"."id" = 1 LIMIT 1
+Rendered shared/_topbar.html.haml (4.7ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/tools/show.html.haml within layouts/application (60.2ms)
+Completed 200 OK in 166ms (Views: 66.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Sep 18 19:08:03 -0500 2011
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_topbar.html.haml (4.9ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/index.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 38ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 19:08:04 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2192559080_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (4.7ms)
+Rendered shared/_flashes.html.haml (2.3ms)
+Rendered admin/tools/index.html.haml within layouts/application (53.7ms)
+Completed 200 OK in 158ms (Views: 59.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/source_documents/original/missing.png" for 127.0.0.1 at Sun Sep 18 19:08:07 -0500 2011
+
+ActionController::RoutingError (No route matches "/source_documents/original/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 19:08:20 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_admin_tools_index_html_haml___709956947_2192555720_0 RAISED compile error
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:32: syntax error, unexpected ')'
+));}\n      </td>\n      <td>\n        #{
+ ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:34: unknown regexp options - td
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:34: syntax error, unexpected $undefined
+));}\n      </td>\n      <td>\n        #{
+                  ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:34: syntax error, unexpected $undefined
+));}\n      </td>\n      <td>\n        #{
+                              ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:36: syntax error, unexpected '}', expecting kEND
+));}\n      </td>\n    </tr>\n", -2, false);end
+    ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:36: unknown regexp options - tr
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:36: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n", -2, false);end
+                             ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:37: syntax error, unexpected $undefined
+_hamlout.push_text("    <tr>\n      <td#{_hamlout.adjust_ta...
+                             ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:39: syntax error, unexpected '}', expecting kEND
+));}\n        #{_hamlout.format_sc...
+    ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: unknown regexp options - tr
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n  </tbody>\n</table>\n", -4, ...
+                             ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: unknown regexp options - tabl
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: syntax error, unexpected $undefined
+...  </tr>\n  </tbody>\n</table>\n", -4, false);::Haml::Util.ht...
+                              ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: unterminated string meets end of file
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: syntax error, unexpected $end, expecting kEND
+Function body:           def _app_views_admin_tools_index_html_haml___709956947_2192555720_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "admin/tools/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :ugly=>false, :format=>:html5, :escape_html=>true, :encoding=>nil, :escape_attrs=>true, :attr_wrapper=>"'"});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<h2>\n  Tools\n</h2>\n#{
+
+_hamlout.format_script_false_false_false_true_false_true_false((link_to "Submit A New Tool", new_admin_tool_path
+));}\n<br>\n<br>\n#{
+
+_hamlout.format_script_false_false_false_true_false_true_false((render :partial => 'search'
+));}\n<table class='data'>\n  <thead>\n    <th>\n      ID\n    </th>\n    <th>\n      Title\n    </th>\n    <th>\n      Author\n    </th>\n    <th>\n      Source Document\n    </th>\n    <th>\n      Date Created\n    </th>\n    <th>\n      Actions\n    </th>\n  </thead>\n  <tbody>\n", 2, false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_hamlout.append_if_string= @tools.each do |tool|
+_hamlout.push_text("    <tr>\n      <td>\n        #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false((tool.id
+));}\n      </td>\n      <td>\n        #{
+_hamlout.format_script_false_false_false_true_false_true_false((tool.name
+));}\n      </td>\n      <td>\n        #{
+_hamlout.format_script_false_false_false_true_false_true_false((tool.author
+));}\n      </td>\n      <td>\n        #{
+_hamlout.format_script_false_false_false_true_false_true_false((link_to tool.source_document_file_name, tool.source_document.try(:url) - if tool.source_document
+));}\n      </td>\n      <td>\n        #{
+_hamlout.format_script_false_false_false_true_false_true_false((tool.date_created.try(:to_formatted_s,:short_with_year)
+));}\n      </td>\n      <td>\n        #{
+_hamlout.format_script_false_false_false_true_false_true_false((action_images [:admin, tool], :exclude => [:index]
+));}\n      </td>\n    </tr>\n", -2, false);end
+_hamlout.push_text("    <tr>\n      <td#{_hamlout.adjust_tabs(1); _hamlout.attributes({}, nil, :colspan => 5)}>\n        #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( will_paginate @tools
+));}\n      </td>\n    </tr>\n  </tbody>\n</table>\n", -4, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/breid/code/cm/app/views/admin/tools/index.html.haml:40:in `compile'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_view/template.rb:134:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications.rb:54:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_view/template.rb:127:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:26:in `render_without_haml'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/haml-3.1.2/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.9/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:446:in `_run__1622032360__process_action__199225275__callbacks'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `send'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `send'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:119:in `process'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_controller/metal.rb:178:in `action'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/haml-3.1.2/vendor/sass/lib/sass/../sass/plugin/rack.rb:54:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/warden-1.0.4/lib/warden/manager.rb:35:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/warden-1.0.4/lib/warden/manager.rb:34:in `catch'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/warden-1.0.4/lib/warden/manager.rb:34:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/application.rb:77:in `send'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/commands/server.rb:65:in `start'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/commands.rb:30
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/commands.rb:27:in `tap'
+/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.9/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered admin/tools/index.html.haml within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 112ms
+
+ActionView::Template::Error (compile error
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:32: syntax error, unexpected ')'
+));}\n      </td>\n      <td>\n        #{
+ ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:34: unknown regexp options - td
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:34: syntax error, unexpected $undefined
+));}\n      </td>\n      <td>\n        #{
+                  ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:34: syntax error, unexpected $undefined
+));}\n      </td>\n      <td>\n        #{
+                              ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:36: syntax error, unexpected '}', expecting kEND
+));}\n      </td>\n    </tr>\n", -2, false);end
+    ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:36: unknown regexp options - tr
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:36: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n", -2, false);end
+                             ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:37: syntax error, unexpected $undefined
+_hamlout.push_text("    <tr>\n      <td#{_hamlout.adjust_ta...
+                             ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:39: syntax error, unexpected '}', expecting kEND
+));}\n        #{_hamlout.format_sc...
+    ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: unknown regexp options - tr
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n  </tbody>\n</table>\n", -4, ...
+                             ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: unknown regexp options - tabl
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: syntax error, unexpected $undefined
+...  </tr>\n  </tbody>\n</table>\n", -4, false);::Haml::Util.ht...
+                              ^
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: unterminated string meets end of file
+/Users/breid/code/cm/app/views/admin/tools/index.html.haml:40: syntax error, unexpected $end, expecting kEND):
+    29:           =tool.author
+    30:         %td
+    31:           =link_to tool.source_document_file_name, tool.source_document.try(:url) - if tool.source_document
+    32:         %td
+    33:           =tool.date_created.try(:to_formatted_s,:short_with_year)
+    34:         %td
+    35:           =action_images [:admin, tool], :exclude => [:index]
+  app/views/admin/tools/index.html.haml:40:in `compile'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  [1m[36mTool Load (0.8ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.4ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/admin/tools" for 127.0.0.1 at Sun Sep 18 19:08:28 -0500 2011
+  Processing by Admin::ToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_tools__search_html_haml__819624457_2196010740_219710 at /Users/breid/code/cm/app/views/admin/tools/_search.html.haml:1)
+Rendered admin/tools/_search.html.haml (2.6ms)
+  [1m[36mTool Load (0.5ms)[0m  [1mSELECT "tools".* FROM "tools" LIMIT 25 OFFSET 0[0m
+Rendered shared/_topbar.html.haml (4.5ms)
+Rendered shared/_flashes.html.haml (2.3ms)
+Rendered admin/tools/index.html.haml within layouts/application (129.0ms)
+Completed 200 OK in 154ms (Views: 134.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/source_documents/original/missing.png" for 127.0.0.1 at Sun Sep 18 19:08:30 -0500 2011
+
+ActionController::RoutingError (No route matches "/source_documents/original/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
