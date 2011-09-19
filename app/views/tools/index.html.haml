@@ -1,0 +1,37 @@
+%h1
+  Tools Search
+%br
+=render :partial => 'search'
+%table.data
+  %thead
+    %th
+      ID
+    %th
+      Title
+    %th
+      Author
+    %th
+      Source Document
+    %th
+      Date Created
+    %th
+      Actions
+  %tbody
+    -@tools.each do |tool|
+      %tr
+        %td
+          =tool.id
+        %td
+          =tool.name
+        %td
+          =tool.author
+        %td
+          =link_to tool.source_document_file_name, tool.source_document.try(:url)  if tool.source_document_file_name
+        %td
+          =tool.date_created.try(:to_formatted_s,:short_with_year)
+        %td
+          =action_images [tool], :exclude => [:index, :edit, :delete]
+    %tr
+      %td{:colspan => 6}
+        = page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'
+        = will_paginate @tools

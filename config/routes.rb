@@ -53,6 +53,9 @@ Cm::Application.routes.draw do
     resources :tools
   end
   resources :admin
+  
+  resources :tools
+  match 'about' => 'welcome#about'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

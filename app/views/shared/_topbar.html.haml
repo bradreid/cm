@@ -1,25 +1,25 @@
 
-%table#topbar
+%table.clear_both#topbar
   %tr
     -if current_user
-      %td.special{:valign => 'bottom'}
+      %td.special
         .box.brown
-        .left
+        .left.text
           =link_to 'Admin', '/admin'
-    %td.special{:valign => 'bottom'}
+    %td.special
       .box.blue
-      .left
-        About
-    %td{:valign => 'bottom'}
+      .left.text
+        =link_to 'About', '/about'
+    %td.special
       .box.orange
-      .left
+      .left.text
         Guided    
-    %td{:valign => 'bottom'}
+    %td.special
       .box.green
-      .left
-        Search
-    %td{:valign => 'bottom'}
+      .left.text
+        =link_to 'Search', tools_path
+    %td.special
       .box.red
-      .left
+      .left.text
         Reviews            
 
