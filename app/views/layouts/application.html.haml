@@ -10,27 +10,14 @@
     = csrf_meta_tag 
     
 %body
-  = render :partial => 'shared/topbar'
   .clear_both
   #masthead
-    - if controller.is_a? WelcomeController
-      .inner
-        .container
-          %h1
-            The Choice Matrix, from RDI at BU  
-          %p.lead
-            The Choice Matrix is a toolkit from RDI at BU designed ...etc.
-
-      .quickstart
-        .container
-          .row
-            .span5.columns
-              Guided Selection Quick Start
-            .span5.columns
-              Search Quick Start
-            .span5.columns
-              Reviews Quick Start        
+    .inner
+      .container
+        %h1
+          =link_to 'The Choice Matrix', root_path
   .container
+    = render :partial => 'shared/topbar'  
     %br
     %br
       #content
@@ -45,6 +32,6 @@
           &copy The Choice Matrix, RDI
           =Time.now.year
           ="-"
-          ="Software developed by #{link_to 'Beyond The Cube', 'http://www.beyondthecube.ca', :class => 'orange'}".html_safe
+          ="Software developed by #{link_to 'Beyond The Cube', 'http://www.beyondthecube.ca'}".html_safe
           
 

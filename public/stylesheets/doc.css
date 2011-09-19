@@ -23,6 +23,38 @@ div.actions {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px; }
 
+table#topbar, table.none {
+  border-width: 0px;
+  cellspacing: 0px;
+  margin: 0px;
+  padding: 0px; }
+  table#topbar td, table.none td {
+    border: 0px;
+    vertical-align: bottom; }
+
+.left {
+  float: left; }
+
+.box {
+  float: left;
+  width: 20px;
+  height: 20px; }
+
+.blue {
+  background-color: #12b7a7; }
+
+.green {
+  background-color: #adcc02; }
+
+.orange {
+  background-color: #f7b308; }
+
+.red {
+  background-color: #fd5d11; }
+
+.brown {
+  background-color: #7e573a; }
+
 .clear_both {
   clear: both; }
 
@@ -31,34 +63,37 @@ div.actions {
   height: auto !important;
   height: 500px; }
 
-#masthead, #footer {
-  background-color: #049cd9;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#004d9f), to(#049cd9));
-  background-image: -webkit-linear-gradient(#004d9f, #049cd9);
-  background-image: -moz-linear-gradient(#004d9f, #049cd9);
-  background-image: -o-linear-gradient(top, #004d9f, #049cd9);
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#004d9f), to(#049cd9));
-  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#004D9F', EndColorStr='#049cd9', GradientType=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#004D9F', EndColorStr='#049cd9', GradientType=0))"; }
+#topbar, #topbar a {
+  color: #7e573a;
+  font-size: 28px;
+  text-decoration: none; }
+
+#masthead {
+  background-color: white;
+  background: transparent url(../images/topbar.jpg) bottom center;
+  background-repeat: repeat-x; }
+
+#footer {
+  background-color: #7e573a;
+  background-repeat: no-repeat; }
 
 #masthead div.inner, #footer div.inner {
-  background: transparent url(../images/grid-18px.png) top center;
   padding: 45px 0;
   -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3); }
 
-#masthead p, #footer, #footer h1, #masthead h1 {
-  color: white;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+#masthead p, #footer, #footer h1, #masthead h1, #masthead a {
+  color: #f7b308;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-decoration: none; }
 
 #footer a {
-  color: white;
+  color: #f7b308;
   font-weight: bold; }
 
 #masthead {
-  margin-top: 40px; }
+  margin-top: 0px; }
 
 #masthead h1, #masthead p {
   text-align: center;
