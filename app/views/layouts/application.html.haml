@@ -11,11 +11,12 @@
     
 %body
   .clear_both
+  =render :partial => 'shared/users'  
   #masthead
     .inner
       .container
         %h1
-          =link_to 'The Choice Matrix', root_path
+          =link_to 'The Choice Matrix', root_path          
   .container
     = render :partial => 'shared/topbar'  
     %br
