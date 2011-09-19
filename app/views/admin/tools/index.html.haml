@@ -28,7 +28,7 @@
         %td
           =tool.author
         %td
-          =link_to tool.source_document_file_name, tool.source_document.try(:url)  if tool.source_document
+          =link_to tool.source_document_file_name, tool.source_document.try(:url)  if tool.source_document_file_name
         %td
           =tool.date_created.try(:to_formatted_s,:short_with_year)
         %td
