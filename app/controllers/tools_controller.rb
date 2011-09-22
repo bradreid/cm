@@ -1,4 +1,5 @@
 class ToolsController < ApplicationController
+  before_filter :set_area
   
   def index
     if params[:search]
@@ -25,6 +26,10 @@ private
     end
     sql = variables.inject([where_clause.join(' OR ')]){|sum, item|  sum << item}
     @tools = @tools.where(sql)
+  end
+  
+  def set_area
+    @area = :search
   end
   
 end

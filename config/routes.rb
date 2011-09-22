@@ -54,7 +54,9 @@ Cm::Application.routes.draw do
   end
   resources :admin
   
+  resources :reviews
   resources :tools
+  resources :guided_questions
   match 'about' => 'welcome#about'
 
   # You can have the root of your site routed with "root"

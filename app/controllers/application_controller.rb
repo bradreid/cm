@@ -3,6 +3,28 @@ class ApplicationController < ActionController::Base
   
   before_filter :verify_access
   
+  helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?
+  
+  def admin_selected?
+    @area == :admin
+  end
+  
+  def about_selected?
+    @area == :about
+  end
+  
+  def search_selected?
+    @area == :search
+  end
+  
+  def reviews_selected?
+    @area == :reviews
+  end
+  
+  def guided_selected?
+    @area == :guided
+  end
+  
   protected
   
   # Use basic authentication in my realm to get a user object.
