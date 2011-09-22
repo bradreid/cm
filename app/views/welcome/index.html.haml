@@ -1,12 +1,5 @@
-:javascript
-  $(function(){
-    $('.hover td').click(function(){
-      document.location=$(this).attr('url');
-    });
-  });
-
 %center
-  %table.hover{:cellpadding => 10, :cellspacing => 10, :border => 0}
+  %table.hover.mainpage{:cellpadding => 10, :cellspacing => 10, :border => 0}
     %tr
       %td.blue{:width => '175px', :align => 'center', :height => '175px', :align => 'center', :valign => 'bottom', :url => "/about"}
         .fronttext
