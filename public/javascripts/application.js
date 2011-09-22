@@ -8,20 +8,7 @@ $(document).ready(function(){
     $('.alert-message').hide();
   });
 
-  // Dropdown example for topbar nav
-  // ===============================
-
-  $("body").bind("click", function (e) {
-    $('a.menu').parent("li").removeClass("open");
-    $('.menu-dropdown').hide();
+  $('.mainpage td').click(function(){
+    document.location=$(this).attr('url');
   });
-
-  $("a.menu").click(function (e) {
-    var li = $(this).parent("li");
-    li.toggleClass('open');
-    $('.menu-dropdown').show();
-    return false;
-  });
-
-
 });
