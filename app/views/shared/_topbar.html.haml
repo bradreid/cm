@@ -8,33 +8,33 @@
             %td.brown{:width => '30px', :height => '30px'}
             %td
               .text
-                =link_to 'Admin', '/admin', :class => 'navhover'
+                =link_to 'Admin', '/admin', :class => "#{admin_selected? ? 'selected' : ''}"
     %td.center
       %table.hover{:cellpadding => 0, :cellspacing => 0}
         %tr
           %td.blue{:width => '30px', :height => '30px'}
           %td
             .text
-              =link_to 'About', '/about'
+              =link_to 'About', '/about', :class => "#{about_selected? ? 'selected' : ''}"
     %td.center
       %table.hover{:cellpadding => 0, :cellspacing => 0}
         %tr
           %td.orange{:width => '30px', :height => '30px'}
           %td
             .text
-              =link_to 'Admin', '/admin'   
+              =link_to 'Guided', new_guided_question_path, :class => "#{guided_selected? ? 'selected' : ''}"
     %td.center
       %table.hover{:cellpadding => 0, :cellspacing => 0}
         %tr
           %td.green{:width => '30px', :height => '30px'}
           %td
             .text
-              =link_to 'Search', tools_path
+              =link_to 'Search', tools_path, :class => "#{search_selected? ? 'selected' : ''}"
     %td.center
       %table.hover{:cellpadding => 0, :cellspacing => 0}
         %tr
           %td.red{:width => '30px', :height => '30px'}
           %td
             .text
-              =link_to 'Admin', '/admin'           
+              =link_to 'Reviews', reviews_path, :class => "#{reviews_selected? ? 'selected' : ''}"      
 

@@ -1,18 +1,25 @@
+:javascript
+  $(function(){
+    $('.hover td').click(function(){
+      document.location=$(this).attr('url');
+    });
+  });
+
 %center
-  %table{:cellpadding => 10, :cellspacing => 10, :border => 0}
+  %table.hover{:cellpadding => 10, :cellspacing => 10, :border => 0}
     %tr
-      %td.blue{:width => '175px', :align => 'center', :height => '175px', :align => 'center', :valign => 'bottom'}
+      %td.blue{:width => '175px', :align => 'center', :height => '175px', :align => 'center', :valign => 'bottom', :url => "/about"}
         .fronttext
           About
         
-      %td.green{:width => '175px', :align => 'center', :height => '175px', :align => 'center', :valign => 'bottom'}
+      %td.green{:width => '175px', :align => 'center', :height => '175px', :align => 'center', :valign => 'bottom', :url => "#{new_guided_question_path}"}
         .fronttext
           Guided
     %tr
-      %td.orange{:align => 'center', :width => '175px', :height => '175px', :align => 'center', :valign => 'bottom'}
+      %td.orange{:align => 'center', :width => '175px', :height => '175px', :align => 'center', :valign => 'bottom', :url => "#{tools_path}"}
         .fronttext
           Search
        
-      %td.red{:align => 'center', :width => '175px', :height => '175px', :align => 'center', :valign => 'bottom'}
+      %td.red{:align => 'center', :width => '175px', :height => '175px', :align => 'center', :valign => 'bottom', :url => "#{reviews_path}"}
         .fronttext
           Reviews
