@@ -28,7 +28,7 @@ class Tool < ActiveRecord::Base
   def who?
     attrs = [:who_charity, :who_non_profit, :who_social_enterprise, :who_company, :who_community_economic_development_organization]
     select_true_attributes(attrs)  
-  end  
+  end 
   
 protected
 

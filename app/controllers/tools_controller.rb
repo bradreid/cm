@@ -4,9 +4,7 @@ class ToolsController < ApplicationController
   def index
     if params[:search]
       search_tools
-      @tools = @tools.paginate(:page => params[:page], :per_page => 25)      
-    else
-      @tools = Tool.paginate(:page => params[:page], :per_page => 25)      
+      @tools = @tools.paginate(:page => params[:page], :per_page => 25)          
     end
   end
   

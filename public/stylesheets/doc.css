@@ -10,6 +10,13 @@ div.actions {
 .field_with_errors {
   display: inline; }
 
+table #search_results tr:hover {
+  background-color: #e1eafe; }
+
+.search_hit_title {
+  text-decoration: underline;
+  font-size: 120%; }
+
 .show_list {
   list-style: none; }
   .show_list li {
