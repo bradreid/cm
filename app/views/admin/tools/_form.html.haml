@@ -1,7 +1,3 @@
-=form.check_box :where_urban, {}, :where_urban => 'test'
-=form.check_box :where_urban, {}, :where_urban => 'test2'
-=form.check_box :where_urban, {}, :where_urban => 'test3'
-
 %fieldset
   .clearfix
     = form.label :name, "Tool Title"
@@ -135,9 +131,9 @@
               =form.label :why_action_planning, 'Action Planning', :style => 'display:inline'
         %li
           %label
-            =form.check_box :why_community_building
+            =form.check_box :why_community_capacity_building
             %span
-              =form.label :why_community_building, 'Community Building', :style => 'display:inline'  
+              =form.label :why_community_capacity_building, 'Community Capacity Building', :style => 'display:inline'  
         %li
           %label
             =form.check_box :why_needs_analysis
@@ -150,14 +146,9 @@
               =form.label :why_budgeting, 'Budgeting', :style => 'display:inline' 
         %li
           %label
-            =form.check_box :why_leadership_building
+            =form.check_box :why_leadership_capacity_building
             %span
-              =form.label :why_leadership_building, 'Leadership Building', :style => 'display:inline'  
-        %li
-          %label
-            =form.check_box :why_team_building
-            %span
-              =form.label :why_team_building, 'Team Building', :style => 'display:inline'
+              =form.label :why_leadership_capacity_building, 'Leadership Capacity Building', :style => 'display:inline'  
         %li
           %label
             =form.check_box :why_asset_mapping
