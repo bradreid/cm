@@ -1,7 +1,7 @@
 %div.actions
   %strong
     Quick Links:
-  = action_images [:admin, @tool], :exclude => [:show] 
+  = action_images [@tool], :exclude => [:show, :edit, :delete] 
 
 %h2
   = "#{@tool.name}"
