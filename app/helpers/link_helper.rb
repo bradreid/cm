@@ -2,15 +2,15 @@ module LinkHelper
   
   def listing_link(path, opts = {})
     alt_text = opts[:title].blank?? 'Back to Listing' : opts[:title]
-    link_to(image_tag('link_icons/list.png', :alt => alt_text), path, {:title => 'Back to Listing'}.merge(opts))
+    link_to(image_tag('link_icons/list.png', :alt => alt_text, :align => 'middle'), path, {:title => 'Back to Listing'}.merge(opts))
   end
 
   def view_link(path, opts = {})
-    link_to(image_tag('link_icons/view.png', :alt => 'View'), path, {:title => 'View'}.merge(opts))
+    link_to(image_tag('link_icons/view.png', :alt => 'View', :height => 25, :align => 'middle'), path, {:title => 'View'}.merge(opts))
   end
 
   def edit_link(path, opts = {})
-    link_to(image_tag('link_icons/edit.png', :alt => 'Edit'), edit_polymorphic_path(path), {:title => 'Edit'}.merge(opts))
+    link_to(image_tag('link_icons/edit.png', :alt => 'Edit', :align => 'middle'), edit_polymorphic_path(path), {:title => 'Edit'}.merge(opts))
   end
 
   def delete_link(*args)
@@ -24,7 +24,7 @@ module LinkHelper
                     
     html_options.merge!(args.second) if args.second
     name   = html_options.delete(:name) || "Delete"
-    img_tg = image_tag('link_icons/delete.png', :alt => html_options[:alt_text], :title => html_options[:title]).html_safe
+    img_tg = image_tag('link_icons/delete.png', :alt => html_options[:alt_text], :title => html_options[:title], :align => 'middle').html_safe
     remote = html_options.delete(:remote)
     bttn   = html_options.delete(:button)
     if remote && bttn
