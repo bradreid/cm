@@ -59,7 +59,7 @@
   .clearfix
     .input
       %ul.inputs-list
-        -@tool.where.map(&:to_s).sort.each do |q|          
+        -@tool.where_attrs.map(&:to_s).sort.each do |q|          
           %li
             %label
               =form.check_box q, :style => 'display:inline'

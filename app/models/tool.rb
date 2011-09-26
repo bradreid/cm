@@ -10,12 +10,12 @@ class Tool < ActiveRecord::Base
     attrs.select{|attr| self.send(attr)}.map{|m| m.to_s.gsub(/^[^_]*_/, '')}
   end
   
-  def where
+  def where_attrs
     attrs = self.methods.select {|v| v =~ /where_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')} - ['where']
   end
   
   def where?
-    select_true_attributes(where)
+    select_true_attributes(where_attrs)
   end
   
   def when
