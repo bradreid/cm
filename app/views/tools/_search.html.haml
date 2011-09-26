@@ -1,3 +1,21 @@
-- form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
-  = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
-  =image_tag 'Search.png', :width => 30, :height => 30, :onclick => "$('#returns_form').submit();"
+
+- if params[:advanced]
+  %ul.pills
+    %li
+      =link_to "Basic Search", tools_path
+    %li.active
+      =link_to "Advanced Saerch", tools_path(:advanced => true)
+  %br
+  %br  
+  Advanced Search
+-else
+  %ul.pills
+    %li.active
+      =link_to "Basic Search", tools_path
+    %li
+      =link_to "Advanced Saerch", tools_path(:advanced => true)
+  %br
+  %br
+  - form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
+    = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
+    =image_tag 'Search.png', :width => 30, :height => 30, :onclick => "$('#returns_form').submit();"

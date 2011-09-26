@@ -56,6 +56,22 @@
     .label_for_list Steps
     =@tool.steps
     
+%h4 Who (User Groups) (The individuals, organizations, associations identified or intended to apply the tool)
+%ul.show_list
+  %li
+    .label_for_list
+    -@tool.who?.each do |w|
+      =w.humanize
+      %br    
+      
+%h4 Who (Beneficiaries) (The individuals, organizations, associations identified or intended who will benefit by the use of this tool)
+%ul.show_list
+  %li
+    .label_for_list
+    -@tool.whobeneficiaries?.each do |w|
+      =w.humanize
+      %br      
+    
 %h4 Where (What types of communities can this tool be used to benefit?)
 %ul.show_list
   %li
@@ -122,23 +138,6 @@
     =@tool.expertise_needed
     &nbsp;    
 
-   
-%h4 Who (What types of organizations can this tool be used to benefit?)
-%ul.show_list
-  %li
-    .label_for_list
-    -@tool.who?.each do |w|
-      =w.humanize
-      %br      
-      
-      
-      
-
-        
-
-    
-    
-  
 .clear
 %div.actions_footer.clear
   = action_links [:admin, @tool], :exclude => [:show]
