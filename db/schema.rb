@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110926011536) do
+ActiveRecord::Schema.define(:version => 20110926012715) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -85,6 +85,18 @@ ActiveRecord::Schema.define(:version => 20110926011536) do
     t.datetime "source_document_updated_at"
     t.float    "rating"
     t.string   "focus"
+    t.boolean  "why_asset_acquisition"
+    t.boolean  "why_asset_mobilization"
+    t.boolean  "why_economic_assesment"
+    t.boolean  "why_institutional_assessment"
+    t.boolean  "why_environmental_impact_assessment"
+    t.boolean  "why_poverty_assessment"
+    t.boolean  "why_project_assessment"
+    t.boolean  "why_communications_development"
+    t.boolean  "why_community_economic_development"
+    t.boolean  "why_community_development"
+    t.boolean  "why_partnership_building"
+    t.boolean  "why_leadership_building"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"
