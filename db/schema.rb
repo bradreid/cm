@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110926010008) do
+ActiveRecord::Schema.define(:version => 20110926011536) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -62,11 +62,10 @@ ActiveRecord::Schema.define(:version => 20110926010008) do
     t.boolean  "why_collective_visioning"
     t.boolean  "why_solution_building"
     t.boolean  "why_action_planning"
-    t.boolean  "why_community_building"
+    t.boolean  "why_community_capacity_building"
     t.boolean  "why_needs_analysis"
     t.boolean  "why_budgeting"
-    t.boolean  "why_leadership_building"
-    t.boolean  "why_team_building"
+    t.boolean  "why_leadership_capacity_building"
     t.boolean  "why_asset_mapping"
     t.string   "time_to_use_type"
     t.boolean  "who_charity"

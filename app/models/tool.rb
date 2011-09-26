@@ -21,7 +21,7 @@ class Tool < ActiveRecord::Base
   end  
   
   def why?
-    attrs = [:why_collective_visioning, :why_solution_building, :why_action_planning, :why_community_building, :why_needs_analysis, :why_budgeting, :why_leadership_building, :why_team_building, :why_asset_mapping]
+    attrs = [:why_collective_visioning, :why_solution_building, :why_action_planning, :why_community_capacity_building, :why_needs_analysis, :why_budgeting, :why_leadership_capacity_building, :why_asset_mapping]
     select_true_attributes(attrs)    
   end
   
