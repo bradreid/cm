@@ -22,14 +22,14 @@
           %td.orange{:width => '30px', :height => '30px'}
           %td
             .text
-              =link_to 'Guided', new_guided_question_path, :class => "#{guided_selected? ? 'selected' : ''}"
+              =link_to 'Guided', '/guided', :class => "#{guided_selected? ? 'selected' : ''}"
     %td{:url => "#{tools_path}"}
       %table{:cellpadding => 0, :cellspacing => 0}
         %tr
           %td.green{:width => '30px', :height => '30px'}
           %td
             .text
-              =link_to 'Search', tools_path, :class => "#{search_selected? ? 'selected' : ''}"
+              =link_to 'Search', '/search', :class => "#{search_selected? ? 'selected' : ''}"
     %td{:url => "#{reviews_path}"}
       %table.hover{:cellpadding => 0, :cellspacing => 0}
         %tr
