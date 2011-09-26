@@ -11,7 +11,7 @@ class Tool < ActiveRecord::Base
   end
   
   def where
-    attrs = self.methods.select {|v| v =~ /where_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')} - ['where']
+    attrs = self.methods.select {|v| v =~ /where_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')} - ['where']
   end
   
   def where?
@@ -19,7 +19,7 @@ class Tool < ActiveRecord::Base
   end
   
   def when
-    self.methods.select {|v| v =~ /when_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}    
+    self.methods.select {|v| v =~ /when_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')}    
   end  
   
   def when?
@@ -31,11 +31,11 @@ class Tool < ActiveRecord::Base
   end
   
   def why
-    self.methods.select {|v| v =~ /why_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}
+    self.methods.select {|v| v =~ /why_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')}
   end
   
   def who
-    self.methods.select {|v| v =~ /who_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}
+    self.methods.select {|v| v =~ /who_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')}
   end 
   
   def who?
@@ -43,7 +43,7 @@ class Tool < ActiveRecord::Base
   end
   
   def whobeneficiaries
-    self.methods.select {|v| v =~ /whobeneficiaries_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}
+    self.methods.select {|v| v =~ /whobeneficiaries_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')}
   end 
   
   def whobeneficiaries?
