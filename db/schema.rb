@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110926012715) do
+ActiveRecord::Schema.define(:version => 20110926022330) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -68,11 +68,6 @@ ActiveRecord::Schema.define(:version => 20110926012715) do
     t.boolean  "why_leadership_capacity_building"
     t.boolean  "why_asset_mapping"
     t.string   "time_to_use_type"
-    t.boolean  "who_charity"
-    t.boolean  "who_non_profit"
-    t.boolean  "who_social_enterprise"
-    t.boolean  "who_company"
-    t.boolean  "who_community_economic_development_organization"
     t.string   "author"
     t.date     "date_created"
     t.string   "language"
@@ -97,6 +92,28 @@ ActiveRecord::Schema.define(:version => 20110926012715) do
     t.boolean  "why_community_development"
     t.boolean  "why_partnership_building"
     t.boolean  "why_leadership_building"
+    t.boolean  "why_impact_analysis"
+    t.boolean  "why_environmental_analysis"
+    t.boolean  "why_committee_analysis"
+    t.boolean  "why_visioning"
+    t.boolean  "why_project_management_control"
+    t.boolean  "why_project_management_monitoring"
+    t.boolean  "why_whole_community_planning"
+    t.boolean  "why_cost_benefit_analysis"
+    t.boolean  "why_physical_environment_analysis"
+    t.boolean  "why_community_profile_analysis"
+    t.boolean  "why_community_indicator_analysis"
+    t.boolean  "empowerment"
+    t.boolean  "why_proverty_reduction"
+    t.boolean  "why_physical_environment"
+    t.boolean  "why_community_event"
+    t.boolean  "why_budget_review"
+    t.boolean  "who_individuals"
+    t.boolean  "who_organizations"
+    t.boolean  "who_associations"
+    t.boolean  "whobeneficiaries_individuals"
+    t.boolean  "whobeneficiaries_organizations"
+    t.boolean  "whobeneficiaries_associations"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"

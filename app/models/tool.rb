@@ -4,7 +4,7 @@ class Tool < ActiveRecord::Base
   validates_presence_of :name, :focus, :reading_level, :jargon, :steps, :cost_to_obtain, :cost_to_use, :time_to_use, :author, :date_created, :language
   validates_numericality_of :cost_to_obtain, :cost_to_use, :time_to_use
   validates_uniqueness_of :name
-  validate :where_required, :when_required, :why_required, :who_required
+  validate :where_required, :when_required, :why_required, :who_required, :whobeneficiaries_required
   
   def select_true_attributes(attrs)
     attrs.select{|attr| self.send(attr)}.map{|m| m.to_s.gsub(/^[^_]*_/, '')}
@@ -42,6 +42,14 @@ class Tool < ActiveRecord::Base
     select_true_attributes(self.who)  
   end
   
+  def whobeneficiaries
+    self.methods.select {|v| v =~ /whobeneficiaries_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}
+  end 
+  
+  def whobeneficiaries?
+    select_true_attributes(self.whobeneficiaries)  
+  end  
+  
 protected
 
   def where_required
@@ -74,6 +82,15 @@ protected
   def who_required
     if who?.empty?
       self.errors.add_to_base("You must select one option describing who will use this tool")     
+      return false
+    else
+      true
+    end
+  end  
+  
+  def whobeneficiaries_required
+    if whobeneficiaries?.empty?
+      self.errors.add_to_base("You must select one option describing who will benefit from ths use of this tool")     
       return false
     else
       true

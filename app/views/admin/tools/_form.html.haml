@@ -26,6 +26,32 @@
     .input
       =form.select :steps, FormConstants.steps.map{|r| [r,r]}, :include_blank => 'How many steps to complete?'  
       
+%fieldset      
+  %legend
+    Who (User Groups) (The individuals, organizations, associations identified or intended to apply the tool)
+  .clearfix
+    .input
+      %ul.inputs-list
+        -@tool.who.map(&:to_s).sort.each do |q|          
+          %li
+            %label
+              =form.check_box q, :style => 'display:inline'
+              %span
+                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'
+                
+%fieldset      
+  %legend
+    Who (Beneficiaries) (The individuals, organizations, associations identified or intended to benefit from the use of the tool)
+  .clearfix
+    .input
+      %ul.inputs-list
+        -@tool.whobeneficiaries.map(&:to_s).sort.each do |q|          
+          %li
+            %label
+              =form.check_box q, :style => 'display:inline'
+              %span
+                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'                
+      
       
 %fieldset      
   %legend
@@ -114,20 +140,6 @@
     = form.label :expertise_needed
     .input
       = form.text_field :expertise_needed, :maxlength=> 255      
-      
-      
-%fieldset      
-  %legend
-    Who (What types of organizations can this tool be used to benefit?)
-  .clearfix
-    .input
-      %ul.inputs-list
-        -@tool.who.map(&:to_s).sort.each do |q|          
-          %li
-            %label
-              =form.check_box q, :style => 'display:inline'
-              %span
-                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'
 
 
 %fieldset      
