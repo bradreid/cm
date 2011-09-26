@@ -10,25 +10,37 @@ class Tool < ActiveRecord::Base
     attrs.select{|attr| self.send(attr)}.map{|m| m.to_s.gsub(/^[^_]*_/, '')}
   end
   
-  def where?
-    attrs = [:where_regional, :where_local, :where_rural, :where_urban, :where_urban_centre, :where_neighbourhood]
-    select_true_attributes(attrs)
+  def where
+    attrs = self.methods.select {|v| v =~ /where_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')} - ['where']
   end
   
-  def when?
-    attrs = [:when_info_gathering, :when_review, :when_planning, :when_implementing, :when_analyzing, :when_organizing]
-    select_true_attributes(attrs)
+  def where?
+    select_true_attributes(where)
+  end
+  
+  def when
+    self.methods.select {|v| v =~ /when_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}    
   end  
   
-  def why?
-    attrs = [:why_collective_visioning, :why_solution_building, :why_action_planning, :why_community_capacity_building, :why_needs_analysis, :why_budgeting, :why_leadership_capacity_building, :why_asset_mapping]
-    select_true_attributes(attrs)    
+  def when?
+    select_true_attributes(self.when)
   end
   
-  def who?
-    attrs = [:who_charity, :who_non_profit, :who_social_enterprise, :who_company, :who_community_economic_development_organization]
-    select_true_attributes(attrs)  
+  def why?
+    select_true_attributes(why)     
+  end
+  
+  def why
+    self.methods.select {|v| v =~ /why_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}
+  end
+  
+  def who
+    self.methods.select {|v| v =~ /who_.*changed\?/}.map{|s| s.gsub(/_changed\?/, '')}
   end 
+  
+  def who?
+    select_true_attributes(self.who)  
+  end
   
 protected
 
