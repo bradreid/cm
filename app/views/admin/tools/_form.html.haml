@@ -1,8 +1,19 @@
+=form.check_box :where_urban, {}, :where_urban => 'test'
+=form.check_box :where_urban, {}, :where_urban => 'test2'
+=form.check_box :where_urban, {}, :where_urban => 'test3'
+
 %fieldset
   .clearfix
     = form.label :name, "Tool Title"
     .input
       = form.text_field :name, :maxlength=> 255
+%fieldset
+  %legend
+    What is main focus of the CED activity or project?
+  .clearfix
+    =form.label :focus
+    .input
+      =form.select :focus, FormConstants.focus.map{|r| [r,r]}, :include_blank => 'Please select a reading level'
 %fieldset
   %legend
     Complexity
@@ -64,7 +75,7 @@
       
 %fieldset      
   %legend
-    When (At what stage of the CED project cycle is this tool most useful?) 
+    When (At what phase of the CED project cycle is this tool most useful?) 
   .clearfix
     .input
       %ul.inputs-list
@@ -227,7 +238,6 @@
             =form.check_box :who_community_economic_development_organization
             %span
               =form.label :who_community_economic_development_organization, 'Community Economic Development Organization', :style => 'display:inline'
-
 
 
 %fieldset      

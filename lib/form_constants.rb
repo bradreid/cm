@@ -12,6 +12,10 @@ class FormConstants
     ['Just ONE', 'A few', 'Some', 'A lot', "It's a process!"]
   end  
   
+  def self.focus
+    ["Social", "Economic", "Environment"]
+  end
+  
   def self.time_units
     ['Days', 'Weeks', 'Months', 'Years']
   end  

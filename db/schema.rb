@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925023308) do
+ActiveRecord::Schema.define(:version => 20110926010008) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20110925023308) do
     t.integer  "source_document_file_size"
     t.datetime "source_document_updated_at"
     t.float    "rating"
+    t.string   "focus"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"
