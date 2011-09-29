@@ -1,12 +1,6 @@
+body
+  :background-image url('../images/template/bg.jpg')
 
-div.actions
-  :float right
-  :border #308ABB + #333 "1px solid"
-  :padding 5px 8px
-  :margintop 20px
-  :borderradius 5px 
-  :mozborderradius 5px
-  :webkitborderradius 5px
 
 .field_with_errors
   :display inline
@@ -76,62 +70,16 @@ table.hover tbody td:hover
   :overflow visible
   :font-size 120%
   :padding 10px
+  a
+    :color white
+    :text-decoration underline
 #content
   :min-height 300px
   :height auto!important
   :height 500px  
-#topbar, #topbar a
-  :color #7E573A
-  :font-size 28px 
-  :text-decoration none 
+
+td.body
+  :background-image url('../images/template/body.png')
+td.splash
+  :background-image url('../images/template/body.png')   
   
-#masthead
-  :background-color #ffffff
-  :background transparent url(../images/topbar.jpg) bottom center 
-  :background-repeat repeat-x
-
-#footer
-  :background-color #7E573A
-  :background-repeat no-repeat
-  :font-size 120%
-  :-webkit-box-shadow inset 0 10px 30px rgba(0, 0, 0, 0.3)
-  :-moz-box-shadow inset 0 10px 30px rgba(0, 0, 0, 0.3)
-  :box-shadow inset 0 10px 30px rgba(0, 0, 0, 0.3)  
-  
-#masthead div.inner, #footer div.inner 
-  :padding 45px 0
-  :-webkit-box-shadow inset 0 10px 30px rgba(0, 0, 0, 0.3)
-  :-moz-box-shadow inset 0 10px 30px rgba(0, 0, 0, 0.3)
-  :box-shadow inset 0 10px 30px rgba(0, 0, 0, 0.3)
-
-  
-#masthead p, #footer, #footer h1, #masthead h1, #masthead a
-  :color #F7B308
-  :text-shadow 0 1px 1px rgba(0,0,0,.3)  
-  :text-decoration none
-  
-#footer a
-  :color #F7B308
-  :font-weight bold
-
-  
-#masthead
-  margin-top: 0px
-  
-#masthead h1, #masthead p
-  :text-align center
-  :margin-bottom 9px
-
-#masthead h1 
-  :font-size 54px
-  :line-height 1
-  :text-shadow 0 1px 2px rgba(0,0,0,.5)
-
-#masthead p 
-  :font-weight 300
-
-#masthead p.lead 
-  :font-size 20px
-  :line-height 27px
-
-

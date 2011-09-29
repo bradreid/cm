@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110926022330) do
+ActiveRecord::Schema.define(:version => 20110929004807) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -51,10 +51,7 @@ ActiveRecord::Schema.define(:version => 20110926022330) do
     t.boolean  "where_local"
     t.boolean  "where_rural"
     t.boolean  "where_urban"
-    t.boolean  "where_urban_centre"
-    t.boolean  "where_neighbourhood"
-    t.boolean  "when_info_gathering"
-    t.boolean  "when_review"
+    t.boolean  "when_reviewing"
     t.boolean  "when_planning"
     t.boolean  "when_implementing"
     t.boolean  "when_analyzing"
@@ -108,12 +105,23 @@ ActiveRecord::Schema.define(:version => 20110926022330) do
     t.boolean  "why_physical_environment"
     t.boolean  "why_community_event"
     t.boolean  "why_budget_review"
-    t.boolean  "who_individuals"
-    t.boolean  "who_organizations"
-    t.boolean  "who_associations"
-    t.boolean  "whobeneficiaries_individuals"
-    t.boolean  "whobeneficiaries_organizations"
-    t.boolean  "whobeneficiaries_associations"
+    t.boolean  "where_municipal"
+    t.boolean  "where_inter_provincial"
+    t.boolean  "where_northern"
+    t.boolean  "where_agricultural"
+    t.boolean  "where_resource_based"
+    t.boolean  "where_boom_bust"
+    t.boolean  "where_declining"
+    t.boolean  "who_ced_practicioner"
+    t.boolean  "who_ced_service_organization"
+    t.boolean  "who_community_based_service"
+    t.boolean  "who_organization"
+    t.boolean  "who_volunteer_groups"
+    t.boolean  "whobeneficiaries_ced_practicioner"
+    t.boolean  "whobeneficiaries_ced_service_organization"
+    t.boolean  "whobeneficiaries_community_based_service"
+    t.boolean  "whobeneficiaries_organization"
+    t.boolean  "whobeneficiaries_volunteer_groups"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"

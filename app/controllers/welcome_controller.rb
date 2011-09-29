@@ -4,5 +4,9 @@ class WelcomeController < ApplicationController
     @area = :about
   end
   
+  def index
+    @splash = true
+  end
+  
   
 end
