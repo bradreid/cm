@@ -1,6 +1,9 @@
 #user_bar
   -if defined? current_user    
     -if current_user
+      = link_to "Admin", admin_tools_path
+      &nbsp;
+      &nbsp;      
       = link_to("Hello #{current_user.username}! ", edit_user_registration_path)
       &nbsp;
       &nbsp;

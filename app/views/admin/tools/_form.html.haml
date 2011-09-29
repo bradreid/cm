@@ -51,11 +51,23 @@
               =form.check_box q, :style => 'display:inline'
               %span
                 =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'                
-      
+  
+%fieldset      
+  %legend
+    What (What is the purpose of using this particular tool?)
+  .clearfix
+    .input
+      %ul.inputs-list
+        -@tool.why.map(&:to_s).sort.each do |q|          
+          %li
+            %label
+              =form.check_box q, :style => 'display:inline'
+              %span
+                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'      
       
 %fieldset      
   %legend
-    Where (What types of communities can this tool be used to benefit?) 
+    Where (The geographical coverage of the community and/or type of community intended to be impacted) 
   .clearfix
     .input
       %ul.inputs-list
@@ -64,12 +76,7 @@
             %label
               =form.check_box q, :style => 'display:inline'
               %span
-                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'           
-  .clearfix
-    =form.label :where, 'This tool was made in'
-    .input
-      =form.text_field :where
-      
+                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'                 
       
 %fieldset      
   %legend
@@ -84,20 +91,6 @@
               %span
                 =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'           
   
-
-
-%fieldset      
-  %legend
-    Why (What is the purpose of using this particular tool?)
-  .clearfix
-    .input
-      %ul.inputs-list
-        -@tool.why.map(&:to_s).sort.each do |q|          
-          %li
-            %label
-              =form.check_box q, :style => 'display:inline'
-              %span
-                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'
               
               
 %fieldset      
@@ -117,6 +110,10 @@
       = form.text_field :time_to_use, :maxlength=> 20   
       = form.select :time_to_use_type, FormConstants.time_units.map{|r| [r,r]}
   .clearfix
+    = form.label :activities_involved
+    .input
+      = form.text_field :activities_involved, :maxlength=> 255      
+  .clearfix
     = form.label :electronics_equipment
     .input
       = form.text_field :electronics_equipment, :maxlength=> 255  
@@ -131,11 +128,7 @@
   .clearfix
     = form.label :other_resources_needed
     .input
-      = form.text_field :other_resources_needed, :maxlength=> 255      
-  .clearfix
-    = form.label :activities_involved
-    .input
-      = form.text_field :activities_involved, :maxlength=> 255  
+      = form.text_field :other_resources_needed, :maxlength=> 255        
   .clearfix
     = form.label :expertise_needed
     .input
@@ -149,6 +142,10 @@
     = form.label :author
     .input
       = form.text_field :author, :maxlength=> 255
+  .clearfix
+    =form.label :where, 'Which country was this tool created in'
+    .input
+      =form.text_field :where      
   .clearfix
     = form.label :date_created
     .input
