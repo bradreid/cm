@@ -12,35 +12,7 @@
 
 ActiveRecord::Schema.define(:version => 20111002010201) do
 
-  create_table "models", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "models", ["email"], :name => "index_models_on_email", :unique => true
-  add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
-
   create_table "tools", :force => true do |t|
-    t.string   "name"
-    t.float    "cost_to_obtain"
-    t.float    "cost_to_use"
-    t.integer  "time_to_use"
-    t.text     "other_resources_needed"
-    t.text     "electronics_equipment"
-    t.text     "software"
-    t.text     "method_of_access"
-    t.text     "activities_involved"
-    t.text     "expertise_needed"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "reading_level"
@@ -127,8 +99,6 @@ ActiveRecord::Schema.define(:version => 20111002010201) do
     t.boolean  "whobeneficiaries_seniors"
     t.boolean  "whobeneficiaries_women"
   end
-
-  add_index "tools", ["name"], :name => "index_tools_on_name"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
