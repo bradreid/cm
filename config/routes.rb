@@ -51,6 +51,7 @@ Cm::Application.routes.draw do
   
   namespace :admin do
     resources :tools
+    resources :users
   end
   resources :admin
   
