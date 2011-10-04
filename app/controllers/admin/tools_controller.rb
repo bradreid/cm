@@ -54,7 +54,7 @@ private
     variables = []
     @tools = Tool.paginate(:page => params[:page], :per_page => 25)
     params[:search].split.each do |t|
-      where_clause << "((name like ?) OR (description like ?))"
+      where_clause << "((UPPER(name) like UPPER(?)) OR (UPPER(description) like UPPER(?)))"
       variables << "%#{t}%"
       variables << "%#{t}%"      
     end
