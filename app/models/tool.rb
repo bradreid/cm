@@ -4,7 +4,7 @@ class Tool < ActiveRecord::Base
   validates_presence_of :name, :focus, :reading_level, :jargon, :steps, :cost_to_obtain, :cost_to_use, :time_to_use, :author, :date_created, :language
   validates_numericality_of :cost_to_obtain, :cost_to_use, :time_to_use
   validates_uniqueness_of :name
-  validate :where_required, :when_required, :why_required, :who_required, :whobeneficiaries_required
+  validate :where_required, :when_required, :why_required, :who_required, :whobeneficiaries_required, :focus_required
   
   def select_true_attributes(attrs)
     attrs.select{|attr| self.send(attr)}.map{|m| m.to_s.gsub(/^[^_]*_/, '')}
@@ -25,6 +25,14 @@ class Tool < ActiveRecord::Base
   def when?
     select_true_attributes(self.when)
   end
+  
+  def focus
+    self.methods.select {|v| v =~ /focus_.*changed\?/}.map{|s| s.to_s.gsub(/_changed\?/, '')}    
+  end  
+  
+  def focus?
+    select_true_attributes(self.focus)
+  end  
   
   def why?
     select_true_attributes(why)     

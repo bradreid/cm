@@ -1,0 +1,24 @@
+
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| 
+  Username
+  %br
+  = f.text_field :login 
+
+  %p
+  %br
+  Password
+  %br
+  = f.password_field :password
+
+  %br
+  %br
+  %p{:style => 'white-space:nowrap;'}
+    = f.submit "Sign in" , :class => 'btn primary', :style => "float:left"
+    - if devise_mapping.rememberable?
+      &nbsp;
+      &nbsp;
+      =f.check_box :remember_me
+      Remember me
+
+%br
+= render :partial => "devise/shared/links"
