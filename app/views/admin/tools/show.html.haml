@@ -22,7 +22,8 @@
     &nbsp;
   %li
     .label_for_list Source Document
-    =link_to @tool.source_document_file_name, @tool.source_document.url
+    =link_to(@tool.source_document_file_name, @tool.source_document.url) if @tool.source_document_file_name
+    &nbsp;
   %li
     .label_for_list File Size
     =@tool.source_document_file_size
@@ -31,6 +32,7 @@
   %li
     .label_for_list File Format
     =@tool.source_document_content_type
+    &nbsp;
   %li
     .label_for_list Description
     .description
