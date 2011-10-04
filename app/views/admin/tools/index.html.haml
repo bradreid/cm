@@ -1,9 +1,19 @@
-%h2
-  Tools
-=link_to "Submit A New Tool", new_admin_tool_path
+.page-header
+  %h1
+    Tools
+    %small
+      Create, edit and delete tools
+=link_to "Submit A New Tool", new_admin_tool_path, :class => 'btn primary'
 %br
 %br
-=render :partial => 'search'
+%table{:cellpadding => 10}
+  %tr
+    %td    
+      %h3
+        Manage existing tools 
+    %td{:width => 10}
+    %td
+      =render :partial => 'search'
 %table.data#search_results{:width => '100%', :border => '0', :cellspacing => 0}
   %thead
     %th
