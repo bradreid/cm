@@ -2,11 +2,12 @@
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
-
-  <p><%= f.label :email %><br />
+  <br>
+  Email
+  <br>
   <%= f.email_field :email %></p>
 
-  <p><%= f.submit "Send me reset password instructions" %></p>
+  <p><%= f.submit "Send reset instructions", :class => 'btn primary' %></p>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+<%= link_to "Back to login", new_session_path(resource_name) %>

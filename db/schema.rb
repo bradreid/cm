@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110929004807) do
+ActiveRecord::Schema.define(:version => 20111002010201) do
 
   create_table "models", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(:version => 20110929004807) do
     t.integer  "source_document_file_size"
     t.datetime "source_document_updated_at"
     t.float    "rating"
-    t.string   "focus"
     t.boolean  "why_asset_acquisition"
     t.boolean  "why_asset_mobilization"
     t.boolean  "why_economic_assesment"
@@ -117,11 +116,16 @@ ActiveRecord::Schema.define(:version => 20110929004807) do
     t.boolean  "who_community_based_service"
     t.boolean  "who_organization"
     t.boolean  "who_volunteer_groups"
-    t.boolean  "whobeneficiaries_ced_practicioner"
-    t.boolean  "whobeneficiaries_ced_service_organization"
-    t.boolean  "whobeneficiaries_community_based_service"
-    t.boolean  "whobeneficiaries_organization"
-    t.boolean  "whobeneficiaries_volunteer_groups"
+    t.boolean  "focus_social"
+    t.boolean  "focus_economic"
+    t.boolean  "focus_environmental"
+    t.boolean  "focus_sustainable"
+    t.boolean  "where_provincial"
+    t.boolean  "whobeneficiaries_first_nations"
+    t.boolean  "whobeneficiaries_metis"
+    t.boolean  "whobeneficiaries_youth"
+    t.boolean  "whobeneficiaries_seniors"
+    t.boolean  "whobeneficiaries_women"
   end
 
   add_index "tools", ["name"], :name => "index_tools_on_name"

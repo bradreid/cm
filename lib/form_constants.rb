@@ -5,11 +5,11 @@ class FormConstants
   end
   
   def self.jargon
-    ['None', 'A little', 'Some', 'A lot', 'Very technical']
+    ['0-10', '11-20', '21-30', '30+']
   end
   
   def self.steps
-    ['Just ONE', 'A few', 'Some', 'A lot', "It's a process!"]
+    ['1-3', '4-6', '7-10', '10+']
   end  
   
   def self.focus
