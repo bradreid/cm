@@ -17,7 +17,7 @@ class FormConstants
   end
   
   def self.time_units
-    ['Days', 'Weeks', 'Months', 'Years', 'Hours', 'Minutes']
+    ['Minutes', 'Hours', 'Days', 'Weeks', 'Months', 'Years']
   end  
   
   def self.language
