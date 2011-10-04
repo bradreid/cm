@@ -1,3 +1,9 @@
+.page-header
+  %h1
+    Search
+    %small
+      Find the tool you are looking for
+%br
 =render :partial => 'search'
 - if @tools
   = page_entries_info @tools, :model => 'Tool'
