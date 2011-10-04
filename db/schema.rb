@@ -13,6 +13,16 @@
 ActiveRecord::Schema.define(:version => 20111002010201) do
 
   create_table "tools", :force => true do |t|
+    t.string   "name"
+    t.string   "method_of_access"
+    t.float    "cost_to_use"
+    t.float    "cost_to_obtain"
+    t.integer  "time_to_use"
+    t.string   "other_resources_needed"
+    t.string   "electronics_equipment"
+    t.string   "software"
+    t.string   "activities_involved"
+    t.string   "expertise_needed"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "reading_level"
