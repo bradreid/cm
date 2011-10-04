@@ -21,6 +21,6 @@ class FormConstants
   end  
   
   def self.language
-    ['English', 'French', 'Bilingual']
+    ['English', 'French', 'Bilingual', 'Both Available']
   end  
 end

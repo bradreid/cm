@@ -175,7 +175,7 @@
   .clearfix
     = form.label :date_created
     .input
-      = form.date_select :date_created
+      = form.date_select :date_created, :start_year => Time.now.year - 20, :discard_day => true
   .clearfix
     = form.label :language
     .input
@@ -187,7 +187,7 @@
   .clearfix
     = form.label :total_pages
     .input
-      = form.text_field :total_pages, :maxlength=> 255          \ 
+      = form.text_field :total_pages, :maxlength=> 255
   .clearfix
     = form.label :source_document
     .input
