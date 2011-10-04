@@ -32,7 +32,8 @@
         %td
           =tool.date_created.try(:to_formatted_s,:short_with_year)
         %td
-          =action_images [:admin, tool], :exclude => [:index]
+          %p{:style => 'white-space:nowrap;'}
+            =action_images [:admin, tool], :exclude => [:index]
     %tr
       %td{:colspan => 6}
         = page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'

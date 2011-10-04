@@ -96,6 +96,15 @@ protected
     end
   end  
   
+  def focus_required
+    if focus?.empty?
+      self.errors.add_to_base("You must select a topic describing this tool")     
+      return false
+    else
+      true
+    end
+  end  
+  
   def whobeneficiaries_required
     if whobeneficiaries?.empty?
       self.errors.add_to_base("You must select one option describing who will benefit from ths use of this tool")     
