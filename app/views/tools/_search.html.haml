@@ -6,8 +6,28 @@
     %li.active
       =link_to "Advanced Search", tools_path(:advanced => true)
   %br
-  %br  
-  filters to be added
+  %br
+  - form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
+    = hidden_field_tag :advanced, true
+    %br
+    %br
+    %fieldset
+      .clearfix
+        =label_tag :name_or_description, "Name/Description"
+        .input
+          = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
+          //=image_tag 'Search.png', :width => 30, :height => 30, :onclick => "$('#returns_form').submit();"        
+      .clearfix
+        = label_tag :author, "Author"
+        .input
+          =text_field_tag :author, params[:author], :title => 'Search by author'
+      .clearfix
+        =label_tag :language, "Language"
+        .input
+          = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
+      .clearfix
+        .input
+          =submit_tag 'Search', :class => 'btn primary'
 -else
   %ul.pills
     %li.active

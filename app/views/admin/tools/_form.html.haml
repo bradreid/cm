@@ -3,6 +3,10 @@
     = form.label :name, "Tool Title"
     .input
       = form.text_field :name, :maxlength=> 255
+  .clearfix
+    =form.label :rating, "Rating"
+    .input
+      =form.text_field :rating, :maxlength => 10
 %fieldset
   %legend
     Complexity
