@@ -3,8 +3,18 @@ class ToolsController < ApplicationController
   
   def index
     if params[:search]
-      search_tools
-      @tools = @tools.paginate(:page => params[:page], :per_page => 25)          
+      search_tools   
+      
+      unless params[:language].blank?
+        @tools = @tools.where(:language => params[:language])
+      end
+      
+      unless params[:author].blank?
+        tools=Tool.arel_table
+        
+        @tools = @tools.where(tools[:author].matches("%#{params[:author]}%"))
+      end
+      
     end
   end
   

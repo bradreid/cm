@@ -1,5 +1,4 @@
 class FormConstants
-  
   def self.reading_levels
     ['Grade 5/6', 'Grade 8', 'Grade 12', 'Bachelors', 'Masters', 'PhD']
   end
@@ -21,6 +20,6 @@ class FormConstants
   end  
   
   def self.language
-    ['English', 'French', 'Bilingual', 'Both Available']
+    ['English Only', 'French Only', 'Bilingual', 'Both Available']
   end  
 end
