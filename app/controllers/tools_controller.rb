@@ -11,8 +11,15 @@ class ToolsController < ApplicationController
       
       unless params[:author].blank?
         tools=Tool.arel_table
-        
         @tools = @tools.where(tools[:author].matches("%#{params[:author]}%"))
+      end
+      
+      unless params[:time_to_use_as_seconds].blank?
+        @tools = @tools.where("time_to_use_as_seconds <= ?", params[:time_to_use_as_seconds].to_i.send(params[:time_to_use_type].downcase).seconds.to_i)
+      end
+      
+      unless params[:rating].blank?
+        @tools = @tools.where("rating >= ?", params[:rating].to_i)
       end
       
     end

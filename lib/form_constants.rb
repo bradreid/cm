@@ -16,10 +16,14 @@ class FormConstants
   end
   
   def self.time_units
-    ['Minutes', 'Hours', 'Days', 'Weeks', 'Months', 'Years']
+    ['Minute', 'Hour', 'Day', 'Week', 'Month', 'Year']
   end  
   
   def self.language
     ['English Only', 'French Only', 'Bilingual', 'Both Available']
+  end  
+  
+  def self.rating
+    ['1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars']
   end  
 end

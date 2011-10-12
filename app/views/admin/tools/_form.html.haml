@@ -93,7 +93,7 @@
     = form.label :time_to_use
     .input
       = form.text_field :time_to_use, :maxlength=> 20   
-      = form.select :time_to_use_type, FormConstants.time_units.map{|r| [r,r]}              
+      = form.select :time_to_use_type, FormConstants.time_units.map{|r| [r.pluralize,r]}              
   .clearfix
     = form.label :other_resources_needed
     .input

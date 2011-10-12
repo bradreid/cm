@@ -6,6 +6,8 @@ class Tool < ActiveRecord::Base
   validates_uniqueness_of :name
   validate :where_required, :when_required, :why_required, :who_required, :whobeneficiaries_required, :focus_required
   
+  before_save :update_time_to_use_as_seconds
+  
   def select_true_attributes(attrs)
     attrs.select{|attr| self.send(attr)}.map{|m| m.to_s.gsub(/^[^_]*_/, '')}
   end
@@ -113,4 +115,8 @@ protected
       true
     end
   end  
+  
+  def update_time_to_use_as_seconds
+    self.time_to_use_as_seconds = self.time_to_use.send(self.time_to_use_type.downcase).seconds
+  end
 end
