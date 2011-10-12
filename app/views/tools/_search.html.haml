@@ -13,7 +13,7 @@
     %br
     %fieldset
       .clearfix
-        =label_tag :name_or_description, "Name/Description"
+        =label_tag :name_or_description, "Keywords"
         .input
           = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
           //=image_tag 'Search.png', :width => 30, :height => 30, :onclick => "$('#returns_form').submit();"        
