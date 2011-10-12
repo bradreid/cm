@@ -26,6 +26,19 @@
         .input
           = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
       .clearfix
+        = label_tag :time_to_use
+        .input
+          = text_field_tag :time_to_use_as_seconds, params[:time_to_use_as_seconds], :maxlength=> 20   
+          = select_tag :time_to_use_type, options_for_select(FormConstants.time_units.map{|r| [r.pluralize,r]}, (params[:time_to_use_type].blank? ? 'Day' : params[:time_to_use_type]))          
+      .clearfix
+        =label_tag :rating, "Rating"
+        .input
+          = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => 'Please select the rating to search by'          
+      .clearfix
+        =label_tag :date_created, "Date Created"
+        .input
+          TODO
+      .clearfix
         .input
           =submit_tag 'Search', :class => 'btn primary'
 -else

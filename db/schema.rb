@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111002010201) do
+ActiveRecord::Schema.define(:version => 20111012002046) do
 
   create_table "tools", :force => true do |t|
     t.string   "name"
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20111002010201) do
     t.boolean  "whobeneficiaries_youth"
     t.boolean  "whobeneficiaries_seniors"
     t.boolean  "whobeneficiaries_women"
+    t.integer  "time_to_use_as_seconds"
   end
 
   create_table "users", :force => true do |t|
