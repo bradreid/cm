@@ -1,0 +1,68 @@
+- form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
+  = hidden_field_tag :advanced, true
+  %br
+  %br
+  %table.search_results{:border => 0, :cellspacing => 0, :cellpadding => 0, :width => '100%'}
+    %tr
+      %td
+        .bold
+          Keywords
+      %td
+        with all of the words
+      %td
+        = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
+        
+    %tr
+      %td
+        .bold
+          Author
+      %td
+        Return tools written by
+      %td
+        =text_field_tag :author, params[:author], :title => 'Search by author'       
+     
+    %tr
+      %td
+        .bold
+          Language
+      %td
+        Return tools written in this language
+      %td
+        = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
+        
+        
+    %tr
+      %td
+        .bold
+          Time to use
+      %td
+        Tools that can be used in less than
+      %td
+        = text_field_tag :time_to_use_as_seconds, params[:time_to_use_as_seconds], :maxlength=> 20   
+        = select_tag :time_to_use_type, options_for_select(FormConstants.time_units.map{|r| [r.pluralize,r]}, (params[:time_to_use_type].blank? ? 'Day' : params[:time_to_use_type]))        
+
+    %tr
+      %td
+        .bold
+          Rating
+      %td
+        Tools with at least this rating
+      %td
+        = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => 'Please select the rating to search by'          
+
+
+    %tr
+      %td
+        .bold
+          Date created
+      %td
+        Return tools published between
+      %td
+        = text_field_tag :from, params[:from], :maxlength=> 20, :size => 10  
+        ="—"
+        = text_field_tag :to, params[:to], :maxlength=> 20, :size => 10
+        %br
+        e.g. 1996
+    %tr
+      %td
+        =submit_tag 'Search', :class => 'btn primary'

@@ -4,6 +4,11 @@ body {
 .field_with_errors {
   display: inline; }
 
+table .search_results tr:hover {
+  background-color: #e1eafe; }
+table .search_results tr td {
+  padding: 15px; }
+
 table #search_results tr:hover {
   background-color: #e1eafe; }
 
@@ -50,6 +55,9 @@ table.hover tbody td:hover {
 
 .text {
   padding-left: 5px; }
+
+.bold {
+  font-weight: bold; }
 
 .blue {
   background-color: #12b7a7; }
