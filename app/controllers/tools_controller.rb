@@ -22,6 +22,14 @@ class ToolsController < ApplicationController
         @tools = @tools.where("rating >= ?", params[:rating].to_i)
       end
       
+      unless params[:from].blank?
+        @tools = @tools.where("date_created >= ?", Date.parse("1/1/#{params[:from]}"))
+      end
+      
+      unless params[:to].blank?
+         @tools = @tools.where("date_created <= ?", Date.parse("12/31/#{params[:to]}"))
+       end      
+      
     end
   end
   
