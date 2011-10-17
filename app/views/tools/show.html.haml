@@ -80,7 +80,7 @@
 %h4 Where (What types of communities can this tool be used to benefit?)
 %ul.show_list
   %li
-    =@tool.where_question.join(', ')
+    =@tool.where_question.try(:join, ', ')
   %li
     .label_for_list This tool was made in
     =@tool.where_created
