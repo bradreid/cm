@@ -26,4 +26,36 @@ class FormConstants
   def self.rating
     ['1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars']
   end  
+  
+  def self.when
+    ['Organizing', 'Planning', 'Analyzing', 'Implementing', 'Reviewing']
+  end
+  
+  def self.organizing_purpose
+    ['Partnership Building', 'Fundraising', 'Project Team Building', 'Engagement']
+  end
+  
+  def self.planning_purpose
+    ['Visioning', 'Action Planning', 'Project Management']
+  end
+  
+  def self.implementing_purpose
+    ['People Focused', 'Green Focused', 'Grow Focused', 'Sustainable Focused', 'No Specific Focus']
+  end
+  
+  def self.reviewing_purpose
+    ['Project Evaluation', 'Process Evaluation', 'Community Feedback']
+  end
+  
+  def self.analyzing_purpose
+    ['Assessment', 'Comprehensive analysis']
+  end
+  
+  def self.where
+    ['Local', 'Municipal', 'Regional', 'Rural', 'Northern', 'Urban']
+  end
+  
+  def self.topic
+    ['People', 'Green', 'Grow', 'Sustainable', 'Not Topic Specific']
+  end
 end
