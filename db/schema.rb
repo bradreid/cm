@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111012002046) do
+ActiveRecord::Schema.define(:version => 20111017032843) do
 
   create_table "tools", :force => true do |t|
     t.string   "name"
@@ -28,16 +28,7 @@ ActiveRecord::Schema.define(:version => 20111012002046) do
     t.string   "reading_level"
     t.string   "jargon"
     t.string   "steps"
-    t.string   "where"
-    t.boolean  "where_regional"
-    t.boolean  "where_local"
-    t.boolean  "where_rural"
-    t.boolean  "where_urban"
-    t.boolean  "when_reviewing"
-    t.boolean  "when_planning"
-    t.boolean  "when_implementing"
-    t.boolean  "when_analyzing"
-    t.boolean  "when_organizing"
+    t.text     "where",                               :limit => 255
     t.boolean  "why_collective_visioning"
     t.boolean  "why_solution_building"
     t.boolean  "why_action_planning"
@@ -86,29 +77,24 @@ ActiveRecord::Schema.define(:version => 20111012002046) do
     t.boolean  "why_physical_environment"
     t.boolean  "why_community_event"
     t.boolean  "why_budget_review"
-    t.boolean  "where_municipal"
-    t.boolean  "where_inter_provincial"
-    t.boolean  "where_northern"
-    t.boolean  "where_agricultural"
-    t.boolean  "where_resource_based"
-    t.boolean  "where_boom_bust"
-    t.boolean  "where_declining"
     t.boolean  "who_ced_practicioner"
     t.boolean  "who_ced_service_organization"
     t.boolean  "who_community_based_service"
     t.boolean  "who_organization"
     t.boolean  "who_volunteer_groups"
-    t.boolean  "focus_social"
-    t.boolean  "focus_economic"
-    t.boolean  "focus_environmental"
-    t.boolean  "focus_sustainable"
-    t.boolean  "where_provincial"
     t.boolean  "whobeneficiaries_first_nations"
     t.boolean  "whobeneficiaries_metis"
     t.boolean  "whobeneficiaries_youth"
     t.boolean  "whobeneficiaries_seniors"
     t.boolean  "whobeneficiaries_women"
     t.integer  "time_to_use_as_seconds"
+    t.string   "source_document_name"
+    t.string   "editor"
+    t.string   "publisher"
+    t.string   "when"
+    t.string   "why"
+    t.string   "where_created"
+    t.string   "topic"
   end
 
   create_table "users", :force => true do |t|

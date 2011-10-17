@@ -4,8 +4,14 @@
 %h4 Description
 %ul.show_list
   %li
-    .label_for_list Author
+    .label_for_list Authors
     =@tool.author 
+  %li
+    .label_for_list Editors
+    =@tool.editor 
+  %li
+    .label_for_list Publisher
+    =@tool.publisher    
   %li 
     .label_for_list Date Created
     =@tool.date_created.to_formatted_s(:short_with_year)
@@ -24,6 +30,11 @@
     .label_for_list Source Document
     =link_to(@tool.source_document_file_name, @tool.source_document.url) if @tool.source_document_file_name
     &nbsp;
+    
+  %li
+    .label_for_list Source Document Url
+    =link_to(@tool.source_document.url, @tool.source_document.url) if @tool.source_document_file_name
+    &nbsp;    
   %li
     .label_for_list File Size
     =@tool.source_document_file_size
@@ -40,6 +51,12 @@
     &nbsp;
 %br
 .clear_both
+
+
+%h4 Topic (The triple bottom line)
+%ul.show_list
+  %li
+    =@tool.topic
 
 %h4 Complexity
 %ul.show_list
@@ -72,30 +89,22 @@
 %h4 Where (What types of communities can this tool be used to benefit?)
 %ul.show_list
   %li
-    .label_for_list
-    -@tool.where?.each do |w|
-      =w.humanize
-      %br
-    %br
+    =@tool.where_question.join(', ')
   %li
     .label_for_list This tool was made in
-    =@tool.where
+    =@tool.where_created
       
 %h4 When (At what phase of the CED project cycle is this tool most useful?)
 %ul.show_list
   %li
-    .label_for_list
-    -@tool.when?.each do |w|
-      =w.humanize
-      %br
+    =@tool.when
+    %br
       
 %h4 Why (What is the purpose of using this particular tool?)
 %ul.show_list
   %li
-    .label_for_list
-    -@tool.why?.each do |w|
-      =w.humanize
-      %br 
+    =@tool.why
+    %br
       
 %h4 How (What resources and or instructions are needed to use the tool?)
 %ul.show_list
