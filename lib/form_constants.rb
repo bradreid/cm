@@ -48,11 +48,11 @@ class FormConstants
   end
   
   def self.analyzing_purpose
-    ['Assessment', 'Comprehensive analysis']
+    ['Assessment', 'Comprehensive Analysis']
   end
-  
+
   def self.where
-    ['Local', 'Municipal', 'Regional', 'Rural', 'Northern', 'Urban']
+    ['Local', 'Municipal', 'Regional', 'Provincial', 'Inter-Provincial', 'Rural', 'Urban', 'Northern', 'Agricultural', 'Resource-based', 'Boom-bust', 'Declining']
   end
   
   def self.topic
