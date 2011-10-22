@@ -1,0 +1,110 @@
+%h2
+  = "#{@tool.name}"
+%br
+%ul.show_list
+  %li
+    .label_for_list Source Document Title
+    =@tool.source_document_name
+    &nbsp;    
+  %li
+    .label_for_list Source Document Url
+    =@tool.source_url
+    &nbsp;    
+  %li
+    .label_for_list Expertise Needed
+    =@tool.expertise_needed
+    &nbsp;  
+  %li
+    .label_for_list Special Equipment/Facilities Needed
+    =@tool.special_equipment_facilities   
+    %br
+    &nbsp;        
+  %li
+    .label_for_list Authors
+    =@tool.author 
+    &nbsp;    
+  %li
+    .label_for_list Editors
+    =@tool.editor 
+    &nbsp;    
+  %li
+    .label_for_list Publisher
+    =@tool.publisher    
+    &nbsp;    
+  %li
+    .label_for_list This tool was made in
+    =@tool.where_created    
+    &nbsp;    
+  %li 
+    .label_for_list Date Created
+    ="#{Date::MONTHNAMES[@tool.date_created.try(:month)]} #{@tool.date_created.try(:year)}"
+    &nbsp;    
+  %li
+    .label_for_list Language
+    =@tool.language
+    &nbsp;    
+  %li
+    .label_for_list Source Document
+    =link_to(@tool.source_document_file_name, @tool.source_document.url) if @tool.source_document_file_name
+    &nbsp;   
+  %li
+    .label_for_list File Size
+    =@tool.source_document_file_size
+    KB
+    &nbsp;
+  %li
+    .label_for_list File Format
+    =@tool.source_document_content_type
+    &nbsp;
+  %li
+    .label_for_list Copyright
+    =@tool.copyright ? "Yes" : "No"
+    &nbsp;    
+  %li
+    .label_for_list Copyright Holder
+    =@tool.copyright_holder
+    &nbsp;
+  %li
+    .label_for_list Copyright Restrictions
+    =@tool.copyright_restrictions
+    &nbsp;
+  %li
+    .label_for_list Copyright Permissions
+    =@tool.copyright_permissions
+    &nbsp;                  
+  %li
+    .label_for_list Description
+    .description
+      =simple_format @tool.description    
+    &nbsp;  
+%br
+.clear_both
+
+
+%h4 Topic (The triple bottom line)
+%ul.show_list
+  %li
+    =@tool.topic     
+    
+%h4 Where (What types of communities can this tool be used to benefit?)
+%ul.show_list
+  %li
+    =@tool.where_question.try(:join, ', ')
+      
+%h4 When (At what phase of the CED project cycle is this tool most useful?)
+%ul.show_list
+  %li
+    =@tool.when
+    %br
+      
+%h4 Why (What is the purpose of using this particular tool?)
+%ul.show_list
+  %li
+    =@tool.why
+    %br
+    
+%h4  Who (List the individuals, organizations and associations that are intended to use the tool)
+%ul.show_list
+  %li
+    =@tool.who
+    %br

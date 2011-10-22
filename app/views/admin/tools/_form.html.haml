@@ -27,133 +27,21 @@
     .input
       = form.text_field :source_document_name, :maxlength=> 255      
   .clearfix
+    =form.label :source_url
+    .input
+      =form.text_field :source_url, :maxlength => 255
+  .clearfix
     =form.label :rating, "Rating"
     .input
       =form.text_field :rating, :maxlength => 10
-%fieldset
-  %legend
-    Complexity
-  .clearfix
-    =form.label :reading_level
-    .input
-      =form.select :reading_level, FormConstants.reading_levels.map{|r| [r,r]}, :include_blank => 'Please select the reading level'   
-  .clearfix
-    =form.label :jargon
-    .input
-      =form.select :jargon, FormConstants.jargon.map{|r| [r,r]}, :include_blank => 'Please select the number for jargon-words used?'   
-  .clearfix
-    =form.label :steps
-    .input
-      =form.select :steps, FormConstants.steps.map{|r| [r,r]}, :include_blank => 'Please select the number of steps to complete?'  
-      
-      
-%fieldset
-  %legend
-    Topic (Which of the three categories of the triple bottom line does this tool apply to?)
-  .clearfix
-    .input
-      = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => 'Please select the topic that applies to this tool'
-                
-%fieldset      
-  %legend
-    Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
-  .clearfix
-    .input
-      = form.select :where_question, FormConstants.where.map{|r| [r,r]}, {}, :multiple => 'multiple', :class => 'multiple'
-
-       
-       
-%fieldset      
-  %legend
-    When (At what phase of the CED project cycle is this tool most useful?) 
-  .clearfix
-    .input
-      = form.select :when, FormConstants.when.map{|r| [r,r]}, :include_blank => 'Please select the main phase the tool is used for' 
-      
-%fieldset      
-  %legend
-    Why (What is the purpose of using this particular tool?) 
-  .clearfix
-    .input
-      = form.select :why, FormConstants.organizing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Organizing' ? '' : 'display:none'}", :id => 'organizing_purpose', :class => 'purpose'
-      = form.select :why, FormConstants.planning_purpose.map{|r| [r,r]},{:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Planning' ? '' : 'display:none'}", :id => 'planning_purpose', :class => 'purpose'
-      = form.select :why, FormConstants.analyzing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'} , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
-      = form.select :why, FormConstants.implementing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
-      = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
-                
-                
-%fieldset      
-  %legend
-    How (What do you need or what do you need to do to use the tool?)
-  .clearfix
-    = form.label :method_of_access
-    .input
-      = form.text_field :method_of_access, :maxlength=> 255              
-  .clearfix
-    = form.label :cost_to_use
-    .input
-      = form.text_field :cost_to_use, :maxlength=> 20
-  .clearfix
-    = form.label :cost_to_obtain
-    .input
-      = form.text_field :cost_to_obtain, :maxlength=> 20                  
-  .clearfix
-    = form.label :time_to_use
-    .input
-      = form.text_field :time_to_use, :maxlength=> 20   
-      = form.select :time_to_use_type, FormConstants.time_units.map{|r| [r.pluralize,r]}              
-  .clearfix
-    = form.label :other_resources_needed
-    .input
-      = form.text_field :other_resources_needed, :maxlength=> 255        
-  .clearfix
-    = form.label :electronics_equipment
-    .input
-      = form.text_field :electronics_equipment, :maxlength=> 255  
-  .clearfix
-    = form.label :software
-    .input
-      = form.text_field :software, :maxlength=> 255         
-  .clearfix
-    = form.label :activities_involved
-    .input
-      = form.text_field :activities_involved, :maxlength=> 255     
   .clearfix
     = form.label :expertise_needed
     .input
-      = form.text_field :expertise_needed, :maxlength=> 255                         
-                    
-%fieldset      
-  %legend
-    Who (The individuals, organizations, associations identified or intended to apply the tool?)
+      = form.text_field :expertise_needed, :maxlength=> 255    
   .clearfix
+    = form.label :special_equipment_facilities, "Special equipment/ Facilities needed"
     .input
-      %ul.inputs-list
-        -@tool.who.map(&:to_s).sort.each do |q|          
-          %li
-            %label
-              =form.check_box q, :style => 'display:inline'
-              %span
-                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'
-                
-%fieldset      
-  %legend
-    Who (The peoples identified or intended to benefit from use of the tool?)
-  .clearfix
-    .input
-      %ul.inputs-list
-        -@tool.whobeneficiaries.map(&:to_s).sort.each do |q|          
-          %li
-            %label
-              =form.check_box q, :style => 'display:inline'
-              %span
-                =form.label q, q.gsub(/^[^_]*_/, '').humanize, :style => 'display:inline'                
-                                            
-  
-
-%fieldset      
-  %legend
-    Tool Description
+      = form.text_field :special_equipment_facilities, :maxlength=> 255 
   .clearfix
     = form.label :author, "Authors"
     .input
@@ -179,19 +67,69 @@
     .input
       = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => 'Please select the language in which the tool is written'    
   .clearfix
-    = form.label :relevant_pages
-    .input
-      = form.text_field :relevant_pages, :maxlength=> 255 
-  .clearfix
-    = form.label :total_pages
-    .input
-      = form.text_field :total_pages, :maxlength=> 255
-  .clearfix
     = form.label :source_document
     .input
       = form.file_field :source_document
   .clearfix
+    = form.label :copyright
+    .input
+      = form.check_box :copyright
+  .clearfix
+    = form.label :copyright_holder
+    .input
+      = form.text_field :copyright_holder, :maxlength => 255
+  .clearfix
+    = form.label :copyright_restrictions
+    .input
+      = form.text_field :copyright_restrictions, :maxlength => 255       
+  .clearfix
+    = form.label :copyright_permissions
+    .input
+      = form.text_field :copyright_permissions, :maxlength => 255                                             
+  .clearfix
     = form.label :description
     .input
       = form.text_area :description,:class => 'xxlarge'
+           
       
+%fieldset
+  %legend
+    Topic (Which of the three categories of the triple bottom line does this tool apply to?)
+  .clearfix
+    .input
+      = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => 'Please select the topic that applies to this tool'
+                
+%fieldset      
+  %legend
+    Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
+  .clearfix
+    .input
+      = form.select :where_question, FormConstants.where.map{|r| [r,r]}, {}, :multiple => 'multiple', :class => 'multiple'
+
+       
+       
+%fieldset      
+  %legend
+    When (At what phase of the CED project cycle is this tool most useful?) 
+  .clearfix
+    .input
+      = form.select :when, FormConstants.when.map{|r| [r,r]}, :include_blank => 'Please select the main phase the tool is used for'     
+      
+%fieldset      
+  %legend
+    Why (What is the purpose of using this particular tool?) 
+  .clearfix
+    .input
+      = form.select :why, FormConstants.organizing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Organizing' ? '' : 'display:none'}", :id => 'organizing_purpose', :class => 'purpose'
+      = form.select :why, FormConstants.planning_purpose.map{|r| [r,r]},{:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Planning' ? '' : 'display:none'}", :id => 'planning_purpose', :class => 'purpose'
+      = form.select :why, FormConstants.analyzing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'} , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
+      = form.select :why, FormConstants.implementing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
+      = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
+
+%fieldset
+  %legend
+    Who (List the individuals, organizations and associations that are intended to use the tool)
+  .clearfix
+    .input
+      =form.text_field :who, :maxlength => 255                                          
+                    
