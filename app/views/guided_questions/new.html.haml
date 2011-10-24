@@ -1,4 +1,19 @@
 :javascript
+  $(function(){
+   $('#phases').change(function(){
+     select_purpose("." + $(this).val().toLowerCase());
+   }); 
+   
+   $('.purpose_select').change(function(){
+     $('#phases_table').spin();
+     $.ajax({
+       url: "#{guided_questions_path}",
+       dataType: 'script',
+       data: "format=js&purpose=" + $(this).val()
+     });
+   });
+  });
+
   function select_purpose(clazz){
     $('.purpose').hide();
     $(clazz).show();
@@ -12,7 +27,7 @@
     %small
       Let us guide you to the right tool
       
-%table{:width => '75%'}
+%table#phases_table{:width => '75%'}
   %tr
   
     %td.phase.widespace{:valign => 'top'}
@@ -21,20 +36,7 @@
         %small
           Select a phase    
       %br
-      Organizing
-      =radio_button_tag :phases, 'organizing', false, :onclick => "select_purpose('.organizing')"
-      %br
-      Planning
-      =radio_button_tag :phases, 'planning', false, :onclick => "select_purpose('.planning')"
-      %br
-      Analyzing
-      =radio_button_tag :phases, 'analyzing', false, :onclick => "select_purpose('.analyzing')"      
-      %br
-      Implementing
-      =radio_button_tag :phases, 'implementing', false, :onclick => "select_purpose('.implementing')"      
-      %br
-      Reviewing
-      =radio_button_tag :phases, 'reviewing', false, :onclick => "select_purpose('.reviewing')"      
+      = select_tag :phases, options_for_select(FormConstants.when.map{|r| [r,r]}, params[:language]),:size => FormConstants.when.size, :style => 'height:inherit'     
     %td.widespace{:valign => 'top'}
       %h2
         Step 2
@@ -42,63 +44,22 @@
           Select a purpose 
       %br     
       .organizing.purpose{:style => "#{params[:phases] == 'organizing' ? '' : 'display:none'}"}
-        Partnership Building
-        =radio_button_tag :purpose, 'partnership_building'
-        %br
-        Fundraising
-        =radio_button_tag :purpose, 'fundraising'
-        %br        
-        Project Team Building
-        =radio_button_tag :purpose, 'project_team_building'
-        %br        
-        Engagement
-        =radio_button_tag :purpose, 'engagement'
-        %br     
+        =select_tag :purpose, options_for_select(FormConstants.organizing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.organizing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'
+   
       
       .planning.purpose{:style => "#{params[:phases] == 'planning' ? '' : 'display:none'}"}
-        Visioning
-        =radio_button_tag :purpose, 'visioning'
-        %br
-        Action Planning
-        =radio_button_tag :purpose, 'action_planning'
-        %br        
-        Project Management
-        =radio_button_tag :purpose, 'project_management'
-        %br        
+        =select_tag :purpose, options_for_select(FormConstants.planning_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.planning_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
       
 
       .analyzing.purpose{:style => "#{params[:phases] == 'analyzing' ? '' : 'display:none'}"}
-        Assessment
-        =radio_button_tag :purpose, 'assessment'
-        %br
-        Comprehensive Analysis
-        =radio_button_tag :purpose, 'comprehensize_analysis'
-        %br      
+        =select_tag :purpose, options_for_select(FormConstants.analyzing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.analyzing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'      
       
       .implementing.purpose{:style => "#{params[:phases] == 'implementing' ? '' : 'display:none'}"}
-        People Focused
-        =radio_button_tag :purpose, 'people_focused'
-        %br
-        Green Focused
-        =radio_button_tag :purpose, 'green_focused'
-        %br        
-        Grow Focused
-        =radio_button_tag :purpose, 'grow_focused'
-        %br        
-        Sustainable Focused
-        =radio_button_tag :purpose, 'sustainable_focused'
-        %br      
+        =select_tag :purpose, options_for_select(FormConstants.implementing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.implementing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
     
     
       .reviewing.purpose{:style => "#{params[:phases] == 'reviewing' ? '' : 'display:none'}"}
-        Project Evaluation
-        =radio_button_tag :purpose, 'project_evaluation'
-        %br        
-        Process Evaluation
-        =radio_button_tag :purpose, 'process_evaluation'
-        %br        
-        Community Feedback
-        =radio_button_tag :purpose, 'community_feedback'
-        %br          
-    
-         
+        =select_tag :purpose, options_for_select(FormConstants.reviewing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.reviewing_purpose.size, :style => 'height:inherit' , :class => 'purpose_select'         
+%br
+%br    
+#search_results
