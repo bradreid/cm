@@ -29,18 +29,6 @@
         Return tools written in this language
       %td
         = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
-        
-        
-    %tr
-      %td
-        .bold
-          Time to use
-      %td
-        Tools that can be used in less than
-      %td
-        = text_field_tag :time_to_use_as_seconds, params[:time_to_use_as_seconds], :maxlength=> 20   
-        = select_tag :time_to_use_type, options_for_select(FormConstants.time_units.map{|r| [r.pluralize,r]}, (params[:time_to_use_type].blank? ? 'Day' : params[:time_to_use_type]))        
-
     %tr
       %td
         .bold
