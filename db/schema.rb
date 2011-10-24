@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111022200559) do
+ActiveRecord::Schema.define(:version => 20111024025255) do
 
   create_table "tools", :force => true do |t|
     t.string   "name"
@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(:version => 20111022200559) do
     t.string   "source_url"
     t.integer  "created_by"
   end
+
+  add_index "tools", ["description"], :name => "index_tools_on_description"
+  add_index "tools", ["name"], :name => "index_tools_on_name"
+  add_index "tools", ["why"], :name => "index_tools_on_why"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

@@ -1,0 +1,34 @@
+- if @tools
+  = page_entries_info @tools, :model => 'Tool'
+  %br
+  %br
+  %table#search_results{:width => '100%', :border => '0', :cellspacing => 0}
+    %tbody
+      -@tools.each do |tool|
+        %tr
+          %td{:align => 'left', :valign => 'top', :style => 'padding-bottom:20px', :width => '10%'}
+            %p{:style => 'white-space:nowrap;'}
+              =image_tag('star_empty.png', :height => 15)
+              =image_tag('star_empty.png', :height => 15)
+              =image_tag('star_empty.png', :height => 15)
+              =image_tag('star_empty.png', :height => 15)
+              =image_tag('star_empty.png', :height => 15)                                                        
+              (7)
+              &nbsp;
+              =image_tag('icon_review.png', :height => 35, :align => 'middle')  
+              &nbsp; 
+              &nbsp;
+          %td{:align => 'left', :valign => 'middle', :style => 'padding-bottom:20px' }
+            =link_to tool.name, tool_path(tool), :class => 'search_hit_title'
+            %p
+              =tool.description
+          %td{:valign => 'top', :style => 'padding-bottom:20px'}
+            %p{:style => 'white-space:nowrap;'}
+              &nbsp;
+              =link_to(image_tag('icon_tic.png', :height => 35), tool_path(tool))          
+              &nbsp;
+              =link_to(image_tag('icon_pdf.png', :height => 35), tool.source_document.url) if tool.source_document_file_name
+              
+      %tr
+        %td{:colspan => 6}
+          = will_paginate @tools
