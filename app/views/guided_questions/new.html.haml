@@ -4,18 +4,20 @@
      select_purpose("." + $(this).val().toLowerCase());
    }); 
    
-   $('.purpose_select').change(function(){
+   $('.purpose_select option').click(function(){
      $('#phases_table').spin();
      $.ajax({
        url: "#{guided_questions_path}",
        dataType: 'script',
        data: "format=js&purpose=" + $(this).val()
      });
+     $('#search_results').show();
    });
   });
 
   function select_purpose(clazz){
     $('.purpose').hide();
+    $('#search_results').hide();
     $(clazz).show();
     return true;
   }
@@ -44,22 +46,22 @@
           Select a purpose 
       %br     
       .organizing.purpose{:style => "#{params[:phases] == 'organizing' ? '' : 'display:none'}"}
-        =select_tag :purpose, options_for_select(FormConstants.organizing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.organizing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'
+        =select_tag :organizing_purpose, options_for_select(FormConstants.organizing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.organizing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'
    
       
       .planning.purpose{:style => "#{params[:phases] == 'planning' ? '' : 'display:none'}"}
-        =select_tag :purpose, options_for_select(FormConstants.planning_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.planning_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
+        =select_tag :planning_purpose, options_for_select(FormConstants.planning_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.planning_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
       
 
       .analyzing.purpose{:style => "#{params[:phases] == 'analyzing' ? '' : 'display:none'}"}
-        =select_tag :purpose, options_for_select(FormConstants.analyzing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.analyzing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'      
+        =select_tag :analyzing_purpose, options_for_select(FormConstants.analyzing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.analyzing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'      
       
       .implementing.purpose{:style => "#{params[:phases] == 'implementing' ? '' : 'display:none'}"}
-        =select_tag :purpose, options_for_select(FormConstants.implementing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.implementing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
+        =select_tag :implementing_purpose, options_for_select(FormConstants.implementing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.implementing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
     
     
       .reviewing.purpose{:style => "#{params[:phases] == 'reviewing' ? '' : 'display:none'}"}
-        =select_tag :purpose, options_for_select(FormConstants.reviewing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.reviewing_purpose.size, :style => 'height:inherit' , :class => 'purpose_select'         
+        =select_tag :reviewing_purpose, options_for_select(FormConstants.reviewing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.reviewing_purpose.size, :style => 'height:inherit' , :class => 'purpose_select'         
 %br
 %br    
 #search_results
