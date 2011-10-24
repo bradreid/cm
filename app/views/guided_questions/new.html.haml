@@ -36,7 +36,7 @@
         %small
           Select a phase    
       %br
-      = select_tag :phases, options_for_select(FormConstants.when.map{|r| [r,r]}, params[:language]),:size => FormConstants.when.size, :style => 'height:inherit'     
+      = select_tag :phases, options_for_select(FormConstants.when.map{|r| ["#{r} (#{Tool.count(:conditions => {:when => r})})",r]}, params[:language]),:size => FormConstants.when.size, :style => 'height:inherit'     
     %td.widespace{:valign => 'top'}
       %h2
         Step 2
