@@ -7,7 +7,7 @@
    $('.purpose_select option').click(function(){
      $('#phases_table').spin();
      $.ajax({
-       url: "#{guided_questions_path}",
+       url: "#{phases_path}",
        dataType: 'script',
        data: "format=js&purpose=" + $(this).val()
      });

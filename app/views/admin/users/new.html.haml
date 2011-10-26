@@ -1,0 +1,32 @@
+%h2
+  Create a new user account
+
+= form_for [:admin, @user], :builder => CmFormBuilder do |f| 
+  = f.error_messages
+  
+  <br>
+  Username
+  <br>
+  = f.text_field :username
+  %p
+
+
+  <br>
+  Email
+  <br>
+  = f.email_field :email
+  %p
+  <br>
+  Password
+  <br>
+  = f.password_field :password
+  %p
+  <br>
+  
+  Confirm password
+  <br>
+  = f.password_field :password_confirmation
+  %p
+
+  = f.submit "Create User", :class => 'btn primary'
+  =link_to "Cancel", admin_users_path, :class => 'btn error'

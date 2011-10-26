@@ -1,6 +1,6 @@
 Cm::Application.routes.draw do
-
-  devise_for :users
+  
+  devise_for :users, :controllers => {:registrations => "Admin::Users"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,15 +52,17 @@ Cm::Application.routes.draw do
   namespace :admin do
     resources :tools
     resources :users
+    resources :admin_registrations
   end
   resources :admin
   
   resources :reviews
   resources :tools
-  resources :guided_questions
-  match 'about' => 'welcome#about'
+  resources :phases
   match 'search' => 'tools#index'
-  match 'guided' => 'guided_questions#new'
+  match 'people' => 'people#index'
+  match 'green' => 'green#index'
+  match 'grow' => 'grow#index'      
   
 
   # You can have the root of your site routed with "root"
