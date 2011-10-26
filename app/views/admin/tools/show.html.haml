@@ -1,5 +1,21 @@
 =render 'shared/tic'  
-      
+%br
+%h3
+  Administration
+%br
+%ul.show_list
+  %li
+    .label_for_list Submitted at
+    =@tool.created_at.to_formatted_s(:short_with_year)
+    &nbsp;    
+  %li
+    .label_for_list Submitted by
+    =@tool.created_by.try(:username)
+    &nbsp;
+  %li
+    .label_for_list Updated at
+    =@tool.updated_at.to_formatted_s(:short_with_year)
+    &nbsp;          
 
 .clear
 %div.actions_footer.clear

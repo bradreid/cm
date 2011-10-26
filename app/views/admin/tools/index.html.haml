@@ -3,7 +3,7 @@
     Tools
     %small
       Create, edit and delete tools
-=link_to "Create A New Tool", new_admin_tool_path, :class => 'btn primary'
+=link_to "Submit A New Tool", new_admin_tool_path, :class => 'btn primary'
 %br
 %br
 %table{:cellpadding => 10}
@@ -27,6 +27,8 @@
     %th
       Date Created
     %th
+      Submitted By
+    %th
       Actions
   %tbody
     -@tools.each do |tool|
@@ -41,6 +43,8 @@
           =link_to tool.source_document_file_name, tool.source_document.try(:url)  if tool.source_document_file_name
         %td
           =tool.date_created.try(:to_formatted_s,:short_with_year)
+        %td
+          =tool.created_by.try(:username)
         %td
           %p{:style => 'white-space:nowrap;'}
             =action_images [:admin, tool], :exclude => [:index]
