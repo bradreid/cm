@@ -32,7 +32,7 @@ class Admin::ToolsController < AdminController
   end
   
   def create
-    @tool = Tool.new(params[:tool])
+    @tool = Tool.new(params[:tool].merge(:created_by => current_user))
     if @tool.save
       flash[:notice] = "You successfully created the new tool named #{@tool.name}"
       redirect_to admin_tools_path
