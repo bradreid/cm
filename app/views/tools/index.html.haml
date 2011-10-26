@@ -1,3 +1,10 @@
+:javascript
+  $(function(){
+    if ("#{params[:anchor]}"=='results'){
+      window.location = window.location.href + "#results";
+    }
+  })
+
 .page-header
   %h1
     Search
@@ -38,4 +45,4 @@
               
       %tr
         %td{:colspan => 6}
-          = will_paginate @tools
+          = will_paginate @tools         
