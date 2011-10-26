@@ -8,6 +8,20 @@ class Admin::UsersController < AdminController
     @user = User.new
   end
   
+  def edit
+    @user = current_user
+  end
+  
+  def update
+    @user = current_user
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "You successfully updated the user account"
+      redirect_to '/admin'
+    else
+      render 'edit'
+    end
+  end
+  
   def create
     @user = User.new(params[:user])
     if @user.save
