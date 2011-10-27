@@ -4,6 +4,7 @@ class Tool < ActiveRecord::Base
   validates_presence_of :name, :author, :language, :when, :why, :topic, :description, :copyright, :source_url
   validates_uniqueness_of :name
   belongs_to :created_by, :class_name => 'User', :foreign_key => 'created_by'
+  has_many :reviews
   
   def where_question
     JSON.parse(self.where) if self.where

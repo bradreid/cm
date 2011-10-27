@@ -1,0 +1,111 @@
+%fieldset
+  %h3
+    Tool Reviewer Information:
+  %p
+  By agreeing to provide a review of a Community Development Tool, Tool Reviewers are
+  required to provide their name, Organization, and role / job title, and also agree to have
+  this information made public along with their review.
+  %p
+  .clearfix.required
+    = form.label :name
+    .input
+      = form.text_field :name, :maxlength=> 255
+  .clearfix.required
+    = form.label :organization
+    .input
+      = form.text_field :organization, :maxlength=> 255
+  .clearfix.required
+    = form.label :current_role, "Current Role/Job Title"
+    .input
+      = form.text_field :current_role, :maxlength=> 255     
+  .clearfix.required
+    = form.label :years_of_experience, "Years of experience in Community Development"
+    .input
+      = form.text_field :years_of_experience, :maxlength=> 255  
+  .clearfix.required
+    = form.label :accreditations, "Professional Training or Accreditation(s) in Community Development or other area"
+    .input
+      = form.text_area :accreditations, :rows => 5       
+  .clearfix.required
+    = form.label :memberships, "Memberships in Community Development Organizations, Associations, and affiliated Networks (Provide names and years of memberships in each)"
+    .input
+      = form.text_area :memberships, :rows => 5    
+      
+  %p
+  If in the future Tool Reviewers wish to changes their previous tool review(s) or to have
+  their tool review(s) removed from the website, they can do so by informing the Rural
+  Development Institute of this decision, emailing <rdi@brandonu.ca> . Reviewers are
+  asked to include CED Tool Review in the subject line.
+  %p
+  The Rural Development Institute sincerely appreciates the efforts of those who
+  contribute their review of Community Development Tools. 
+  %h3
+    Tool Review Instructions:
+  %p
+  Tool Reviewers are asked to answer each question in Section 1, add constructive
+  comments in Section 2, and provide their final recommendations in Section 3.
+  %p
+  The scoring for questions in Section 1 will be averaged to give a Star-ranking of the tool.
+  %p
+  The display of the Tool Review will be available in two forms:
+  %p
+  (1) An average of the Star-rankings of the tool, and the number of times the
+  particular tool has been reviewed.
+  (2) Separate full records of each review of a particular tool listed by date (most
+  recent first). Each record will include the specific Star-ranking, the scoring
+  for each question in Section 1, the comments from Section 2, and the
+  recommendations from Section 3.   
+  %h3
+    Section 1
+  %p
+  Before beginning the review, please answer the following question:
+  %p
+  .clearfix.required
+    = form.label :tool_used, "Prior to reading this tool, have you had an opportunity to use this particular tool while engaged in your community development activities?"
+    .input
+      Yes
+      = form.radio_button :tool_used, "yes"
+      No
+      = form.radio_button :tool_used, "no"      
+ 
+  %h4
+    Tool Review Questions:  
+  .clearfix
+    =form.label :goal_clear, "Do you agree that this tool states its goal or purpose in a clear and understandable way?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :goal_clear, '1'
+          %th=form.radio_button :goal_clear, '2'
+          %th=form.radio_button :goal_clear, '3'
+          %th=form.radio_button :goal_clear, '4'
+          %th=form.radio_button :goal_clear, '5'
+          
+  .clearfix
+    =form.label :tasks_easy_to_understand, "Do you agree that the tasks or activities presented in this tool easy to read and understand?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :tasks_easy_to_understand, '1'
+          %th=form.radio_button :tasks_easy_to_understand, '2'
+          %th=form.radio_button :tasks_easy_to_understand, '3'
+          %th=form.radio_button :tasks_easy_to_understand, '4'
+          %th=form.radio_button :tasks_easy_to_understand, '5'          
+          
+          
+          
+          
