@@ -56,8 +56,11 @@ Cm::Application.routes.draw do
   end
   resources :admin
   
-  resources :reviews
-  resources :tools
+  resources :tools do
+    scope :module => 'tools' do
+      resources :reviews
+    end    
+  end
   resources :phases
   match 'search' => 'tools#index'
   match 'people' => 'people#index'

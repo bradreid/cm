@@ -10,7 +10,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024025255) do
+ActiveRecord::Schema.define(:version => 20111027020320) do
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "tool_id"
+    t.string   "name"
+    t.string   "organization"
+    t.string   "current_role"
+    t.integer  "years_of_experience"
+    t.text     "accreditations"
+    t.text     "memberships"
+    t.boolean  "tool_used"
+    t.integer  "goal_clear"
+    t.integer  "tasks_easy_to_understand"
+    t.integer  "additional_requirements_clear"
+    t.integer  "tasks_eash_to_implement"
+    t.integer  "tasks_achieve_goal"
+    t.integer  "additional_resources_required_for_goal"
+    t.integer  "easily_adapted"
+    t.integer  "easily_adapted_cultural"
+    t.integer  "easily_merged"
+    t.text     "comments"
+    t.text     "over_all_impressions"
+    t.integer  "insightful_resource"
+    t.integer  "perfect_to_use_as_presented"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tools", :force => true do |t|
     t.string   "name"
@@ -48,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20111024025255) do
 
   add_index "tools", ["description"], :name => "index_tools_on_description"
   add_index "tools", ["name"], :name => "index_tools_on_name"
+  add_index "tools", ["when"], :name => "index_tools_on_when"
   add_index "tools", ["why"], :name => "index_tools_on_why"
 
   create_table "users", :force => true do |t|
