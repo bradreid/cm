@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20111027020320) do
     t.integer  "goal_clear"
     t.integer  "tasks_easy_to_understand"
     t.integer  "additional_requirements_clear"
-    t.integer  "tasks_eash_to_implement"
+    t.integer  "tasks_easy_to_implement"
     t.integer  "tasks_achieve_goal"
     t.integer  "additional_resources_required_for_goal"
     t.integer  "easily_adapted"
