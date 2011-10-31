@@ -15,7 +15,11 @@
   %li
     .label_for_list Updated at
     =@tool.updated_at.to_formatted_s(:short_with_year)
-    &nbsp;          
+    &nbsp;  
+  %li
+    .label_for_list Comments
+    =simple_format @tool.comments
+    &nbsp;        
 
 .clear
 %div.actions_footer.clear
