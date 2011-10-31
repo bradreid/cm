@@ -7,6 +7,13 @@
   }
 
   $(function(){
+      $('.copyright_button').click(function(){
+        if ($(this).val() == "1"){
+          $('.copyright_restrictions_area').show();
+        }else{
+          $('.copyright_restrictions_area').hide();          
+        }
+      });
       whn = $('#tool_when').val();
       id = '#' + whn.toLowerCase() + "_purpose";      
       togglePurposeSelects(id);
@@ -127,11 +134,11 @@
     = form.label :copyright
     .input
       Yes
-      =form.radio_button :copyright, '1'    
+      =form.radio_button :copyright, '1', :class => 'copyright_button'    
       &nbsp;
       No
-      =form.radio_button :copyright, '0'
-  .clearfix
+      =form.radio_button :copyright, '0', :class => 'copyright_button' 
+  .clearfix.copyright_restrictions_area{:style => "#{@tool.copyright == '1' ? 'display:display' : 'display:none'}"}
     = form.label :copyright_restrictions
     .input
       = form.text_field :copyright_restrictions, :maxlength => 255       
