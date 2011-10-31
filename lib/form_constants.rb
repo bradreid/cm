@@ -40,7 +40,7 @@ class FormConstants
   end
   
   def self.implementing_purpose
-    ['People Focused', 'Green Focused', 'Grow Focused', 'Sustainable Focused', 'No Specific Focus']
+    ['Natrual Resources', 'Cultural and Arts', 'Human Resources', 'Social Capital', 'Governance', 'Financial', 'Community Infrastructure']
   end
   
   def self.reviewing_purpose
@@ -52,10 +52,14 @@ class FormConstants
   end
 
   def self.where
-    ['Local', 'Municipal', 'Regional', 'Provincial', 'Inter-Provincial', 'Rural', 'Urban', 'Northern', 'Agricultural', 'Resource-based', 'Boom-bust', 'Declining']
+    ['Local', 'Municipal', 'Regional', 'Provincial', 'Inter-Provincial', 'Rural', 'Urban', 'Northern', 'Agricultural', 'Resource-based', 'Boom-bust', 'Declining', 'Not Specified']
   end
   
   def self.topic
-    ['People', 'Green', 'Grow', 'Sustainable', 'Not Topic Specific']
+    ['People', 'Green', 'Grow', 'Balanced', 'Not Specified']
+  end
+  
+  def self.expertise_needed
+    ['High-school', 'College', 'University', 'Technical', 'Other', 'Not Specified']
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111027020320) do
+ActiveRecord::Schema.define(:version => 20111031000056) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "tool_id"
@@ -64,12 +64,13 @@ ActiveRecord::Schema.define(:version => 20111027020320) do
     t.string   "topic"
     t.string   "who"
     t.string   "special_equipment_facilities"
-    t.boolean  "copyright"
+    t.string   "copyright"
     t.string   "copyright_holder"
     t.string   "copyright_restrictions"
     t.string   "copyright_permissions"
     t.string   "source_url"
     t.integer  "created_by"
+    t.text     "comments"
   end
 
   add_index "tools", ["description"], :name => "index_tools_on_description"

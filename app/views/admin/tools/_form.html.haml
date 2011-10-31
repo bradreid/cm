@@ -19,29 +19,21 @@
 
 %fieldset
   .clearfix
-    = form.label :name, "Tool Title"
+    = form.label :name, "Tool title"
     .input
       = form.text_field :name, :maxlength=> 255
   .clearfix
-    = form.label :source_document_name, "Source Document Title"
+    = form.label :source_document_name, "Source document title"
     .input
       = form.text_field :source_document_name, :maxlength=> 255      
   .clearfix
-    =form.label :source_url
+    = form.label :source_document
     .input
-      =form.text_field :source_url, :maxlength => 255
+      = form.file_field :source_document      
   .clearfix
-    =form.label :rating, "Rating"
+    =form.label :source_url, 'Source document URL'
     .input
-      =form.text_field :rating, :maxlength => 10
-  .clearfix
-    = form.label :expertise_needed
-    .input
-      = form.text_field :expertise_needed, :maxlength=> 255    
-  .clearfix
-    = form.label :special_equipment_facilities, "Special equipment/ Facilities needed"
-    .input
-      = form.text_field :special_equipment_facilities, :maxlength=> 255 
+      =form.text_field :source_url, :maxlength => 255      
   .clearfix
     = form.label :author, "Authors"
     .input
@@ -49,72 +41,31 @@
   .clearfix
     = form.label :editor, "Editors"
     .input
-      = form.text_field :editor, :maxlength=> 255        
+      = form.text_field :editor, :maxlength=> 255      
   .clearfix
     = form.label :publisher
     .input
-      = form.text_field :publisher, :maxlength=> 255          
-  .clearfix
-    =form.label :where_created, 'Which country was this tool created in'
-    .input
-      =form.text_field :where_created    
+      = form.text_field :publisher, :maxlength=> 255      
   .clearfix
     = form.label :date_created
     .input
-      = form.date_select :date_created, :start_year => Time.now.year - 20, :discard_day => true
+      = form.date_select :date_created, :start_year => Time.now.year - 20, :discard_day => true       
   .clearfix
     = form.label :language
     .input
-      = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => 'Please select the language in which the tool is written'    
-  .clearfix
-    = form.label :source_document
-    .input
-      = form.file_field :source_document
-  .clearfix
-    = form.label :copyright
-    .input
-      = form.check_box :copyright
-  .clearfix
-    = form.label :copyright_holder
-    .input
-      = form.text_field :copyright_holder, :maxlength => 255
-  .clearfix
-    = form.label :copyright_restrictions
-    .input
-      = form.text_field :copyright_restrictions, :maxlength => 255       
-  .clearfix
-    = form.label :copyright_permissions
-    .input
-      = form.text_field :copyright_permissions, :maxlength => 255                                             
+      = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => 'Please select the language in which the tool is written'       
   .clearfix
     = form.label :description
     .input
-      = form.text_area :description,:class => 'xxlarge'
-           
+      = form.text_area :description,:class => 'xxlarge', :rows => 5
       
-%fieldset
-  %legend
-    Topic (Which of the three categories of the triple bottom line does this tool apply to?)
-  .clearfix
-    .input
-      = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => 'Please select the topic that applies to this tool'
-                
-%fieldset      
-  %legend
-    Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
-  .clearfix
-    .input
-      = form.select :where_question, FormConstants.where.map{|r| [r,r]}, {}, :multiple => 'multiple', :class => 'multiple', :size => 12
-
-       
-       
 %fieldset      
   %legend
     When (At what phase of the CED project cycle is this tool most useful?) 
   .clearfix
     .input
       = form.select :when, FormConstants.when.map{|r| [r,r]}, :include_blank => 'Please select the main phase the tool is used for'     
-      
+
 %fieldset      
   %legend
     Why (What is the purpose of using this particular tool?) 
@@ -125,11 +76,78 @@
       = form.select :why, FormConstants.analyzing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'} , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
       = form.select :why, FormConstants.implementing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
       = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
-
-%fieldset
+      
+%fieldset      
   %legend
-    Who (List the individuals, organizations and associations that are intended to use the tool)
+    Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
   .clearfix
     .input
-      =form.text_field :who, :maxlength => 255                                          
+      = form.select :where, FormConstants.where.map{|r| [r,r]}   
+  .clearfix
+    =form.label :where_created, 'Which country was this tool created in'
+    .input
+      =form.text_field :where_created         
+      
+%fieldset
+  %legend
+    Topic (Which of the three categories of the triple bottom line does this tool apply to?)
+  .clearfix
+    .input
+      = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => 'Please select the topic that applies to this tool'      
+      
+%fieldset
+  %legend
+    Expertise Needed (The education, technical training, or skills identified or suggested as required to use the tool)
+  .clearfix
+    .input
+      = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [r,r]}, :include_blank => 'Please select expertise needed to use the tool'      
+
+%fieldset      
+  .clearfix
+    = form.label :special_equipment_facilities, "Resources Required"
+    .input
+      = form.text_field :special_equipment_facilities, :maxlength=> 255      
+  .clearfix
+    = form.label :who
+    .input
+      &nbsp;(Placeholder)     
+      
+      
+  .clearfix
+    =form.label :rating, "Rating"
+    .input
+      =form.text_field :rating, :maxlength => 10   
+     
+
+  .clearfix
+    = form.label :copyright_holder
+    .input
+      = form.text_field :copyright_holder, :maxlength => 255
+  .clearfix
+    = form.label :copyright
+    .input
+      Yes
+      =form.radio_button :copyright, '1'    
+      &nbsp;
+      No
+      =form.radio_button :copyright, '0'
+  .clearfix
+    = form.label :copyright_restrictions
+    .input
+      = form.text_field :copyright_restrictions, :maxlength => 255       
+  .clearfix
+    = form.label :copyright_permissions
+    .input
+      Yes
+      =form.radio_button :copyright_permissions, '1'   
+      &nbsp;       
+      No
+      =form.radio_button :copyright_permissions, '0'
+
+
+
+       
+       
+
+                                         
                     
