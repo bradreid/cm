@@ -67,9 +67,9 @@
     = form.label :tool_used, "Prior to reading this tool, have you had an opportunity to use this particular tool while engaged in your community development activities?"
     .input
       Yes
-      = form.radio_button :tool_used, "yes"
+      = form.radio_button :tool_used, "1"
       No
-      = form.radio_button :tool_used, "no"    
+      = form.radio_button :tool_used, "0"    
   %h5
     Usability
   .clearfix
@@ -145,6 +145,24 @@
           %th=form.radio_button :tasks_easy_to_implement, '3'
           %th=form.radio_button :tasks_easy_to_implement, '4'
           %th=form.radio_button :tasks_easy_to_implement, '5'
+          
+  .clearfix
+    =form.label :tasks_achieve_goal, "Do you agree that the steps or tasks presented in this tool will be able to achieve its goal?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :tasks_achieve_goal, '1'
+          %th=form.radio_button :tasks_achieve_goal, '2'
+          %th=form.radio_button :tasks_achieve_goal, '3'
+          %th=form.radio_button :tasks_achieve_goal, '4'
+          %th=form.radio_button :tasks_achieve_goal, '5'          
                        
           
           

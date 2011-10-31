@@ -58,7 +58,7 @@
     &nbsp;
   %li
     .label_for_list Copyright
-    =@tool.copyright ? "Yes" : "No"
+    =@tool.copyright=='1' ? "Yes" : "No"
     &nbsp;    
   %li
     .label_for_list Copyright Holder
@@ -70,7 +70,7 @@
     &nbsp;
   %li
     .label_for_list Copyright Permissions
-    =@tool.copyright_permissions
+    =@tool.copyright_permissions=='1' ? "Yes" : "No"
     &nbsp;                  
   %li
     .label_for_list Description
@@ -89,7 +89,7 @@
 %h4 Where (What types of communities can this tool be used to benefit?)
 %ul.show_list
   %li
-    =@tool.where_question.try(:join, ', ')
+    =@tool.where
       
 %h4 When (At what phase of the CED project cycle is this tool most useful?)
 %ul.show_list
