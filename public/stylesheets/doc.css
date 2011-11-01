@@ -4,13 +4,8 @@ body {
 .field_with_errors {
   display: inline; }
 
-table .search_results tr:hover {
-  background-color: #e1eafe; }
 table .search_results tr td {
   padding: 15px; }
-
-table #search_results tr:hover {
-  background-color: #e1eafe; }
 
 .search_hit_title {
   text-decoration: underline;

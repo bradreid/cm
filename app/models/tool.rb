@@ -6,4 +6,15 @@ class Tool < ActiveRecord::Base
   belongs_to :created_by, :class_name => 'User', :foreign_key => 'created_by'
   has_many :reviews
 
+  def add_rating(rating)
+    Tool.transaction do
+      self.lock!
+      self.rating_count ||= 0
+      self.rating_total ||= 0.0
+      self.rating_count += 1
+      self.rating_total += rating
+      self.rating = self.rating_total/self.rating_count
+      self.save!
+    end
+  end
 end

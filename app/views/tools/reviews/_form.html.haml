@@ -56,13 +56,11 @@
   for each question in Section 1, the comments from Section 2, and the
   recommendations from Section 3.   
   %h3
-    Section 1
+    Section 1 Tool Review Questions:
   %p
   Before beginning the review, please answer the following question:
   %p
-       
-  %h4
-    Tool Review Questions:  
+        
   .clearfix.required
     = form.label :tool_used, "Prior to reading this tool, have you had an opportunity to use this particular tool while engaged in your community development activities?"
     .input
@@ -164,7 +162,138 @@
           %th=form.radio_button :tasks_achieve_goal, '4'
           %th=form.radio_button :tasks_achieve_goal, '5'          
                        
+
+  .clearfix
+    =form.label :additional_resources_required_for_goal, "Do you agree that the additional resources, such as expertise, facility needs, or technical resources, are realistic requirements for achieving the tool's goal?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :additional_resources_required_for_goal, '1'
+          %th=form.radio_button :additional_resources_required_for_goal, '2'
+          %th=form.radio_button :additional_resources_required_for_goal, '3'
+          %th=form.radio_button :additional_resources_required_for_goal, '4'
+          %th=form.radio_button :additional_resources_required_for_goal, '5'          
           
+          
+  %h5
+    Adaptability
+  .clearfix
+    =form.label :easily_adapted, "Do you agree that this tool can be easily adapted to fit the unique circumstances and context of CD projects or activities in different communities and localities?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :easily_adapted, '1'
+          %th=form.radio_button :easily_adapted, '2'
+          %th=form.radio_button :easily_adapted, '3'
+          %th=form.radio_button :easily_adapted, '4'
+          %th=form.radio_button :easily_adapted, '5'
+
+  .clearfix
+    =form.label :easily_adapted_cultural, "Do you agree that this tool can be easily adapted to fit the unique circumstances and context of CD projects or activities in different communities (e.g. cultural / linguistic)?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :easily_adapted_cultural, '1'
+          %th=form.radio_button :easily_adapted_cultural, '2'
+          %th=form.radio_button :easily_adapted_cultural, '3'
+          %th=form.radio_button :easily_adapted_cultural, '4'
+          %th=form.radio_button :easily_adapted_cultural, '5'          
+
+
+  .clearfix
+    =form.label :easily_merged, "Do you agree that this tool could be easily merged or combined with (an)other tool(s) so it fits better within the circumstances and context of particular CD projects or activities?"
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :easily_merged, '1'
+          %th=form.radio_button :easily_merged, '2'
+          %th=form.radio_button :easily_merged, '3'
+          %th=form.radio_button :easily_merged, '4'
+          %th=form.radio_button :easily_merged, '5'    
+          
+          
+  %h3
+    Section 2 Comments and Impressions:
+  .clearfix.required
+    = form.label :comments, "Do you have any additional comments regarding any other aspect(s) of this tool?"
+    .input
+      =form.text_area :comments, :rows => 5
+      
+  .clearfix.required
+    = form.label :over_all_impressions, "What are your over all impressions of this tool?"
+    .input
+      =form.text_area :over_all_impressions, :rows => 5      
+          
+          
+  %h3
+    Section 3 Final Recommendations:
+  %p
+  Based on your review and comments, how strongly would you recommend this tool to other CD practitioners in the following ways?
+  %p
+  .clearfix.required
+    = form.label :insightful_resource, "This tool is an insightful resource."
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :insightful_resource, '1'
+          %th=form.radio_button :insightful_resource, '2'
+          %th=form.radio_button :insightful_resource, '3'
+          %th=form.radio_button :insightful_resource, '4'
+          %th=form.radio_button :insightful_resource, '5'
+          
+  .clearfix
+    =form.label :perfect_to_use_as_presented, "This Tool is perfect to use as it is presented."
+    .input
+      %p
+      %table{:width => '100%'}
+        %tr
+          %th Strongly Disagree
+          %th Disagree
+          %th Undecided
+          %th Agree
+          %th Strongly Agree
+        %tr
+          %th=form.radio_button :perfect_to_use_as_presented, '1'
+          %th=form.radio_button :perfect_to_use_as_presented, '2'
+          %th=form.radio_button :perfect_to_use_as_presented, '3'
+          %th=form.radio_button :perfect_to_use_as_presented, '4'
+          %th=form.radio_button :perfect_to_use_as_presented, '5'          
+                
           
           
           

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111031000056) do
+ActiveRecord::Schema.define(:version => 20111101011138) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "tool_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20111031000056) do
     t.integer  "years_of_experience"
     t.text     "accreditations"
     t.text     "memberships"
-    t.boolean  "tool_used"
+    t.string   "tool_used"
     t.integer  "goal_clear"
     t.integer  "tasks_easy_to_understand"
     t.integer  "additional_requirements_clear"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20111031000056) do
     t.integer  "perfect_to_use_as_presented"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "rating"
   end
 
   create_table "tools", :force => true do |t|
@@ -71,6 +72,8 @@ ActiveRecord::Schema.define(:version => 20111031000056) do
     t.string   "source_url"
     t.integer  "created_by"
     t.text     "comments"
+    t.integer  "rating_count"
+    t.float    "rating_total"
   end
 
   add_index "tools", ["description"], :name => "index_tools_on_description"
