@@ -5,7 +5,7 @@ class PhasesController < ApplicationController
       wants.html{render 'new'}
       wants.js do
         render :update do |page|
-          page.call "$('#search_results').html", render(:partial => 'search_results')
+          page.call "$('#search_results').html", render(:partial => '/shared/tic_search_results', :locals => {:remote => true})
           page.call '$.Spinner.unspin'
         end
       end
