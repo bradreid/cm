@@ -14,7 +14,7 @@
               =image_tag('star_empty.png', :height => 15)
               =image_tag('star_empty.png', :height => 15)
               =image_tag('star_empty.png', :height => 15)                                                        
-              ="(#{tool.rating.round(2)})"
+              ="(#{tool.rating.try(:round,2)})"
               &nbsp;
               =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(tool), :title => 'Review Tool')
               &nbsp; 
