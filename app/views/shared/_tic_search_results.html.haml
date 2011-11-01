@@ -16,7 +16,7 @@
               =image_tag('star_empty.png', :height => 15)                                                        
               ="(#{tool.rating.round(2)})"
               &nbsp;
-              =link_to(image_tag('icon_review.png', :height => 35, :alt_text => 'Review Tool'), new_tool_review_path(tool))
+              =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(tool), :title => 'Review Tool')
               &nbsp; 
               &nbsp;
           %td{:align => 'left', :valign => 'middle', :style => 'padding-bottom:20px' }
@@ -25,8 +25,8 @@
               =tool.description
           %td{:valign => 'top', :style => 'padding-bottom:20px'}
             %p{:style => 'white-space:nowrap;'}
-              =link_to(image_tag('icon_tic.png', :height => 35), tool_path(tool))
-              =link_to(image_tag('icon_pdf.png', :height => 35), tool.source_document.url) if tool.source_document_file_name
+              =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(tool), :title => 'Tool Information Card')
+              =link_to(image_tag('icon_pdf.png', :height => 35, :alt => 'Download Source Document'), tool.source_document.url, :title => 'Download Source Document') if tool.source_document_file_name
 
       %tr
         %td{:colspan => 6}
