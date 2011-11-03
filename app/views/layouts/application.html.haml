@@ -17,7 +17,7 @@
     %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
       %tr
         %td#header{:align => 'center'}
-          -if current_user
+          -if current_user.try(:is_admin?)
             =link_to image_tag('template/header_title_short.png',:width => 498, :height => 116, :style => 'margin:0px;padding:0px;float:left;'), root_path           
           -else
             =link_to image_tag('template/header_title.png', :style => 'margin:0px;padding:0px;float:left;'), root_path
@@ -25,7 +25,7 @@
           =link_to image_tag('template/header_green.png', :style => 'margin:0px;padding:0px;float:left;'), '/green'
           =link_to image_tag('template/header_grow.png', :style => 'margin:0px;padding:0px;float:left;'), '/grow'          
           =link_to image_tag('template/header_search.png', :style => 'margin:0px;padding:0px;float:left;'), '/search'
-          - if current_user
+          - if current_user.try(:is_admin?)
             =link_to image_tag('template/header_phases_middle.png', :style => 'margin:0px;padding:0px;float:left;'), phases_path            
             =link_to image_tag('template/header_admin.png', :style => 'margin:0px;padding:0px;float:left;'), '/admin' 
           -else
@@ -38,6 +38,7 @@
               %br
               %br
               #content
+                =render :partial => 'shared/flashes'              
                 %center
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
                     %tr
@@ -53,7 +54,7 @@
                         =link_to image_tag('template/splash_button_search.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), '/search'                  
                       %td
                         =link_to image_tag('template/splash_button_phases.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), phases_path                 
-                      - if current_user
+                      - if current_user.try(:is_admin?)
                         %td
                           =link_to image_tag('template/splash_button_admin.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), '/admin'                 
                 %br

@@ -50,5 +50,5 @@
             =action_images [:admin, tool], :exclude => [:index]
     %tr
       %td{:colspan => 6}
-        = page_entries_info @tools, :entry_name => 'tools', :plural_name => 'tools'
+        = page_entries_info @tools, :model => 'Tool'
         = will_paginate @tools

@@ -17,6 +17,10 @@
         Username
       %th
         Email
+      %th
+        Is Admin?
+      %th
+        Actions
   %tbody
     -@users.each do |u|
       %tr
@@ -26,3 +30,8 @@
           =u.username
         %td
           =u.email
+        %th
+          =u.is_admin? ? "Yes" : 'No'
+        %th
+          =action_images [:admin, u], :exclude => [:index, :show]
+          
