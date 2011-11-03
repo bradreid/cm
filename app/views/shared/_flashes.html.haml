@@ -6,7 +6,7 @@
         = flash[:notice]
 
   - if !flash[:error].blank?
-    %div.alert-message.success
+    %div.alert-message.error
       =link_to 'x', '#', :class => 'close'
       %p
         = flash[:error]
