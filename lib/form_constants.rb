@@ -52,7 +52,7 @@ class FormConstants
   end
 
   def self.where
-    ['Local', 'Municipal', 'Regional', 'Provincial', 'Inter-Provincial', 'Rural', 'Urban', 'Northern', 'Agricultural', 'Resource-based', 'Boom-bust', 'Declining', 'Not Specified']
+    ['Local', 'Municipal', 'Regional', 'Rural','Northern', 'Urban', 'Not Specified']
   end
   
   def self.topic
