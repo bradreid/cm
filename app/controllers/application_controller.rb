@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   end
   
   def default_pagination_params
-    {:page => params[:page], :per_page => 2}
+    {:page => params[:page], :per_page => 20}
   end
   
   protected
