@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController  
     def index
-      @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'People'}))
+      @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'People'}, :order => 'name asc'))
       unless params[:search].blank?
         search_tools
       end  

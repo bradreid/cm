@@ -3,9 +3,9 @@ class Admin::ToolsController < AdminController
   def index
     if params[:search]
       search_tools
-      @tools = @tools.paginate default_pagination_params
+      @tools = @tools.paginate default_pagination_params.merge(:order => 'name asc')
     else
-      @tools = Tool.paginate default_pagination_params      
+      @tools = Tool.paginate default_pagination_params.merge(:order => 'name asc')
     end
   end
   
