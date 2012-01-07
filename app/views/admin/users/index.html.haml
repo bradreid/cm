@@ -8,6 +8,9 @@
 = link_to "Create a new user", new_admin_user_path, :class => 'btn primary'
 %br
 %br
+- if @users
+  = page_entries_info @users, :model => 'User' 
+%br
 %table#search_results.data
   %thead
     %tr
@@ -34,4 +37,7 @@
           =u.is_admin? ? "Yes" : 'No'
         %th
           =action_images [:admin, u], :exclude => [:index, :show]
+      %tr
+    %td{:colspan => 5}
+      = will_paginate @users, :renderer => 'WillPaginateHelper::LinkRenderer'          
           

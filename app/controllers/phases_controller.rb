@@ -1,6 +1,6 @@
 class PhasesController < ApplicationController  
   def index
-    @tools = Tool.paginate(:conditions => {:why => params[:purpose]},:page => params[:page], :per_page => 25)
+    @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:why => params[:purpose]}))
     respond_to do |wants|
       wants.html{render 'new'}
       wants.js do

@@ -2131,7 +2131,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 .pagination .disabled a, .pagination .disabled a:hover {
   background-color: transparent;
-  color: #bfbfbf;
+  color: black;
 }
 .pagination .next a {
   border: 0;

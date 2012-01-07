@@ -1,7 +1,7 @@
 class Admin::UsersController < AdminController
   
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 25, :order => 'username')  
+    @users = User.paginate(default_pagination_params.merge(:order => 'username'))  
   end
   
   def new
