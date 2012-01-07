@@ -4,7 +4,7 @@
   %br
   %br
   %table#search_results{:width => '100%', :border => '0', :cellspacing => 0}
-    %tbody
+    %tbody#tools_body
       -@tools.each do |tool|
         %tr
           %td{:align => 'left', :valign => 'top', :style => 'padding-bottom:20px', :width => '10%'}
@@ -33,4 +33,4 @@
           -if remote
             = will_paginate(@tools, :renderer => 'RemoteLinkRenderer', :remote_url => phases_path(:format=> :js, :purpose => params[:purpose]))          
           -else
-            = will_paginate @tools
+            = will_paginate @tools, :renderer => 'WillPaginateHelper::LinkRenderer'

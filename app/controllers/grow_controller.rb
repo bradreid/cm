@@ -1,6 +1,6 @@
 class GrowController < ApplicationController  
     def index
-      @tools = Tool.paginate(:conditions => {:topic => 'Grow'},:page => params[:page], :per_page => 25)
+      @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'Grow'}))
       unless params[:search].blank?
         search_tools
       end  

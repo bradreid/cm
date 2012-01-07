@@ -3,9 +3,9 @@ class Admin::ToolsController < AdminController
   def index
     if params[:search]
       search_tools
-      @tools = @tools.paginate(:page => params[:page], :per_page => 25)      
+      @tools = @tools.paginate default_pagination_params
     else
-      @tools = Tool.paginate(:page => params[:page], :per_page => 25)      
+      @tools = Tool.paginate default_pagination_params      
     end
   end
   
@@ -52,7 +52,7 @@ private
   def search_tools
     where_clause = []
     variables = []
-    @tools = Tool.paginate(:page => params[:page], :per_page => 25)
+    @tools = Tool.paginate default_pagination_params
     params[:search].split.each do |t|
       where_clause << "((UPPER(name) like UPPER(?)) OR (UPPER(description) like UPPER(?)))"
       variables << "%#{t}%"

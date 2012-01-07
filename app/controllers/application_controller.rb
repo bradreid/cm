@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
     @area == :guided
   end
   
+  def default_pagination_params
+    {:page => params[:page], :per_page => 2}
+  end
+  
   protected
   
   # Use basic authentication in my realm to get a user object.

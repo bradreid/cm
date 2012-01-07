@@ -54,4 +54,4 @@
             =action_images [:admin, tool], :exclude => [:index]
     %tr
       %td{:colspan => 6}
-        = will_paginate @tools
+        = will_paginate @tools, :renderer => 'WillPaginateHelper::LinkRenderer'    
