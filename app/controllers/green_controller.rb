@@ -2,7 +2,7 @@ class GreenController < ApplicationController
   
   
   def index
-    @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'Green'}))
+    @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'Green'}, :order => 'name asc'))
     unless params[:search].blank?
       search_tools
     end  

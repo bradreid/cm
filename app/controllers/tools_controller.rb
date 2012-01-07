@@ -41,7 +41,7 @@ private
   def search_tools
     where_clause = []
     variables = []
-    @tools = Tool.paginate default_pagination_params
+    @tools = Tool.paginate default_pagination_params.merge(:order => 'name asc')
     params[:search].split.each do |t|
       where_clause << "((UPPER(name) like UPPER(?)) OR (UPPER(description) like UPPER(?)))"
       variables << "%#{t}%"
