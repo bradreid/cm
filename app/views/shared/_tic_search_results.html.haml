@@ -11,7 +11,7 @@
             %p{:style => 'white-space:nowrap;'}                                                      
               .stars{:style => 'background-position:-100px -260px;display:-moz-inline-box;display:inline-block;height:13px;width:65px;text-align:left;vertical-align:baseline;position:relative;top:1px'}
                 .stars{:style => "background-position:-100px -275px;height:13px;width:#{((tool.rating.try(:round,1) || 0.0) * 13).to_s}px;overflow:hidden;text-align:left"}
-              ="(#{tool.rating.try(:round,1) || 0.0})"
+              ="#{tool.rating.try(:round,1) ? '(' + tool.rating.try(:round,1).to_s + ')' :  ''}"
           %td{:valign => 'top'}
             &nbsp;
             =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(tool), :title => 'Review Tool')
