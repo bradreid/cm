@@ -7,7 +7,7 @@ class Tools::ReviewsController < ApplicationController
   
   def create
     @tool = Tool.find(params[:tool_id])
-    @review = @tool.reviews.build(params[:review])
+    @review = @tool.reviews.build(params[:review].merge(:user => current_user))
     if @review.save
       flash[:notice] = "You have successfully submitted your tool review"
       redirect_to tool_path(@tool)

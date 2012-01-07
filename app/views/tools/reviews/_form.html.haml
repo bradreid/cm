@@ -1,299 +1,202 @@
 %fieldset
-  %h3
-    Tool Reviewer Information:
-  %p
-  By agreeing to provide a review of a Community Development Tool, Tool Reviewers are
-  required to provide their name, Organization, and role / job title, and also agree to have
-  this information made public along with their review.
-  %p
   .clearfix.required
-    = form.label :name
+    = form.label :experience, 'What is your experience with this tool?'
     .input
-      = form.text_field :name, :maxlength=> 255
-  .clearfix.required
-    = form.label :organization
-    .input
-      = form.text_field :organization, :maxlength=> 255
-  .clearfix.required
-    = form.label :current_role, "Current Role/Job Title"
-    .input
-      = form.text_field :current_role, :maxlength=> 255     
-  .clearfix.required
-    = form.label :years_of_experience, "Years of experience in Community Development"
-    .input
-      = form.text_field :years_of_experience, :maxlength=> 255  
-  .clearfix.required
-    = form.label :accreditations, "Professional Training or Accreditation(s) in Community Development or other area"
-    .input
-      = form.text_area :accreditations, :rows => 5       
-  .clearfix.required
-    = form.label :memberships, "Memberships in Community Development Organizations, Associations, and affiliated Networks (Provide names and years of memberships in each)"
-    .input
-      = form.text_area :memberships, :rows => 5    
       
-  %p
-  If in the future Tool Reviewers wish to changes their previous tool review(s) or to have
-  their tool review(s) removed from the website, they can do so by informing the Rural
-  Development Institute of this decision, emailing <rdi@brandonu.ca> . Reviewers are
-  asked to include CED Tool Review in the subject line.
-  %p
-  The Rural Development Institute sincerely appreciates the efforts of those who
-  contribute their review of Community Development Tools. 
-  %h3
-    Tool Review Instructions:
-  %p
-  Tool Reviewers are asked to answer each question in Section 1, add constructive
-  comments in Section 2, and provide their final recommendations in Section 3.
-  %p
-  The scoring for questions in Section 1 will be averaged to give a Star-ranking of the tool.
-  %p
-  The display of the Tool Review will be available in two forms:
-  %p
-  (1) An average of the Star-rankings of the tool, and the number of times the
-  particular tool has been reviewed.
-  (2) Separate full records of each review of a particular tool listed by date (most
-  recent first). Each record will include the specific Star-ranking, the scoring
-  for each question in Section 1, the comments from Section 2, and the
-  recommendations from Section 3.   
-  %h3
-    Section 1 Tool Review Questions:
-  %p
-  Before beginning the review, please answer the following question:
-  %p
-        
-  .clearfix.required
-    = form.label :tool_used, "Prior to reading this tool, have you had an opportunity to use this particular tool while engaged in your community development activities?"
-    .input
-      Yes
-      = form.radio_button :tool_used, "1"
-      No
-      = form.radio_button :tool_used, "0"    
-  %h5
-    Usability
-  .clearfix
-    =form.label :goal_clear, "Do you agree that this tool states its goal or purpose in a clear and understandable way?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :goal_clear, '1'
-          %th=form.radio_button :goal_clear, '2'
-          %th=form.radio_button :goal_clear, '3'
-          %th=form.radio_button :goal_clear, '4'
-          %th=form.radio_button :goal_clear, '5'
-          
-  .clearfix
-    =form.label :tasks_easy_to_understand, "Do you agree that the tasks or activities presented in this tool easy to read and understand?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :tasks_easy_to_understand, '1'
-          %th=form.radio_button :tasks_easy_to_understand, '2'
-          %th=form.radio_button :tasks_easy_to_understand, '3'
-          %th=form.radio_button :tasks_easy_to_understand, '4'
-          %th=form.radio_button :tasks_easy_to_understand, '5'  
-          
-  .clearfix
-    =form.label :additional_requirements_clear, "Do you agree that this tool states in a clear and understandable way whether and what additional requirements, such as expertise, facility needs, or technical resources, are required to use the tool?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :additional_requirements_clear, '1'
-          %th=form.radio_button :additional_requirements_clear, '2'
-          %th=form.radio_button :additional_requirements_clear, '3'
-          %th=form.radio_button :additional_requirements_clear, '4'
-          %th=form.radio_button :additional_requirements_clear, '5'     
-          
-  %h5
-    Readability
-  .clearfix
-    =form.label :tasks_easy_to_implement, "Do you agree that the activities or tasks presented in this tool are easy to follow and implement?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :tasks_easy_to_implement, '1'
-          %th=form.radio_button :tasks_easy_to_implement, '2'
-          %th=form.radio_button :tasks_easy_to_implement, '3'
-          %th=form.radio_button :tasks_easy_to_implement, '4'
-          %th=form.radio_button :tasks_easy_to_implement, '5'
-          
-  .clearfix
-    =form.label :tasks_achieve_goal, "Do you agree that the steps or tasks presented in this tool will be able to achieve its goal?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :tasks_achieve_goal, '1'
-          %th=form.radio_button :tasks_achieve_goal, '2'
-          %th=form.radio_button :tasks_achieve_goal, '3'
-          %th=form.radio_button :tasks_achieve_goal, '4'
-          %th=form.radio_button :tasks_achieve_goal, '5'          
-                       
-
-  .clearfix
-    =form.label :additional_resources_required_for_goal, "Do you agree that the additional resources, such as expertise, facility needs, or technical resources, are realistic requirements for achieving the tool's goal?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :additional_resources_required_for_goal, '1'
-          %th=form.radio_button :additional_resources_required_for_goal, '2'
-          %th=form.radio_button :additional_resources_required_for_goal, '3'
-          %th=form.radio_button :additional_resources_required_for_goal, '4'
-          %th=form.radio_button :additional_resources_required_for_goal, '5'          
-          
-          
-  %h5
-    Adaptability
-  .clearfix
-    =form.label :easily_adapted, "Do you agree that this tool can be easily adapted to fit the unique circumstances and context of CD projects or activities in different communities and localities?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :easily_adapted, '1'
-          %th=form.radio_button :easily_adapted, '2'
-          %th=form.radio_button :easily_adapted, '3'
-          %th=form.radio_button :easily_adapted, '4'
-          %th=form.radio_button :easily_adapted, '5'
-
-  .clearfix
-    =form.label :easily_adapted_cultural, "Do you agree that this tool can be easily adapted to fit the unique circumstances and context of CD projects or activities in different communities (e.g. cultural / linguistic)?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :easily_adapted_cultural, '1'
-          %th=form.radio_button :easily_adapted_cultural, '2'
-          %th=form.radio_button :easily_adapted_cultural, '3'
-          %th=form.radio_button :easily_adapted_cultural, '4'
-          %th=form.radio_button :easily_adapted_cultural, '5'          
+      =form.radio_button :experience, 'never'
+      Never used it
+      %br
+      =form.radio_button :experience, 'tried'
+      ="I've tried to use it"
+      %br
+      =form.radio_button :experience, 'twice'
+      Used it once or twice
+      %br
+      =form.radio_button :experience, 'regularly'
+      Use it regularly
 
 
-  .clearfix
-    =form.label :easily_merged, "Do you agree that this tool could be easily merged or combined with (an)other tool(s) so it fits better within the circumstances and context of particular CD projects or activities?"
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :easily_merged, '1'
-          %th=form.radio_button :easily_merged, '2'
-          %th=form.radio_button :easily_merged, '3'
-          %th=form.radio_button :easily_merged, '4'
-          %th=form.radio_button :easily_merged, '5'    
-          
-          
-  %h3
-    Section 2 Comments and Impressions:
+
   .clearfix.required
-    = form.label :comments, "Do you have any additional comments regarding any other aspect(s) of this tool?"
-    .input
-      =form.text_area :comments, :rows => 5
-      
-  .clearfix.required
-    = form.label :over_all_impressions, "What are your over all impressions of this tool?"
-    .input
-      =form.text_area :over_all_impressions, :rows => 5      
-          
-          
-  %h3
-    Section 3 Final Recommendations:
-  %p
-  Based on your review and comments, how strongly would you recommend this tool to other CD practitioners in the following ways?
-  %p
-  .clearfix.required
-    = form.label :insightful_resource, "This tool is an insightful resource."
-    .input
-      %p
-      %table{:width => '100%'}
+    = form.label :community_context, '1. Community Context:', :class => 'big'
+    .input      
+      %table.border
         %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
+          %th{:align => 'left'}
+            =form.radio_button :community_context, '2'
+            High
+          %th{:align => 'left'}
+            =form.radio_button :community_context, '1'
+            Low          
+          %th{:align => 'left'}
+            =form.radio_button :community_context, '0'
+            Not Stated
         %tr
-          %th=form.radio_button :insightful_resource, '1'
-          %th=form.radio_button :insightful_resource, '2'
-          %th=form.radio_button :insightful_resource, '3'
-          %th=form.radio_button :insightful_resource, '4'
-          %th=form.radio_button :insightful_resource, '5'
-          
-  .clearfix
-    =form.label :perfect_to_use_as_presented, "This Tool is perfect to use as it is presented."
-    .input
-      %p
-      %table{:width => '100%'}
-        %tr
-          %th Strongly Disagree
-          %th Disagree
-          %th Undecided
-          %th Agree
-          %th Strongly Agree
-        %tr
-          %th=form.radio_button :perfect_to_use_as_presented, '1'
-          %th=form.radio_button :perfect_to_use_as_presented, '2'
-          %th=form.radio_button :perfect_to_use_as_presented, '3'
-          %th=form.radio_button :perfect_to_use_as_presented, '4'
-          %th=form.radio_button :perfect_to_use_as_presented, '5'          
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Local/regional conditions to generate results from tool are clearly stated. 
+              %li Target users are identified.
+              %li Underlying assumptions or conditions when and where the tool works are clearly presented.
                 
-          
-          
-          
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Local/regional conditions are vague or generalized. 
+              %li Target users are not clearly defined.
+              %li Assumptions or conditions where or when to use the tool are vague.
+              
+
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Community conditions are not presented.
+              %li Target users are not identified. 
+              %li Conditions where or when to use the tool are not presented
+              
+      
+      
+  .clearfix.required
+    = form.label :generates_results, '2. Generates Results'
+    .input      
+      %table.border
+        %tr
+          %th{:align => 'left'}
+            =form.radio_button :generates_results, '2'
+            High
+          %th{:align => 'left'}
+            =form.radio_button :generates_results, '1'
+            Low          
+          %th{:align => 'left'}
+            =form.radio_button :generates_results, '0'
+            Not Stated
+        %tr
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li
+                Goal/purpose of tool is clearly stated.
+              %li
+                Possible to implement by a local group.
+              %li
+                Tasks will achieve stated goal.
+              %li
+                Examples of results from tool are informative and helpful.
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li
+                Goal/purpose is unclear.
+              %li
+                Requires specialized knowledge or resources not readily available.
+              %li
+                Tasks do not clearly align with the goal.
+              %li
+                Examples are unhelpful. 
+                
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li
+                Goal/purpose is not stated.
+              %li
+                Tasks are unclear.
+              %li
+                Examples are not given.                              
+                  
+                  
+                  
+  .clearfix.required
+    = form.label :resources_identified, '3. Resources Identified:'
+    .input      
+      %table.border
+        %tr
+          %th{:align => 'left'}
+            =form.radio_button :resources_identified, '2'
+            High
+          %th{:align => 'left'}
+            =form.radio_button :resources_identified, '1'
+            Low          
+          %th{:align => 'left'}
+            =form.radio_button :resources_identified, '0'
+            Not Stated
+        %tr
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Other resources to use the tool are clearly specified, e.g. expertise, facilitator, technical, facilities.
+
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Other resources to use the tool are unclear.
+
+
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Resources to use the tool are not stated.
+
+
+
+  .clearfix.required
+    = form.label :format_presentation, '4. Format/Presentation'
+    .input      
+      %table.border
+        %tr
+          %th{:align => 'left'}
+            =form.radio_button :format_presentation, '2'
+            High
+          %th{:align => 'left'}
+            =form.radio_button :format_presentation, '1'
+            Low          
+          %th{:align => 'left'}
+            =form.radio_button :format_presentation, '0'
+            Not Stated
+        %tr
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Text and descriptions are easy to understand.
+              %li Uses plain language.
+              %li Page layout is reader friendly.
+              %li Visuals and graphics help in understanding how to use tool. 
+              %li Layout emphasizes what elements of the tool are most important.
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Text and descriptions are wordy and complicated.
+              %li Uses difficult jargon.
+              %li Visual aids are limited or unhelpful 
+              %li Layout does not emphasize what is important.
+              
+
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Text and descriptions are impossible to understand.
+              %li Layout is impossible to follow.
+                              
+
+
+  .clearfix.required
+    = form.label :adaptable, '5. Adaptable:'
+    .input      
+      %table.border
+        %tr
+          %th{:align => 'left'}
+            =form.radio_button :adaptable, '2'
+            High
+          %th{:align => 'left'}
+            =form.radio_button :adaptable, '1'
+            Low          
+          %th{:align => 'left'}
+            =form.radio_button :adaptable, '0'
+            Not Stated
+        %tr
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Limited expertise is needed to adapt activities to fit local circumstances.
+              %li Examples of modified activities are helpful and easy to understand.
+              %li Suggests how tool merges with other tools or activities.
+              
+
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li Special expertise or consultants are needed to adapt activities to fit local circumstances.
+              %li Examples of modified activities are unhelpful. 
+
+              
+
+
+          %td{:align => 'left', :valign => 'top'}
+            %ul
+              %li No mention of adapting activities.
