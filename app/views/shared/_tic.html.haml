@@ -126,4 +126,4 @@
     %th{:align => 'left', :valign => 'top'}
       Reviwers
     %td{:align => 'left', :valign => 'top'}
-      =@tool.reviews.map{|r| r.name}.join("<br>").html_safe           
+      =@tool.reviews.map{|r| r.user.try(:username)}.join("<br>").html_safe           
