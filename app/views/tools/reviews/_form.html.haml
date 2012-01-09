@@ -50,6 +50,10 @@
               %li Community conditions are not presented.
               %li Target users are not identified. 
               %li Conditions where or when to use the tool are not presented
+        %tr
+          %td{:colspan => 3}
+            =form.label :community_context_comment, 'Community Context Comments:'
+            =form.text_area :community_context_comment, :rows => 3, :cols => 40, :style => 'width:400px'
               
       
       
@@ -96,7 +100,11 @@
               %li
                 Tasks are unclear.
               %li
-                Examples are not given.                              
+                Examples are not given.    
+        %tr
+          %td{:colspan => 3}
+            =form.label :generates_results_comment, 'Generates Results Comments:'
+            =form.text_area :generates_results_comment, :rows => 3, :cols => 40      , :style => 'width:400px'                                    
                   
                   
                   
@@ -127,6 +135,10 @@
           %td{:align => 'left', :valign => 'top'}
             %ul
               %li Resources to use the tool are not stated.
+        %tr
+          %td{:colspan => 3}
+            =form.label :resources_identified_comment, 'Resources Identified Comments:'
+            =form.text_area :resources_identified_comment, :rows => 3, :cols => 40    , :style => 'width:400px'          
 
 
 
@@ -164,6 +176,10 @@
             %ul
               %li Text and descriptions are impossible to understand.
               %li Layout is impossible to follow.
+        %tr
+          %td{:colspan => 3}
+            =form.label :format_presentation_comment, 'Format Presentation Comments:'
+            =form.text_area :format_presentation_comment, :rows => 3, :cols => 40    , :style => 'width:400px'          
                               
 
 
@@ -200,3 +216,13 @@
           %td{:align => 'left', :valign => 'top'}
             %ul
               %li No mention of adapting activities.
+        %tr
+          %td{:colspan => 3}
+            =form.label :adaptable_comment, 'Adaptable Comments:'
+            =form.text_area :adaptable_comment, :rows => 3, :cols => 40    , :style => 'width:400px'          
+
+
+  .clearfix.required
+    = form.label :comment, '6. Overall Comments:'
+    .input
+      =form.text_area :comment, :rows => 3, :cols => 40, :style => 'width:400px'
