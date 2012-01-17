@@ -6,19 +6,37 @@ body {
 
 table.border {
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-collapse: collapse; }
 
 table.border td {
   width: 33%;
   border-width: 1px;
-  padding: 1px;
+  padding: 5px;
   border-style: solid; }
 
 table.border th {
   width: 33%;
   border-width: 1px;
-  padding: 1px;
+  padding: 5px;
+  border-style: solid; }
+
+table.tic {
+  border-collapse: collapse; }
+  table.tic td {
+    border-width: 1px;
+    padding: 5px;
+    border-style: solid; }
+  table.tic td.notop {
+    border-top-width: 0px; }
+  table.tic td.noleft {
+    border-left-width: 0px; }
+  table.tic td.noright {
+    border-right-width: 0px; }
+
+table.tic th {
+  border-width: 1px;
+  padding: 5px;
   border-style: solid; }
 
 .stars {
@@ -77,6 +95,9 @@ table.hover tbody td:hover {
 
 .bold {
   font-weight: bold; }
+
+.big {
+  font-size: 130%; }
 
 .blue {
   background-color: #12b7a7; }

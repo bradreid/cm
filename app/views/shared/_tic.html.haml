@@ -1,5 +1,48 @@
 %h2
   = "#{@tool.name}"
+  
+%br
+%br
+%table.tic
+  %tr
+    %td.bold.big
+      Description
+  %tr
+    %td
+      %br
+      =@tool.description
+      %br
+      %br
+%table{:cellpadding => 0, :cellspacing => 0, :width => '100%'}
+  %tr
+    %td{:width => '50%', :valign => 'top'}
+      %table.tic{:width => '100%'}
+        %tr
+          %td.notop.big.bold When
+          %td.notop.big.noright.bold Why
+          %td.notop.noleft
+        -FormConstants.when.sort.each do |w|
+          -size = FormConstants.send("#{w}_purpose".downcase).size
+          %tr
+            %td.notop{:rowspan => size}
+              =w
+            %td.notop.noright
+              =FormConstants.send("#{w}_purpose".downcase).sort.first    
+            %td.noleft.notop
+              =check_box_tag :purpose, nil,  true if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
+          -(1..(size - 1)).each do |i|
+            %tr
+              %td.noright
+                = FormConstants.send("#{w}_purpose".downcase).sort[i]
+              %td.noleft
+                =check_box_tag :purpose, nil, true if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
+    %td{:valign => 'top', :width => '50%'}
+      %table.tic{:width => '100%'}
+        %tr
+          %td.notop.noleft.big.bold  Tool Details
+
+
+  
 %br
 %ul.show_list
   %li
