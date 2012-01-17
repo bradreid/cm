@@ -39,7 +39,43 @@
     %td{:valign => 'top', :width => '50%'}
       %table.tic{:width => '100%'}
         %tr
-          %td.notop.noleft.big.bold  Tool Details
+          %td.notop.noleft.noright.big.bold  Tool Details
+          %td.notop.noleft
+        %tr
+          %td.noleft.noright
+            Equipment	/	Facilities Needed
+          %td.noleft
+            =@tool.special_equipment_facilities
+          
+        %tr
+          %td.noleft.noright
+            Expertise Needed
+          %td.noleft  
+            =@tool.expertise_needed  
+          
+        %tr
+          %td.noleft.noright
+            Language
+          %td.noleft
+            =@tool.language
+
+        %tr
+          %td.noleft.noright
+            Authors
+          %td.noleft                
+            =@tool.author
+            
+        %tr
+          %td.noleft.noright
+            Editors
+          %td.noleft
+            =@tool.editor
+
+        %tr
+          %td.noleft.noright
+            This tool was made in
+          %td.noleft                
+            =@tool.where_created            
 
 
   
