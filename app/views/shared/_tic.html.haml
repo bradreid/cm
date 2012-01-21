@@ -26,6 +26,8 @@
     jQuery.each( $('.min_height'), set_height );
   })
 
+.right
+  =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(@tool), :title => 'Review Tool')
 %h2
   = "#{@tool.name}"
   %small                                                     
@@ -146,6 +148,21 @@
             Source Document URL
           %td.noleft.min_height
             =@tool.source_url
+            
+  %tr
+    %td.big.bold{:colspan => 2}
+      %table.tic{:width => '100%'}
+        %tr
+          %td
+            Tool Reviews
+        -@tool.reviews.each do |r|
+          %tr
+            %td
+              = r.rating
+              =r.user.try(:login) || 'Anonoumous'
+            %td
+              =r.text
+        
   
 %br
 %ul.show_list
@@ -165,30 +182,5 @@
     .label_for_list Copyright Permissions
     =@tool.copyright_permissions=='1' ? "Yes" : "No"
     &nbsp;                  
-  %li
-    .label_for_list Description
-    .description
-      =simple_format @tool.description    
-    &nbsp;  
 %br
-.clear_both
-
-    
-%h4  Star-ranking
-%br
-%table
-  %tr
-    %th{:align => 'left', :valign => 'top', :width => 300}
-      Stars
-    %td{:align => 'left', :valign => 'top'}
-      =@tool.rating.try(:round,2)
-  %tr
-    %th{:align => 'left', :valign => 'top'}
-      Number of reviews
-    %td{:align => 'left', :valign => 'top'}
-      =@tool.rating_count
-  %tr
-    %th{:align => 'left', :valign => 'top'}
-      Reviwers
-    %td{:align => 'left', :valign => 'top'}
-      =@tool.reviews.map{|r| r.user.try(:username)}.join("<br>").html_safe           
+.clear_both         
