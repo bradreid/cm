@@ -5,6 +5,10 @@ class Review < ActiveRecord::Base
   belongs_to :user
   before_save :add_rating
   after_save :update_tool_stars
+  
+  def text
+    "test"
+  end
    
 private
 
