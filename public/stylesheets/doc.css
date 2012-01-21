@@ -22,11 +22,14 @@ table.border th {
   border-style: solid; }
 
 table.tic {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  word-wrap: break-word;
+  table-layout: fixed; }
   table.tic td {
     border-width: 1px;
     padding: 5px;
-    border-style: solid; }
+    border-style: solid;
+    word-wrap: break-word; }
   table.tic td.notop {
     border-top-width: 0px; }
   table.tic td.noleft {

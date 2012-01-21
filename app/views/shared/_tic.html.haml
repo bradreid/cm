@@ -1,9 +1,39 @@
+:javascript
+  var min_height = 100.00;
+
+
+  function cal_min_height(i, element){
+    height = $(element).height();
+    console.log(height);
+    if (height < min_height){
+      min_height = height;
+    }
+  }
+  
+  function set_height(i, element){
+    height = $(element).height();
+    interval = Math.ceil((height - (height * 0.1)) / min_height);
+    new_height = interval * min_height + ((interval - 1)  * 10) + interval + (1 * interval -1) ;
+    if (interval > 1){
+     $(element).height(new_height); 
+    } else{
+      $(element).height(min_height);     
+    }
+  }  
+  
+  $(function(){
+    jQuery.each( $('.min_height'), cal_min_height );
+    jQuery.each( $('.min_height'), set_height );
+  })
+
 %h2
   = "#{@tool.name}"
+  %small                                                     
+    =rating_stars(@tool)
   
 %br
 %br
-%table.tic
+%table.tic{:width => '100%'}
   %tr
     %td.bold.big
       Description
@@ -15,126 +45,110 @@
       %br
 %table{:cellpadding => 0, :cellspacing => 0, :width => '100%'}
   %tr
-    %td{:width => '50%', :valign => 'top'}
+    %td{:width => '40%', :valign => 'top'}
       %table.tic{:width => '100%'}
         %tr
           %td.notop.big.bold When
           %td.notop.big.noright.bold Why
-          %td.notop.noleft
+          %td.notop.noleft{:width => '25%'}
         -FormConstants.when.sort.each do |w|
           -size = FormConstants.send("#{w}_purpose".downcase).size
           %tr
             %td.notop{:rowspan => size}
               =w
-            %td.notop.noright
+            %td.notop.noright.min_height
               =FormConstants.send("#{w}_purpose".downcase).sort.first    
-            %td.noleft.notop
-              =check_box_tag :purpose, nil,  true if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
+            %td.noleft.notop{:align => 'center'}
+              =check_box_tag :purpose, nil,  true, :style => 'padding:0px; margin:0px' if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
           -(1..(size - 1)).each do |i|
             %tr
-              %td.noright
+              %td.noright.min_height
                 = FormConstants.send("#{w}_purpose".downcase).sort[i]
-              %td.noleft
-                =check_box_tag :purpose, nil, true if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
+              %td.noleft{:align => 'center'}
+                =check_box_tag :purpose, nil, true, :style => 'padding:0px; margin:0px' if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
+        %tr
+          %td.min_height
+            Topic
+          %td{:colspan => 2}
+            =@tool.topic
+        %tr
+          %td.min_height
+            Who
+          %td{:colspan => 2}
+            =@tool.who
     %td{:valign => 'top', :width => '50%'}
       %table.tic{:width => '100%'}
         %tr
-          %td.notop.noleft.noright.big.bold  Tool Details
+          %td.notop.noleft.noright.big.bold{:width => '40%'}  Tool Details
           %td.notop.noleft
         %tr
-          %td.noleft.noright
+          %td.noleft.noright.equipment
             Equipment	/	Facilities Needed
-          %td.noleft
+          %td.noleft.min_height
             =@tool.special_equipment_facilities
           
         %tr
           %td.noleft.noright
             Expertise Needed
-          %td.noleft  
+          %td.noleft.min_height
             =@tool.expertise_needed  
           
         %tr
           %td.noleft.noright
             Language
-          %td.noleft
+          %td.noleft.min_height
             =@tool.language
 
         %tr
           %td.noleft.noright
             Authors
-          %td.noleft                
+          %td.noleft.min_height
             =@tool.author
             
         %tr
           %td.noleft.noright
             Editors
-          %td.noleft
+          %td.noleft.min_height
             =@tool.editor
 
         %tr
           %td.noleft.noright
             This tool was made in
-          %td.noleft                
+          %td.noleft.min_height   
             =@tool.where_created            
-
-
+        %tr
+          %td.noleft.noright
+            Publisher
+          %td.noleft.min_height     
+            =@tool.publisher
+        %tr
+          %td.noleft.noright
+            Date Created
+          %td.noleft.min_height  
+            ="#{Date::MONTHNAMES[@tool.date_created.try(:month)]} #{@tool.date_created.try(:year)}"           
+        %tr
+          %td.noleft.noright
+            File Size
+          %td.noleft.min_height
+            =@tool.source_document_file_size            
+        %tr
+          %td.noleft.noright
+            File Format
+          %td.noleft.min_height
+            =@tool.source_document_content_type
+        %tr
+          %td.noleft.noright
+            Source Document Title
+          %td.noleft.min_height
+            =@tool.source_document_name           
+        %tr
+          %td.noleft.noright
+            Source Document URL
+          %td.noleft.min_height
+            =@tool.source_url
   
 %br
 %ul.show_list
-  %li
-    .label_for_list Source Document Title
-    =@tool.source_document_name
-    &nbsp;    
-  %li
-    .label_for_list Source Document Url
-    =@tool.source_url
-    &nbsp;    
-  %li
-    .label_for_list Expertise Needed
-    =@tool.expertise_needed
-    &nbsp;  
-  %li
-    .label_for_list Special Equipment/Facilities Needed
-    =@tool.special_equipment_facilities   
-    %br
-    &nbsp;        
-  %li
-    .label_for_list Authors
-    =@tool.author 
-    &nbsp;    
-  %li
-    .label_for_list Editors
-    =@tool.editor 
-    &nbsp;    
-  %li
-    .label_for_list Publisher
-    =@tool.publisher    
-    &nbsp;    
-  %li
-    .label_for_list This tool was made in
-    =@tool.where_created    
-    &nbsp;    
-  %li 
-    .label_for_list Date Created
-    ="#{Date::MONTHNAMES[@tool.date_created.try(:month)]} #{@tool.date_created.try(:year)}"
-    &nbsp;    
-  %li
-    .label_for_list Language
-    =@tool.language
-    &nbsp;    
-  %li
-    .label_for_list Source Document
-    =link_to(@tool.source_document_file_name, @tool.source_document.url) if @tool.source_document_file_name
-    &nbsp;   
-  %li
-    .label_for_list File Size
-    =@tool.source_document_file_size
-    KB
-    &nbsp;
-  %li
-    .label_for_list File Format
-    =@tool.source_document_content_type
-    &nbsp;
   %li
     .label_for_list Copyright
     =@tool.copyright=='1' ? "Yes" : "No"
@@ -159,34 +173,6 @@
 %br
 .clear_both
 
-
-%h4 Topic (The triple bottom line)
-%ul.show_list
-  %li
-    =@tool.topic     
-    
-%h4 Where (What types of communities can this tool be used to benefit?)
-%ul.show_list
-  %li
-    =@tool.where
-      
-%h4 When (At what phase of the CED project cycle is this tool most useful?)
-%ul.show_list
-  %li
-    =@tool.when
-    %br
-      
-%h4 Why (What is the purpose of using this particular tool?)
-%ul.show_list
-  %li
-    =@tool.why
-    %br
-    
-%h4  Who (List the individuals, organizations and associations that are intended to use the tool)
-%ul.show_list
-  %li
-    =@tool.who
-    %br
     
 %h4  Star-ranking
 %br
