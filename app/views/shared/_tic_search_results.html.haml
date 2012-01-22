@@ -1,6 +1,8 @@
+.clear_both
 -remote ||= false
 - if @tools
-  = page_entries_info @tools, :model => 'Tool'
+  .left
+    = page_entries_info @tools, :model => 'Tool'
   %br
   %br
   %table#search_results{:width => '100%', :border => '0', :cellspacing => 0}

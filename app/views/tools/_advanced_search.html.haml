@@ -4,48 +4,48 @@
   %br
   %table.search_results{:border => 0, :cellspacing => 0, :cellpadding => 0, :width => '100%'}
     %tr
-      %td
+      %td{:align => 'left'}
         .bold
           Keywords
-      %td
+      %td{:align => 'left'}
         with all of the words
-      %td
+      %td{:align => 'left'}
         = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
         
     %tr
-      %td
+      %td{:align => 'left'}
         .bold
           Author
-      %td
+      %td{:align => 'left'}
         Return tools written by
-      %td
+      %td{:align => 'left'}
         =text_field_tag :author, params[:author], :title => 'Search by author'       
      
     %tr
-      %td
+      %td{:align => 'left'}
         .bold
           Language
-      %td
+      %td{:align => 'left'}
         Return tools written in this language
-      %td
+      %td{:align => 'left'}
         = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
     %tr
-      %td
+      %td{:align => 'left'}
         .bold
           Rating
-      %td
+      %td{:align => 'left'}
         Tools with at least this rating
-      %td
+      %td{:align => 'left'}
         = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => 'Please select the rating to search by'          
 
 
     %tr
       %td
-        .bold
+        .bold{:align => 'left'}
           Date created
-      %td
+      %td{:align => 'left'}
         Return tools published between
-      %td
+      %td{:align => 'left'}
         = text_field_tag :from, params[:from], :maxlength=> 20, :size => 10  
         ="—"
         = text_field_tag :to, params[:to], :maxlength=> 20, :size => 10

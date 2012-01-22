@@ -4,7 +4,7 @@
      select_purpose("." + $(this).val().toLowerCase());
    }); 
    
-   $('.purpose_select option').click(function(){
+   $('.purpose_select').click(function(){
      $('#phases_table').spin();
      $.ajax({
        url: "#{phases_path}",
