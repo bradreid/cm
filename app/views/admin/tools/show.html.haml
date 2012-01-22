@@ -5,8 +5,28 @@
 %br
 %ul.show_list
   %li
+    .label_for_list Topic
+    =@tool.topic
+    &nbsp;
+  %li
+    .label_for_list Copyright
+    =@tool.copyright=='1' ? "Yes" : "No"
+    &nbsp;    
+  %li
+    .label_for_list Copyright Holder
+    =@tool.copyright_holder
+    &nbsp;
+  %li
+    .label_for_list Copyright Restrictions
+    =@tool.copyright_restrictions
+    &nbsp;
+  %li
+    .label_for_list Copyright Permissions
+    =@tool.copyright_permissions=='1' ? "Yes" : "No"
+    &nbsp;
+  %li
     .label_for_list Submitted at
-    =@tool.created_at.to_formatted_s(:short_with_year)
+    =@tool.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
     &nbsp;    
   %li
     .label_for_list Submitted by
@@ -14,7 +34,7 @@
     &nbsp;
   %li
     .label_for_list Updated at
-    =@tool.updated_at.to_formatted_s(:short_with_year)
+    =@tool.updated_at.strftime("%A, %B %d, %Y at %l:%M%p")
     &nbsp;  
   %li
     .label_for_list Comments
