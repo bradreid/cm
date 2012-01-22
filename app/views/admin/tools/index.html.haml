@@ -1,19 +1,12 @@
 .page-header
   %h1
-    Tools
+    Manage tools
     %small
       Create, edit and delete tools
 =link_to "Submit A New Tool", new_admin_tool_path, :class => 'btn primary'
 %br
 %br
-%table{:cellpadding => 10}
-  %tr
-    %td    
-      %h3
-        Manage existing tools 
-    %td{:width => 10}
-    %td
-      =render :partial => 'search'
+=render :partial => 'search'
 %br
 = page_entries_info @tools, :model => 'Tool' 
 %br
@@ -26,8 +19,6 @@
       Title
     %th
       Author
-    %th
-      Source Document
     %th
       Date Created
     %th
@@ -43,8 +34,6 @@
           =tool.name
         %td
           =tool.author
-        %td
-          =link_to tool.source_document_file_name, tool.source_document.try(:url)  if tool.source_document_file_name
         %td
           =tool.date_created.try(:to_formatted_s,:short_with_year)
         %td

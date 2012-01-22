@@ -188,25 +188,6 @@
           =r.text
         %td
           =view_link tool_review_path(@tool, r)
-        
--if controller.is_a? AdminController  
-  %br
-  %ul.show_list
-    %li
-      .label_for_list Copyright
-      =@tool.copyright=='1' ? "Yes" : "No"
-      &nbsp;    
-    %li
-      .label_for_list Copyright Holder
-      =@tool.copyright_holder
-      &nbsp;
-    %li
-      .label_for_list Copyright Restrictions
-      =@tool.copyright_restrictions
-      &nbsp;
-    %li
-      .label_for_list Copyright Permissions
-      =@tool.copyright_permissions=='1' ? "Yes" : "No"
-      &nbsp;                  
+                    
 %br
 .clear_both         
