@@ -21,9 +21,19 @@
     }
   }  
   
+  function show_bottom_borders(){
+    diff =  $('#left_length').height() - $('#right_length').height();
+    if (diff > 1){
+      $('.rightbottom').removeClass('nobottom');
+    } else if (diff < -1){
+      $('.leftbottom').removeClass('nobottom');
+    }
+  }
+  
   $(function(){
     jQuery.each( $('.min_height'), cal_min_height );
     jQuery.each( $('.min_height'), set_height );
+    show_bottom_borders();
   })
 
 .right
@@ -41,147 +51,162 @@
     %td.bold.big
       Description
   %tr
-    %td
+    %td.nobottom
       %br
       =@tool.description
       %br
       %br
-%table{:cellpadding => 0, :cellspacing => 0, :width => '100%'}
+%table.ticborder{:cellpadding => 0, :cellspacing => 0, :width => '100%'}
   %tr
     %td{:width => '40%', :valign => 'top'}
-      %table.tic{:width => '100%'}
+      %table#left_length.tic{:width => '100%', :cellpadding => 0, :cellspacing => 0}
         %tr
-          %td.notop.big.bold When
+          %td.notop.big.bold.noleft When
           %td.notop.big.noright.bold Why
-          %td.notop.noleft{:width => '25%'}
+          %td.notop.noleft.noright{:width => '25%'}
         -FormConstants.when.sort.each do |w|
           -size = FormConstants.send("#{w}_purpose".downcase).size
           %tr
-            %td.notop{:rowspan => size}
+            %td.notop.noleft{:rowspan => size}
               =w
             %td.notop.noright.min_height
               =FormConstants.send("#{w}_purpose".downcase).sort.first    
-            %td.noleft.notop{:align => 'center'}
+            %td.noleft.notop.noright{:align => 'center'}
               =check_box_tag :purpose, nil,  true, :style => 'padding:0px; margin:0px' if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
           -(1..(size - 1)).each do |i|
             %tr
               %td.noright.min_height
                 = FormConstants.send("#{w}_purpose".downcase).sort[i]
-              %td.noleft{:align => 'center'}
+              %td.noleft.noright{:align => 'center'}
                 =check_box_tag :purpose, nil, true, :style => 'padding:0px; margin:0px' if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
         %tr
-          %td.min_height
+          %td.min_height.noleft
             Topic
-          %td{:colspan => 2}
+          %td.noright{:colspan => 2}
             =@tool.topic
         %tr
-          %td.min_height
+          %td.min_height.noleft.nobottom.leftbottom
             Who
-          %td{:colspan => 2}
+          %td.noright.nobottom.leftbottom{:colspan => 2}
             =@tool.who
     %td{:valign => 'top', :width => '50%'}
-      %table.tic{:width => '100%'}
+      %table#right_length.tic{:width => '100%'}
         %tr
           %td.notop.noleft.noright.big.bold{:width => '40%'}  Tool Details
-          %td.notop.noleft
+          %td.notop.noleft.noright
         %tr
           %td.noleft.noright.equipment
             Equipment	/	Facilities Needed
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.special_equipment_facilities
           
         %tr
           %td.noleft.noright
             Expertise Needed
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.expertise_needed  
           
         %tr
           %td.noleft.noright
             Language
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.language
 
         %tr
           %td.noleft.noright
             Authors
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.author
             
         %tr
           %td.noleft.noright
             Editors
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.editor
 
         %tr
           %td.noleft.noright
             This tool was made in
-          %td.noleft.min_height   
+          %td.noleft.min_height.noright 
             =@tool.where_created            
         %tr
           %td.noleft.noright
             Publisher
-          %td.noleft.min_height     
+          %td.noleft.min_height.noright    
             =@tool.publisher
         %tr
           %td.noleft.noright
             Date Created
-          %td.noleft.min_height  
+          %td.noleft.min_height.noright 
             ="#{Date::MONTHNAMES[@tool.date_created.try(:month)]} #{@tool.date_created.try(:year)}"           
         %tr
           %td.noleft.noright
             File Size
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.source_document_file_size            
         %tr
           %td.noleft.noright
             File Format
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.source_document_content_type
         %tr
           %td.noleft.noright
             Source Document Title
-          %td.noleft.min_height
+          %td.noleft.min_height.noright
             =@tool.source_document_name           
         %tr
-          %td.noleft.noright
+          %td.noleft.noright.nobottom.rightbottom
             Source Document URL
-          %td.noleft.min_height
+          %td.noleft.min_height.noright.nobottom.rightbottom
             =@tool.source_url
             
-  %tr
-    %td{:colspan => 2}
-      %table.tic{:width => '100%'}
-        %tr
-          %td.big.bold{:colspan => 2}
-            Tool Reviews
-        -@tool.reviews.each do |r|
-          %tr
-            %td
-              =review_stars(r)
-              =r.user.try(:username) || 'Anonoumous'
-            %td
-              =r.text
-        
-  
 %br
-%ul.show_list
-  %li
-    .label_for_list Copyright
-    =@tool.copyright=='1' ? "Yes" : "No"
-    &nbsp;    
-  %li
-    .label_for_list Copyright Holder
-    =@tool.copyright_holder
-    &nbsp;
-  %li
-    .label_for_list Copyright Restrictions
-    =@tool.copyright_restrictions
-    &nbsp;
-  %li
-    .label_for_list Copyright Permissions
-    =@tool.copyright_permissions=='1' ? "Yes" : "No"
-    &nbsp;                  
+%br
+.clear_both
+%h2
+  Reviews
+-if !@tool.reviews.any?
+  This tool has not been reviewed
+-else
+  %table.data
+    %tr
+      %th
+        Rating
+      %th
+        Reviewer
+      %th
+        Comments
+      %th
+        Actions
+    -@tool.reviews.each do |r|
+      %tr
+        %td
+          =review_stars(r)
+        %th
+          =r.user.try(:username) || 'Anonoumous'
+        %td
+          =r.text
+        %td
+          =view_link tool_review_path(@tool, r)
+        
+-if controller.is_a? AdminController  
+  %br
+  %ul.show_list
+    %li
+      .label_for_list Copyright
+      =@tool.copyright=='1' ? "Yes" : "No"
+      &nbsp;    
+    %li
+      .label_for_list Copyright Holder
+      =@tool.copyright_holder
+      &nbsp;
+    %li
+      .label_for_list Copyright Restrictions
+      =@tool.copyright_restrictions
+      &nbsp;
+    %li
+      .label_for_list Copyright Permissions
+      =@tool.copyright_permissions=='1' ? "Yes" : "No"
+      &nbsp;                  
 %br
 .clear_both         

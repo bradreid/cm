@@ -19,6 +19,15 @@ table.border th
   :border-width 1px
   :padding 5px
   :border-style solid  
+
+table.ticborder
+  :border-collapse collapse 
+  :word-wrap break-word
+  :table-layout fixed
+  td
+    :border-width 1px
+    :padding 0px
+    :border-style solid
   
 table.tic
   :border-collapse collapse 
@@ -31,9 +40,11 @@ table.tic
     :word-wrap break-word
   td.notop
     :border-top-width 0px 
+  td.nobottom
+    :border-bottom-width 0px    
   td.noleft
     :border-left-width 0px
-  td.nof
+  td.noright
     :border-right-width 0px    
 table.tic th
   :border-width 1px
