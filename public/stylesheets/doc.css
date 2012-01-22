@@ -21,6 +21,15 @@ table.border th {
   padding: 5px;
   border-style: solid; }
 
+table.ticborder {
+  border-collapse: collapse;
+  word-wrap: break-word;
+  table-layout: fixed; }
+  table.ticborder td {
+    border-width: 1px;
+    padding: 0px;
+    border-style: solid; }
+
 table.tic {
   border-collapse: collapse;
   word-wrap: break-word;
@@ -32,9 +41,11 @@ table.tic {
     word-wrap: break-word; }
   table.tic td.notop {
     border-top-width: 0px; }
+  table.tic td.nobottom {
+    border-bottom-width: 0px; }
   table.tic td.noleft {
     border-left-width: 0px; }
-  table.tic td.nof {
+  table.tic td.noright {
     border-right-width: 0px; }
 
 table.tic th {

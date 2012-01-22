@@ -7,7 +7,8 @@ class Review < ActiveRecord::Base
   after_save :update_tool_stars
   
   def text
-    "test"
+    c = [self.comment, self.community_context_comment, self.generates_results_comment, self.resources_identified_comment, self.format_presentation_comment, self.adaptable_comment]
+    c.compact.join('. ').gsub(/\.\./, '.')[0..250]
   end
    
 private
