@@ -28,10 +28,11 @@
 
 .right
   =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(@tool), :title => 'Review Tool')
-%h2
-  = "#{@tool.name}"
-  %small                                                     
-    =rating_stars(@tool)
+.page-header
+  %h1
+    = "#{@tool.name}"
+    %small                                                     
+      =rating_stars(@tool)
   
 %br
 %br

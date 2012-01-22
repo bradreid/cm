@@ -32,7 +32,7 @@
             =link_to image_tag('template/header_phases.png', :style => 'margin:0px;padding:0px;float:left;'), phases_path
       %tr
         -if @splash
-          %td.splash
+          %td.splash{:align => 'left'}
             .container
               %br
               %br
@@ -61,7 +61,7 @@
                 %br
                 %br                        
         -else
-          %td.body
+          %td.body{:align => 'left'}
             .container
               %br
               %br
