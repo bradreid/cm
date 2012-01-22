@@ -4,7 +4,7 @@
 
   function cal_min_height(i, element){
     height = $(element).height();
-    console.log(height);
+    //console.log(height);
     if (height < min_height){
       min_height = height;
     }
@@ -150,16 +150,16 @@
             =@tool.source_url
             
   %tr
-    %td.big.bold{:colspan => 2}
+    %td{:colspan => 2}
       %table.tic{:width => '100%'}
         %tr
-          %td
+          %td.big.bold{:colspan => 2}
             Tool Reviews
         -@tool.reviews.each do |r|
           %tr
             %td
-              = r.rating
-              =r.user.try(:login) || 'Anonoumous'
+              =review_stars(r)
+              =r.user.try(:username) || 'Anonoumous'
             %td
               =r.text
         
