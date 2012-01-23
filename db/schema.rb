@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107021836) do
+ActiveRecord::Schema.define(:version => 20120123022236) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -77,8 +77,8 @@ ActiveRecord::Schema.define(:version => 20120107021836) do
   add_index "tools", ["why"], :name => "index_tools_on_why"
 
   create_table "users", :force => true do |t|
-    t.string    "email",                                 :default => "", :null => false
-    t.string    "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string    "email",                                 :default => "",   :null => false
+    t.string    "encrypted_password",     :limit => 128, :default => "",   :null => false
     t.string    "reset_password_token"
     t.timestamp "reset_password_sent_at"
     t.timestamp "remember_created_at"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20120107021836) do
     t.timestamp "updated_at"
     t.string    "username"
     t.boolean   "is_admin"
+    t.boolean   "active",                                :default => true
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

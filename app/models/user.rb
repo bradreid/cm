@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active
   
   validates_presence_of :username
   validates_uniqueness_of :username
@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     login = conditions.delete(:login)
-    where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    where(conditions).where(["(lower(username) = :value OR lower(email) = :value) AND active = :active", { :value => login.downcase , :active => true}]).first
   end
     
 end

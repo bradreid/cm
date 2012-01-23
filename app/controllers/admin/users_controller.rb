@@ -14,7 +14,8 @@ class Admin::UsersController < AdminController
   
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
+    @user.update_attribute(:active, false)
+    flash[:notice] = "You have successfully inactivated the user: #{@user.login}"
     redirect_to admin_users_path
   end
   

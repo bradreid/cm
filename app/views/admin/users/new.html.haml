@@ -16,6 +16,11 @@
     %br
     =f.check_box :is_admin
 
+  -if current_user.is_admin?
+    %br
+    Active?
+    %br
+    =f.check_box :active
 
   <br>
   Email

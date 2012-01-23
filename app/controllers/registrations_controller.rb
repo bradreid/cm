@@ -18,6 +18,7 @@ class RegistrationsController < Devise::RegistrationsController
   
 private
   def remove_is_admin
+    params[:user].try(:delete,:active)    
     params[:user].try(:delete,:is_admin)
   end
 end
