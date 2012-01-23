@@ -1,5 +1,10 @@
 class Tools::ReviewsController < ApplicationController
   
+  def show
+    @tool = Tool.find(params[:tool_id])   
+    @review = @tool.reviews.find(params[:id]) 
+  end
+  
   def new
     @tool = Tool.find(params[:tool_id])
     @review = @tool.reviews.build
