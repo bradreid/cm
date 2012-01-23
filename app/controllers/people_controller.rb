@@ -15,7 +15,7 @@ class PeopleController < ApplicationController
         variables << "%#{t}%"
         variables << "%#{t}%"      
       end
-      sql = variables.inject([where_clause.join(' OR ')]){|sum, item|  sum << item}
+      sql = variables.inject([where_clause.join(' AND ')]){|sum, item|  sum << item}
       @tools = @tools.where(sql)
     end  
 end
