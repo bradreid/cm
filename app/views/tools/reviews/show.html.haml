@@ -1,0 +1,57 @@
+.right
+  =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(@tool), :title => 'Tool Information Card')
+.page-header
+  %h1
+    CED Review
+    %small 
+      =@tool.name
+      = review_stars(@review)
+
+.bold
+  Reviewed By:
+=@review.user.try(:username) || Anonymous
+%br
+.bold
+  Reviewed On:
+=@review.created_at.strftime("%A, %B %d, %Y at %l:%M%p")    
+  
+      
+%h3
+  What is your experience with this tool?
+=@review.experience
+
+
+%h3
+  1. Community Context:
+=ranking_text(@review.community_context)
+%br
+=@review.community_context_comment
+
+%h3
+  2. Generates Results
+=ranking_text(@review.generates_results)
+%br
+=@review.generates_results_comment
+
+%h3
+  3. Resources Identified
+=ranking_text(@review.resources_identified)
+%br
+=@review.resources_identified_comment
+
+%h3
+  4. Format/Presentation
+=ranking_text(@review.format_presentation)
+%br
+=@review.format_presentation_comment
+
+%h3
+  5. Adaptable
+=ranking_text(@review.adaptable)
+%br
+=@review.adaptable_comment
+
+
+%h3
+  6. Overall Comments
+=@review.comment
