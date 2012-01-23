@@ -158,7 +158,7 @@
           %td.noleft.noright.nobottom.rightbottom
             Source Document URL
           %td.noleft.min_height.noright.nobottom.rightbottom
-            =@tool.source_url
+            =link_to(@tool.source_url, @tool.source_url) if @tool.source_url
             
 %br
 %br
