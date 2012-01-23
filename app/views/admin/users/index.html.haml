@@ -40,7 +40,7 @@
         %th
           =u.is_admin? ? "Yes" : 'No'
         %th
-          =action_images [:admin, u], :exclude => [:index, :show]
+          =action_images [:admin, u], :exclude => [:index, :show], :delete => {:title => 'Inactivate', :alt_text => 'Inactivate', :confirm => 'Are you sure you want to inactivate this user'}
       %tr
     %td{:colspan => 5}
       = will_paginate @users, :renderer => 'WillPaginateHelper::LinkRenderer'          
