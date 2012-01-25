@@ -1,0 +1,32 @@
+.page-header
+  %h1
+    =@user.display_name
+    %small
+      Reviews by user
+      
+.clear_both
+%br
+%br
+-if !@user.reviews.any?
+  This user has not reviewed any tools
+-else
+  %table.data
+    %tr
+      %th
+        Rating
+      %th
+        Tool
+      %th
+        Reviewed At
+      %th
+        Actions
+    -@user.reviews.each do |r|
+      %tr
+        %td
+          =review_stars(r)
+        %th
+          = link_to r.tool.name, tool_path(r.tool)
+        %td
+          =r.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
+        %td
+          =view_link tool_review_path(r.tool, r)      

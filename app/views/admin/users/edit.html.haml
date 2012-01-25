@@ -9,6 +9,21 @@
   <br>
   = f.text_field :username
   %p
+  
+  <br>
+  First Name
+  <br>
+  = f.text_field :first_name
+  %p
+
+
+
+  <br>
+  Last Name
+  <br>
+  = f.text_field :last_name
+  %p
+  
 
   -if current_user.is_admin?
     %br
@@ -32,6 +47,8 @@
   <br>
   Password
   <br>
+  (Leave blank if you don't want to change)
+  %br
   = f.password_field :password
   %p
   <br>

@@ -175,7 +175,7 @@
       %th
         Reviewer
       %th
-        Comments
+        Reviewed At
       %th
         Actions
     -@tool.reviews.each do |r|
@@ -183,9 +183,9 @@
         %td
           =review_stars(r)
         %th
-          =r.user.try(:username) || 'Anonoumous'
+          = r.user ? link_to(r.user.display_name, user_path(r.user)) : 'Anonoumous'
         %td
-          =r.text
+          =r.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
         %td
           =view_link tool_review_path(@tool, r)
                     

@@ -15,11 +15,13 @@
   %thead
     %tr
       %th
-        Active
-      %th
         ID
       %th
+        Active
+      %th
         Username
+      %th
+        Full Name
       %th
         Email
       %th
@@ -30,11 +32,13 @@
     -@users.each do |u|
       %tr
         %td
+          =u.id      
+        %td
           =u.active? ? 'Yes' : 'No'
         %td
-          =u.id
-        %td
           =u.username
+        %th
+          =u.display_name
         %td
           =u.email
         %th
