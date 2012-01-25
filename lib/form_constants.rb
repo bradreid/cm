@@ -40,7 +40,7 @@ class FormConstants
   end
   
   def self.implementing_purpose
-    ['Natrual Resources', 'Cultural and Arts', 'Human Resources', 'Social Capital', 'Governance', 'Financial', 'Community Infrastructure']
+    ['Natural Resources', 'Cultural and Arts', 'Human Resources', 'Social Capital', 'Governance', 'Financial', 'Community Infrastructure']
   end
   
   def self.reviewing_purpose
