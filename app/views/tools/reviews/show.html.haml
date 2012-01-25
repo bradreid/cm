@@ -7,16 +7,15 @@
       =@tool.name
       = review_stars(@review)
 
-.bold
-  Reviewed By:
-=@review.user.try(:username) || Anonymous
-%br
-.bold
-  Reviewed On:
+
+Review by
+=@review.user ? link_to(@review.user.display_name, user_path(@review.user)) :  'Anonymous'
+on
 =@review.created_at.strftime("%A, %B %d, %Y at %l:%M%p")    
   
-      
-%h3
+%br
+%br      
+%h5
   What is your experience with this tool?
 =@review.experience
 

@@ -62,6 +62,7 @@ Cm::Application.routes.draw do
     end    
   end
   resources :phases
+  resources :users
   match 'search' => 'tools#index'
   match 'people' => 'people#index'
   match 'green' => 'green#index'

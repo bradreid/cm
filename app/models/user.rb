@@ -6,11 +6,19 @@ class User < ActiveRecord::Base
          
   attr_accessor :login
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active
+  has_many :reviews
   
-  validates_presence_of :username
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active, :first_name, :last_name
+  
+  validates_presence_of :username, :first_name, :last_name
   validates_uniqueness_of :username
+  
+  def display_name
+    full_name = "#{first_name} #{last_name}"
+    full_name = self.username if full_name.blank?
+    full_name
+  end
   
   protected
 
