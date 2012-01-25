@@ -72,13 +72,13 @@
             %td.notop.noright.min_height
               =FormConstants.send("#{w}_purpose".downcase).sort.first    
             %td.noleft.notop.noright{:align => 'center'}
-              =check_box_tag :purpose, nil,  true, :style => 'padding:0px; margin:0px' if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
+              =image_tag 'check_mark.png', :height => 25 if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
           -(1..(size - 1)).each do |i|
             %tr
               %td.noright.min_height
                 = FormConstants.send("#{w}_purpose".downcase).sort[i]
               %td.noleft.noright{:align => 'center'}
-                =check_box_tag :purpose, nil, true, :style => 'padding:0px; margin:0px' if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
+                =image_tag 'check_mark.png', :height => 25 if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
         %tr
           %td.min_height.noleft
             Topic
