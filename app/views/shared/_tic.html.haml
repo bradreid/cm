@@ -1,19 +1,23 @@
 :javascript
   var min_height = 100.00;
+  var min_padding = 100.00;
 
 
   function cal_min_height(i, element){
-    height = $(element).height();
+    e = $(element);
+    height = e.height();
     //console.log(height);
     if (height < min_height){
       min_height = height;
+      min_padding = parseInt(e.css("padding-top"), 10) + parseInt(e.css("padding-bottom"), 10)+ parseInt(e.css("margin-top"), 10) + parseInt(e.css("margin-bottom"), 10)
     }
   }
   
   function set_height(i, element){
     height = $(element).height();
     interval = Math.ceil((height - (height * 0.1)) / min_height);
-    new_height = interval * min_height + ((interval - 1)  * 10) + interval + (1 * interval -1) ;
+    new_height = interval * min_height + ((interval - 1) * min_padding) + interval + (1 * interval -1) ;
+    //$(element).html(height + ' ' + new_height + ' ' + min_padding + ' ' + interval + (1 * interval -1));
     if (interval > 1){
      $(element).height(new_height); 
     } else{
