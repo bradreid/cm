@@ -187,7 +187,7 @@
         %td
           =review_stars(r)
         %th
-          = r.user ? link_to(r.user.display_name, user_path(r.user)) : 'Anonoumous'
+          = r.user ? link_to(r.user.display_name, user_path(r.user)) : 'Anonymous'
         %td
           =r.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
         %td

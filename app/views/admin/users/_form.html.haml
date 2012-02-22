@@ -1,0 +1,52 @@
+= devise_error_messages! 
+
+<br>
+Username
+<br>
+= f.text_field :username
+%p
+
+
+<br>
+First Name
+<br>
+= f.text_field :first_name
+%p
+
+
+
+<br>
+Last Name
+<br>
+= f.text_field :last_name
+%p
+  
+-if current_user.try(:is_admin?)
+  %br
+  Is Admin?
+  %br
+  =f.check_box :is_admin
+
+  %br
+  Active?
+  %br
+  =f.check_box :active
+
+<br>
+Email
+<br>
+= f.email_field :email
+%p
+<br>
+Password
+<br>
+= f.password_field :password
+%p
+<br>
+
+Confirm password
+<br>
+= f.password_field :password_confirmation
+%p
+
+= f.submit text, :class => 'btn primary'
