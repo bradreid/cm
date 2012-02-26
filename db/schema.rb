@@ -13,24 +13,24 @@
 ActiveRecord::Schema.define(:version => 20120226195230) do
 
   create_table "reviews", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "tool_id"
-    t.string   "experience"
-    t.integer  "community_context"
-    t.text     "community_context_comment"
-    t.integer  "generates_results"
-    t.text     "generates_results_comment"
-    t.integer  "resources_identified"
-    t.text     "resources_identified_comment"
-    t.integer  "format_presentation"
-    t.text     "format_presentation_comment"
-    t.integer  "adaptable"
-    t.text     "adaptable_comment"
-    t.text     "comment"
-    t.integer  "rating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "active",                       :default => true
+    t.integer   "user_id"
+    t.integer   "tool_id"
+    t.string    "experience"
+    t.integer   "community_context"
+    t.text      "community_context_comment"
+    t.integer   "generates_results"
+    t.text      "generates_results_comment"
+    t.integer   "resources_identified"
+    t.text      "resources_identified_comment"
+    t.integer   "format_presentation"
+    t.text      "format_presentation_comment"
+    t.integer   "adaptable"
+    t.text      "adaptable_comment"
+    t.text      "comment"
+    t.integer   "rating"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "active",                       :default => true
   end
 
   add_index "reviews", ["tool_id"], :name => "index_reviews_on_tool_id"

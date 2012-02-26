@@ -15,7 +15,7 @@
         %br
       =f.check_box :active    
       %br
-      - if ['edit', 'update'].include? params[:action] && !current_user.try(:is_admin?)
+      - if (['edit', 'update'].include? params[:action]) && current_user == @user
         %br
         Current password
         <br>
@@ -28,13 +28,13 @@
       %p
       
       %br
-      First Name
+      First Name (optional)
       %br
       = f.text_field :first_name
       %p
 
       %br
-      Last Name
+      Last Name (optional)
       %br
       = f.text_field :last_name
       %p      
@@ -62,7 +62,7 @@
     %td{:width => '50%', :valign => 'top'}
       
       %br
-      Current Role/Job Title (optional)
+      Current Role/Job Title
       %br
       = f.text_field :current_role
       %p 

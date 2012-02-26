@@ -1,12 +1,21 @@
 .page-header
   %h1
     =@user.display_name
-    %small
-      Reviews by user
+
+%table
+  - @user.display_fields.each do |a|
+    -if !current_user.send(a[0]).blank?
+      %tr
+        %td{:valign => 'top'}
+          =a[1]
+        %td
+          =simple_format current_user.send(a[0])
       
 .clear_both
 %br
 %br
+%h3
+  Reviews
 -if !@user.reviews.any?
   This user has not reviewed any tools
 -else
@@ -16,7 +25,7 @@
         %th
           Active
       %th
-        Rating
+        User Rating
       %th
         Tool
       %th
@@ -36,6 +45,7 @@
           =review_stars(r)
         %th
           = link_to r.tool.name, tool_path(r.tool)
+          = rating_stars(r.tool)
         %td
           =r.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
         %td
@@ -43,4 +53,4 @@
             =view_link tool_review_path(r.tool, r) 
             -if current_user.try(:is_admin?)
               |
-              =link_to status_image(!r.active?) , toggle_active_admin_tool_review_path(r.tool, r) 
+              =link_to status_image(!r.active?) , toggle_active_admin_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} to this review?" 
