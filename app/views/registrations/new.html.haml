@@ -9,7 +9,7 @@
   consent to provide their name, organization, and role / job title, and are also agreeing to have this
   information made public along with their review.
 
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| 
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :builder => CmFormBuilder) do |f| 
   
   =render :partial => 'admin/users/form', :locals => {:f => f, :text => 'Sign Up!'}
   

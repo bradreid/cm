@@ -9,10 +9,12 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def update
+    @user = current_user
     super
   end
   
   def edit
+   @user = current_user   
     super
   end
   
