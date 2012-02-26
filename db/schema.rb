@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120125013849) do
+ActiveRecord::Schema.define(:version => 20120226195230) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20120125013849) do
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active",                       :default => true
   end
 
   add_index "reviews", ["tool_id"], :name => "index_reviews_on_tool_id"
@@ -77,12 +78,12 @@ ActiveRecord::Schema.define(:version => 20120125013849) do
   add_index "tools", ["why"], :name => "index_tools_on_why"
 
   create_table "users", :force => true do |t|
-    t.string    "email",                                 :default => "",   :null => false
-    t.string    "encrypted_password",     :limit => 128, :default => "",   :null => false
+    t.string    "email",                                                  :default => "",   :null => false
+    t.string    "encrypted_password",                      :limit => 128, :default => "",   :null => false
     t.string    "reset_password_token"
     t.timestamp "reset_password_sent_at"
     t.timestamp "remember_created_at"
-    t.integer   "sign_in_count",                         :default => 0
+    t.integer   "sign_in_count",                                          :default => 0
     t.timestamp "current_sign_in_at"
     t.timestamp "last_sign_in_at"
     t.string    "current_sign_in_ip"
@@ -91,9 +92,18 @@ ActiveRecord::Schema.define(:version => 20120125013849) do
     t.timestamp "updated_at"
     t.string    "username"
     t.boolean   "is_admin"
-    t.boolean   "active",                                :default => true
+    t.boolean   "active",                                                 :default => true
     t.string    "first_name"
     t.string    "last_name"
+    t.string    "current_role"
+    t.string    "organization"
+    t.string    "city_town"
+    t.string    "state_province"
+    t.string    "country"
+    t.text      "address"
+    t.string    "years_of_experience"
+    t.text      "professional_training_and_accreditation"
+    t.text      "memberships_in_community_development"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

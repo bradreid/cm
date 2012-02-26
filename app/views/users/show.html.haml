@@ -12,6 +12,9 @@
 -else
   %table.data
     %tr
+      - if current_user.try(:is_admin?)
+        %th
+          Active
       %th
         Rating
       %th
@@ -20,8 +23,15 @@
         Reviewed At
       %th
         Actions
-    -@user.reviews.each do |r|
+    -if current_user.try(:is_admin?)
+      -reviews = @user.reviews
+    -else
+      -reviews = @user.reviews.active
+    -reviews.each do |r|
       %tr
+        - if current_user.try(:is_admin?)
+          %td
+            =status_image(r.active?)
         %td
           =review_stars(r)
         %th
@@ -29,4 +39,8 @@
         %td
           =r.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
         %td
-          =view_link tool_review_path(r.tool, r)      
+          %span{:style => 'white-space:nowrap'}
+            =view_link tool_review_path(r.tool, r) 
+            -if current_user.try(:is_admin?)
+              |
+              =link_to status_image(!r.active?) , toggle_active_admin_tool_review_path(r.tool, r) 

@@ -1,5 +1,6 @@
 class Tools::ReviewsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show]
+  prepend_before_filter :authenticate_message, :except => [:show]
   
   def show
     @tool = Tool.find(params[:tool_id])   
@@ -20,6 +21,11 @@ class Tools::ReviewsController < ApplicationController
     else
       render 'new'
     end
+  end
+  
+private
+  def authenticate_message
+    flash[:warn] = 'You must login or sign up for an account to review a tool' unless current_user
   end
   
 end

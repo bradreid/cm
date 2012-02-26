@@ -1,52 +1,117 @@
 = devise_error_messages! 
 
-<br>
-Username
-<br>
-= f.text_field :username
-%p
 
+%table{:border => 0, :width => '100%'}
+  %tr
+    %td{:width => '50%', :valign => 'top'}
+      - if ['edit', 'update'].include? params[:action]
+        %br
+        Current password
+        <br>
+        = f.password_field :current_password
+      %p    
+      <br>
+      Username
+      <br>
+      = f.text_field :username
+      %p
+      
+      %br
+      First Name
+      %br
+      = f.text_field :first_name
+      %p
 
-<br>
-First Name
-<br>
-= f.text_field :first_name
-%p
-
-
-
-<br>
-Last Name
-<br>
-= f.text_field :last_name
-%p
+      %br
+      Last Name
+      %br
+      = f.text_field :last_name
+      %p      
   
--if current_user.try(:is_admin?)
-  %br
-  Is Admin?
-  %br
-  =f.check_box :is_admin
+      -if current_user.try(:is_admin?)
+        %br
+        Is Admin?
+        %br
+        =f.check_box :is_admin
 
-  %br
-  Active?
-  %br
-  =f.check_box :active
+        %br
+        Active?
+        %br
+        =f.check_box :active
 
-<br>
-Email
-<br>
-= f.email_field :email
-%p
-<br>
-Password
-<br>
-= f.password_field :password
-%p
-<br>
+      <br>
+      Email
+      <br>
+      = f.email_field :email
+      %p
+      
+      <br>
+      Password
+      <br>
+      = f.password_field :password
+      %p
+      <br>
 
-Confirm password
-<br>
-= f.password_field :password_confirmation
-%p
-
+      Confirm password
+      <br>
+      = f.password_field :password_confirmation
+      %p
+           
+      
+      
+    %td{:width => '50%', :valign => 'top'}
+      
+      %br
+      Current Role/Job Title (optional)
+      %br
+      = f.text_field :current_role
+      %p 
+      
+      
+      %br
+      Organization (optional)
+      %br
+      = f.text_field :organization
+      %p  
+      
+      %br
+      Place of work: City/Town (optional)
+      %br
+      = f.text_field :city_town
+      %p
+      
+      
+      %br
+      Place of work: State/Province (optional)
+      %br
+      = f.text_field :state_province
+      %p   
+      
+      %br
+      Country (optional)
+      %br
+      = f.text_field :country
+      %p     
+      
+      %br
+      Address (optional)
+      %br
+      = f.text_area :address, :rows => 3
+      %p      
+      
+      
+      %br
+      Years of experience in Community Development: (optional)
+      %br
+      = f.text_field :years_of_experience, :rows => 3
+      %p 
+      
+      %br
+      Professional Training or Accreditation(s) in Community Development or other area: (optional)
+      %br
+      = f.text_area :professional_training_and_accreditation, :rows => 3
+      %p                    
+      
+    
+ 
 = f.submit text, :class => 'btn primary'
