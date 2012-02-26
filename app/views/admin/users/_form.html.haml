@@ -1,10 +1,21 @@
-= devise_error_messages! 
+= f.error_messages
 
 
 %table{:border => 0, :width => '100%'}
   %tr
     %td{:width => '50%', :valign => 'top'}
-      - if ['edit', 'update'].include? params[:action]
+      -if current_user.try(:is_admin?)
+        %br
+        Is Admin?
+        %br
+        =f.check_box :is_admin
+
+        %br
+        Active?
+        %br
+      =f.check_box :active    
+      %br
+      - if ['edit', 'update'].include? params[:action] && !current_user.try(:is_admin?)
         %br
         Current password
         <br>
@@ -27,17 +38,6 @@
       %br
       = f.text_field :last_name
       %p      
-  
-      -if current_user.try(:is_admin?)
-        %br
-        Is Admin?
-        %br
-        =f.check_box :is_admin
-
-        %br
-        Active?
-        %br
-        =f.check_box :active
 
       <br>
       Email
