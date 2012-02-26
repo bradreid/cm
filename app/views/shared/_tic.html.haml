@@ -169,11 +169,18 @@
 .clear_both
 %h2
   Reviews
--if !@tool.reviews.any?
+- if current_user.try(:is_admin?)
+  -reviews = @tool.reviews
+-else
+  -reviews = @tool.reviews.active
+-if !reviews.any?
   This tool has not been reviewed
 -else
   %table.data
     %tr
+      -if current_user.try(:is_admin?)
+        %th
+          Active
       %th
         Rating
       %th
@@ -182,8 +189,11 @@
         Reviewed At
       %th
         Actions
-    -@tool.reviews.each do |r|
+    -reviews.each do |r|
       %tr
+        - if current_user.try(:is_admin?)
+          %td
+            =status_image(r.active?)
         %td
           =review_stars(r)
         %th

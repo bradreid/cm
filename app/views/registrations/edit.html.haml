@@ -1,0 +1,19 @@
+.page-header
+  %h1
+    Edit your account
+    %small
+      change your account
+
+%p
+  By logging in to review a Community Development Tool, Tool Reviewers are giving their informed
+  consent to provide their name, organization, and role / job title, and are also agreeing to have this
+  information made public along with their review.
+  
+  
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| 
+
+  =render :partial => 'admin/users/form', :locals => {:f => f, :text => 'Update account'}
+
+  =link_to "Cancel", root_path, :class => 'btn error'
+
+= render :partial => "devise/shared/links"  

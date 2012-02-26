@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
   has_many :reviews
   
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active, :first_name, :last_name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active, :first_name, :last_name,
+                  :professional_training_and_accreditation, :years_of_experience, :address, :country, :state_province, :city_town,
+                  :organization, :current_role
   
   validates_presence_of :username, :first_name, :last_name
   validates_uniqueness_of :username

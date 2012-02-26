@@ -6,6 +6,8 @@ class Review < ActiveRecord::Base
   before_save :add_rating
   after_save :update_tool_stars
   
+  named_scope :active, :conditions => {:active => true}
+  
   def text
     c = [self.comment, self.community_context_comment, self.generates_results_comment, self.resources_identified_comment, self.format_presentation_comment, self.adaptable_comment]
     c.compact.join('. ').gsub(/\.\./, '.')[0..250]
