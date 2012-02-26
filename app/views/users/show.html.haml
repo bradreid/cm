@@ -4,12 +4,12 @@
 
 %table
   - @user.display_fields.each do |a|
-    -if !current_user.send(a[0]).blank?
+    -if !@user.send(a[0]).blank?
       %tr
         %td{:valign => 'top'}
           =a[1]
         %td
-          =simple_format current_user.send(a[0])
+          =simple_format @user.send(a[0])
       
 .clear_both
 %br
