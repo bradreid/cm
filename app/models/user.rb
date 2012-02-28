@@ -17,9 +17,9 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   
   def display_name
-    full_name = "#{first_name} #{last_name}"
-    full_name += " #{self.current_role}" if self.current_role
-    full_name = self.username if full_name.blank?
+    full_name = "#{first_name} #{last_name}".strip
+    full_name = self.username if full_name.blank?    
+    full_name += ", #{self.current_role}" if self.current_role
     full_name
   end
   
