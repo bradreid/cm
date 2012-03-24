@@ -11,6 +11,7 @@ class Tool < ActiveRecord::Base
       self.lock!
       self.rating_count = 0
       self.rating_total = 0.0
+      self.rating = 0.0
       self.save!
       self.reviews.active.each{|r| self.add_rating(r.rating) }
     end
