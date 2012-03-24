@@ -7,6 +7,8 @@ class Review < ActiveRecord::Base
   after_save :update_tool_stars
   
   named_scope :active, :conditions => {:active => true}
+  named_scope :active_by_user, lambda { |user_id| {:conditions => ["active = ? OR user_id = ?", true, user_id]} }
+  named_scope :inactive_by_user, lambda { |user_id| {:conditions => ["active = ? OR user_id = ?", false, user_id]} }  
   
   def text
     c = [self.comment, self.community_context_comment, self.generates_results_comment, self.resources_identified_comment, self.format_presentation_comment, self.adaptable_comment]

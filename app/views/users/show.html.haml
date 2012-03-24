@@ -6,8 +6,10 @@
   - @user.display_fields.each do |a|
     -if !@user.send(a[0]).blank?
       %tr
-        %td{:valign => 'top'}
-          =a[1]
+        %td
+          %p
+            =a[1]
+        %td{:width => 10}
         %td
           =simple_format @user.send(a[0])
       
@@ -21,7 +23,7 @@
 -else
   %table.data
     %tr
-      - if current_user.try(:is_admin?)
+      - if current_user.try(:is_admin?) || @user.reviews.inactive_by_user(current_user).any?
         %th
           Active
       %th
@@ -32,13 +34,13 @@
         Reviewed At
       %th
         Actions
-    -if current_user.try(:is_admin?)
+    -if current_user.try(:is_admin?) || @user == current_user
       -reviews = @user.reviews
     -else
       -reviews = @user.reviews.active
     -reviews.each do |r|
       %tr
-        - if current_user.try(:is_admin?)
+        -if current_user.try(:is_admin?) || @user.reviews.inactive_by_user(current_user).any?
           %td
             =status_image(r.active?)
         %td
@@ -51,6 +53,8 @@
         %td
           %span{:style => 'white-space:nowrap'}
             =view_link tool_review_path(r.tool, r) 
-            -if current_user.try(:is_admin?)
+            -if current_user.try(:is_admin?) || r.user == current_user
               |
-              =link_to status_image(!r.active?) , toggle_active_admin_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} to this review?" 
+              = edit_link [r.tool, r]
+              |
+              =link_to status_image(!r.active?) , toggle_active_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} to this review?" 

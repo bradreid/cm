@@ -50,15 +50,7 @@ Cm::Application.routes.draw do
   #   end
   
   namespace :admin do
-    resources :tools do
-      scope :module => 'tools' do
-        resources :reviews do
-          member do
-            get :toggle_active
-          end
-        end
-      end
-    end
+    resources :tools
     resources :users
     resources :admin_registrations
   end
@@ -66,7 +58,11 @@ Cm::Application.routes.draw do
   
   resources :tools do
     scope :module => 'tools' do
-      resources :reviews
+      resources :reviews do
+        member do
+          get :toggle_active
+        end
+      end
     end    
   end
   resources :phases

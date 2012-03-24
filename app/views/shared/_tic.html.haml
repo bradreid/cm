@@ -172,13 +172,13 @@
 - if current_user.try(:is_admin?)
   -reviews = @tool.reviews
 -else
-  -reviews = @tool.reviews.active
+  -reviews = @tool.reviews.active_by_user(current_user)
 -if !reviews.any?
   This tool has not been reviewed
 -else
   %table.data
     %tr
-      -if current_user.try(:is_admin?)
+      -if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
         %th
           Active
       %th
@@ -191,7 +191,7 @@
         Actions
     -reviews.each do |r|
       %tr
-        - if current_user.try(:is_admin?)
+        - if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
           %td
             =status_image(r.active?)
         %td
@@ -203,12 +203,11 @@
         %td
           %span{:style => 'white-space:nowrap'}
             =view_link tool_review_path(@tool, r) 
-            -if r.user == current_user
+            -if current_user.try(:is_admin?) || r.user == current_user
               |
               =edit_link [@tool, r]
-            -if current_user.try(:is_admin?)
               |
-              =link_to status_image(!r.active?) , toggle_active_admin_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} this review?"        
+              =link_to status_image(!r.active?) , toggle_active_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} this review?"        
                     
 %br
 .clear_both         

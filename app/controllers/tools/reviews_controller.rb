@@ -35,6 +35,22 @@ class Tools::ReviewsController < ApplicationController
     end    
   end
   
+  def toggle_active
+    @tool = Tool.find(params[:tool_id])
+    @review = @tool.reviews.find(params[:id])
+    if current_user.is_admin? || @review.user == current_user
+      @review.update_attribute(:active, !@review.active?)
+      if @review.active?
+        flash[:notice] = 'You activated the review'      
+      else
+        flash[:notice] = 'You deactivated the review, other users will not be able to view it'       
+      end
+    else
+      flash[:error] = "You cannot change this review"
+    end
+    redirect_to :back
+  end  
+  
   def create
     @tool = Tool.find(params[:tool_id])
     @review = @tool.reviews.build(params[:review].merge(:user => current_user))
