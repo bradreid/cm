@@ -59,7 +59,8 @@
                           =link_to image_tag('template/splash_button_admin.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), '/admin'                 
                 %br
                 %br
-                %br                        
+                %br   
+                =yield                     
         -else
           %td.body{:align => 'left'}
             .container

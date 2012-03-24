@@ -12,6 +12,29 @@ class Tools::ReviewsController < ApplicationController
     @review = @tool.reviews.build
   end
   
+  def edit
+    if current_user.is_admin?
+      @review = Review.find(params[:id])
+    else
+      @review = current_user.reviews.find(params[:id])
+    end
+  end
+  
+  def update
+    if current_user.is_admin?
+      @review = Review.find(params[:id])
+    else
+      @review = current_user.reviews.find(params[:id])
+    end
+    
+    if @review.update_attributes(params[:review])
+      flash[:notice] = 'You have updated the review'
+      redirect_to tool_path @review.tool
+    else
+      render 'edit'
+    end    
+  end
+  
   def create
     @tool = Tool.find(params[:tool_id])
     @review = @tool.reviews.build(params[:review].merge(:user => current_user))

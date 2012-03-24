@@ -1,6 +1,6 @@
 %fieldset
   .clearfix.required
-    = form.label :experience, 'What is your experience with this tool?'
+    = form.label :experience, '1. What is your experience with this tool?', :class => 'big'
     .input
       %table
         %tr
@@ -20,17 +20,17 @@
 
 
   .clearfix.required
-    = form.label :community_context, '1. Community Context:', :class => 'big'
+    = form.label :community_context, '2. Community Context', :class => 'big'
     .input      
       %table.border
         %tr
-          %th{:align => 'left'}
+          %th{:align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_2').attr('checked', true);"}
             =form.radio_button :community_context, '2'
             High
-          %th{:align => 'left'}
+          %th{:align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_1').attr('checked', true);"}
             =form.radio_button :community_context, '1'
             Low          
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_community_context_0').attr('checked', true);"}
             =form.radio_button :community_context, '0'
             Not Stated
         %tr
@@ -54,23 +54,23 @@
               %li Conditions where or when to use the tool are not presented
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :community_context_comment, 'Community Context Comments:'
-            =form.text_area :community_context_comment, :rows => 3, :cols => 40, :style => 'width:400px'
+            =form.label :community_context_comment, 'Comments'
+            =form.text_area :community_context_comment, :rows => 3, :cols => 40, :style => 'width:99%'
               
       
       
   .clearfix.required
-    = form.label :generates_results, '2. Generates Results'
+    = form.label :generates_results, '3. Generates Results', :class => 'big'
     .input      
       %table.border
         %tr
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_generates_results_2').attr('checked', true);"}
             =form.radio_button :generates_results, '2'
             High
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_generates_results_1').attr('checked', true);"}
             =form.radio_button :generates_results, '1'
             Low          
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_generates_results_0').attr('checked', true);"}
             =form.radio_button :generates_results, '0'
             Not Stated
         %tr
@@ -105,23 +105,23 @@
                 Examples are not given.    
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :generates_results_comment, 'Generates Results Comments:'
-            =form.text_area :generates_results_comment, :rows => 3, :cols => 40      , :style => 'width:400px'                                    
+            =form.label :generates_results_comment, 'Comments'
+            =form.text_area :generates_results_comment, :rows => 3, :cols => 40, :style => 'width:99%'                                   
                   
                   
                   
   .clearfix.required
-    = form.label :resources_identified, '3. Resources Identified:'
+    = form.label :resources_identified, '4. Resources Identified', :class => 'big'
     .input      
       %table.border
         %tr
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_resources_identified_2').attr('checked', true);"}
             =form.radio_button :resources_identified, '2'
             High
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_resources_identified_1').attr('checked', true);"}
             =form.radio_button :resources_identified, '1'
             Low          
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_resources_identified_0').attr('checked', true);"}
             =form.radio_button :resources_identified, '0'
             Not Stated
         %tr
@@ -139,23 +139,23 @@
               %li Resources to use the tool are not stated.
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :resources_identified_comment, 'Resources Identified Comments:'
-            =form.text_area :resources_identified_comment, :rows => 3, :cols => 40    , :style => 'width:400px'          
+            =form.label :resources_identified_comment, 'Comments'
+            =form.text_area :resources_identified_comment, :rows => 3, :cols => 40, :style => 'width:99%'        
 
 
 
   .clearfix.required
-    = form.label :format_presentation, '4. Format/Presentation'
+    = form.label :format_presentation, '5. Format/Presentation', :class => 'big'
     .input      
       %table.border
         %tr
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_format_presentation_2').attr('checked', true);"}
             =form.radio_button :format_presentation, '2'
             High
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_format_presentation_1').attr('checked', true);"}
             =form.radio_button :format_presentation, '1'
             Low          
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_format_presentation_0').attr('checked', true);"}
             =form.radio_button :format_presentation, '0'
             Not Stated
         %tr
@@ -180,23 +180,23 @@
               %li Layout is impossible to follow.
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :format_presentation_comment, 'Format Presentation Comments:'
-            =form.text_area :format_presentation_comment, :rows => 3, :cols => 40    , :style => 'width:400px'          
+            =form.label :format_presentation_comment, 'Comments'
+            =form.text_area :format_presentation_comment, :rows => 3, :cols => 40, :style => 'width:99%'         
                               
 
 
   .clearfix.required
-    = form.label :adaptable, '5. Adaptable:'
+    = form.label :adaptable, '6. Adaptable', :class => 'big'
     .input      
       %table.border
         %tr
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_adaptable_2').attr('checked', true);"}
             =form.radio_button :adaptable, '2'
             High
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_adaptable_1').attr('checked', true);"}
             =form.radio_button :adaptable, '1'
             Low          
-          %th{:align => 'left'}
+          %th{:align => 'left', :onclick => "$('#review_adaptable_0').attr('checked', true);"}
             =form.radio_button :adaptable, '0'
             Not Stated
         %tr
@@ -220,14 +220,14 @@
               %li No mention of adapting activities.
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :adaptable_comment, 'Adaptable Comments:'
-            =form.text_area :adaptable_comment, :rows => 3, :cols => 40    , :style => 'width:400px'          
+            =form.label :adaptable_comment, 'Comments'
+            =form.text_area :adaptable_comment, :rows => 3, :cols => 40, :style => 'width:99%'          
 
 
   .clearfix.required
-    %table
+    %table{:width => '100%'}
       %tr
         %td{:align => 'left'}
-          = form.label :comment, '6. Overall Comments:'
+          = form.label :comment, '7. Overall Comments', :class => 'big'
           .input
-            =form.text_area :comment, :rows => 3, :cols => 40, :style => 'width:400px'
+            =form.text_area :comment, :rows => 3, :cols => 40, :style => 'width:99%'

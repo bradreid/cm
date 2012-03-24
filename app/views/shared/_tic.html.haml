@@ -203,6 +203,9 @@
         %td
           %span{:style => 'white-space:nowrap'}
             =view_link tool_review_path(@tool, r) 
+            -if r.user == current_user
+              |
+              =edit_link [@tool, r]
             -if current_user.try(:is_admin?)
               |
               =link_to status_image(!r.active?) , toggle_active_admin_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} this review?"        
