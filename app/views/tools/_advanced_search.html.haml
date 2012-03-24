@@ -1,56 +1,61 @@
-- form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
-  = hidden_field_tag :advanced, true
-  %br
-  %br
-  %table.search_results{:border => 0, :cellspacing => 0, :cellpadding => 0, :width => '100%'}
-    %tr
-      %td{:align => 'left'}
-        .bold
-          Keywords
-      %td{:align => 'left'}
-        with all of the words
-      %td{:align => 'left'}
-        = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
+
+.right
+  =link_to_function 'show search fields', "$('#advanced_saearch_fiels').show('slow');$(this).hide();$('#hide_fields').show();", :style => "display:#{@tools ? '' : 'none'}", :class => 'btn success', :id => 'show_fields'
+  =link_to_function 'hide search fields', "$('#advanced_saearch_fiels').hide('slow');$(this).hide();$('#show_fields').show();", :style => "display:none", :class => 'btn success', :id => 'hide_fields'
+#advanced_saearch_fiels{:style => "display:#{@tools ? 'none' : ''}"}
+  - form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
+    = hidden_field_tag :advanced, true
+    %br
+    %br
+    %table.search_results{:border => 0, :cellspacing => 0, :cellpadding => 0, :width => '100%'}
+      %tr
+        %td{:align => 'left'}
+          .bold
+            Keywords
+        %td{:align => 'left'}
+          with all of the words
+        %td{:align => 'left'}
+          = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
         
-    %tr
-      %td{:align => 'left'}
-        .bold
-          Author
-      %td{:align => 'left'}
-        Return tools written by
-      %td{:align => 'left'}
-        =text_field_tag :author, params[:author], :title => 'Search by author'       
+      %tr
+        %td{:align => 'left'}
+          .bold
+            Author
+        %td{:align => 'left'}
+          Return tools written by
+        %td{:align => 'left'}
+          =text_field_tag :author, params[:author], :title => 'Search by author'       
      
-    %tr
-      %td{:align => 'left'}
-        .bold
-          Language
-      %td{:align => 'left'}
-        Return tools written in this language
-      %td{:align => 'left'}
-        = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
-    %tr
-      %td{:align => 'left'}
-        .bold
-          Rating
-      %td{:align => 'left'}
-        Tools with at least this rating
-      %td{:align => 'left'}
-        = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => 'Please select the rating to search by'          
+      %tr
+        %td{:align => 'left'}
+          .bold
+            Language
+        %td{:align => 'left'}
+          Return tools written in this language
+        %td{:align => 'left'}
+          = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
+      %tr
+        %td{:align => 'left'}
+          .bold
+            Rating
+        %td{:align => 'left'}
+          Tools with at least this rating
+        %td{:align => 'left'}
+          = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => 'Please select the rating to search by'          
 
 
-    %tr
-      %td
-        .bold{:align => 'left'}
-          Date created
-      %td{:align => 'left'}
-        Return tools published between
-      %td{:align => 'left'}
-        = text_field_tag :from, params[:from], :maxlength=> 20, :size => 10  
-        ="—"
-        = text_field_tag :to, params[:to], :maxlength=> 20, :size => 10
-        %br
-        e.g. 1996
-    %tr
-      %td
-        =submit_tag 'Search', :class => 'btn primary'
+      %tr
+        %td
+          .bold{:align => 'left'}
+            Date created
+        %td{:align => 'left'}
+          Return tools published between
+        %td{:align => 'left'}
+          = text_field_tag :from, params[:from], :maxlength=> 20, :size => 10  
+          ="—"
+          = text_field_tag :to, params[:to], :maxlength=> 20, :size => 10
+          %br
+          e.g. 1996
+      %tr
+        %td
+          =submit_tag 'Search', :class => 'btn primary'

@@ -1,12 +1,9 @@
-
 - if params[:advanced]
   %ul.pills
     %li
       =link_to "Basic Search", tools_path
     %li.active
       =link_to "Advanced Search", tools_path(:advanced => true)
-  %br
-  %br
   = render :partial => 'advanced_search'
 -else
   %ul.pills
@@ -14,8 +11,6 @@
       =link_to "Basic Search", tools_path
     %li
       =link_to "Advanced Search", tools_path(:advanced => true)
-  %br
-  %br
   .left
     - form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
       = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
