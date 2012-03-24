@@ -31,6 +31,10 @@ class ApplicationController < ActionController::Base
   
   protected
   
+  def default_url_options(options={})
+    { :locale => I18n.locale }
+  end  
+  
   # Use basic authentication in my realm to get a user object.
   # Since this is a security filter - return false if the user is not
   # authenticated.
