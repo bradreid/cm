@@ -4,6 +4,11 @@ class Admin::UsersController < AdminController
     @users = User.paginate(default_pagination_params.merge(:order => 'username'))  
   end
   
+  def show
+    @user = User.find(params[:id])
+    render 'users/show'
+  end
+  
   def new
     @user = User.new
   end

@@ -15,42 +15,51 @@ on
   
 %br
 %br      
-%h5
-  What is your experience with this tool?
+%h3
+  1. What is your experience with this tool?
 =@review.experience
 
 
 %h3
-  1. Community Context:
-=ranking_text(@review.community_context)
-%br
-=@review.community_context_comment
+  2. Community Context:
+%p
+  =ranking_text(@review.community_context)
+%p
+  =simple_format('Comment: ' + @review.community_context_comment).html_safe if @review.community_context_comment.present?
 
 %h3
-  2. Generates Results
-=ranking_text(@review.generates_results)
-%br
-=@review.generates_results_comment
+  3. Generates Results
+%p
+  =ranking_text(@review.generates_results)
+
+%p
+  =simple_format('Comment: ' + @review.generates_results_comment).html_safe if @review.generates_results_comment.present?
+  
 
 %h3
-  3. Resources Identified
-=ranking_text(@review.resources_identified)
-%br
-=@review.resources_identified_comment
+  4. Resources Identified
+%p
+  =ranking_text(@review.resources_identified)
+%p
+  =simple_format('Comment: ' + @review.resources_identified_comment).html_safe if @review.resources_identified_comment.present?
 
 %h3
-  4. Format/Presentation
-=ranking_text(@review.format_presentation)
-%br
-=@review.format_presentation_comment
-
-%h3
-  5. Adaptable
-=ranking_text(@review.adaptable)
-%br
-=@review.adaptable_comment
+  5. Format/Presentation
+%p
+  =ranking_text(@review.format_presentation)
+%p
+  =simple_format('Comment: ' + @review.format_presentation_comment).html_safe if @review.format_presentation_comment.present?
 
 
 %h3
-  6. Overall Comments
-=@review.comment
+  6. Adaptable
+%p
+  =ranking_text(@review.adaptable)
+%p
+  =simple_format('Comment: ' + @review.adaptable_comment).html_safe if @review.adaptable_comment.present?
+
+
+
+%h3
+  7. Overall Comments
+=simple_format(@review.comment).html_safe

@@ -21,11 +21,15 @@
       %th
         Username
       %th
+        Active Reviews
+      %th
         Display Name
       %th
         Email
       %th
-        Is Admin?
+        Admin?
+      %th
+        Created at
       %th
         Actions
   %tbody
@@ -38,13 +42,18 @@
         %td
           =u.username
         %td
+          =u.reviews.active.count
+        %td
           =u.display_name
         %td
           =u.email
-        %th
+        %td
           =u.is_admin? ? "Yes" : 'No'
-        %th
-          =action_images [:admin, u], :exclude => [:index, :show], :delete => {:title => 'Inactivate', :alt_text => 'Inactivate', :confirm => 'Are you sure you want to inactivate this user'}
+        %td
+          =u.created_at.to_formatted_s(:short_with_year)
+        %td
+          %span{:style => 'white-space: nowrap'}
+            =action_images [:admin, u], :exclude => [:index], :delete => {:title => 'Inactivate', :alt_text => 'Inactivate', :confirm => 'Are you sure you want to inactivate this user'}
       %tr
     %td{:colspan => 5}
       = will_paginate @users, :renderer => 'WillPaginateHelper::LinkRenderer'          
