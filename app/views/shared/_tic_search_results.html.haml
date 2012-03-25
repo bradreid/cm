@@ -31,4 +31,3 @@
           -if remote
             = will_paginate(@tools, :renderer => 'RemoteLinkRenderer', :remote_url => phases_path(:format=> :js, :purpose => params[:purpose]))          
           -else
-            = will_paginate @tools, :renderer => 'WillPaginateHelper::LinkRenderer'
