@@ -12,7 +12,11 @@ class ToolsController < ApplicationController
       end
       
       unless params[:author].blank?
-        @tools = arel_start.where(tools[:author].matches("%#{params[:author]}%"))
+        begin
+          @tools = arel_start.search_by_author(params[:author])
+        rescue
+          @tools = arel_start.where(["UPPER(author) like UPPER(?)", "%#{params[:author]}%"])
+        end
       end
       
       unless params[:time_to_use_as_seconds].blank?
