@@ -98,7 +98,7 @@ GEM
     tzinfo (0.3.29)
     warden (1.0.4)
       rack (>= 1.0)
-    will_paginate (3.0.1)
+    will_paginate (3.0.3)
     xml-simple (1.1.0)
 
 PLATFORMS
@@ -117,4 +117,4 @@ DEPENDENCIES
   sqlite3
   stemmer
   texticle (~> 2.0)
-  will_paginate (~> 3.0.0)
+  will_paginate (~> 3.0.3)
