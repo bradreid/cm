@@ -18,9 +18,9 @@
             &nbsp; 
             &nbsp;
           %td{:align => 'left', :valign => 'middle', :style => 'padding-bottom:20px' }
-            =link_to tool.name, tool_path(tool), :class => 'search_hit_title'
+            =link_to query_highlight(tool.name,params[:search]).html_safe, tool_path(tool), :class => 'search_hit_title'
             %p
-              =tool.description
+              =query_highlight(tool.description, params[:search]).html_safe
           %td{:valign => 'top', :style => 'padding-bottom:20px'}
             %p{:style => 'white-space:nowrap;'}
               =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(tool), :title => 'Tool Information Card')

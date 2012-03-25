@@ -1,6 +1,9 @@
 body {
   background-image: url("../images/template/bg.jpg"); }
 
+.highlight {
+  background: yellow; }
+
 .field_with_errors {
   display: inline; }
 
