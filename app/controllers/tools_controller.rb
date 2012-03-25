@@ -52,7 +52,7 @@ private
     end
     sql = variables.inject([where_clause.join(' AND ')]){|sum, item|  sum << item}
     begin
-      @tools = arel_start.search(:description => 'assessment', :name => 'community')
+      @tools = arel_start.search(:description => params[:search], :name => params[:search])
     rescue
       @tools = arel_start.where(sql)
       @tools = @tools.order('name asc')      
