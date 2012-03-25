@@ -34,6 +34,8 @@ class ToolsController < ApplicationController
       unless params[:to].blank?
          @tools = arel_start.where("date_created <= ?", Date.parse("12/31/#{params[:to]}"))
       end      
+      
+      arel_start.paginate default_pagination_params
   end
   
   def show
@@ -56,7 +58,7 @@ private
     end
     sql = variables.inject([where_clause.join(' AND ')]){|sum, item|  sum << item}
     begin
-      @tools = arel_start.search_by_name_or_description(params[:search], params[:search]).paginate default_pagination_params
+      @tools = arel_start.search_by_name_or_description(params[:search], params[:search])
     rescue
       @tools = arel_start.where(sql)
       @tools = @tools.order('name asc')      
