@@ -10,7 +10,7 @@ gem 'sqlite3'
 gem 'haml'
 gem "jquery-rails"
 gem 'devise'
-gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate', '~> 3.0.3'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'rmagick'
 gem 'aws-s3'
