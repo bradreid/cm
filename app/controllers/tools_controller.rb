@@ -39,7 +39,7 @@ class ToolsController < ApplicationController
 private
   
   def arel_start
-    @tools ||= Tool.paginate default_pagination_params.merge(:order => 'name asc')
+    @tools ||= Tool.paginate default_pagination_params
   end
 
   def search_tools
@@ -51,7 +51,12 @@ private
       variables << "%#{t}%"      
     end
     sql = variables.inject([where_clause.join(' AND ')]){|sum, item|  sum << item}
-    @tools = arel_start.where(sql)
+    begin
+      @tools = arel_start.search(:description => 'assessment', :name => 'community')
+    rescue
+      @tools = arel_start.where(sql)
+      @tools = @tools.order('name asc')      
+    end
   end
   
   def set_area
