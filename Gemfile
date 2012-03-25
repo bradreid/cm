@@ -16,7 +16,7 @@ gem 'rmagick'
 gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
-gem 'texticle', '1.0.3'
+gem 'texticle', '~> 2.0', :require => 'texticle/rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
