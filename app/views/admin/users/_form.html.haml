@@ -13,8 +13,8 @@
         %br
         Active?
         %br
-      =f.check_box :active    
-      %br
+        =f.check_box :active    
+        %br
       - if (['edit', 'update'].include? params[:action]) && current_user == @user
         %br
         Current password

@@ -1,13 +1,11 @@
 .page-header
   %h1
-    Sign up
+    =t :sign_up, :scope => :devise
     %small
-      create an account
+      =t :create_an_account, :scope => :devise
 
 %p
-  By logging in to review a Community Development Tool, Tool Reviewers are giving their informed
-  consent to provide their name, organization, and role / job title, and are also agreeing to have this
-  information made public along with their review.
+  =t :account_creation_message, :scope => :devise
 
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :builder => CmFormBuilder) do |f| 
   
