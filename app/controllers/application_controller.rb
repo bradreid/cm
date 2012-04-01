@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   protected
   
   def default_url_options(options={})
-    { :locale => I18n.locale }
+    current_user.try(:is_admin?) ? { :locale => I18n.locale } : { :locale => :en}    
   end  
   
   def set_locale
