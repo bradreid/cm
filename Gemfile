@@ -17,6 +17,7 @@ gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
 gem 'texticle', '~> 2.0', :require => 'texticle/rails'
+gem 'http_accept_language'
 
 # Use unicorn as the web server
 # gem 'unicorn'

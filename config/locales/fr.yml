@@ -1,0 +1,14 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  devise:
+    username: translate me in french
+    password: translate me in french
+    login: translate me in french
+    remeber_me: translate me in french
+    sign_up: translate me in french
+    forgot_your_password?: translate me in french
+    email: translate me in french
+    send_reset_instructions: translate me in french
+    back_to_login: translate me in french    
