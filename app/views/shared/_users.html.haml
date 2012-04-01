@@ -1,4 +1,8 @@
 #user_bar
+  - if I18n.locale != :fr
+    = link_to "French", url_for(:locale => :fr)
+  -else
+    = link_to "English", url_for(:locale => :en)
   -if defined? current_user    
     -if current_user     
       = link_to("Hello #{current_user.username}! ", edit_user_registration_path)

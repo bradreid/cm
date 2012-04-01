@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :verify_access
+  before_filter :verify_access, :set_locale
   
   helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?
   
@@ -33,6 +33,10 @@ class ApplicationController < ActionController::Base
   
   def default_url_options(options={})
     { :locale => I18n.locale }
+  end  
+  
+  def set_locale
+    I18n.locale = params[:locale] || request.compatible_language_from(%w{en fr}).to_sym || I18n.default_locale
   end  
   
   # Use basic authentication in my realm to get a user object.
