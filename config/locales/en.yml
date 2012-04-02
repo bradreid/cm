@@ -5,12 +5,27 @@ en:
   devise:
     username: Username
     password: Password
+    confirm_password: Confirm password
     login: Login
     remember_me: Remember Me
     sign_up: Sign up
+    cancel: Cancel
+    is_admin?: Is Admin?
+    active?: Active?
     forgot_your_password?: Forgot your password?
+    mandatory_field: mandatory
+    optional_field: optional
+    first_name: First name
+    last_name: Last name
     email: Email
     send_reset_instructions: Send reset instructions
     back_to_login: Back to login
     create_an_account: Create an account
     account_creation_message: By logging in to review a Community Development Tool, Tool Reviewers are giving their informed consent to provide their name, organization, and role / job title, and are also agreeing to have this information made public along with their review.
+    in_the_future: If in the future Tool Reviewers wish to edit their previous tool review(s) or to have their tool review(s) removed from the website, they can do so by informing the Rural Development Institute of this decision, emailing <rdi@brandonu.ca> . Reviewers are asked to include CED Tool Review in the subject line.
+    rdi_appreciates: The Rural Development Institute sincerely appreciates the efforts of those who contribute their review of Community Development Tools.
+    legend: Legend
+    mandatory: Mandatory = field must be filled.
+    optional: Optional = reviewer consents to provide information in field.
+    will_be_displayed: Will be displayed = Display Information along with tool reviewed; (display in a simple, small “text box” whatever information is provided by the reviewer.
+    will_not_be_displayed: Will not be displayed = Do not Display Information; (information is data-based for administrative and research use only).

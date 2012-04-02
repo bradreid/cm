@@ -9,9 +9,9 @@
 
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :builder => CmFormBuilder) do |f| 
   
-  =render :partial => 'admin/users/form', :locals => {:f => f, :text => 'Sign Up!'}
+  =render :partial => 'admin/users/form', :locals => {:f => f, :text => t(:sign_up, :scope => :devise)}
   
-  =link_to "Cancel", root_path, :class => 'btn error'
+  =link_to t(:cancel, :scope => :devise), root_path, :class => 'btn error'
 
 = render :partial => "devise/shared/links" 
 
@@ -20,21 +20,16 @@
 %br
 %br
 %p
-If in the future Tool Reviewers wish to edit their previous tool review(s) or to have their tool review(s)
-removed from the website, they can do so by informing the Rural Development Institute of this decision,
-emailing <rdi@brandonu.ca> . Reviewers are asked to include CED Tool Review in the subject line.
+=t :in_the_future, :scope => :devise
 %p
-The Rural Development Institute sincerely appreciates the efforts of those who contribute their review
-of Community Development Tools.
+=t :rdi_appreciates, :scope => :devise
 %p
-Legend
+=t :legend, :scope => :devise
 %p
-Mandatory = field must be filled.
+=t :mandatory, :scope => :devise
 %p
-Optional = reviewer consents to provide information in field.
+=t :optional, :scope => :devise
 %p
-Will be displayed = Display Information along with tool reviewed; (display in a simple, small “text box”
-whatever information is provided by the reviewer.
+=t :will_be_displayed, :scope => :devise
 %p
-Will not be displayed = Do not Display Information; (information is data-based for administrative and
-research use only).
+=t :will_not_be_displayed, :scope => :devise

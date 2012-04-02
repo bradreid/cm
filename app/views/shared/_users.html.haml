@@ -1,5 +1,5 @@
 #user_bar
-  - if current_user.try(:is_admin?)
+  - if (current_user.try(:is_admin?) || Rails.env == 'development') && !['update', 'create'].include?(params[:action])
     - if I18n.locale != :fr
       = link_to "French", url_for(:locale => :fr)
     -else
