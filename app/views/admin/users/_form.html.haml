@@ -62,52 +62,52 @@
     %td{:width => '50%', :valign => 'top'}
       
       %br
-      Current Role/Job Title (mandatory)
+      ="#{t(:current_role, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe      
       %br
       = f.text_field :current_role
       %p 
       
       
       %br
-      Organization (optional)
+      ="#{t(:organization, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
       %br
       = f.text_field :organization
       %p  
       
       %br
-      Place of work: City/Town (optional)
+      ="#{t(:city_town, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
       %br
       = f.text_field :city_town
       %p
       
       
       %br
-      Place of work: State/Province (optional)
+      ="#{t(:state_province, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe      
       %br
       = f.text_field :state_province
       %p   
       
       %br
-      Country (optional)
+      ="#{t(:country, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
       %br
       = f.text_field :country
       %p     
       
       %br
-      Address (optional)
+      ="#{t(:address, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
       %br
       = f.text_area :address, :rows => 3
       %p      
       
       
       %br
-      Years of experience in Community Development: (optional)
+      ="#{t(:years_of_experience, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
       %br
       = f.text_field :years_of_experience, :rows => 3
       %p 
       
       %br
-      Professional Training or Accreditation(s) in Community Development or other area: (optional)
+      ="#{t(:professional_training, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe      
       %br
       = f.text_area :professional_training_and_accreditation, :rows => 3
       %p                    
