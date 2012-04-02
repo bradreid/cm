@@ -29,6 +29,14 @@ fr:
     optional: french
     will_be_displayed: french
     will_not_be_displayed: french
+    hello: french
+    reset_request: french
+    change_my_password: french
+    didnt_request: french
+    wont_change: french
+    passwords:
+      user:
+        send_instructions:  You will receive an email with instructions about how to reset your password in a few minutes.    
     
     
     
