@@ -37,8 +37,8 @@ fr:
     errors:
       messages:
         blank: can't be blank 
-        too_short: french is too short
-        confirmation:  french can't be blank
+        too_short: french Password is too short (minimum is 6 characters)
+        confirmation:  french Passowrd confirmation does not match
       template:
         header:
           one:   "French Sorry, 1 error prevented your form from being saved"
