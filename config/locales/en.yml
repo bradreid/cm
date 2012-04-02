@@ -34,5 +34,5 @@ en:
     errors:
       template:
         header:
-          one:   "French Sorry, 1 error prevented your form from being saved"
-          other: "French Sorry, %{count} errors prevented your form from being saved"    
+          one:   "Sorry, 1 error prevented your form from being saved"
+          other: "Sorry, %{count} errors prevented your form from being saved"    
