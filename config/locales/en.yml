@@ -29,3 +29,10 @@ en:
     optional: Optional = reviewer consents to provide information in field.
     will_be_displayed: Will be displayed = Display Information along with tool reviewed; (display in a simple, small “text box” whatever information is provided by the reviewer.
     will_not_be_displayed: Will not be displayed = Do not Display Information; (information is data-based for administrative and research use only).
+    
+  activerecord:
+    errors:
+      template:
+        header:
+          one:   "French Sorry, 1 error prevented your form from being saved"
+          other: "French Sorry, %{count} errors prevented your form from being saved"    
