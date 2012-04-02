@@ -3,14 +3,52 @@
 
 fr:
   devise:
-    username: translate me in french
-    password: translate me in french
-    login: translate me in french
-    remeber_me: translate me in french
-    sign_up: translate me in french
-    forgot_your_password?: translate me in french
-    email: translate me in french
-    send_reset_instructions: translate me in french
-    back_to_login: translate me in french
-    create_an_account: translate me in french
-    account_creation_message: translate me in french
+    username: french
+    password: french
+    confirm_password: french
+    login: french
+    remember_me: french
+    sign_up: french
+    cancel: french
+    is_admin?: french
+    active?: french
+    forgot_your_password?: french
+    mandatory_field: french
+    optional_field: french
+    first_name: french
+    last_name: french
+    email: french
+    send_reset_instructions: french
+    back_to_login: french
+    create_an_account: french
+    account_creation_message: french
+    in_the_future: french
+    rdi_appreciates: french
+    legend: french
+    mandatory: french
+    optional: french
+    will_be_displayed: french
+    will_not_be_displayed: french
+    
+    
+    
+    
+  activerecord:
+    errors:
+      messages:
+        blank: can't be blank 
+        too_short: french is too short
+        confirmation:  french can't be blank
+      template:
+        header:
+          one:   "French Sorry, 1 error prevented your form from being saved"
+          other: "French Sorry, %{count} errors prevented your form from being saved"
+    models:
+      user: French User
+    attributes:
+      user:
+        email: French email
+        password: French passowrd
+        username: French username
+        current_role: French current role
+        
