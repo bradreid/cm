@@ -37,6 +37,14 @@ en:
     address: Address
     years_of_experience: Years of experience in Community Development
     professional_training: Professional Training or Accreditation(s) in Community Development or other area
+    hello: Hello
+    reset_request: 'Someone has requested a link to change your password, and you can do this through the link below.'
+    change_my_password: 'Someone has requested a link to change your password, and you can do this through the link below.'
+    didnt_request: "If you didn't request this, please ignore this email."
+    wont_change: "Your password won't change until you access the link above and create a new one."
+    passwords:
+      user:
+        send_instructions:  You will receive an email with instructions about how to reset your password in a few minutes.
     
   activerecord:
     errors:
