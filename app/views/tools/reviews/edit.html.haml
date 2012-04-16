@@ -1,8 +1,8 @@
 .page-header
   %h1
-    CED Tool Review Edit Form
+    =t :title, :scope=>[:reviews,:edit]
     %small
-      You are about to edit a review 
+      =t :subtitle, :scope=>[:reviews,:edit]
       =@review.tool.name
 
 %table{:width => '75%'}
@@ -12,8 +12,8 @@
         = f.error_messages
         = render :partial => "form", :object => f
         %br
-        = submit_tag "Update the review", :class => "btn primary"
+        = submit_tag t(:button_update,:scope=>[:reviews,:edit]), :class => "btn primary"
   
-        = link_to "Cancel", tool_path(@tool), :class => "btn danger"
+        = link_to t(:button_cancel), tool_path(@tool), :class => "btn danger"
       %br
       %br

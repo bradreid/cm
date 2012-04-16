@@ -17,23 +17,23 @@
 %br
 %br
 %h3
-  Reviews
+  =t :rev_list, :scope=>[:viewuser]
 -if !@user.reviews.any?
-  This user has not reviewed any tools
+  =t :rev_none, :scope=>[:viewuser]
 -else
   %table.data
     %tr
       - if current_user.try(:is_admin?) || @user.reviews.inactive_by_user(current_user).any?
         %th
-          Active
+          =t :heading_active, :scope=>[:viewuser]
       %th
-        User Rating
+        =t :heading_rating, :scope=>[:viewuser]
       %th
-        Tool
+        =t :heading_tool, :scope=>[:viewuser]
       %th
-        Reviewed At
+        =t :heading_date, :scope=>[:viewuser]
       %th
-        Actions
+        =t :heading_actions, :scope=>[:viewuser]
     -if current_user.try(:is_admin?) || @user == current_user
       -reviews = @user.reviews
     -else

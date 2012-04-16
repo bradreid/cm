@@ -53,7 +53,7 @@
 %table.tic{:width => '100%'}
   %tr
     %td.bold.big
-      =t :heading_desc, :scope=>[:tic]
+      Description
   %tr
     %td.nobottom
       %br
