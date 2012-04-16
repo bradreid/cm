@@ -1,7 +1,7 @@
 
-.right
-  =link_to_function 'show search fields', "$('#advanced_saearch_fiels').show('slow');$(this).hide();$('#hide_fields').show();", :style => "display:#{@tools ? '' : 'none'}", :class => 'btn success', :id => 'show_fields'
-  =link_to_function 'hide search fields', "$('#advanced_saearch_fiels').hide('slow');$(this).hide();$('#show_fields').show();", :style => "display:none", :class => 'btn success', :id => 'hide_fields'
+.left 
+  =link_to_function t(:button_show,:scope=>[:search,:search,:advanced]), "$('#advanced_saearch_fiels').show('slow');$(this).hide();$('#hide_fields').show();", :style => "display:#{@tools ? '' : 'none'}", :class => 'btn success', :id => 'show_fields'
+  =link_to_function t(:button_hide,:scope=>[:search,:search,:advanced]), "$('#advanced_saearch_fiels').hide('slow');$(this).hide();$('#show_fields').show();", :style => "display:none", :class => 'btn success', :id => 'hide_fields'
 #advanced_saearch_fiels{:style => "display:#{@tools ? 'none' : ''}"}
   - form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
     = hidden_field_tag :advanced, true
@@ -11,51 +11,51 @@
       %tr
         %td{:align => 'left'}
           .bold
-            Keywords
+            =t :keywords, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          with all of the words
+          =t :keywords_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
           = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
         
       %tr
         %td{:align => 'left'}
           .bold
-            Author
+            =t :author, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          Return tools written by
+          =t :author_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
           =text_field_tag :author, params[:author], :title => 'Search by author'       
      
       %tr
         %td{:align => 'left'}
           .bold
-            Language
+            =t :language, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          Return tools written in this language
+          =t :language_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => 'Please select the language in which the tool is written'    
+          = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :include_blank => t(:language_instruct,:scope=>[:search,:search,:advanced])
       %tr
         %td{:align => 'left'}
           .bold
-            Rating
+            =t :rating, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          Tools with at least this rating
+          =t :rating_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => 'Please select the rating to search by'          
+          = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :include_blank => t(:rating_instruct,:scope=>[:search,:search,:advanced])
 
 
       %tr
         %td
           .bold{:align => 'left'}
-            Date created
+            =t :datecreated, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          Return tools published between
+          =t :datecreated_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          = text_field_tag :from, params[:from], :maxlength=> 20, :size => 10  
+          = text_field_tag :from, params[:from], :maxlength=> 4, :size => 4  
           ="—"
-          = text_field_tag :to, params[:to], :maxlength=> 20, :size => 10
+          = text_field_tag :to, params[:to], :maxlength=> 4, :size => 4
           %br
-          e.g. 1996
+          =t :datecreated_eg, :scope=>[:search,:search,:advanced]
       %tr
         %td
-          =submit_tag 'Search', :class => 'btn primary'
+          =submit_tag t(:button_search, :scope => [:search,:search,:advanced]), :class => 'btn primary'

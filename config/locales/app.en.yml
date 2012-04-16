@@ -1,0 +1,45 @@
+en:
+  search:
+    people:
+      title: People
+      subtitle: View people tools
+    green:
+      title: Green
+      subtitle: View green tools
+    grow:
+      title: Grow
+      subtitle: View grow tools
+    search:
+      title: Search
+      subtitle: Find the tool you are looking for
+      button_basic: Basic Search
+      button_advanced: Advanced Search
+      advanced: 
+        keywords: Keywords
+        keywords_subtext: With all of the words
+        author: Author
+        author_subtext: Return tools written by
+        language: Language
+        language_subtext: Return tools written in this language
+        language_instruct: Please select the language in which the tool is written
+        rating: Rating
+        rating_subtext: Tools with at least this rating
+        rating_instruct: Please select the rating to search by
+        datecreated: Date Created
+        datecreated_subtext: Return tools published between
+        datecreated_eg: e.g. 1996
+        button_search: Searches
+        button_hide: Hide Search Fields
+        button_show: Show Search Fields
+  formconstants:
+    language:
+      en: English Only
+      fr: French Only
+      bi: Bilingual
+      both: Both Available
+    rating:
+      one: 1 Star
+      two: 2 Stars
+      three: 3 Stars
+      four: 4 Stars
+      five: 5 Stars

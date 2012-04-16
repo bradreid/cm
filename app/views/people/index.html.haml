@@ -1,9 +1,9 @@
 .clear_both
 .page-header
   %h1
-    People
+    =t :title, :scope => [:search, :people]
     %small
-      View people tools
+      =t :subtitle, :scope => [:search, :people]
       
 .left
   =render :partial => 'shared/search', :locals => {:path => people_path}
