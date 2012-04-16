@@ -3,8 +3,8 @@ en:
     username: Username
     password: Password
     confirm_password: Confirm password
-    login: Login
-    logout: Logout
+    login: Loginx
+    logout: Logoutx
     remember_me: Remember Me
     sign_up: Sign up
     cancel: Cancel
