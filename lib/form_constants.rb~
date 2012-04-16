@@ -43,6 +43,6 @@ class FormConstants
   end
   
   def self.expertise_needed
-    [t(:highschool,:scope=>[:formconstants,:expertise]), t(:college,:scope=>[:formconstants,:expertise]), t(:uni,:scope=>[:formconstants,:expertise]), t(:tech,:scope=>[:formconstants,:expertise]), t(:other,:scope=>[:formconstants,:expertise]), t(:none,:scope=>[:formconstants,:expertise]) ]
+    ['High-school', 'College', 'University', 'Technical', 'Other', 'Not Specified']
   end
 end

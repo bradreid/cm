@@ -3,6 +3,7 @@
     =t :sec_accounts, :scope=>[:admin]
     %small
       =t :subtitle, :scope=>[:admin,:accounts]
+      All users with login credentials
       
 
 = link_to t(:button_new,:scope=>[:admin,:accounts]), new_admin_user_path, :class => 'btn primary'

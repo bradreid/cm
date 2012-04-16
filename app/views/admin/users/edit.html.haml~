@@ -1,0 +1,9 @@
+.page-header
+  %h1
+    =t :title_edit, :scope=>[:admin,:accounts]
+    %small
+      =@user.display_name
+
+= form_for [:admin, @user], :builder => CmFormBuilder do |f| 
+  = render :partial => 'form', :locals => {:f => f, :text => 'Update User!'}
+  =link_to "Cancel", admin_users_path, :class => 'btn error'

@@ -8,6 +8,6 @@
   %li
     =link_to t(:sec_tools,:scope=>[:admin]), admin_tools_path
   %li
-    =link_to t(:sec_accounts,:scope=>[:admin]), admin_users_path
+    =link_to t(:sec_stats,:scope=>[:admin]), admin_users_path
   %li
     =t(:sec_stats,:scope=>[:admin])

@@ -1,5 +1,7 @@
 en:
   button_cancel: Cancel
+  check_yes: 'Yes'
+  check_no: 'No'
   search:
     people:
       title: People
@@ -76,6 +78,27 @@ en:
       rev_proj: Project Evaluation
       rev_proc: Process Evaluation
       rev_feedback: Community Feedback
+    topic:
+      people: People
+      green: Green
+      grow: Grow
+      balanced: Balanced
+      none: Not Specified
+    where:
+      local: Local
+      municipal: Municipal
+      regional: Regional
+      rural: Rural
+      northern: Northern
+      urban: Urban
+      none: Not Specified
+    expertise:
+      highschool: High School
+      college: College
+      uni: University
+      tech: Technical Certification
+      other: Other
+      none: Not Specified
   reviews:
     title: CED Tool Review Form
     subtitle: You are about to review
@@ -143,7 +166,7 @@ en:
       none: None 
     edit:
       title: CED Tool Review Edit Form
-      subtitle: You are about to edit a review 
+      subtitle: You are about to edit a review for
       button_update: Update Review
     notices:
       edit_success: You have updated the review
@@ -158,6 +181,7 @@ en:
     heading_active: Active
     heading_rating: Rating
     heading_tool: Tool
+    heading_reviewer: Reviewed By
     heading_date: Reviewed On
     heading_actions: Actions
     field_first: First Name
@@ -171,4 +195,73 @@ en:
     field_years: Years of Experience in Community Development
     field_prof: Professional Training or Accreditation
   tic:
-    heading_desc: Descriptions
+    heading_desc: Description
+    heading_when: When
+    heading_why: Why
+    heading_details: Tool Details
+    norevs: This tool has not been reviewed
+    equipneeds: Equipment/Facilities Needed
+    expneeds: Expertise Needed
+    lang: Language
+    authors: Authors
+    editors: Editors
+    madein: This tool was made in
+    pub: Publisher
+    datecreated: Date Created
+    filesize: File Size
+    fileformat: File Format
+    sourcetitle: Source Document Title
+    sourceurl: Source Document URL
+    when_topic: Topic
+    when_who: Who
+  admin:
+    title: Admin
+    subtitle: Manage the website
+    sec_tools: Tools
+    sec_accounts: Accounts
+    sec_stats: Statistics
+    access_err: You have to be an administrator
+    tools:
+      subtitle: Create, edit, and delete tools
+      button_new: Submit New Tool
+      heading_id: ID
+      heading_title: Title
+      heading_author: Author
+      heading_date: Date Created
+      heading_subby: Submitted By
+      heading_actions: Actions
+    newtool:
+      title: Tool Submission Form
+      button_new: Create New Tool
+      tooltitle: Tool Title
+      sourcefile: Source Document File
+      lang_instruct: Please select the language in which the tool is written
+      phase_instruct: Please select the main phase the tool is used for
+      when: When (At what phase of the CED project cycle is this tool most useful?) 
+      why: Why (What is the purpose of using this particular tool?) 
+      where: Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
+      which: The Country This Tool was Created in
+      topic: Topic (Which of the three categories of the triple bottom line does this tool apply to?)
+      expneeds: Expertise Needed (The education, technical training, or skills identified or suggested as required to use the tool)
+      resources: Resources Required
+      who: Who
+      copy_holder: Copyright Holder
+      copy_check: Copyright 
+      copy_restr: Copyright Restrictions
+      copy_perm: Copyright Permissions
+      comments: Comments
+    accounts: 
+      subtitle: All users with login credentials
+      button_new: Create New Account
+      heading_id: ID
+      heading_active: Active?
+      heading_user: Username
+      heading_revs: Active Reviews
+      heading_name: Display Name
+      heading_email: Email
+      heading_admin: Admin?
+      heading_date: Date Created
+      heading_actions: Actions
+      subtitle_new: Create a new user account
+      title_edit: Edit user account
+      button_edit: Update Account

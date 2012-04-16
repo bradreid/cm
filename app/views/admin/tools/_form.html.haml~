@@ -117,8 +117,7 @@
   .clearfix
     = form.label :who, t(:who,:scope=>[:admin,:newtool])
     .input
-      &nbsp;
-      =t(:who_placeholder,:scope=>[:admin,:newtool])     
+      &nbsp;=t(:who_placeholder,:scope=>[:admin,:newtool])     
      
   .clearfix
     = form.label :copyright_holder, t(:copy_holder,:scope=>[:admin,:newtool])
