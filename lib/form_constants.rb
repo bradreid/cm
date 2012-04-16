@@ -22,7 +22,7 @@ class FormConstants
   end  
   
   def self.language
-    ['English Only', 'French Only', 'Bilingual', 'Both Available']
+    [t(:en, :scope=>[:formconstants,:language]), t(:fr, :scope=>[:formconstants,:language]), t(:bi, :scope=>[:formconstants,:language]), t(:both, :scope=>[:formconstants,:language])]
   end  
   
   def self.rating
@@ -30,27 +30,27 @@ class FormConstants
   end  
   
   def self.when
-    ['Organizing', 'Planning', 'Analyzing', 'Implementing', 'Reviewing']
+    [t(:organizing, :scope=>[:formconstants,:when]),t(:planning, :scope=>[:formconstants,:when]),t(:analyzing, :scope=>[:formconstants,:when]),t(:implementing, :scope=>[:formconstants,:when]),t(:reviewing, :scope=>[:formconstants,:when])]
   end
   
   def self.organizing_purpose
-    ['Partnership Building', 'Fundraising', 'Project Team Building', 'Engagement']
+    [t(:org_partnership, :scope=>[:formconstants,:when]),t(:org_fundraising, :scope=>[:formconstants,:when]),t(:org_teambuilding, :scope=>[:formconstants,:when]),t(:org_engagement, :scope=>[:formconstants,:when])]
   end
   
   def self.planning_purpose
-    ['Visioning', 'Action Planning', 'Project Management']
+    [t(:plan_vis, :scope=>[:formconstants,:when]),t(:plan_act, :scope=>[:formconstants,:when]),t(:plan_man, :scope=>[:formconstants,:when])]
   end
   
   def self.implementing_purpose
-    ['Natural Resources', 'Cultural and Arts', 'Human Resources', 'Social Capital', 'Governance', 'Financial', 'Community Infrastructure']
+    [t(:impl_natural, :scope=>[:formconstants,:when]),t(:impl_cultural, :scope=>[:formconstants,:when]),t(:impl_hr, :scope=>[:formconstants,:when]),t(:impl_social, :scope=>[:formconstants,:when]),t(:impl_gov, :scope=>[:formconstants,:when]),t(:impl_financial, :scope=>[:formconstants,:when]),t(:impl_comm, :scope=>[:formconstants,:when])]
   end
   
   def self.reviewing_purpose
-    ['Project Evaluation', 'Process Evaluation', 'Community Feedback']
+    [t(:rev_proj, :scope=>[:formconstants,:when]),t(:rev_proc, :scope=>[:formconstants,:when]),t(:rev_feedback, :scope=>[:formconstants,:when])]
   end
   
   def self.analyzing_purpose
-    ['Assessment', 'Comprehensive Analysis']
+    [t(:anal_ass, :scope=>[:formconstants,:when]),t(:anal_comp, :scope=>[:formconstants,:when])]
   end
 
   def self.where
