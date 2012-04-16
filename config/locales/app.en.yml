@@ -75,4 +75,64 @@ en:
       rev_proj: Project Evaluation
       rev_proc: Process Evaluation
       rev_feedback: Community Feedback
-
+  reviews:
+    title: CED Tool Review Form
+    subtitle: You are about to review
+    button_submit: Submit Review
+    button_cancel: Cancel
+    questions:
+      hi: High 
+      lo: Low
+      ns: Not Stated
+      comments: Comments
+      one: 1. What is your experience with this tool?
+      one_never: Never used it
+      one_tried: I've tried to use it
+      one_twice: Used it once or twice
+      one_regularly: Use it regularly
+      two: 2. Community Context
+      two_hi_a: Local/regional conditions to generate results from tool are clearly stated.
+      two_hi_b: Target users are identified.
+      two_hi_c: Underlying assumptions or conditions when and where the tool works are clearly presented.
+      two_lo_a: Local/regional conditions are vague or generalized.
+      two_lo_b: Target users are not clearly defined.
+      two_lo_c: Assumptions or conditions where or when to use the tool are vague.
+      two_ns_a: Community conditions are not presented.
+      two_ns_b: Target users are not identified.
+      two_ns_c: Conditions where or when to use the tool are not presented.
+      three: 3. Generates Results
+      three_hi_a: Goal/purpose of tool is clearly stated.
+      three_hi_b: Possible to implement by a local group.
+      three_hi_c: Tasks will achieve stated goal.
+      three_hi_d: Examples of results from tool are informative and helpful.
+      three_lo_a: Goal/purpose is unclear.
+      three_lo_b: Requires specialized knowledge or resources not readily available.
+      three_lo_c: Tasks do not clearly align with the goal.
+      three_lo_d: Examples are unhelpful.
+      three_ns_a: Goal/purpose is not stated.
+      three_ns_b: Tasks are unclear.
+      three_ns_c: Examples are not given.
+      four: 4. Resources Identified
+      four_hi_a: Other resources to use the tool are clearly specified, e.g. expertise, facilitator, technical, facilities.
+      four_lo_a: Other resources to use the tool are unclear.
+      four_ns_a: Resources to use the tool are not stated.
+      five: 5. Format/Presentation
+      five_hi_a: Text and descriptions are easy to understand.
+      five_hi_b: Uses plain language.
+      five_hi_c: Page layout is reader friendly.
+      five_hi_d: Visuals and graphics help in understanding how to use tool.
+      five_hi_e: Layout emphasizes what elements of the tool are most important.
+      five_lo_a: Text and descriptions are wordy and complicated.
+      five_lo_b: Uses difficult jargon.
+      five_lo_c: Visual aids are limited or unhelpful
+      five_lo_d: Layout does not emphasize what is important.
+      five_ns_a: Text and descriptions are impossible to understand.
+      five_ns_b: Layout is impossible to follow.
+      six: 6. Adaptable
+      six_hi_a: Limited expertise is needed to adapt activities to fit local circumstances.
+      six_hi_b: Examples of modified activities are helpful and easy to understand.
+      six_hi_c: Suggests how tool merges with other tools or activities.
+      six_lo_a: Special expertise or consultants are needed to adapt activities to fit local circumstances.
+      six_lo_b: Examples of modified activities are unhelpful.
+      six_ns_a: No mention of adapting activities.
+      seven: 7. Overall Comments

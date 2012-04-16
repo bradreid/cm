@@ -1,226 +1,206 @@
 %fieldset
   .clearfix.required
-    = form.label :experience, '1. What is your experience with this tool?', :class => 'big'
+    = form.label :experience, t(:one,:scope=>[:reviews,:questions]), :class => 'big'
     .input
       %table
         %tr
           %td{:align => 'left'}
             =form.radio_button :experience, 'never'
-            Never used it
+            =t(:one_never,:scope=>[:reviews,:questions])
             %br
             =form.radio_button :experience, 'tried'
-            ="I've tried to use it"
+            =t(:one_tried,:scope=>[:reviews,:questions])
             %br
             =form.radio_button :experience, 'twice'
-            Used it once or twice
+            =t(:one_twice,:scope=>[:reviews,:questions])
             %br
             =form.radio_button :experience, 'regularly'
-            Use it regularly
+            =t(:one_regularly,:scope=>[:reviews,:questions])
 
 
 
   .clearfix.required
-    = form.label :community_context, '2. Community Context', :class => 'big'
+    = form.label :community_context, t(:two,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table.border
         %tr
           %th{:align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_2').attr('checked', true);"}
             =form.radio_button :community_context, '2'
-            High
+            =t :hi, :scope=>[:reviews,:questions]
           %th{:align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_1').attr('checked', true);"}
             =form.radio_button :community_context, '1'
-            Low          
+            =t :lo, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_community_context_0').attr('checked', true);"}
             =form.radio_button :community_context, '0'
-            Not Stated
+            =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Local/regional conditions to generate results from tool are clearly stated. 
-              %li Target users are identified.
-              %li Underlying assumptions or conditions when and where the tool works are clearly presented.
+              %li=t :two_hi_a, :scope=>[:reviews,:questions]
+              %li=t :two_hi_b, :scope=>[:reviews,:questions]
+              %li=t :two_hi_c, :scope=>[:reviews,:questions]
                 
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Local/regional conditions are vague or generalized. 
-              %li Target users are not clearly defined.
-              %li Assumptions or conditions where or when to use the tool are vague.
-              
+              %li=t :two_lo_a, :scope=>[:reviews,:questions]
+              %li=t :two_lo_b, :scope=>[:reviews,:questions]
+              %li=t :two_lo_c, :scope=>[:reviews,:questions]
 
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Community conditions are not presented.
-              %li Target users are not identified. 
-              %li Conditions where or when to use the tool are not presented
+              %li=t :two_ns_a, :scope=>[:reviews,:questions]
+              %li=t :two_ns_b, :scope=>[:reviews,:questions]
+              %li=t :two_ns_c, :scope=>[:reviews,:questions]
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :community_context_comment, 'Comments'
+            =form.label :community_context_comment, t(:comments,:scope=>[:reviews,:questions])
             =form.text_area :community_context_comment, :rows => 3, :cols => 40, :style => 'width:99%'
               
       
       
   .clearfix.required
-    = form.label :generates_results, '3. Generates Results', :class => 'big'
+    = form.label :generates_results, t(:three,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table.border
         %tr
           %th{:align => 'left', :onclick => "$('#review_generates_results_2').attr('checked', true);"}
             =form.radio_button :generates_results, '2'
-            High
+            =t :hi, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_generates_results_1').attr('checked', true);"}
             =form.radio_button :generates_results, '1'
-            Low          
+            =t :lo, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_generates_results_0').attr('checked', true);"}
             =form.radio_button :generates_results, '0'
-            Not Stated
+            =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li
-                Goal/purpose of tool is clearly stated.
-              %li
-                Possible to implement by a local group.
-              %li
-                Tasks will achieve stated goal.
-              %li
-                Examples of results from tool are informative and helpful.
+              %li=t :three_hi_a, :scope=>[:reviews,:questions]
+              %li=t :three_hi_b, :scope=>[:reviews,:questions]
+              %li=t :three_hi_c, :scope=>[:reviews,:questions]
+              %li=t :three_hi_d, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li
-                Goal/purpose is unclear.
-              %li
-                Requires specialized knowledge or resources not readily available.
-              %li
-                Tasks do not clearly align with the goal.
-              %li
-                Examples are unhelpful. 
+              %li=t :three_lo_a, :scope=>[:reviews,:questions]
+              %li=t :three_lo_b, :scope=>[:reviews,:questions]
+              %li=t :three_lo_c, :scope=>[:reviews,:questions]
+              %li=t :three_lo_d, :scope=>[:reviews,:questions]
                 
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li
-                Goal/purpose is not stated.
-              %li
-                Tasks are unclear.
-              %li
-                Examples are not given.    
+              %li=t :three_ns_a, :scope=>[:reviews,:questions]
+              %li=t :three_ns_b, :scope=>[:reviews,:questions]
+              %li=t :three_ns_c, :scope=>[:reviews,:questions]
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :generates_results_comment, 'Comments'
+            =form.label :generates_results_comment, t(:comments,:scope=>[:reviews,:questions])
             =form.text_area :generates_results_comment, :rows => 3, :cols => 40, :style => 'width:99%'                                   
                   
                   
                   
   .clearfix.required
-    = form.label :resources_identified, '4. Resources Identified', :class => 'big'
+    = form.label :resources_identified, t(:four,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table.border
         %tr
           %th{:align => 'left', :onclick => "$('#review_resources_identified_2').attr('checked', true);"}
             =form.radio_button :resources_identified, '2'
-            High
+            =t :hi, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_resources_identified_1').attr('checked', true);"}
             =form.radio_button :resources_identified, '1'
-            Low          
+            =t :lo, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_resources_identified_0').attr('checked', true);"}
             =form.radio_button :resources_identified, '0'
-            Not Stated
+            =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Other resources to use the tool are clearly specified, e.g. expertise, facilitator, technical, facilities.
+              %li=t :four_hi_a, :scope=>[:reviews,:questions]
 
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Other resources to use the tool are unclear.
+              %li=t :four_lo_a, :scope=>[:reviews,:questions]
 
 
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Resources to use the tool are not stated.
+              %li=t :four_ns_a, :scope=>[:reviews,:questions]
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :resources_identified_comment, 'Comments'
+            =form.label :resources_identified_comment, t(:comments,:scope=>[:reviews,:questions])
             =form.text_area :resources_identified_comment, :rows => 3, :cols => 40, :style => 'width:99%'        
 
 
 
   .clearfix.required
-    = form.label :format_presentation, '5. Format/Presentation', :class => 'big'
+    = form.label :format_presentation, t(:five,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table.border
         %tr
           %th{:align => 'left', :onclick => "$('#review_format_presentation_2').attr('checked', true);"}
             =form.radio_button :format_presentation, '2'
-            High
+            =t :hi, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_format_presentation_1').attr('checked', true);"}
             =form.radio_button :format_presentation, '1'
-            Low          
+            =t :lo, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_format_presentation_0').attr('checked', true);"}
             =form.radio_button :format_presentation, '0'
-            Not Stated
+            =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Text and descriptions are easy to understand.
-              %li Uses plain language.
-              %li Page layout is reader friendly.
-              %li Visuals and graphics help in understanding how to use tool. 
-              %li Layout emphasizes what elements of the tool are most important.
+              %li=t :five_hi_a, :scope=>[:reviews,:questions]
+              %li=t :five_hi_b, :scope=>[:reviews,:questions]
+              %li=t :five_hi_c, :scope=>[:reviews,:questions]
+              %li=t :five_hi_d, :scope=>[:reviews,:questions]
+              %li=t :five_hi_e, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Text and descriptions are wordy and complicated.
-              %li Uses difficult jargon.
-              %li Visual aids are limited or unhelpful 
-              %li Layout does not emphasize what is important.
-              
-
+              %li=t :five_lo_a, :scope=>[:reviews,:questions]
+              %li=t :five_lo_b, :scope=>[:reviews,:questions]
+              %li=t :five_lo_c, :scope=>[:reviews,:questions]
+              %li=t :five_lo_d, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Text and descriptions are impossible to understand.
-              %li Layout is impossible to follow.
+              %li=t :five_ns_a, :scope=>[:reviews,:questions]
+              %li=t :five_ns_b, :scope=>[:reviews,:questions]
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :format_presentation_comment, 'Comments'
+            =form.label :format_presentation_comment, t(:comments,:scope=>[:reviews,:questions])
             =form.text_area :format_presentation_comment, :rows => 3, :cols => 40, :style => 'width:99%'         
                               
 
 
   .clearfix.required
-    = form.label :adaptable, '6. Adaptable', :class => 'big'
+    = form.label :adaptable, t(:six,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table.border
         %tr
           %th{:align => 'left', :onclick => "$('#review_adaptable_2').attr('checked', true);"}
             =form.radio_button :adaptable, '2'
-            High
+            =t :hi, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_adaptable_1').attr('checked', true);"}
             =form.radio_button :adaptable, '1'
-            Low          
+            =t :lo, :scope=>[:reviews,:questions]
           %th{:align => 'left', :onclick => "$('#review_adaptable_0').attr('checked', true);"}
             =form.radio_button :adaptable, '0'
-            Not Stated
+            =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Limited expertise is needed to adapt activities to fit local circumstances.
-              %li Examples of modified activities are helpful and easy to understand.
-              %li Suggests how tool merges with other tools or activities.
-              
-
+              %li=t :six_hi_a, :scope=>[:reviews,:questions]
+              %li=t :six_hi_b, :scope=>[:reviews,:questions]
+              %li=t :six_hi_c, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li Special expertise or consultants are needed to adapt activities to fit local circumstances.
-              %li Examples of modified activities are unhelpful. 
-
-              
-
-
+              %li=t :six_lo_a, :scope=>[:reviews,:questions]
+              %li=t :six_lo_b, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
             %ul
-              %li No mention of adapting activities.
+              %li=t :six_ns_a, :scope=>[:reviews,:questions]
         %tr
           %td{:colspan => 3, :align => 'left'}
-            =form.label :adaptable_comment, 'Comments'
+            =form.label :adaptable_comment, t(:comments,:scope=>[:reviews,:questions])
             =form.text_area :adaptable_comment, :rows => 3, :cols => 40, :style => 'width:99%'          
 
 
@@ -228,6 +208,6 @@
     %table{:width => '100%'}
       %tr
         %td{:align => 'left'}
-          = form.label :comment, '7. Overall Comments', :class => 'big'
+          = form.label :comment, t(:seven,:scope=>[:reviews,:questions]), :class => 'big'
           .input
             =form.text_area :comment, :rows => 3, :cols => 40, :style => 'width:99%'
