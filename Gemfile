@@ -12,12 +12,13 @@ gem "jquery-rails"
 gem 'devise'
 gem 'will_paginate', '~> 3.0.3'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
-gem 'rmagick'
+gem 'rmagick', '=2.12.2'
 gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
-gem 'texticle', '~> 2.0', :require => 'texticle/rails'
+gem 'texticle', '=1.0.3'
 gem 'http_accept_language'
+gem 'pg', '=0.12.2'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,3 +1,5 @@
+include ActionView::Helpers::TranslationHelper
+
 class FormConstants
   def self.reading_levels
     ['Grade 5/6', 'Grade 8', 'Grade 12', 'Bachelors', 'Masters', 'PhD']
@@ -24,7 +26,7 @@ class FormConstants
   end  
   
   def self.rating
-    ['1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars']
+    [t(:one, :scope=>[:formconstants,:rating]), t(:two, :scope=>[:formconstants,:rating]), t(:three, :scope=>[:formconstants,:rating]), t(:four, :scope=>[:formconstants,:rating]), t(:five, :scope=>[:formconstants,:rating])]
   end  
   
   def self.when

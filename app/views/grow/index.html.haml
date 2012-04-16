@@ -1,8 +1,8 @@
 .page-header
   %h1
-    Grow
+    =t :title, :scope => [:search, :grow]
     %small
-      View grow tools
+      =t :subtitle, :scope => [:search, :grow]
 
 =render :partial => 'shared/search', :locals => {:path => grow_path}
 =render :partial => 'shared/tic_search_results'  
