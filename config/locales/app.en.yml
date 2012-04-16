@@ -31,6 +31,13 @@ en:
         button_search: Searches
         button_hide: Hide Search Fields
         button_show: Show Search Fields
+    phases:
+      title: Phases
+      subtitle: Identify tools using CED phases
+      step_one: Step 1
+      step_one_text: Select a phase
+      step_two: Step 2
+      step_two_text: Select a purpose
   formconstants:
     language:
       en: English Only
@@ -43,3 +50,29 @@ en:
       three: 3 Stars
       four: 4 Stars
       five: 5 Stars
+    when:
+      organizing: Organizing
+      planning: Planning
+      analyzing: Analyzing
+      implementing: Implementing
+      reviewing: Reviewing 
+      org_partnership: Partnership Building
+      org_fundraising: Fundraising
+      org_teambuilding: Project Team Building
+      org_engagement: Engagement
+      plan_vis: Visioning
+      plan_act: Action Planning
+      plan_man: Project Management
+      anal_ass: Assessment
+      anal_comp: Comprehensive Analysis
+      impl_natural: Natural Resources
+      impl_cultural: Cultural and Arts
+      impl_hr: Human Resources
+      impl_social: Social Capital
+      impl_gov: Governance
+      impl_financial: Financial
+      impl_comm: Community Infrastructure
+      rev_proj: Project Evaluation
+      rev_proc: Process Evaluation
+      rev_feedback: Community Feedback
+

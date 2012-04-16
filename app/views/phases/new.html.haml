@@ -25,25 +25,25 @@
 
 .page-header
   %h1
-    Phases
+    =t :title, :scope =>[:search, :phases]
     %small
-      Identify tools using CED phases
+      =t :subtitle, :scope =>[:search, :phases]
       
 %table#phases_table{:width => '75%'}
   %tr
   
     %td.phase.widespace{:valign => 'top'}
       %h2
-        Step 1
+        =t :step_one, :scope =>[:search, :phases]
         %small
-          Select a phase    
+          =t :step_one_text, :scope =>[:search, :phases]
       %br
       = select_tag :phases, options_for_select(FormConstants.when.map{|r| ["#{r} (#{Tool.count(:conditions => {:when => r})})",r]}, params[:language]),:size => FormConstants.when.size, :style => 'height:inherit'     
     %td.widespace{:valign => 'top'}
       %h2
-        Step 2
+        =t :step_two, :scope =>[:search, :phases]
         %small
-          Select a purpose 
+          =t :step_two_text, :scope =>[:search, :phases]
       %br     
       .organizing.purpose{:style => "#{params[:phases] == 'organizing' ? '' : 'display:none'}"}
         =select_tag :organizing_purpose, options_for_select(FormConstants.organizing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.organizing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'
