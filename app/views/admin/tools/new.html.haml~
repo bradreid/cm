@@ -6,6 +6,6 @@
     %br
     = submit_tag t(:button_new,:scope=>[:admin,:newtool]), :class => "btn primary"
     
-    = link_to t(:button_cancel), admin_tools_path, :class => "btn danger"
+    = link_to "Cancel", admin_tools_path, :class => "btn danger"
 %br
 %br

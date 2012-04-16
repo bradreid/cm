@@ -53,7 +53,7 @@
 %table.tic{:width => '100%'}
   %tr
     %td.bold.big
-      Description
+      =t :heading_desc, :scope=>[:tic]
   %tr
     %td.nobottom
       %br
@@ -65,8 +65,8 @@
     %td{:width => '40%', :valign => 'top'}
       %table#left_length.tic{:width => '100%', :cellpadding => 0, :cellspacing => 0, :bgcolor => '#B8CCE4'}
         %tr
-          %td.notop.big.bold.noleft When
-          %td.notop.big.noright.bold Why
+          %td.notop.big.bold.noleft=t(:heading_when, :scope=>[:tic])
+          %td.notop.big.noright.bold=t(:heading_why, :scope=>[:tic])
           %td.notop.noleft.noright{:width => '25%'}
         -FormConstants.when.sort.each do |w|
           -size = FormConstants.send("#{w}_purpose".downcase).size
@@ -96,71 +96,66 @@
     %td{:valign => 'top', :width => '50%'}
       %table#right_length.tic{:width => '100%', :bgcolor => '#D6E3BC'}
         %tr
-          %td.notop.noleft.noright.big.bold{:width => '40%'}  Tool Details
+          %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:heading_why, :scope=>[:tic])
           %td.notop.noleft.noright
         %tr
           %td.noleft.noright.equipment
-            Equipment	/	Facilities Needed
+            =t :equipneeds, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.special_equipment_facilities
-          
         %tr
           %td.noleft.noright
-            Expertise Needed
+            =t :expneeds, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.expertise_needed  
-          
         %tr
           %td.noleft.noright
-            Language
+            =t :lang, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.language
-
         %tr
           %td.noleft.noright
-            Authors
+            =t :authors, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.author
-            
         %tr
           %td.noleft.noright
-            Editors
+            =t :editors, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.editor
-
         %tr
           %td.noleft.noright
-            This tool was made in
+            =t :madein, :scope=>[:tic]
           %td.noleft.min_height.noright 
             =@tool.where_created            
         %tr
           %td.noleft.noright
-            Publisher
+            =t :pub, :scope=>[:tic]
           %td.noleft.min_height.noright    
             =@tool.publisher
         %tr
           %td.noleft.noright
-            Date Created
+            =t :datecreated, :scope=>[:tic]
           %td.noleft.min_height.noright 
             ="#{Date::MONTHNAMES[@tool.date_created.try(:month)]} #{@tool.date_created.try(:year)}"           
         %tr
           %td.noleft.noright
-            File Size
+            =t :filesize, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.source_document_file_size            
         %tr
           %td.noleft.noright
-            File Format
+            =t :fileformat, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.source_document_content_type
         %tr
           %td.noleft.noright
-            Source Document Title
+            =t :sourcetitle, :scope=>[:tic]
           %td.noleft.min_height.noright
             =@tool.source_document_name           
         %tr
           %td.noleft.noright.nobottom.rightbottom
-            Source Document URL
+            =t :sourceurl, :scope=>[:tic]
           %td.noleft.min_height.noright.nobottom.rightbottom
             =link_to(@tool.source_url, @tool.source_url) if @tool.source_url
             
@@ -168,27 +163,27 @@
 %br
 .clear_both
 %h2
-  Reviews
+  =t :rev_list, :scope=>[:viewuser]
 - if current_user.try(:is_admin?)
   -reviews = @tool.reviews
 -else
   -reviews = @tool.reviews.active_by_user(current_user)
 -if !reviews.any?
-  This tool has not been reviewed
+  =t :norevs, :scope=>[:tic]
 -else
   %table.data
     %tr
       -if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
         %th
-          Active
+          =t :heading_active, :scope=>[:viewuser]
       %th
-        Rating
+        =t :heading_rating, :scope=>[:viewuser]
       %th
-        Reviewer
+        =t :heading_reviewer, :scope=>[:viewuser]
       %th
-        Reviewed At
+        =t :heading_date, :scope=>[:viewuser]
       %th
-        Actions
+        =t :heading_actions, :scope=>[:viewuser]
     -reviews.each do |r|
       %tr
         - if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
@@ -199,7 +194,7 @@
         %th
           = r.user ? link_to(r.user.display_name, user_path(r.user)) : 'Anonymous'
         %td
-          =r.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
+          =r.created_at.strftime("%A, %B %d, %Y, %l:%M%p")
         %td
           %span{:style => 'white-space:nowrap'}
             =view_link tool_review_path(@tool, r) 

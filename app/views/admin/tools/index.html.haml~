@@ -14,17 +14,17 @@
 %table.data#search_results{:width => '100%', :border => '0', :cellspacing => 0}
   %thead
     %th
-      =t :heading_id, :scope=>[:admin,:tools]
+      ID
     %th
-      =t :heading_title, :scope=>[:admin,:tools]
+      Title
     %th
-      =t :heading_author, :scope=>[:admin,:tools]
+      Author
     %th
-      =t :heading_date, :scope=>[:admin,:tools]
+      Date Created
     %th
-      =t :heading_subby, :scope=>[:admin,:tools]
+      Submitted By
     %th
-      =t :heading_actions, :scope=>[:admin,:tools]
+      Actions
   %tbody
     -@tools.each do |tool|
       %tr
