@@ -2,33 +2,34 @@
   =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(@tool), :title => 'Tool Information Card')
 .page-header
   %h1
-    CED Review
+    =t :title, :scope=>[:reviews,:view]
     %small 
       =@tool.name
       = review_stars(@review)
 
 
-Review by
+=t :subtext_by, :scope=>[:reviews,:view]
 =@review.user ? link_to(@review.user.display_name, user_path(@review.user)) :  'Anonymous'
-on
-=@review.created_at.strftime("%A, %B %d, %Y at %l:%M%p")    
+%p
+=t :subtext_on, :scope=>[:reviews,:view]
+=@review.created_at.strftime("%A, %B %d, %Y, %l:%M%p")    
   
 %br
 %br      
 %h3
-  1. What is your experience with this tool?
+  =t :one, :scope=>[:reviews,:questions]
 =@review.experience
 
 
 %h3
-  2. Community Context:
+  =t :two, :scope=>[:reviews,:questions]
 %p
   =ranking_text(@review.community_context)
 %p
   =simple_format('Comment: ' + @review.community_context_comment).html_safe if @review.community_context_comment.present?
 
 %h3
-  3. Generates Results
+  =t :three, :scope=>[:reviews,:questions]
 %p
   =ranking_text(@review.generates_results)
 
@@ -37,14 +38,14 @@ on
   
 
 %h3
-  4. Resources Identified
+  =t :four, :scope=>[:reviews,:questions]
 %p
   =ranking_text(@review.resources_identified)
 %p
   =simple_format('Comment: ' + @review.resources_identified_comment).html_safe if @review.resources_identified_comment.present?
 
 %h3
-  5. Format/Presentation
+  =t :five, :scope=>[:reviews,:questions]
 %p
   =ranking_text(@review.format_presentation)
 %p
@@ -52,7 +53,7 @@ on
 
 
 %h3
-  6. Adaptable
+  =t :six, :scope=>[:reviews,:questions]
 %p
   =ranking_text(@review.adaptable)
 %p
@@ -61,5 +62,9 @@ on
 
 
 %h3
-  7. Overall Comments
-=simple_format(@review.comment).html_safe
+  =t :seven, :scope=>[:reviews,:questions]
+%p
+- if @review.comment.present?
+  =simple_format(@review.comment).html_safe
+- else 
+  =t :none, :scope=>[:reviews,:view]

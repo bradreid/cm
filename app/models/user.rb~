@@ -24,16 +24,16 @@ class User < ActiveRecord::Base
   end
   
   def display_fields
-    [  [:first_name, t(:field_first,:scope=>[:viewuser])],
-       [:last_name, t(:field_last,:scope=>[:viewuser])],
-       [:current_role, t(:field_role,:scope=>[:viewuser])], 
-       [:organization, t(:field_org,:scope=>[:viewuser])],
-       [:city_town, t(:field_city,:scope=>[:viewuser])],
-       [:state_province, t(:field_state,:scope=>[:viewuser])],
-       [:country, t(:field_country,:scope=>[:viewuser])],
-       [:address, t(:field_address,:scope=>[:viewuser])],
-       [:years_of_experience, t(:field_years,:scope=>[:viewuser])],
-       [:professional_training_and_accreditation, t(:field_prof,:scope=>[:viewuser])]
+    [  [:first_name, 'First Name'],
+       [:last_name, 'Last Name'],
+       [:current_role, t(:field_role,:scope=>[:viewuser])],
+       [:organization, 'Organization'],
+       [:city_town, 'Place of work: City/Town'],
+       [:state_province, 'Place of work: State/Province'],
+       [:country, 'Country'],
+       [:address, 'Address'],
+       [:years_of_experience, 'Years of experience in community development'],
+       [:professional_training_and_accreditation, 'Professional training or accreditation']
     ]
   end
   
