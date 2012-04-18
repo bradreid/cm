@@ -1,4 +1,4 @@
-en:
+fr:
   switchfrench: 'Français'
   switchenglish: English
   button_cancel: Cancel
@@ -260,6 +260,8 @@ en:
       sourcefile: Source Document File
       lang_instruct: Please select the language in which the tool is written
       phase_instruct: Please select the main phase the tool is used for
+      topic_instruct: Please select the topic that applies to this tool
+      exp_instruct: Please select the expertise needed to use this tool
       when: When (At what phase of the CED project cycle is this tool most useful?) 
       why: Why (What is the purpose of using this particular tool?) 
       where: Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
