@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.12'
+gem 'rails', '3.0.9'
 gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
@@ -11,9 +11,9 @@ gem 'haml'
 gem "jquery-rails"
 gem 'devise'
 gem 'will_paginate', '~> 3.0.3'
-gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'paperclip', '=2.3.12'
 gem 'rmagick', '=2.12.2'
-gem 'aws-s3', '=0.6.2'
+gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
 gem 'texticle', '=1.0.3'
