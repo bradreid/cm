@@ -100,14 +100,14 @@
     =t(:topic,:scope=>[:admin,:newtool])     
   .clearfix
     .input
-      = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => 'Please select the topic that applies to this tool'      
+      = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => t(:topic_instruct,:scope=>[:admin,:newtool])
       
 %fieldset
   %legend
     =t(:expneeds,:scope=>[:admin,:newtool])     
   .clearfix
     .input
-      = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [r,r]}, :include_blank => 'Please select expertise needed to use the tool'      
+      = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [r,r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])      
 
 %fieldset      
   .clearfix
