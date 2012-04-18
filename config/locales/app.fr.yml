@@ -1,4 +1,4 @@
-fr:
+en:
   switchfrench: 'Français'
   switchenglish: English
   button_cancel: Cancel
@@ -224,6 +224,19 @@ fr:
     sourceurl: Source Document URL
     when_topic: Topic
     when_who: Who
+  months:
+    jan: January
+    feb: February
+    mar: March
+    apr: April
+    may: May
+    jun: June
+    jul: July
+    aug: August
+    sep: September
+    oct: October
+    nov: November
+    dec: December
   admin:
     title: Admin
     subtitle: Manage the website

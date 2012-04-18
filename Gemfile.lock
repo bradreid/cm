@@ -40,7 +40,7 @@ GEM
       activesupport (= 3.0.12)
     activesupport (3.0.12)
     arel (2.0.10)
-    aws-s3 (0.6.1)
+    aws-s3 (0.6.2)
       builder
       mime-types
       xml-simple
@@ -109,7 +109,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-s3 (= 0.6.1)
+  aws-s3 (= 0.6.2)
   devise
   haml
   http_accept_language
