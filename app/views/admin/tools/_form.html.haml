@@ -56,7 +56,7 @@
   .clearfix
     = form.label :date_created, t(:datecreated,:scope=>[:tic])
     .input
-      = form.date_select :date_created, :start_year => Time.now.year - 20, :discard_day => true       
+      = form.date_select :date_created, :start_year => Time.now.year - 20, :discard_day => true, :order => [:year, :month, :day], :use_month_names => [:t(:jan,:scope=>[:months]),
   .clearfix
     = form.label :language, t(:lang,:scope=>[:tic])
     .input
