@@ -1,9 +1,9 @@
 #user_bar
   - if (current_user.try(:is_admin?) || Rails.env == 'development') && !['update', 'create'].include?(params[:action])
     - if I18n.locale != :fr
-      = link_to "Français", url_for(:locale => :fr)
+      = link_to t(:switchfrench), url_for(:locale => :fr)
     -else
-      = link_to "English", url_for(:locale => :en)
+      = link_to t(:switchenglish), url_for(:locale => :en)
   -if defined? current_user    
     -if current_user     
       = link_to( t(:hello,:scope=>[:devise])+" #{current_user.username}!", edit_user_registration_path)

@@ -1,7 +1,0 @@
-%h2
-  Create a new user account
-  =t :subtitle_new, :scope=>[:admin,:accounts]
-
-= form_for [:admin, @user], :builder => CmFormBuilder do |f| 
-  = render :partial => 'form', :locals => {:f => f, :text => t(:button_new,:scope=>[:admin,:accounts])}
-  =link_to t(:button_cancel), admin_users_path, :class => 'btn error'
