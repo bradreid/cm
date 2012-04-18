@@ -1,7 +1,17 @@
 en:
+  switchfrench: 'Français'
+  switchenglish: English
   button_cancel: Cancel
   check_yes: 'Yes'
   check_no: 'No'
+  stars:
+    one_rev: review
+    multi_rev: reviews
+  links:
+    alt_list: Back to Listing
+    alt_view: View
+    alt_edit: Edit
+    alt_del: Delete
   search:
     people:
       title: People
