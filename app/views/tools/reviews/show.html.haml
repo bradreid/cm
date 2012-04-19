@@ -18,7 +18,14 @@
 %br      
 %h3
   =t :one, :scope=>[:reviews,:questions]
-=@review.experience
+-if @review.experience == 'never'
+  =t :one_never, :scope=>[:reviews,:questions]
+-elsif @review.experience == 'once'
+  =t :one_tried, :scope=>[:reviews,:questions]
+-elsif @review.experience == 'twice'
+  =t :one_twice, :scope=>[:reviews,:questions]
+-else @review.experience == 'regularly'
+  =t :one_regularly, :scope=>[:reviews,:questions]
 
 
 %h3

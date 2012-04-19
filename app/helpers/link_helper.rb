@@ -6,25 +6,25 @@ module LinkHelper
   end
 
   def view_link(path, opts = {})
-    link_to(image_tag('link_icons/view.png', :alt => 'View', :height => 25, :align => 'middle'), path, {:title => 'View'}.merge(opts))
+    link_to(image_tag('link_icons/view.png', :alt => t(:alt_view,:scope=>[:links]), :height => 25, :align => 'middle'), path, {:title => t(:alt_view,:scope=>[:links])}.merge(opts))
   end
 
   def edit_link(path, opts = {})
-    link_to(image_tag('link_icons/edit.png', :alt => 'Edit', :align => 'middle'), edit_polymorphic_path(path), {:title => 'Edit'}.merge(opts))
+    link_to(image_tag('link_icons/edit.png', :alt => t(:alt_edit,:scope=>[:links]), :align => 'middle'), edit_polymorphic_path(path), {:title => t(:alt_edit,:scope=>[:links])}.merge(opts))
   end
 
   def delete_link(*args)
     path         = args.first || {}
     html_options = {
                     :method   => :delete,
-                    :confirm  => "Are you sure? Clicking 'OK' will remove this record permanently!",
-                    :title    => "Delete",
-                    :alt_text => "Delete"
+                    :confirm  => t(:del_confirm,:scope=>[:links]),
+                    :title    => t(:alt_del,:scope=>[:links]),
+                    :alt_text => t(:alt_del,:scope=>[:links])
                     }
                     
     html_options.merge!(args.second) if args.second
     name   = html_options.delete(:name) || "Delete"
-    img_tg = image_tag('link_icons/delete.png', :alt => html_options[:alt_text], :title => html_options[:title], :align => 'middle').html_safe
+    img_tg = image_tag( html_options[:img_link] || 'link_icons/delete.png', :alt => html_options[:alt_text], :title => html_options[:title], :align => 'middle').html_safe
     remote = html_options.delete(:remote)
     bttn   = html_options.delete(:button)
     if remote && bttn
