@@ -12,6 +12,14 @@ en:
     alt_view: View
     alt_edit: Edit
     alt_del: Delete
+    alt_inact: Inactivate
+    alt_act: Activate
+    alt_deact: Deactivate
+    del_confirm: Are you sure you want to remove this record permanently?
+    userdel_confirm: Are you sure you want to inactivate this user?
+    rusure: Are you sure you want to 
+    revdel_confirm: deactivate this review?
+    revadd_confirm: activate this review?
   search:
     people:
       title: People

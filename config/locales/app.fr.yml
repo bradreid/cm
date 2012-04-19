@@ -9,9 +9,9 @@ fr:
     multi_rev: reviews
   links:
     alt_list: Back to Listing
-    alt_view: View
-    alt_edit: Edit
-    alt_del: Delete
+    alt_view: Viewx
+    alt_edit: Editx
+    alt_del: Deletex
   search:
     people:
       title: People
