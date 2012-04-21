@@ -28,7 +28,7 @@ class Tools::ReviewsController < ApplicationController
     end
     
     if @review.update_attributes(params[:review])
-      flash[:notice] = t(:edit_success,:scope=>[:reviews,:notices])
+      flash[:notice] = t(:rev_edit,:scope=>[:notices])
       redirect_to tool_path @review.tool
     else
       render 'edit'
@@ -41,12 +41,12 @@ class Tools::ReviewsController < ApplicationController
     if current_user.is_admin? || @review.user == current_user
       @review.update_attribute(:active, !@review.active?)
       if @review.active?
-        flash[:notice] = t(:activate,:scope=>[:reviews,:notices])
+        flash[:notice] = t(:rev_act,:scope=>[:notices])
       else
-        flash[:notice] = t(:deactivate,:scope=>[:reviews,:notices])
+        flash[:notice] = t(:rev_deact,:scope=>[:notices])
       end
     else
-      flash[:error] = t(:change_error,:scope=>[:reviews,:notices])
+      flash[:error] = t(:rev_chgerr,:scope=>[:notices])
     end
     redirect_to :back
   end  
@@ -55,7 +55,7 @@ class Tools::ReviewsController < ApplicationController
     @tool = Tool.find(params[:tool_id])
     @review = @tool.reviews.build(params[:review].merge(:user => current_user))
     if @review.save
-      flash[:notice] = t(:submit_success,:scope=>[:reviews,:notices])
+      flash[:notice] = t(:rev_submit,:scope=>[:notices])
       redirect_to tool_path(@tool)
     else
       render 'new'
@@ -64,7 +64,7 @@ class Tools::ReviewsController < ApplicationController
   
 private
   def authenticate_message
-    flash[:warn] = t(:need_login,:scope=>[:reviews,:notices]) unless current_user
+    flash[:warn] = t(:need_login,:scope=>[:notices]) unless current_user
   end
   
 end

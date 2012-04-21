@@ -4,6 +4,20 @@ en:
   button_cancel: Cancel
   check_yes: 'Yes'
   check_no: 'No'
+  notices:
+    tool_edit: You successfully updated the tool named
+    tool_create: You successfully created the new tool named
+    tool_del: You successfully deleted the tool named
+    need_login: You must login or sign up for an account to review a tool.
+    rev_act: You have successfully activated the review.
+    rev_deact: You have deactivated the review, other users will not be able to view it.
+    rev_chgerr: You cannot change this review.
+    rev_submit: You have successfully submitted your tool review.
+    rev_edit: You have updated the review.
+    user_act: You have successfully activated the user.
+    user_deact: You have successfully inactivated the user.
+    user_edit: You successfully updated the user account.
+    user_create: You successfully created a new user account.
   stars:
     one_rev: review
     multi_rev: reviews
@@ -17,6 +31,7 @@ en:
     alt_deact: Deactivate
     del_confirm: Are you sure you want to remove this record permanently?
     userdel_confirm: Are you sure you want to inactivate this user?
+    useradd_confirm: Are you sure you want to activate this user?
     rusure: Are you sure you want to 
     revdel_confirm: deactivate this review?
     revadd_confirm: activate this review?
@@ -186,13 +201,6 @@ en:
       title: CED Tool Review Edit Form
       subtitle: You are about to edit a review for
       button_update: Update Review
-    notices:
-      edit_success: You have updated the review
-      activate: You activated the review
-      deactivate: You deactivated the review, other users will not be able to view it
-      change_error: You cannot change this review
-      submit_success: You have successfully submitted your tool review
-      need_login: You must login or sign up for an account to review a tool
   viewuser:
     rev_list: Reviews
     rev_none: This user has not reviewed any tools
