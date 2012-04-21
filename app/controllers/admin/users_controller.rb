@@ -19,8 +19,8 @@ class Admin::UsersController < AdminController
   
   def destroy
     @user = User.find(params[:id])
-    @user.update_attribute(:active, false)
-    flash[:notice] = "You have successfully inactivated the user: #{@user.login}"
+    @user.update_attribute(:active, !@user.active)
+    flash[:notice] = t( (@user.active? ? :user_act: :user_deact),:scope=>[:notices])+" #{@user.login}" 
     redirect_to admin_users_path
   end
   
@@ -31,7 +31,7 @@ class Admin::UsersController < AdminController
       params[:user].delete(:password_confirmation) if params[:user][:password_confirmation].blank? 
     end 
     if @user.update_attributes(params[:user])
-      flash[:notice] = "You successfully updated the user account"
+      flash[:notice] = t :user_edit, :scope=>[:notices]
       redirect_to admin_users_path
     else
       render 'edit'
@@ -41,7 +41,7 @@ class Admin::UsersController < AdminController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "You successfully create a new user"
+      flash[:notice] = t :user_create, :scope=>[:notices]
       redirect_to admin_users_path
     else
       render 'new'

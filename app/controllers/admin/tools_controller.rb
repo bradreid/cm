@@ -20,7 +20,7 @@ class Admin::ToolsController < AdminController
   def update
     @tool = Tool.find(params[:id])
     if @tool.update_attributes(params[:tool])
-      flash[:notice] = "You successfully updated the tool named #{@tool.name}"
+      flash[:notice] = t(:tool_edit,:scope=>[:notices])+ " #{@tool.name}"
       redirect_to admin_tool_path(@tool)
     else
       render 'edit'
@@ -34,7 +34,7 @@ class Admin::ToolsController < AdminController
   def create
     @tool = Tool.new(params[:tool].merge(:created_by => current_user))
     if @tool.save
-      flash[:notice] = "You successfully created the new tool named #{@tool.name}"
+      flash[:notice] = t(:tool_create,:scope=>[:notices])+ " #{@tool.name}"
       redirect_to admin_tools_path
     else
       render 'new'
@@ -44,7 +44,7 @@ class Admin::ToolsController < AdminController
   def destroy
     @tool = Tool.find(params[:id])
     @tool.destroy
-    flash[:notice] = "You successfully deleted the tool named: #{@tool.name}"
+    flash[:notice] = t(:tool_del, :scope=>[:notices])+ " #{@tool.name}"
     redirect_to admin_tools_path
   end
   

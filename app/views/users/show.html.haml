@@ -57,4 +57,4 @@
               |
               = edit_link [r.tool, r]
               |
-              =link_to status_image(!r.active?) , toggle_active_tool_review_path(r.tool, r), :confirm => "Are you sure you want #{r.active? ? 'deactivate' : 'activate'} to this review?" 
+              =delete_link toggle_active_tool_review_path(r.tool, r), :confirm => t(:rusure,:scope=>[:links]) + ' ' + (r.active? ? t(:revdel_confirm,:scope=>[:links]) : t(:revadd_confirm,:scope=>[:links])), :title => (r.active? ? t(:alt_deact,:scope=>[:links]) : t(:alt_act,:scope=>[:links])), :alt_text => (r.active? ? t(:alt_deact,:scope=>[:links]) : t(:alt_act,:scope=>[:links])), :method => :get, :img_link => (r.active? ? nil : 'link_icons/tick.png')

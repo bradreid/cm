@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          
   attr_accessor :login
 
-  has_many :reviews
+  has_many :reviews, :order => :id
   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active, :first_name, :last_name,
