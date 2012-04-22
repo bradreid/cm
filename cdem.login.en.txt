@@ -1,0 +1,43 @@
+1    
+2    
+3    Username
+4    Password
+5    Confirm password
+6    Login
+7    Logout
+8    Remember Me
+9    Sign up
+10   Cancel
+11   Is Admin?
+12   Active?
+13   Forgot your password?
+14   mandatory
+15   optional
+16   First name
+17   Last name
+18   Email
+19   Send reset instructions
+20   Back to login
+21   Create an account
+22   By logging in to review a Community Development Tool, Tool Reviewers are giving their informed consent to provide their name, organization, and role / job title, and are also agreeing to have this information made public along with their review.
+23   If in the future Tool Reviewers wish to edit their previous tool review(s) or to have their tool review(s) removed from the website, they can do so by informing the Rural Development Institute of this decision, emailing <rdi@brandonu.ca> . Reviewers are asked to include CED Tool Review in the subject line.
+24   The Rural Development Institute sincerely appreciates the efforts of those who contribute their review of Community Development Tools.
+25   Legend
+26   Mandatory = field must be filled.
+27   Optional = reviewer consents to provide information in field.
+28   Will be displayed = Display Information along with tool reviewed; (display in a simple, small “text box” whatever information is provided by the reviewer.
+29   Will not be displayed = Do not Display Information; (information is data-based for administrative and research use only).
+30   Current Role/Job Title
+31   Organization
+32   "Place of work: City/Town"
+33   "Place of work: State/Province"
+34   Country
+35   Address
+36   Years of experience in Community Development
+37   Professional Training or Accreditation(s) in Community Development or other area
+38   Welcome 
+39   'Someone has requested a link to change your password, and you can do this through the link below.'
+40   'Someone has requested a link to change your password, and you can do this through the link below.'
+41   "If you didn't request this, please ignore this email."
+42   "Your password won't change until you access the link above and create a new one."
+43       

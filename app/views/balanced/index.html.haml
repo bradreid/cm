@@ -1,0 +1,8 @@
+.page-header
+  %h1
+    =t :title, :scope => [:search, :balanced]
+    %small
+      =t :subtitle, :scope => [:search, :balanced]
+
+=render :partial => 'shared/search', :locals => {:path => balanced_path}
+=render :partial => 'shared/tic_search_results'  

@@ -1,0 +1,7 @@
+1    
+2    
+3    
+4    
+5    
+6    "Sorry, 1 error prevented your form from being saved"
+7    "Sorry, %{count} errors prevented your form from being saved"
