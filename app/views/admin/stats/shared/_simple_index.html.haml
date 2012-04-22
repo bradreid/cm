@@ -1,0 +1,37 @@
+:javascript
+  // Show daterangepicker for report generation template.
+  $(document).ready(function(){
+    var x = $(".report_generation #from");
+    var presetRanges = [
+      {text: 'Today', dateStart: 'today', dateEnd: 'today' },
+      {text: 'Yesterday', dateStart: 'yesterday', dateEnd: 'yesterday' },
+      {text: 'Last 7 days', dateStart: 'today-7days', dateEnd: 'today' },
+      {text: 'Last 14 days', dateStart: 'today-14days', dateEnd: 'today' },
+      {text: 'Month to date', dateStart: function(){ return Date.parse('today').moveToFirstDayOfMonth();  }, dateEnd: 'today' },
+      {text: 'Year to date', dateStart: function(){ var x= Date.parse('today'); x.setMonth(0); x.setDate(1); return x; }, dateEnd: 'today' },
+      {text: 'Previous year', dateStart: function(){ return Date.parse('Jan 01 ' + (Date.today().getFullYear() - 1) + ' 00:00:00 GMT-0600') }, dateEnd: function(){ return Date.parse('Dec 31 ' + (Date.today().getFullYear() - 1) + ' 23:59:59 GMT-0600') } },
+      {text: 'Previous Month', dateStart: function(){ return Date.parse('1 month ago').moveToFirstDayOfMonth();  }, dateEnd: function(){ return Date.parse('1 month ago').moveToLastDayOfMonth();  } },
+      {text: 'Last 30 Days', dateStart: 'Today-30', dateEnd: 'Today' }
+    ];
+
+    x.daterangepicker({
+      dateFormat: 'm/d/yy', presets: {dateRange: 'Date Range'},
+      presetRanges: (presetRanges)
+    });
+        
+  });
+
+%div.report_generation
+  %table.data
+    %tr
+      %th 
+        Select Date
+      %th
+        Actions
+    %tr
+      %td
+        %div.calendar.left_float
+          = text_field_tag :from, params[:from], {:readonly => true, :id => "from" }
+      %td
+        = submit_tag 'Generate Report', :class => "btn primary"
+
