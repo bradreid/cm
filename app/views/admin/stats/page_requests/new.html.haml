@@ -4,3 +4,7 @@
     %small
       =t :pagereqs_sub, :scope=>[:admin,:stats]
 
+%div
+  = form_tag admin_stats_page_requests_path, :method => :get do
+    = render :partial => 'admin/stats/shared/simple_index'
+
