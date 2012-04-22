@@ -310,3 +310,7 @@ en:
       subtitle_new: Create a new user account
       title_edit: Edit user account
       button_edit: Update Account
+    stats: 
+      subtitle: View site reports
+      pagereqs: Page Requests
+      pagereqs_sub: View summary of page requests

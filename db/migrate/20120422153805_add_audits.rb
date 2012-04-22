@@ -2,7 +2,7 @@ class AddAudits < ActiveRecord::Migration
   def self.up
     create_table :server_request_logs, :force => true do |t|
       t.integer :user_id
-      t.integer :session_id
+      t.string  :session_id
       t.integer :tic_id
       t.integer :review_id
       t.string :url

@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   before_filter :verify_access, :set_locale
+
+  after_filter :log_request 
   
   helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?
   
@@ -47,4 +49,9 @@ class ApplicationController < ActionController::Base
       username == 'rdi' && password == 'btc'
     end
   end  
+
+  # everytime user makes request to server, request is saved to db
+  def log_request
+    ServerRequestLog.create! :user => current_user, :session_id => session[:session_id]
+  end
 end

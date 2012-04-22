@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226195230) do
+ActiveRecord::Schema.define(:version => 20120422153805) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -35,9 +35,29 @@ ActiveRecord::Schema.define(:version => 20120226195230) do
 
   add_index "reviews", ["tool_id"], :name => "index_reviews_on_tool_id"
 
+  create_table "server_request_logs", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "session_id"
+    t.integer  "tic_id"
+    t.integer  "review_id"
+    t.string   "url"
+    t.string   "section"
+    t.string   "referrer"
+    t.string   "search"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "server_request_logs", ["review_id"], :name => "index_server_request_logs_on_review_id"
+  add_index "server_request_logs", ["search"], :name => "index_server_request_logs_on_search"
+  add_index "server_request_logs", ["section"], :name => "index_server_request_logs_on_section"
+  add_index "server_request_logs", ["session_id"], :name => "index_server_request_logs_on_session_id"
+  add_index "server_request_logs", ["tic_id"], :name => "index_server_request_logs_on_tic_id"
+  add_index "server_request_logs", ["user_id"], :name => "index_server_request_logs_on_user_id"
+
   create_table "tools", :force => true do |t|
     t.string   "name"
-    t.string   "expertise_needed"
+    t.text     "expertise_needed"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "where"
@@ -73,6 +93,7 @@ ActiveRecord::Schema.define(:version => 20120226195230) do
   end
 
   add_index "tools", ["description"], :name => "index_tools_on_description"
+  add_index "tools", ["name"], :name => "index_tools_on_name"
   add_index "tools", ["when"], :name => "index_tools_on_when"
   add_index "tools", ["why"], :name => "index_tools_on_why"
 
