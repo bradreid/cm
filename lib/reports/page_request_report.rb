@@ -4,13 +4,16 @@ class PageRequestReport < Report
     today = @to.to_date
     d = {}
     (0..num_days).each do |day|
-      d.merge! today.to_s => 0
+      d.merge! today.to_s => [0,0]
       today = today.yesterday
     end
     result = ActiveRecord::Base.connection.execute("select date(srl.created_at), count(*) from server_request_logs srl where srl.created_at between '#{@from.to_s(:db)}' and '#{@to.to_s(:db)}' group by date(srl.created_at) ")
-    result.each{|row| d[row['date']] = row['count'].to_i}
+    result.each{|row| d[row['date']][0] = row['count'].to_i}
+    
+    result = ActiveRecord::Base.connection.execute("select date(srl.created_at), count(distinct(srl.session_id)) from server_request_logs srl where srl.created_at between '#{@from.to_s(:db)}' and '#{@to.to_s(:db)}' group by date(srl.created_at)")
+    result.each{|row| d[row['date']][1] = row['count'].to_i}    
     d = d.sort
-    return Date.parse(d.first.try(:first) || @from.to_s), d.map{|i| i[1]}
+    return Date.parse(d.first.try(:first) || @from.to_s), d.map{|i| i[1][0]}, d.map{|i| i[1][1]}
   end
   
 private
