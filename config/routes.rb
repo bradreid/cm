@@ -75,6 +75,7 @@ Cm::Application.routes.draw do
     match 'people' => 'people#index'
     match 'green' => 'green#index'
     match 'grow' => 'grow#index'      
+    match 'balanced' => 'balanced#index'      
 
 
     # You can have the root of your site routed with "root"

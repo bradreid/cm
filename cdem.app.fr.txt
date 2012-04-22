@@ -1,0 +1,309 @@
+1    
+2    'Français'
+3    English
+4    Cancel
+5    'Yes'
+6    'No'
+7    
+8    You successfully updated the tool named
+9    You successfully created the new tool named
+10   You successfully deleted the tool named
+11   You must login or sign up for an account to review a tool.
+12   You have successfully activated the review.
+13   You have deactivated the review, other users will not be able to view it.
+14   You cannot change this review.
+15   You have successfully submitted your tool review.
+16   You have updated the review.
+17   You have successfully activated the user.
+18   You have successfully inactivated the user.
+19   You successfully updated the user account.
+20   You successfully created a new user account.
+21   
+22   review
+23   reviews
+24   
+25   Back to Listing
+26   View
+27   Edit
+28   Delete
+29   Inactivate
+30   Activate
+31   Deactivate
+32   Are you sure you want to remove this record permanently?
+33   Are you sure you want to inactivate this user?
+34   Are you sure you want to activate this user?
+35   Are you sure you want to 
+36   deactivate this review?
+37   activate this review?
+38   
+39   
+40   People
+41   View people tools
+42   
+43   Green
+44   View green tools
+45   
+46   Grow
+47   View grow tools
+48   
+49   Search
+50   Find the tool you are looking for
+51   Basic Search
+52   Advanced Search
+53   
+54   Keywords
+55   With all of the words
+56   Author
+57   Return tools written by
+58   Language
+59   Return tools written in this language
+60   Please select the language in which the tool is written
+61   Rating
+62   Tools with at least this rating
+63   Please select the rating to search by
+64   Date Created
+65   Return tools published between
+66   e.g. 1996
+67   Searches
+68   Hide Search Fields
+69   Show Search Fields
+70   
+71   Phases
+72   Identify tools using CED phases
+73   Step 1
+74   Select a phase
+75   Step 2
+76   Select a purpose
+77   
+78   
+79   English Only
+80   French Only
+81   Bilingual
+82   Both Available
+83   
+84   1 Star
+85   2 Stars
+86   3 Stars
+87   4 Stars
+88   5 Stars
+89   
+90   Organizing
+91   Planning
+92   Analyzing
+93   Implementing
+94   Reviewing 
+95   Partnership Building
+96   Fundraising
+97   Project Team Building
+98   Engagement
+99   Visioning
+100  Action Planning
+101  Project Management
+102  Assessment
+103  Comprehensive Analysis
+104  Natural Resources
+105  Cultural and Arts
+106  Human Resources
+107  Social Capital
+108  Governance
+109  Financial
+110  Community Infrastructure
+111  Project Evaluation
+112  Process Evaluation
+113  Community Feedback
+114  
+115  People
+116  Green
+117  Grow
+118  Balanced
+119  Not Specified
+120  
+121  Local
+122  Municipal
+123  Regional
+124  Rural
+125  Northern
+126  Urban
+127  Not Specified
+128  
+129  High School
+130  College
+131  University
+132  Technical Certification
+133  Other
+134  Not Specified
+135  
+136  CED Tool Review Form
+137  You are about to review
+138  Submit Review
+139  
+140  High 
+141  Low
+142  Not Stated
+143  Comments
+144  1. What is your experience with this tool?
+145  Never used it
+146  I've tried to use it
+147  Used it once or twice
+148  Use it regularly
+149  2. Community Context
+150  Local/regional conditions to generate results from tool are clearly stated.
+151  Target users are identified.
+152  Underlying assumptions or conditions when and where the tool works are clearly presented.
+153  Local/regional conditions are vague or generalized.
+154  Target users are not clearly defined.
+155  Assumptions or conditions where or when to use the tool are vague.
+156  Community conditions are not presented.
+157  Target users are not identified.
+158  Conditions where or when to use the tool are not presented.
+159  3. Generates Results
+160  Goal/purpose of tool is clearly stated.
+161  Possible to implement by a local group.
+162  Tasks will achieve stated goal.
+163  Examples of results from tool are informative and helpful.
+164  Goal/purpose is unclear.
+165  Requires specialized knowledge or resources not readily available.
+166  Tasks do not clearly align with the goal.
+167  Examples are unhelpful.
+168  Goal/purpose is not stated.
+169  Tasks are unclear.
+170  Examples are not given.
+171  4. Resources Identified
+172  Other resources to use the tool are clearly specified, e.g. expertise, facilitator, technical, facilities.
+173  Other resources to use the tool are unclear.
+174  Resources to use the tool are not stated.
+175  5. Format/Presentation
+176  Text and descriptions are easy to understand.
+177  Uses plain language.
+178  Page layout is reader friendly.
+179  Visuals and graphics help in understanding how to use tool.
+180  Layout emphasizes what elements of the tool are most important.
+181  Text and descriptions are wordy and complicated.
+182  Uses difficult jargon.
+183  Visual aids are limited or unhelpful
+184  Layout does not emphasize what is important.
+185  Text and descriptions are impossible to understand.
+186  Layout is impossible to follow.
+187  6. Adaptable
+188  Limited expertise is needed to adapt activities to fit local circumstances.
+189  Examples of modified activities are helpful and easy to understand.
+190  Suggests how tool merges with other tools or activities.
+191  Special expertise or consultants are needed to adapt activities to fit local circumstances.
+192  Examples of modified activities are unhelpful.
+193  No mention of adapting activities.
+194  7. Overall Comments
+195  
+196  CED Review
+197  Reviewed by
+198  Review submitted on
+199  None 
+200  
+201  CED Tool Review Edit Form
+202  You are about to edit a review for
+203  Update Review
+204  
+205  Reviews
+206  This user has not reviewed any tools
+207  Active
+208  Rating
+209  Tool
+210  Reviewed By
+211  Reviewed On
+212  Actions
+213  First Name
+214  Last Name
+215  Current Role/Job Title
+216  Organization
+217  Place of Work (City/Town)
+218  Place of Work (State/Province)
+219  Country
+220  Address
+221  Years of Experience in Community Development
+222  Professional Training or Accreditation
+223  
+224  Description
+225  When
+226  Why
+227  Tool Details
+228  This tool has not been reviewed
+229  Equipment/Facilities Needed
+230  Expertise Needed
+231  Language
+232  Authors
+233  Editors
+234  This tool was made in
+235  Publisher
+236  Date Created
+237  File Size
+238  File Format
+239  Source Document Title
+240  Source Document URL
+241  Topic
+242  Who
+243  
+244  January
+245  February
+246  March
+247  April
+248  May
+249  June
+250  July
+251  August
+252  September
+253  October
+254  November
+255  December
+256  
+257  Admin
+258  Manage the website
+259  Tools
+260  Accounts
+261  Statistics
+262  You have to be an administrator
+263  
+264  Create, edit, and delete tools
+265  Submit New Tool
+266  ID
+267  Title
+268  Author
+269  Date Created
+270  Submitted By
+271  Actions
+272  
+273  Tool Submission Form
+274  Create New Tool
+275  Tool Title
+276  Source Document File
+277  Please select the language in which the tool is written
+278  Please select the main phase the tool is used for
+279  Please select the topic that applies to this tool
+280  Please select the expertise needed to use this tool
+281  When (At what phase of the CED project cycle is this tool most useful?) 
+282  Why (What is the purpose of using this particular tool?) 
+283  Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
+284  The Country This Tool was Created in
+285  Topic (Which of the three categories of the triple bottom line does this tool apply to?)
+286  Expertise Needed (The education, technical training, or skills identified or suggested as required to use the tool)
+287  Resources Required
+288  Who
+289  (Placeholder)
+290  Copyright Holder
+291  Copyright 
+292  Copyright Restrictions
+293  Copyright Permissions
+294  Comments
+295  
+296  All users with login credentials
+297  Create New Account
+298  ID
+299  Active?
+300  Username
+301  Active Reviews
+302  Display Name
+303  Email
+304  Admin?
+305  Date Created
+306  Actions
+307  Create a new user account
+308  Edit user account
+309  Update Account

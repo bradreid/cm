@@ -1,0 +1,53 @@
+1    
+2    
+3    
+4    
+5    
+6    "has expired, please request a new one"
+7    "not found"
+8    "was already confirmed, please try signing in"
+9    "was not locked"
+10   
+11   "1 error prohibited this %{resource} from being saved: "
+12   "%{count} errors prohibited this %{resource} from being saved: "
+13   
+14   
+15   
+16   'You are already signed in.'
+17   'You need to sign in or sign up before continuing.'
+18   'You have to confirm your account before continuing.'
+19   'Your account is locked.'
+20   'Invalid email or password.'
+21   'Invalid authentication token.'
+22   'Your session expired, please sign in again to continue.'
+23   'Your account was not activated yet.'
+24   
+25   'Signed in successfully.'
+26   'Signed out successfully.'
+27   
+28   'You will receive an email with instructions about how to reset your password in a few minutes.'
+29   'Your password was changed successfully. You are now signed in.'
+30   "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
+31   
+32   'You will receive an email with instructions about how to confirm your account in a few minutes.'
+33   'If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
+34   'Your account was successfully confirmed. You are now signed in.'
+35   
+36   'Welcome! You have signed up successfully.'
+37   'You have signed up successfully. However, we could not sign you in because your account is %{reason}.'
+38   'You updated your account successfully.'
+39   'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+40   
+41   'You will receive an email with instructions about how to unlock your account in a few minutes.'
+42   'Your account was successfully unlocked. You are now signed in.'
+43   'If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.'
+44   
+45   'Successfully authorized from %{kind} account.'
+46   'Could not authorize you from %{kind} because "%{reason}".'
+47   
+48   
+49   'Confirmation instructions'
+50   
+51   'Reset password instructions'
+52   
+53   'Unlock Instructions'

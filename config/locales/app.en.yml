@@ -45,6 +45,9 @@ en:
     grow:
       title: Grow
       subtitle: View grow tools
+    balanced:
+      title: Balanced
+      subtitle: View balanced tools
     search:
       title: Search
       subtitle: Find the tool you are looking for

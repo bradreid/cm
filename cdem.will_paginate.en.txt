@@ -1,0 +1,18 @@
+1    
+2    
+3    "&#8592; Previous"
+4    "Next &#8594;"
+5    "&hellip;"
+6    
+7    
+8    
+9    "No %{model} found"
+10   "Displaying 1 %{model}"
+11   "Displaying all %{count} %{model}"
+12   
+13   "No %{model} found"
+14   "Displaying <b>1</b> %{model}"
+15   "Displaying <b>all&nbsp;%{count}</b> %{model}"
+16   
+17   "Displaying %{model} %{from} - %{to} of %{count} in total"
+18   "Displaying %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total"
