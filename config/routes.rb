@@ -57,6 +57,11 @@ Cm::Application.routes.draw do
       resources :tools
       resources :users
       resources :admin_registrations
+      resource :stats do
+        scope :module => 'stats' do
+          resource :page_requests
+        end
+      end
     end
     resources :admin
 
