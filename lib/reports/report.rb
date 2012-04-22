@@ -19,8 +19,10 @@ private
   def set_date(range)
     begin
       unless range
-        @from = 1.year.ago.to_date + 1.day
-        @to = Time.now.to_date
+        @from_local = 1.year.ago + 1.day
+        @to_local = Time.now
+        @from = @from_local.utc
+        @to = @to_local.utc
         return 
       end
       @from, @to = parse_date(range, false)

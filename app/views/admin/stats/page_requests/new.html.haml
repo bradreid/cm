@@ -3,6 +3,7 @@
     var chart;
     $(document).ready(function() {
       data = eval("#{@data.to_json}");
+      data2 = eval("#{@data2.to_json}");
     	chart = new Highcharts.Chart({
     		chart: {
     			renderTo: 'container',
@@ -67,12 +68,20 @@
     		},
 
     		series: [{
-    			type: 'area',
-    			name: 'USD to EUR',
+    			type: 'spline',
+    			name: 'Page Requests',
     			pointInterval: 24 * 3600 * 1000,
     			pointStart: Date.UTC("#{@start_date.year}", "#{@start_date.month - 1}", "#{@start_date.day}"),
     			data: data
-    		}]
+    		},
+        {
+    			type: 'spline',
+    			name: 'Unique Visitors',
+    			pointInterval: 24 * 3600 * 1000,
+    			pointStart: Date.UTC("#{@start_date.year}", "#{@start_date.month - 1}", "#{@start_date.day}"),
+    			data: data2
+    		}    		
+    		]
     	});
     });
   });

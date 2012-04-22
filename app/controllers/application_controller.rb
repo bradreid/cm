@@ -49,9 +49,19 @@ class ApplicationController < ActionController::Base
       username == 'rdi' && password == 'btc'
     end
   end  
+  
+  def save_referrer?
+    (request.env['HTTP_REFERER'] =~ /localhost|beyondthecube/).nil?
+  end
+  
+  def default_log_hash
+    h = {:user => current_user, :session_id => session[:session_id]}
+    h.merge!(:search => params[:search]) if params[:search]
+    h.merge!(:referrer => request.env['HTTP_REFERER']) if save_referrer? || true
+  end
 
   # everytime user makes request to server, request is saved to db
   def log_request
-    ServerRequestLog.create! :user => current_user, :session_id => session[:session_id]
+    ServerRequestLog.create! default_log_hash
   end
 end
