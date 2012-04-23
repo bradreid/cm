@@ -21,8 +21,8 @@ private
       unless range
         @from_local = 1.year.ago + 1.day
         @to_local = Time.now
-        @from = @from_local.utc
-        @to = @to_local.utc
+        @from = @from_local
+        @to = @to_local
         return 
       end
       @from, @to = parse_date(range, false)
