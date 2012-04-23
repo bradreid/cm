@@ -8,10 +8,10 @@ class PageRequestReport < Report
       today = today.yesterday
     end
     result = ActiveRecord::Base.connection.execute("select date(srl.created_at), count(*) from server_request_logs srl where srl.created_at between '#{@from.to_s(:db)}' and '#{@to.to_s(:db)}' group by date(srl.created_at) ")
-    result.each{|row| d[row['date']][0] = row['count'].to_i}
+    result.each{|row| d[row['date']][0] = row['count'].to_i if d[row['date']]}
     
     result = ActiveRecord::Base.connection.execute("select date(srl.created_at), count(distinct(srl.session_id)) from server_request_logs srl where srl.created_at between '#{@from.to_s(:db)}' and '#{@to.to_s(:db)}' group by date(srl.created_at)")
-    result.each{|row| d[row['date']][1] = row['count'].to_i}    
+    result.each{|row| d[row['date']][1] = row['count'].to_i if d[row['date']]}    
     d = d.sort
     return Date.parse(d.first.try(:first) || @from.to_s), d.map{|i| i[1][0]}, d.map{|i| i[1][1]}
   end
