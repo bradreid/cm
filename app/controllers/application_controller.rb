@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :verify_access, :set_locale
+  before_filter  :set_locale
 
   after_filter :log_request 
   
