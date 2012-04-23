@@ -7,7 +7,7 @@ class PageRequestReport < Report
       d.merge! today.to_s => [0,0]
       today = today.yesterday
     end
-    offset = Time.now.formatted_offset.to_i
+    offset = User.first.created_at.utc_offset / 60 / 60
     result = ActiveRecord::Base.connection.execute("select  date(srl.created_at AT TIME ZONE '#{offset.to_s}') AS date, count(*) from server_request_logs srl where srl.created_at between '#{@from.to_s(:db)}' and '#{@to.to_s(:db)}' group by date(srl.created_at AT TIME ZONE '#{offset.to_s}')")
     result.each{|row| d[row['date']][0] = row['count'].to_i if d[row['date']]}
     
