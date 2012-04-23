@@ -55,9 +55,12 @@ class ApplicationController < ActionController::Base
   end
   
   def default_log_hash
-    h = {:user => current_user, :session_id => session[:session_id]}
+    cookies[:id] ||= ActiveSupport::SecureRandom.base64(8).gsub("/","_").gsub(/=+$/,"")
+    h = {:user => current_user, :session_id => cookies[:id]}
     h.merge!(:search => params[:search]) if params[:search]
     h.merge!(:referrer => request.env['HTTP_REFERER']) if save_referrer?
+    h.merge!(:tic => @log_tic) if @log_tic
+    h
   end
 
   # everytime user makes request to server, request is saved to db
