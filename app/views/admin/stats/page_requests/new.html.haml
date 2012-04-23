@@ -8,7 +8,7 @@
     		chart: {
     			renderTo: 'container',
     			zoomType: 'x',
-    			spacingRight: 20
+    			type: 'spline'
     		},
     		title: {
     			text: 'Page Requests'
@@ -29,12 +29,10 @@
     			title: {
     				text: 'Page Requests'
     			},
-    			min: 0.6,
-    			startOnTick: false,
-    			showFirstLabel: false
     		},
     		tooltip: {
-    			shared: true
+  			crosshairs: true,
+  			shared: true
     		},
     		legend: {
     			enabled: false
