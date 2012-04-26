@@ -1,7 +1,7 @@
 class ToolsController < ApplicationController
-  before_filter :set_area
-  
   def index
+      
+      @log_section = 'search'  #log this request as a search 
       
       unless params[:search].blank?
         search_tools
@@ -39,7 +39,7 @@ class ToolsController < ApplicationController
   
   def show
     @tool = Tool.find(params[:id])
-    @log_tic = @tool
+    @log_tic = @tool # this is for the server request logs and reporting
   end
 
 
@@ -64,10 +64,5 @@ private
       @tools = arel_start.where(sql)
       @tools = @tools.order('name asc')      
     end
-  end
-  
-  def set_area
-    @area = :search
-  end
-  
+  end  
 end
