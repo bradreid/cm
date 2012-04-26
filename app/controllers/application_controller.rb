@@ -7,26 +7,7 @@ class ApplicationController < ActionController::Base
   
   helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?
   
-  def admin_selected?
-    @area == :admin
-  end
-  
-  def about_selected?
-    @area == :about
-  end
-  
-  def search_selected?
-    @area == :search
-  end
-  
-  def reviews_selected?
-    @area == :reviews
-  end
-  
-  def guided_selected?
-    @area == :guided
-  end
-  
+
   def default_pagination_params
     {:page => params[:page], :per_page => 20}
   end
@@ -50,17 +31,14 @@ class ApplicationController < ActionController::Base
     end
   end  
   
-  def save_referrer?
-    (request.env['HTTP_REFERER'] =~ /localhost|beyondthecube/).nil?
+  def referrer
+    (request.env['HTTP_REFERER'] =~ /localhost|beyondthecube/).nil? ? request.env['HTTP_REFERRER'] : nil
   end
   
   def default_log_hash
     cookies[:id] ||= ActiveSupport::SecureRandom.base64(8).gsub("/","_").gsub(/=+$/,"")
-    h = {:user => current_user, :session_id => cookies[:id]}
-    h.merge!(:search => params[:search]) if params[:search]
-    h.merge!(:referrer => request.env['HTTP_REFERER']) if save_referrer?
-    h.merge!(:tic => @log_tic) if @log_tic
-    h
+    { :user => current_user, :session_id => cookies[:id], :tic => @log_tic, :section => @log_section, 
+      :review => @log_review, :search => params[:search], :referrer => self.referrer}
   end
 
   # everytime user makes request to server, request is saved to db

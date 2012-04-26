@@ -5,6 +5,7 @@ class Tools::ReviewsController < ApplicationController
   def show
     @tool = Tool.find(params[:tool_id])   
     @review = @tool.reviews.find(params[:id]) 
+    @log_review = @review # this is for the server request logs and reporting
   end
   
   def new
