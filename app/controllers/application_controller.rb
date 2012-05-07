@@ -1,32 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :verify_access, :set_locale
+  before_filter  :set_locale
 
   after_filter :log_request 
   
   helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?
   
-  def admin_selected?
-    @area == :admin
-  end
-  
-  def about_selected?
-    @area == :about
-  end
-  
-  def search_selected?
-    @area == :search
-  end
-  
-  def reviews_selected?
-    @area == :reviews
-  end
-  
-  def guided_selected?
-    @area == :guided
-  end
-  
+
   def default_pagination_params
     {:page => params[:page], :per_page => 20}
   end
@@ -49,9 +30,19 @@ class ApplicationController < ActionController::Base
       username == 'rdi' && password == 'btc'
     end
   end  
+  
+  def referrer
+    (request.env['HTTP_REFERER'] =~ /localhost|beyondthecube/).nil? ? request.env['HTTP_REFERRER'] : nil
+  end
+  
+  def default_log_hash
+    cookies[:id] ||= ActiveSupport::SecureRandom.base64(8).gsub("/","_").gsub(/=+$/,"")
+    { :user => current_user, :session_id => cookies[:id], :tic => @log_tic, :section => @log_section, 
+      :review => @log_review, :search => params[:search], :referrer => self.referrer}
+  end
 
   # everytime user makes request to server, request is saved to db
   def log_request
-    ServerRequestLog.create! :user => current_user, :session_id => session[:session_id]
+    ServerRequestLog.create! default_log_hash
   end
 end

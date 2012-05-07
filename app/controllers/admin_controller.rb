@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_filter :authenticate_user!, :authenticate_admin
+  before_filter :authenticate_user!, :authenticate_admin, :set_section
   
   
   def authenticate_admin
@@ -9,4 +9,8 @@ class AdminController < ApplicationController
        return false
      end
   end
+  
+  def set_section
+    @log_section = 'admin'
+  end  
 end

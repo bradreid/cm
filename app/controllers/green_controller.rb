@@ -1,5 +1,5 @@
 class GreenController < ApplicationController  
-  
+  before_filter :set_section
   
   def index
     @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'Green'}, :order => 'name asc'))
@@ -29,4 +29,8 @@ private
        @tools = @tools.order('name asc')      
      end
    end
+   
+   def set_section
+     @log_section = 'green'
+   end   
 end

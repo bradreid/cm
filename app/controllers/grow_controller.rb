@@ -1,4 +1,6 @@
 class GrowController < ApplicationController  
+  before_filter :set_section
+  
   def index
     @tools = Tool.paginate(default_pagination_params.merge(:conditions => {:topic => 'Grow'}, :order => 'name asc'))
     unless params[:search].blank?
@@ -27,4 +29,8 @@ private
        @tools = @tools.order('name asc')      
      end
    end  
+   
+   def set_section
+     @log_section = 'grow'
+   end   
 end
