@@ -8,6 +8,7 @@ gem 'rake', '0.8.7'
 
 gem 'sqlite3'
 gem 'haml'
+gem 'sass'
 gem "jquery-rails"
 gem 'devise'
 gem 'will_paginate', '~> 3.0.3'

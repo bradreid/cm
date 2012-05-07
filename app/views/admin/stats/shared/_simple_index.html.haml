@@ -22,16 +22,11 @@
   });
 
 %div.report_generation
-  %table.data
-    %tr
-      %th 
-        Select Date
-      %th
-        Actions
+  %table
     %tr
       %td
         %div.calendar.left_float
-          = text_field_tag :from, params[:from], {:readonly => true, :id => "from" }
+          = text_field_tag :from, params[:from] || "#{1.year.ago.strftime('%m/%d/%Y')} - #{Time.now.strftime('%m/%d/%Y')}", {:id => "from" }
       %td
         = submit_tag 'Generate Report', :class => "btn primary"
 
