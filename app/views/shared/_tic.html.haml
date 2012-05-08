@@ -44,7 +44,7 @@
   %table
     %tr
       %td
-        =link_to( 'Download', tool_path(@tool, :to_pdf => true), :class => 'btn success')
+        =link_to( 'Download Tool', @tool.source_document.url, :class => 'btn success')
       %td
         &nbsp;
       %td
