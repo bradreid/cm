@@ -41,7 +41,14 @@
   })
 
 .right
-  =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(@tool), :title => 'Review Tool')
+  %table
+    %tr
+      %td
+        =link_to( submit_tag('Download', :class => "btn green"), @tool.source_document.url) 
+      %td
+        &nbsp;
+      %td
+        =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(@tool), :title => 'Review Tool')
 .page-header
   %h1
     = "#{@tool.name}"
