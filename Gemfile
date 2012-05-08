@@ -43,3 +43,5 @@ gem 'pg', '=0.12.2'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'pdfkit'
