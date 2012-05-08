@@ -45,7 +45,3 @@ gem 'pg', '=0.12.2'
 # end
 
 gem 'pdfkit'
-
-group :production do
-  gem 'wkhtmltopdf-heroku'
-end
