@@ -40,6 +40,14 @@ class ToolsController < ApplicationController
   def show
     @tool = Tool.find(params[:id])
     @log_tic = @tool # this is for the server request logs and reporting
+    if params[:to_pdf].present?
+      html = render_to_string 'shared/tic_pdf.html.haml', :layout => false
+      kit  = PDFKit.new( html, :page_size => 'Letter' )
+      kit.stylesheets << 'public/stylesheets/doc.css'
+      send_data kit.to_pdf, :type => 'application/pdf', :filename => 'test.pdf', :disposition => 'inline'
+      return
+    else
+    end
   end
 
 

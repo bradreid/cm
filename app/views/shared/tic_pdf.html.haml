@@ -40,23 +40,10 @@
     show_bottom_borders();
   })
 
-.right
-  %table
-    %tr
-      %td
-        =link_to( 'Download', tool_path(@tool, :to_pdf => true), :class => 'btn success')
-      %td
-        &nbsp;
-      %td
-        =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(@tool), :title => 'Review Tool')
 .page-header
   %h1
     = "#{@tool.name}"
-    %small                                                     
-      =rating_stars(@tool)
-  
-%br
-%br
+
 %table.tic{:width => '100%'}
   %tr
     %td.bold.big
@@ -103,7 +90,7 @@
     %td{:valign => 'top', :width => '50%'}
       %table#right_length.tic{:width => '100%', :bgcolor => '#D6E3BC'}
         %tr
-          %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:heading_details, :scope=>[:tic])
+          %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:heading_why, :scope=>[:tic])
           %td.notop.noleft.noright
         %tr
           %td.noleft.noright.equipment
@@ -165,51 +152,4 @@
             =t :sourceurl, :scope=>[:tic]
           %td.noleft.min_height.noright.nobottom.rightbottom
             =link_to(@tool.source_url, @tool.source_url) if @tool.source_url
-            
-%br
-%br
-.clear_both
-%h2
-  =t :rev_list, :scope=>[:viewuser]
-- if current_user.try(:is_admin?)
-  -reviews = @tool.reviews
--else
-  -reviews = @tool.reviews.active_by_user(current_user)
--if !reviews.any?
-  =t :norevs, :scope=>[:tic]
--else
-  %table.data
-    %tr
-      -if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
-        %th
-          =t :heading_active, :scope=>[:viewuser]
-      %th
-        =t :heading_rating, :scope=>[:viewuser]
-      %th
-        =t :heading_reviewer, :scope=>[:viewuser]
-      %th
-        =t :heading_date, :scope=>[:viewuser]
-      %th
-        =t :heading_actions, :scope=>[:viewuser]
-    -reviews.each do |r|
-      %tr
-        - if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
-          %td
-            =status_image(r.active?)
-        %td
-          =review_stars(r)
-        %th
-          = r.user ? link_to(r.user.display_name, user_path(r.user)) : 'Anonymous'
-        %td
-          =r.created_at.strftime("%A, %B %d, %Y, %l:%M%p")
-        %td
-          %span{:style => 'white-space:nowrap'}
-            =view_link tool_review_path(@tool, r) 
-            -if current_user.try(:is_admin?) || r.user == current_user
-              |
-              =edit_link [@tool, r]
-              |
-              =delete_link toggle_active_tool_review_path(r.tool, r), :confirm => t(:rusure,:scope=>[:links]) + ' ' + (r.active? ? t(:revdel_confirm,:scope=>[:links]) : t(:revadd_confirm,:scope=>[:links])), :title => (r.active? ? t(:alt_deact,:scope=>[:links]) : t(:alt_act,:scope=>[:links])), :alt_text => (r.active? ? t(:alt_deact,:scope=>[:links]) : t(:alt_act,:scope=>[:links])), :method => :get, :img_link => (r.active? ? nil : 'link_icons/tick.png')
 
-%br
-.clear_both         
