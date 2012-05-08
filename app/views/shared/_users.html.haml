@@ -1,4 +1,6 @@
 #user_bar
+  - if current_user.try(:is_admin?) 
+    = link_to( t(:title,:scope=>[:admin]), admin_index_path )
   - if (current_user.try(:is_admin?) || Rails.env == 'development') && !['update', 'create'].include?(params[:action])
     - if I18n.locale != :fr
       = link_to t(:switchfrench), url_for(:locale => :fr)
