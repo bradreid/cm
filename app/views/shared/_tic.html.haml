@@ -44,7 +44,7 @@
   %table
     %tr
       %td
-        =link_to( submit_tag('Download', :class => "btn green"), @tool.source_document.url) 
+        =link_to( 'Download', @tool.source_document.url, :class => 'btn success')
       %td
         &nbsp;
       %td
