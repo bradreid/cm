@@ -90,18 +90,16 @@
                 = FormConstants.send("#{w}_purpose".downcase).sort[i]
               %td.noleft.noright{:align => 'center'}
                 =image_tag 'check_mark.png', :height => 25 if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
-        %tr
-          %td.min_height.noleft
-            =t :when_topic, :scope=>[:tic]
-          %td.noright{:colspan => 2}
-            =@tool.topic
-        %tr
-          %td.min_height.noleft.nobottom.leftbottom
-            =t :when_who, :scope=>[:tic]
-          %td.noright.nobottom.leftbottom{:colspan => 2}
-            =@tool.who
     %td{:valign => 'top', :width => '50%'}
       %table#right_length.tic{:width => '100%', :bgcolor => '#D6E3BC'}
+        %tr
+          %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:when_topic, :scope=>[:tic])
+          %td.notop.noleft.noright
+            =@tool.topic
+        %tr
+          %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:when_who, :scope=>[:tic])
+          %td.notop.noleft.noright
+            =@tool.who
         %tr
           %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:heading_details, :scope=>[:tic])
           %td.notop.noleft.noright
