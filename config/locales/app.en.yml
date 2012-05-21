@@ -4,6 +4,12 @@ en:
   button_cancel: Cancel
   check_yes: 'Yes'
   check_no: 'No'
+  alt_people: Find social development tools for a project
+  alt_green: Find environmental tools for a project
+  alt_grow: Find economic development tools for a project
+  alt_balanced: Find sustainable developmental tools for a project
+  alt_search: Search by keywords, date, geography, author, language, and more
+  alt_phases: Find tools for a project cycle
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
