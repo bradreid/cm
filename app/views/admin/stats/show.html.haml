@@ -4,4 +4,6 @@
     %small
       =t :subtitle, :scope=>[:admin,:stats]
 
-=link_to t(:pagereqs,:scope=>[:admin,:stats]), new_admin_stats_page_requests_path
+%ul
+  %li
+    =link_to t(:pagereqs,:scope=>[:admin,:stats]), new_admin_stats_page_requests_path

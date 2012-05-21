@@ -11,7 +11,7 @@
     			type: 'spline'
     		},
     		title: {
-    			text: 'Page Requests'
+    			text: 'Pages Requests and Unique Visitors'
     		},
     		subtitle: {
     			text: document.ontouchstart === undefined ?
@@ -27,7 +27,7 @@
     		},
     		yAxis: {
     			title: {
-    				text: 'Page Requests'
+    			        text: ''
     			},
     		},
     		tooltip: {
@@ -90,3 +90,5 @@
     = render :partial => 'admin/stats/shared/simple_index'
 
 #container
+
+= render :partial => 'admin/stats/shared/footer'
