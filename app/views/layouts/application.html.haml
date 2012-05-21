@@ -46,19 +46,19 @@
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
                     %tr
                       %td
-                        =link_to image_tag('template/splash_button_people.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), people_path                 
+                        =link_to image_tag('template/splash_button_people.png', :width => 200, :title=> t(:alt_people), :style => 'margin:0px;padding:0px;float:left;'), people_path                 
                       %td
-                        =link_to image_tag('template/splash_button_green.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), green_path              
+                        =link_to image_tag('template/splash_button_green.png', :width => 200, :title=> t(:alt_green), :style => 'margin:0px;padding:0px;float:left;'), green_path              
                       %td
-                        =link_to image_tag('template/splash_button_grow.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), grow_path                    
+                        =link_to image_tag('template/splash_button_grow.png', :width => 200, :title=> t(:alt_grow), :style => 'margin:0px;padding:0px;float:left;'), grow_path                    
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}                        
                     %tr
                       %td
-                        =link_to image_tag('template/splash_button_balanced.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), balanced_path                  
+                        =link_to image_tag('template/splash_button_balanced.png', :width => 200, :title=> t(:alt_balanced), :style => 'margin:0px;padding:0px;float:left;'), balanced_path                  
                       %td
-                        =link_to image_tag('template/splash_button_search.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), search_path                  
+                        =link_to image_tag('template/splash_button_search.png', :width => 200, :title=> t(:alt_search), :style => 'margin:0px;padding:0px;float:left;'), search_path                  
                       %td
-                        =link_to image_tag('template/splash_button_phases.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), phases_path                 
+                        =link_to image_tag('template/splash_button_phases.png', :width => 200, :title=> t(:alt_phases), :style => 'margin:0px;padding:0px;float:left;'), phases_path                 
                       -#- if current_user.try(:is_admin?)
                       -#  %td
                       -#    =link_to image_tag('template/splash_button_admin.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), admin_index_path                 

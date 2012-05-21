@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20120422153805) do
 
   create_table "tools", :force => true do |t|
     t.string   "name"
-    t.text     "expertise_needed"
+    t.string   "expertise_needed"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "where"
@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(:version => 20120422153805) do
   end
 
   add_index "tools", ["description"], :name => "index_tools_on_description"
-  add_index "tools", ["name"], :name => "index_tools_on_name"
   add_index "tools", ["when"], :name => "index_tools_on_when"
   add_index "tools", ["why"], :name => "index_tools_on_why"
 
