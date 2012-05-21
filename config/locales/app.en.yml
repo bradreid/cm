@@ -10,6 +10,30 @@ en:
   alt_balanced: Find sustainable developmental tools for a project
   alt_search: Search by keywords, date, geography, author, language, and more
   alt_phases: Find tools for a project cycle
+  alt_org_partnership: Tools to create network linkages
+  alt_org_fundraising: Tools to generate income for a project
+  alt_org_teambuilding: Tools to develop project team
+  alt_org_engagement: Tools to build community interest
+  alt_plan_vis: Tools to begin the planning process
+  alt_plan_act: Tools to help develop action plans
+  alt_plan_man: Tools to manage project planning
+  alt_anal_ass: Tools to assess the community
+  alt_anal_comp: Tools to help conduct detailed assessment
+  alt_impl_natural: Tools to help utilize natural resources
+  alt_impl_cultural: Tools to aid in cultural events
+  alt_impl_hr: Tools to help employers manage people
+  alt_impl_social: Tools to build social capital
+  alt_impl_gov: Tools to help facilitate governing bodies
+  alt_impl_financial: Tools to manage resources
+  alt_impl_comm: Tools to build community improvements
+  alt_rev_proj: Tools to assess and improve projects
+  alt_rev_proc: Tools to evaluate strategy options
+  alt_rev_feedback: Tools to generate input from the community
+  alt_org:  Tools to start a project with
+  alt_plan: Tools to plan a project with
+  alt_anal: Tools to identify community needs, priorities, and feasibility
+  alt_impl: Tools to coordinate and complete a project
+  alt_rev:  Tools to evaluate project achievements and results
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
