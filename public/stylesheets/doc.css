@@ -1,3 +1,9 @@
+.highlight1row {
+  background-color: #d2b9d3; }
+
+.highlight2row {
+  background-color: #d2b9d3; }
+
 body {
   background-image: url("../images/template/bg.jpg"); }
 
@@ -133,6 +139,12 @@ table.hover tbody td:hover {
 
 .brown {
   background-color: #7e573a; }
+
+.pastel_burgendy {
+  background-color: #cc9999; }
+
+.pastel_blue {
+  background-color: #9999cc; }
 
 .clear_both {
   clear: both; }
