@@ -66,6 +66,7 @@ Cm::Application.routes.draw do
     resources :admin
 
     resources :tools do
+      get :downloadtic
       scope :module => 'tools' do
         resources :reviews do
           member do
