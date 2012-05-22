@@ -1,4 +1,11 @@
 class ToolsController < ApplicationController
+  def downloadtic
+    @tool = Tool.find(params[:tool_id])
+    file = open( @tool.source_document.url )
+    file_contents = file {|f| f.read}
+    send_data file_contents, :type=> file.content_type, :filename => @tool.source_document_file_name
+  end
+
   def index
       
       @log_section = 'search'  #log this request as a search 
