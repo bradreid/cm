@@ -104,9 +104,9 @@ en:
       title: Phases
       subtitle: Identify tools using CED phases
       step_one: Step 1
-      step_one_text: Select a phase
+      step_one_text: Click on a phase
       step_two: Step 2
-      step_two_text: Select a purpose
+      step_two_text: Click on a purpose
   formconstants:
     language:
       en: English Only

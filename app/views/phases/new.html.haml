@@ -1,5 +1,29 @@
 :javascript
   $(function(){
+   $('.step2clickable').click(function(){
+     $(this).parent().spin();
+     $('.highlight2row' ).removeClass( 'highlight2row' );
+     $(this).addClass( 'highlight2row' );
+     $.ajax({
+       url: "#{phases_path}",
+       dataType: 'script',
+       data: "format=js&purpose=" + $(this).attr( 'show_rez' )
+     });
+     $('#search_results').show();
+   });
+
+   $('.step1clickable').click(function(){
+     $('#search_results').hide();
+     $('#Organizing' ).hide();
+     $('#Planning' ).hide();
+     $('#Analyzing' ).hide();
+     $('#Implementing' ).hide();
+     $('#Reviewing' ).hide();
+     $('.highlight1row' ).removeClass( 'highlight1row' );
+     $(this).addClass( 'highlight1row' );
+     $('#'+ $(this).attr('show_table') ).show();
+   });
+
    $('#phases').click(function(){
      select_purpose("." + $(this).val().toLowerCase());
    }); 
@@ -28,40 +52,78 @@
     =t :title, :scope =>[:search, :phases]
     %small
       =t :subtitle, :scope =>[:search, :phases]
-      
-%table#phases_table{:width => '75%'}
+
+%table{:width => '75%'}
   %tr
-  
-    %td.phase.widespace{:valign => 'top'}
+    %td
       %h2
         =t :step_one, :scope =>[:search, :phases]
         %small
           =t :step_one_text, :scope =>[:search, :phases]
-      %br
-      = select_tag :phases, options_for_select(FormConstants.when.map{|r| ["#{r} (#{Tool.count(:conditions => {:when => r})})",r]}, params[:language]),:size => FormConstants.when.size, :style => 'height:inherit'     
-    %td.widespace{:valign => 'top'}
+%table{:width => '75%', :frame=>'box'}
+  - ii = 0;
+  - FormConstants.when.each do |r| 
+    %tr.step1clickable{:show_table => r}
+      %td{:width => '30%'}
+        #{r} (#{Tool.count(:conditions => {:when => r})})
+      %td
+        #{FormConstants.whendefns[ii]}
+        - ii = ii + 1;
+            
+%p
+%table#step2_table{:width => '75%'}
+  %tr
+    %td
       %h2
         =t :step_two, :scope =>[:search, :phases]
         %small
           =t :step_two_text, :scope =>[:search, :phases]
-      %br     
-      .organizing.purpose{:style => "#{params[:phases] == 'organizing' ? '' : 'display:none'}"}
-        =select_tag :organizing_purpose, options_for_select(FormConstants.organizing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.organizing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'
+%table#Organizing{:width => '75%', :frame=>'box', :style=>'display:none'}
+  - ii = 0;
+  - FormConstants.organizing_purpose.each do |r|
+    %tr.step2clickable{:show_rez => r}
+      %td{:width => '30%'}
+        #{r} (#{Tool.count(:conditions => {:why => r})})
+      %td
+        #{FormConstants.orgdefns[ii]}
+        - ii = ii + 1;
+%table#Planning{:width => '75%', :frame=>'box', :style=> 'display:none'}
+  - ii = 0;
+  - FormConstants.planning_purpose.each do |r|
+    %tr.step2clickable{:show_rez => r}
+      %td{:width => '30%'}
+        #{r} (#{Tool.count(:conditions => {:why => r})})
+      %td
+        #{FormConstants.plandefns[ii]}
+        - ii = ii + 1;
+%table#Analyzing{:width => '75%', :frame=>'box', :style=> 'display:none'}
+  - ii = 0;
+  - FormConstants.analyzing_purpose.each do |r|
+    %tr.step2clickable{:show_rez => r}
+      %td{:width => '30%'}
+        #{r} (#{Tool.count(:conditions => {:why => r})})
+      %td
+        #{FormConstants.analdefns[ii]}
+        - ii = ii + 1;
+%table#Implementing{:width => '75%', :frame=>'box', :style=> 'display:none'}
+  - ii = 0;
+  - FormConstants.implementing_purpose.each do |r|
+    %tr.step2clickable{:show_rez => r}
+      %td{:width => '30%'}
+        #{r} (#{Tool.count(:conditions => {:why => r})})
+      %td
+        #{FormConstants.impldefns[ii]}
+        - ii = ii + 1;
+%table#Reviewing{:width => '75%', :frame=>'box', :style=> 'display:none'}
+  - ii = 0;
+  - FormConstants.reviewing_purpose.each do |r|
+    %tr.step2clickable{:show_rez => r}
+      %td{:width => '30%'}
+        #{r} (#{Tool.count(:conditions => {:why => r})})
+      %td
+        #{FormConstants.revdefns[ii]}
+        - ii = ii + 1;
    
-      
-      .planning.purpose{:style => "#{params[:phases] == 'planning' ? '' : 'display:none'}"}
-        =select_tag :planning_purpose, options_for_select(FormConstants.planning_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.planning_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
-      
-
-      .analyzing.purpose{:style => "#{params[:phases] == 'analyzing' ? '' : 'display:none'}"}
-        =select_tag :analyzing_purpose, options_for_select(FormConstants.analyzing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.analyzing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'      
-      
-      .implementing.purpose{:style => "#{params[:phases] == 'implementing' ? '' : 'display:none'}"}
-        =select_tag :implementing_purpose, options_for_select(FormConstants.implementing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.implementing_purpose.size, :style => 'height:inherit', :class => 'purpose_select'     
-    
-    
-      .reviewing.purpose{:style => "#{params[:phases] == 'reviewing' ? '' : 'display:none'}"}
-        =select_tag :reviewing_purpose, options_for_select(FormConstants.reviewing_purpose.map{|r| ["#{r} (#{Tool.count(:conditions => {:why => r})})",r]}), :size => FormConstants.reviewing_purpose.size, :style => 'height:inherit' , :class => 'purpose_select'         
-%br
+%br    
 %br    
 #search_results
