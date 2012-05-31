@@ -2,12 +2,9 @@ class ToolsController < ApplicationController
   def downloadtic
     @tool = Tool.find(params[:tool_id])
     fn = @tool.source_document.url
-    if fn.index( ' ' ) 
-      fn = fn.gsub!( ' ', '%20' )
-    end
+    fn.gsub!( ' ', '%20' )
     file = open( fn )
-    file_contents = file.read
-    send_data file_contents, :type=> file.content_type, :filename => @tool.source_document_file_name
+    send_data file.read, :type=> file.content_type, :filename => @tool.source_document_file_name
   end
 
   def index
