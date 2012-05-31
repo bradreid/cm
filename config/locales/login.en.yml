@@ -37,7 +37,7 @@ en:
     professional_training: Professional Training or Accreditation(s) in Community Development or other area
     hello: Welcome 
     reset_request: 'Someone has requested a link to change your password, and you can do this through the link below.'
-    change_my_password: 'Someone has requested a link to change your password, and you can do this through the link below.'
+    change_my_password: 'Change my password.'
     didnt_request: "If you didn't request this, please ignore this email."
     wont_change: "Your password won't change until you access the link above and create a new one."
     
