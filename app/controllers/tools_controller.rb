@@ -6,7 +6,7 @@ class ToolsController < ApplicationController
       fn = fn.gsub!( ' ', '%20' )
     end
     file = open( fn )
-    file_contents = file {|f| f.read}
+    file_contents = file.read
     send_data file_contents, :type=> file.content_type, :filename => @tool.source_document_file_name
   end
 
