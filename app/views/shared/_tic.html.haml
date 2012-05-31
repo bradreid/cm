@@ -44,7 +44,7 @@
   %table
     %tr
       %td
-        =link_to( 'Download Tool', tool_downloadtic_path(@tool), :class => 'btn success')
+        =link_to( 'Download Tool', tool_downloadtic_path(@tool), :class => 'btn success') if @tool.source_document_file_name
       %td
         &nbsp;
       %td

@@ -60,7 +60,7 @@
         =t :step_one, :scope =>[:search, :phases]
         %small
           =t :step_one_text, :scope =>[:search, :phases]
-%table{:width => '75%', :frame=>'box'}
+%table{:width => '75%', :frame=>'box', :cellspacing => 0, :cellpadding => 3}
   - ii = 0;
   - FormConstants.when.each do |r| 
     %tr.step1clickable{:show_table => r}
@@ -78,7 +78,7 @@
         =t :step_two, :scope =>[:search, :phases]
         %small
           =t :step_two_text, :scope =>[:search, :phases]
-%table#Organizing{:width => '75%', :frame=>'box', :style=>'display:none'}
+%table#Organizing{:width => '75%', :frame=>'box', :style=>'display:none', :cellspacing => 0, :cellpadding => 3}
   - ii = 0;
   - FormConstants.organizing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
@@ -87,7 +87,7 @@
       %td
         #{FormConstants.orgdefns[ii]}
         - ii = ii + 1;
-%table#Planning{:width => '75%', :frame=>'box', :style=> 'display:none'}
+%table#Planning{:width => '75%', :frame=>'box', :style=> 'display:none', :cellspacing => 0, :cellpadding => 3}
   - ii = 0;
   - FormConstants.planning_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
@@ -96,7 +96,7 @@
       %td
         #{FormConstants.plandefns[ii]}
         - ii = ii + 1;
-%table#Analyzing{:width => '75%', :frame=>'box', :style=> 'display:none'}
+%table#Analyzing{:width => '75%', :frame=>'box', :style=> 'display:none', :cellspacing => 0, :cellpadding => 3}
   - ii = 0;
   - FormConstants.analyzing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
@@ -105,7 +105,7 @@
       %td
         #{FormConstants.analdefns[ii]}
         - ii = ii + 1;
-%table#Implementing{:width => '75%', :frame=>'box', :style=> 'display:none'}
+%table#Implementing{:width => '75%', :frame=>'box', :style=> 'display:none', :cellspacing => 0, :cellpadding => 3}
   - ii = 0;
   - FormConstants.implementing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
@@ -114,7 +114,7 @@
       %td
         #{FormConstants.impldefns[ii]}
         - ii = ii + 1;
-%table#Reviewing{:width => '75%', :frame=>'box', :style=> 'display:none'}
+%table#Reviewing{:width => '75%', :frame=>'box', :style=> 'display:none', :cellspacing => 0, :cellpadding => 3}
   - ii = 0;
   - FormConstants.reviewing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}

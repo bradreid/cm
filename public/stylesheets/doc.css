@@ -4,6 +4,18 @@
 .highlight2row {
   background-color: #d2b9d3; }
 
+.step1clickable {
+  cursor: default; }
+
+.step1clickable:hover {
+  background-color: #e1eafe; }
+
+.step2clickable {
+  cursor: default; }
+
+.step2clickable:hover {
+  background-color: #e1eafe; }
+
 body {
   background-image: url("../images/template/bg.jpg"); }
 
