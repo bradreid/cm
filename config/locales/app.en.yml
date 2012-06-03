@@ -1,5 +1,5 @@
 en:
-  switchfrench: 'Francais'
+  switchfrench: "Français"
   switchenglish: English
   button_cancel: Cancel
   check_yes: 'Yes'
@@ -112,7 +112,7 @@ en:
       en: English Only
       fr: French Only
       bi: Bilingual
-      both: Both Available
+      bo: Both Available
     rating:
       one: 1 Star
       two: 2 Stars
@@ -125,30 +125,35 @@ en:
       analyzing: Analyzing
       implementing: Implementing
       reviewing: Reviewing 
-      org_partnership: Partnership Building
-      org_fundraising: Fundraising
-      org_teambuilding: Project Team Building
-      org_engagement: Engagement
-      plan_vis: Visioning
-      plan_act: Action Planning
-      plan_man: Project Management
-      anal_ass: Assessment
-      anal_comp: Comprehensive Analysis
-      impl_natural: Natural Resources
-      impl_cultural: Cultural and Arts
-      impl_hr: Human Resources
-      impl_social: Social Capital
-      impl_gov: Governance
-      impl_financial: Financial
-      impl_comm: Community Infrastructure
-      rev_proj: Project Evaluation
-      rev_proc: Process Evaluation
-      rev_feedback: Community Feedback
+      org:
+        partn:          Partnership Building
+        fundr:          Fundraising
+        proje:          Project Team Building
+        engage:         Engagement
+      pla:
+        visio:          Visioning
+        action:         Action Planning
+        proje:          Project Management
+      ana:
+        assess:         Assessment
+        compr:          Comprehensive Analysis
+      imp:
+        natur:            Natural Resources
+        cultu:            Cultural and Arts
+        human:            Human Resources
+        socia:            Social Capital
+        gover:            Governance
+        finan:            Financial
+        commun:           Community Infrastructure
+      rev:        
+        proje:      Project Evaluation
+        proce:      Process Evaluation
+        commun:     Community Feedback
     topic:
-      people: People
-      green: Green
+      peop: People
+      gree: Green
       grow: Grow
-      balanced: Balanced
+      bala: Balanced
       none: Not Specified
     where:
       local: Local
@@ -245,7 +250,7 @@ en:
     heading_actions: Actions
     field_first: First Name
     field_last: Last Name
-    field_role: Current Role/Job Title
+    field_role: Current Role / Job Title
     field_org: Organization
     field_city: Place of Work (City/Town)
     field_state: Place of Work (State/Province)
@@ -254,6 +259,8 @@ en:
     field_years: Years of Experience in Community Development
     field_prof: Professional Training or Accreditation
   tic:
+    download:     Download Tool
+    review:       Review Tool
     heading_desc: Description
     heading_when: When
     heading_why: Why

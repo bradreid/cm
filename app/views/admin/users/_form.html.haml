@@ -17,7 +17,7 @@
         %br
       - if !self.controller.is_a? AdminController
         %br
-        Current password
+        =t :password, :scope=>[:activerecord,:attributes,:user]
         <br>
         = f.password_field :current_password
       %p    

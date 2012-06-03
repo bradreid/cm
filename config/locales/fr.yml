@@ -13,8 +13,8 @@ fr:
     is_admin?: french
     active?: french
     forgot_your_password?: french
-    mandatory_field: mandatory
-    optional_field: optional
+    mandatory_field:  "Hé ça"
+    optional_field:   "Hé ça"
     first_name: french
     last_name: french
     email: french
