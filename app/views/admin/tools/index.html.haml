@@ -37,7 +37,7 @@
         %td
           =tool.id
         %td
-          =link_to query_highlight(tool.name,params[:search]).html_safe, tool_path(tool), :class => 'search_hit_title'
+          =query_highlight(tool.name,params[:search]).html_safe
         %td
           =tool.author
         %td

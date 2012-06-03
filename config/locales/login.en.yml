@@ -16,9 +16,13 @@ en:
     first_name: First name
     last_name: Last name
     email: Email
+    email_new_tools:     Receive email updates for new tools
+    email_new_reviews:   Receive email updates for new tools
     send_reset_instructions: Send reset instructions
     back_to_login: Back to login
     create_an_account: Create an account
+    account_edit_title:        Edit your account
+    account_edit_subtitle:     Change account settings
     account_creation_message: By logging in to review a Community Development Tool, Tool Reviewers are giving their informed consent to provide their name, organization, and role / job title, and are also agreeing to have this information made public along with their review.
     in_the_future: If in the future Tool Reviewers wish to edit their previous tool review(s) or to have their tool review(s) removed from the website, they can do so by informing the Rural Development Institute of this decision, emailing <rdi@brandonu.ca> . Reviewers are asked to include CED Tool Review in the subject line.
     rdi_appreciates: The Rural Development Institute sincerely appreciates the efforts of those who contribute their review of Community Development Tools.
@@ -27,10 +31,10 @@ en:
     optional: Optional = reviewer consents to provide information in field.
     will_be_displayed: Will be displayed = Display Information along with tool reviewed; (display in a simple, small “text box” whatever information is provided by the reviewer.
     will_not_be_displayed: Will not be displayed = Do not Display Information; (information is data-based for administrative and research use only).
-    current_role: Current Role/Job Title
+    current_role: Current Role / Job Title
     organization: Organization
-    city_town: "Place of work: City/Town"
-    state_province: "Place of work: State/Province"
+    city_town: "Place of work: City / Town"
+    state_province: "Place of work: State / Province"
     country: Country
     address: Address
     years_of_experience: Years of experience in Community Development

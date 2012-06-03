@@ -5,3 +5,6 @@ en:
         header:
           one:   "Sorry, 1 error prevented your form from being saved"
           other: "Sorry, %{count} errors prevented your form from being saved"
+    attributes:
+      user:
+        password: Current passowrd
