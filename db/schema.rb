@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603171055) do
+ActiveRecord::Schema.define(:version => 20120603172544) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20120603171055) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "active",                       :default => true
+    t.datetime "last_shared_at"
   end
 
   add_index "reviews", ["tool_id"], :name => "index_reviews_on_tool_id"
@@ -91,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20120603171055) do
     t.integer  "rating_count"
     t.float    "rating_total"
     t.string   "slug"
+    t.datetime "last_shared_at"
   end
 
   add_index "tools", ["description"], :name => "index_tools_on_description"

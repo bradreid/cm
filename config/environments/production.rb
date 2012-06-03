@@ -53,7 +53,7 @@ Cm::Application.configure do
   }
   
   config.middleware.use ExceptionNotifier,
-    :email_prefix => "[Exception] ",
+    :email_prefix => "[CM Exception] ",
     :sender_address => %{"Exception Notifier" <support@cm.beyondthecube.ca>},
     :exception_recipients => %w{bradreid20@gmail.com}  
   
