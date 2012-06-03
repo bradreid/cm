@@ -2,17 +2,17 @@
 %html
   %head
     %title
-      The Choice Matrix
+      = @tool.try(:name) || 'The Choice Matrix'
     %meta{:name => 'description', :content => 'The Choice Matrix'}
     
-    %meta{:property => 'og:title', :content => @title || 'The Choice Matrix'}
+    %meta{:property => 'og:title', :content => @tool.try(:name) || 'The Choice Matrix'}
     %meta{:property => 'og:type', :content => 'university'}
     %meta{:property => 'og:image', :content => "#{image_url('RDI_Logo1.bmp')}"}
     %meta{:property => 'og:url', :content => "#{request.protocol}#{request.host_with_port}/"}    
     %meta{:property => 'og:site_name', :content => 'Rural Development Institute - The Choice Matrix'}
     %meta{:property => 'fb:admins', :content => '654461060'}    
     
-    = stylesheet_link_tag :all, :cached => true
+    = stylesheet_link_tag :all
     = javascript_include_tag 'jquery', 'application', 'jquery.spinner', 'daterangepicker.jQuery', 'highcharts'
     = yield(:head)    
     = csrf_meta_tag  
@@ -61,12 +61,7 @@
               #content
                 =render :partial => 'shared/flashes'  
                 %center
-                  %table{:border => 0, :cellpadding => 0, :cellspacing => 0}
-                    %tr
-                      %td{:valign => 'top'}
-                        .fb-like{'data-send' => "true", 'data-width' => "450", 'data-show-faces' => "true"}
-                      %td{:valign => 'top'}
-                        =link_to 'Tweet', 'https://twitter.com/share', :class => 'twitter-share-button',  'data-via'=>"RDI_BU"
+                  =render :partial => 'shared/like_buttons'
                 %center
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
                     %tr
