@@ -20,6 +20,7 @@ gem 'stemmer'
 gem 'texticle', '=1.0.3'
 gem 'http_accept_language'
 gem 'pg', '=0.12.2'
+gem 'exception_notification', :require => 'exception_notifier'
 
 # Use unicorn as the web server
 # gem 'unicorn'

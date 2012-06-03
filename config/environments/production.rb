@@ -52,6 +52,11 @@ Cm::Application.configure do
     :authentication  => :plain
   }
   
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[Exception] ",
+    :sender_address => %{"Exception Notifier" <support@cm.beyondthecube.ca>},
+    :exception_recipients => %w{bradreid20@gmail.com}  
+  
 
   # Enable threaded mode
   # config.threadsafe!
