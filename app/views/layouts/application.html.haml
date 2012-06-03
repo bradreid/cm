@@ -4,12 +4,17 @@
     %title
       The Choice Matrix
     %meta{:name => 'description', :content => 'The Choice Matrix'}
+    %meta{'og:title' => @title || 'The Choice Matrix'}
+    %meta{'og:type' => 'university'}
+    %meta{'og:url' => "#{image_tag('RDI_Logo1.bmp')}"}
+    %meta{'og:site_name' => 'Rural Development Institute - The Choice Matrix'}
     = stylesheet_link_tag :all, :cached => true
     = javascript_include_tag :defaults, 'jquery-ui.min', 'jquery.spinner', 'daterangepicker.jQuery', 'highcharts'
     = yield(:head)    
-    = csrf_meta_tag 
+    = csrf_meta_tag   
     
 %body
+  =render :partial => 'shared/facebook_js'
   .clear_both
   =render :partial => 'shared/users'
   .clear_both  
@@ -41,7 +46,13 @@
               %br
               %br
               #content
-                =render :partial => 'shared/flashes'              
+                =render :partial => 'shared/flashes'  
+                %table{:border => 0, :cellpadding => 0, :cellspacing => 0}
+                  %tr
+                    %td{:valign => 'top'}
+                      .fb-like{'data-send' => "true", 'data-width' => "450", 'data-show-faces' => "true"}
+                    %td{:valign => 'top'}
+                      =link_to 'Tweet', 'https://twitter.com/share', :class => 'twitter-share-button',  'data-via'=>"RDI_BU"
                 %center
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
                     %tr
