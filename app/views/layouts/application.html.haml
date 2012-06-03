@@ -4,14 +4,25 @@
     %title
       The Choice Matrix
     %meta{:name => 'description', :content => 'The Choice Matrix'}
-    %meta{'og:title' => @title || 'The Choice Matrix'}
-    %meta{'og:type' => 'university'}
-    %meta{'og:url' => "#{image_tag('RDI_Logo1.bmp')}"}
-    %meta{'og:site_name' => 'Rural Development Institute - The Choice Matrix'}
+    %meta{:name => 'og:title', :content => @title || 'The Choice Matrix'}
+    %meta{:name => 'og:type', :content => 'university'}
+    %meta{:name => 'og:image', :content => "#{image_url('RDI_Logo1.bmp')}"}
+    %meta{:name => 'og:url', :content => "#{request.protocol}#{request.host_with_port}/"}    
+    %meta{:name => 'og:site_name', :content => 'Rural Development Institute - The Choice Matrix'}
+    %meta{:name => 'fb:admins', :content => '654461060'}    
     = stylesheet_link_tag :all, :cached => true
     = javascript_include_tag :defaults, 'jquery-ui.min', 'jquery.spinner', 'daterangepicker.jQuery', 'highcharts'
     = yield(:head)    
-    = csrf_meta_tag   
+    = csrf_meta_tag  
+    
+    
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="university" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="The Choice Matrix" />
+    <meta property="fb:admins" content="654461060" />
+     
     
 %body
   =render :partial => 'shared/facebook_js'
