@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603172544) do
+ActiveRecord::Schema.define(:version => 20120603193503) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -102,8 +102,8 @@ ActiveRecord::Schema.define(:version => 20120603172544) do
   add_index "tools", ["why"], :name => "index_tools_on_why"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                                  :default => "",   :null => false
-    t.string   "encrypted_password",                      :limit => 128, :default => "",   :null => false
+    t.string   "email",                                                  :default => "",    :null => false
+    t.string   "encrypted_password",                      :limit => 128, :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -128,9 +128,13 @@ ActiveRecord::Schema.define(:version => 20120603172544) do
     t.string   "years_of_experience"
     t.text     "professional_training_and_accreditation"
     t.text     "memberships_in_community_development"
+    t.boolean  "email_new_tools",                                        :default => false
+    t.boolean  "email_new_reviews",                                      :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["email_new_reviews"], :name => "index_users_on_email_new_reviews"
+  add_index "users", ["email_new_tools"], :name => "index_users_on_email_new_tools"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

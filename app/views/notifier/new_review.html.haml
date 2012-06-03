@@ -1,0 +1,11 @@
+%h1
+  ="A tool was reviewed (#{@review.stars} stars): #{@review.tool.name}"
+
+%h4
+  Description
+=@tool.description  
+%p
+=" To view this review just follow this link: #{tool_review_url(@review.tool, @review)}"
+
+%p
+="Thanks for using #{Rails.configuration.app_name} and have a great day!"
