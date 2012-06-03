@@ -20,8 +20,7 @@ module LinkHelper
                     :confirm  => t(:del_confirm,:scope=>[:links]),
                     :title    => t(:alt_del,:scope=>[:links]),
                     :alt_text => t(:alt_del,:scope=>[:links])
-                    }
-                    
+                    }                
     html_options.merge!(args.second) if args.second
     name   = html_options.delete(:name) || "Delete"
     img_tg = image_tag( html_options[:img_link] || 'link_icons/delete.png', :alt => html_options[:alt_text], :title => html_options[:title], :align => 'middle').html_safe
@@ -63,7 +62,7 @@ module LinkHelper
     a << [listing_link(opts[:index_path] || polymorphic_path(index_path), options.merge(options[:index] || {}))] unless options[:exclude].include?(:index)
     a << [ view_link(context, options.merge(options[:show] || {}))] unless options[:exclude].include?(:show)
     a << [ edit_link(context, options.merge(options[:edit] || {}))] unless options[:exclude].include?(:edit)
-    a << [ delete_link(context, options.merge(options[:delete] || {}))] unless options[:exclude].include?(:delete) 
+    a << [ delete_link(context, options[:delete])] unless options[:exclude].include?(:delete) 
     a.flatten.compact.join( ' | ').html_safe
   end
   
