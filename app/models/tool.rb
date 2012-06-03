@@ -1,4 +1,7 @@
 class Tool < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, :use => :slugged
+    
   has_attached_file :source_document, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => "/:style/:filename"
   
   validates_presence_of :name, :source_document_name, :source_url, :author, :language, :description, :when, :why, :topic, :copyright
