@@ -8,6 +8,7 @@
 = link_to t(:button_new,:scope=>[:admin,:accounts]), new_admin_user_path, :class => 'btn primary'
 %br
 %br
+=render :partial => 'search'
 - if @users
   = page_entries_info @users, :model => 'User' 
 %br
