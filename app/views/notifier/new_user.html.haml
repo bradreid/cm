@@ -1,0 +1,10 @@
+%h1
+  ="A new user has signed up at #{Rails.configuration.app_name},"
+  
+%p
+= @user.display_name
+has signed up.
+=" To view their account follow this link: #{admin_user_url(@user)}"
+
+%p
+Thanks for joining and have a great day!
