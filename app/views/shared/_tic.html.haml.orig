@@ -44,7 +44,11 @@
   %table
     %tr
       %td
-        =link_to( t(:download,:scope=>[:tic]), tool_downloadtic_path(@tool), :class => 'btn success') if @tool.source_document_file_name
+<<<<<<< HEAD
+        =link_to( t(:download,:scope=>[:tic]), tool_downloadtic_path(@tool), :class => 'btn success')
+=======
+        =link_to( 'Download Tool', tool_downloadtic_path(@tool), :class => 'btn success') if @tool.source_document_file_name
+>>>>>>> c741b11d049f0a004ffbea9ea25fa8e0586488c6
       %td
         &nbsp;
       %td
