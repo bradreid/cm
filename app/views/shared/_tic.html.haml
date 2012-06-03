@@ -44,11 +44,11 @@
   %table
     %tr
       %td
-        =link_to( 'Download Tool', tool_downloadtic_path(@tool), :class => 'btn success')
+        =link_to( t(:download,:scope=>[:tic]), tool_downloadtic_path(@tool), :class => 'btn success')
       %td
         &nbsp;
       %td
-        =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(@tool), :title => 'Review Tool')
+        =link_to(image_tag('icon_review.png', :height => 35, :alt => t(:review,:scope=>[:tic])), new_tool_review_path(@tool), :title => t(:review,:scope=>[:tic]))
 .page-header
   %h1
     = "#{@tool.name}"
@@ -79,15 +79,17 @@
           -size = FormConstants.send("#{w}_purpose".downcase).size
           %tr
             %td.notop.noleft{:rowspan => size}
-              =w
+              =t( w.downcase.to_sym, :scope=>[:formconstants, :when] )
             %td.notop.noright.min_height
-              =FormConstants.send("#{w}_purpose".downcase).sort.first    
+              -purp = FormConstants.send("#{w}_purpose".downcase).sort.first 
+              =t( purp[0..5].downcase.to_sym, :scope=>[:formconstants, :when, w.downcase[0..2].to_sym] )
             %td.noleft.notop.noright{:align => 'center'}
               =image_tag 'check_mark.png', :height => 25 if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
           -(1..(size - 1)).each do |i|
             %tr
               %td.noright.min_height
-                = FormConstants.send("#{w}_purpose".downcase).sort[i]
+                - opurp = FormConstants.send("#{w}_purpose".downcase).sort[i] 
+                =t( opurp[0..4].downcase.to_sym, :scope=>[:formconstants, :when, w.downcase[0..2].to_sym] )
               %td.noleft.noright{:align => 'center'}
                 =image_tag 'check_mark.png', :height => 25 if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort[i]
     %td{:valign => 'top', :width => '50%'}
@@ -95,7 +97,8 @@
         %tr
           %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:when_topic, :scope=>[:tic])
           %td.notop.noleft.min_height.noright
-            =@tool.topic
+            -tt = @tool.topic 
+            =t( tt.downcase[0..3].to_sym, :scope=>[:formconstants,:topic])
         %tr
           %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:heading_details, :scope=>[:tic])
           %td.notop.noleft.min_height.noright
@@ -113,7 +116,8 @@
           %td.noleft.noright
             =t :lang, :scope=>[:tic]
           %td.noleft.min_height.noright
-            =@tool.language
+            -tl = @tool.language
+            =t( tl.downcase[0..1].to_sym, :scope=>[:formconstants,:language])
         %tr
           %td.noleft.noright
             =t :authors, :scope=>[:tic]

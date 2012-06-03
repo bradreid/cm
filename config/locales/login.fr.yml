@@ -1,0 +1,45 @@
+fr:
+  devise:
+    username: french
+    password: french
+    confirm_password: french
+    login: french
+    logout: french
+    remember_me: french
+    sign_up: french
+    cancel: french
+    is_admin?: french
+    active?: french
+    forgot_your_password?: french
+    mandatory_field: french
+    optional_field: french
+    first_name: french
+    last_name: french
+    email: french
+    send_reset_instructions: french
+    back_to_login: french
+    create_an_account: french
+    account_edit_title: french
+    account_edit_subtitle: french
+    account_creation_message: french
+    in_the_future: french
+    rdi_appreciates: french
+    legend: french
+    mandatory: french
+    optional: french
+    will_be_displayed: french
+    will_not_be_displayed: french
+    current_role: french
+    organization: french
+    city_town: french
+    state_province: french
+    country: french
+    address: french
+    years_of_experience: french
+    professional_training: french
+    hello: french
+    reset_request: french
+    change_my_password: french
+    didnt_request: french
+    wont_change: french
+    
