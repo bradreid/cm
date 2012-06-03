@@ -2,7 +2,7 @@ class Admin::UsersController < AdminController
   
   def index
     @users = User.paginate(default_pagination_params.merge(:order => 'username'))  
-    @users = @users.search params[:search] if params[:search].present?
+    @users = @users.search_by_user_description params[:search] if params[:search].present?
   end
   
   def show

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603193503) do
+ActiveRecord::Schema.define(:version => 20120603203853) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -130,11 +130,13 @@ ActiveRecord::Schema.define(:version => 20120603193503) do
     t.text     "memberships_in_community_development"
     t.boolean  "email_new_tools",                                        :default => false
     t.boolean  "email_new_reviews",                                      :default => false
+    t.string   "user_description"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["email_new_reviews"], :name => "index_users_on_email_new_reviews"
   add_index "users", ["email_new_tools"], :name => "index_users_on_email_new_tools"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["user_description"], :name => "index_users_on_user_description"
 
 end

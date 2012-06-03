@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   
   after_create :send_welcome_emails
+  before_save :set_user_description
   
   def display_name
     full_name = "#{first_name} #{last_name}".strip
@@ -51,4 +52,8 @@ protected
     Notifier.welcome(self).deliver
     Notifier.new_user(self).deliver
   end    
+  
+  def set_user_description
+    self.user_description = "#{first_name} #{last_name} #{current_role} #{organization}"
+  end
 end
