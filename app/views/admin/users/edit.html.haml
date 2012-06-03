@@ -3,6 +3,13 @@
     =t :title_edit, :scope=>[:admin,:accounts]
     %small
       =@user.display_name
+      .btn-group.pull-right
+        = link_to admin_index_path, :class => 'btn' do
+          %i.icon-arrow-left
+          Back to admin      
+        = link_to admin_users_path, :class => 'btn' do
+          %i.icon-arrow-left
+          Back to users          
 
 = form_for [:admin, @user], :builder => CmFormBuilder do |f| 
   = render :partial => 'form', :locals => {:f => f, :text => t(:button_edit,:scope=>[:admin,:accounts])}

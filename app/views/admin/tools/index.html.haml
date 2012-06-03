@@ -3,6 +3,12 @@
     =t :sec_tools, :scope=>[:admin]
     %small
       =t :subtitle, :scope=>[:admin,:tools]
+      .btn-group.pull-right
+        = link_to admin_index_path, :class => 'btn' do
+          %i.icon-arrow-left
+          Back to admin      
+      
+      
 =link_to t(:button_new,:scope=>[:admin,:tools]), new_admin_tool_path, :class => 'btn primary'
 %br
 %br

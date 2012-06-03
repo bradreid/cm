@@ -1,5 +1,13 @@
 %h2
   = "Tool Edit Form: #{@tool.name}"
+  %small
+    .btn-group.pull-right
+      = link_to admin_tools_path, :class => 'btn' do
+        %i.icon-arrow-left
+        Back to tools
+      = link_to admin_index_path, :class => 'btn' do
+        %i.icon-arrow-left
+        Back to admin        
     
 %div.form
   - form_for [:admin, @tool], :builder => CmFormBuilder, :html => { :multipart => true }  do |f|
