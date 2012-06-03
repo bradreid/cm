@@ -1,293 +1,303 @@
 fr:
-  switchfrench: 'Francais'
+  switchfrench: "Hé ça."
   switchenglish: English
-  button_cancel: Cancel
-  check_yes: 'Yes'
-  check_no: 'No'
+  button_cancel: "Hé ça."
+  check_yes: "Hé ça."
+  check_no: "Hé ça."
   stars:
-    one_rev: review
-    multi_rev: reviews
+    one_rev: "Hé ça."
+    multi_rev: "Hé ça."
   links:
-    alt_list: Back to Listing
-    alt_view: Viewx
-    alt_edit: Editx
-    alt_del: Deletex
+    alt_list: "Hé ça."
+    alt_view: "Hé ça."
+    alt_edit: "Hé ça."
+    alt_del: "Hé ça."
   search:
     people:
-      title: People
-      subtitle: View people tools
+      title: "Hé ça."
+      subtitle: "Hé ça."
     green:
-      title: Green
-      subtitle: View green tools
+      title: "Hé ça."
+      subtitle: "Hé ça."
     grow:
-      title: Grow
-      subtitle: View grow tools
+      title: "Hé ça."
+      subtitle: "Hé ça."
+    balanced:
+      title: "Hé ça."
+      subtitle: "Hé ça."
     search:
-      title: Search
-      subtitle: Find the tool you are looking for
-      button_basic: Basic Search
-      button_advanced: Advanced Search
+      title: "Hé ça."
+      subtitle: "Hé ça."
+      button_basic: "Hé ça."
+      button_advanced: "Hé ça."
       advanced: 
-        keywords: Keywords
-        keywords_subtext: With all of the words
-        author: Author
-        author_subtext: Return tools written by
-        language: Language
-        language_subtext: Return tools written in this language
-        language_instruct: Please select the language in which the tool is written
-        rating: Rating
-        rating_subtext: Tools with at least this rating
-        rating_instruct: Please select the rating to search by
-        datecreated: Date Created
-        datecreated_subtext: Return tools published between
-        datecreated_eg: e.g. 1996
-        button_search: Searches
-        button_hide: Hide Search Fields
-        button_show: Show Search Fields
+        keywords: "Hé ça."
+        keywords_subtext: "Hé ça."
+        author: "Hé ça."
+        author_subtext: "Hé ça."
+        language: "Hé ça."
+        language_subtext: "Hé ça."
+        language_instruct: "Hé ça."
+        rating: "Hé ça."
+        rating_subtext: "Hé ça."
+        rating_instruct: "Hé ça."
+        datecreated: "Hé ça."
+        datecreated_subtext: "Hé ça."
+        datecreated_eg: "Hé ça."
+        button_search: "Hé ça."
+        button_hide: "Hé ça."
+        button_show: "Hé ça."
     phases:
-      title: Phases
-      subtitle: Identify tools using CED phases
-      step_one: Step 1
-      step_one_text: Select a phase
-      step_two: Step 2
-      step_two_text: Select a purpose
+      title: "Hé ça."
+      subtitle: "Hé ça."
+      step_one: "Hé ça."
+      step_one_text: "Hé ça."
+      step_two: "Hé ça."
+      step_two_text: "Hé ça."
   formconstants:
     language:
-      en: English Only
-      fr: French Only
-      bi: Bilingual
-      both: Both Available
+      en: "Hé ça."
+      fr: "Hé ça."
+      bi: "Hé ça."
+      bo: "Hé ça."
     rating:
-      one: 1 Star
-      two: 2 Stars
-      three: 3 Stars
-      four: 4 Stars
-      five: 5 Stars
+      one: "Hé ça."
+      two: "Hé ça."
+      three: "Hé ça."
+      four: "Hé ça."
+      five: "Hé ça."
     when:
-      organizing: Organizing
-      planning: Planning
-      analyzing: Analyzing
-      implementing: Implementing
-      reviewing: Reviewing 
-      org_partnership: Partnership Building
-      org_fundraising: Fundraising
-      org_teambuilding: Project Team Building
-      org_engagement: Engagement
-      plan_vis: Visioning
-      plan_act: Action Planning
-      plan_man: Project Management
-      anal_ass: Assessment
-      anal_comp: Comprehensive Analysis
-      impl_natural: Natural Resources
-      impl_cultural: Cultural and Arts
-      impl_hr: Human Resources
-      impl_social: Social Capital
-      impl_gov: Governance
-      impl_financial: Financial
-      impl_comm: Community Infrastructure
-      rev_proj: Project Evaluation
-      rev_proc: Process Evaluation
-      rev_feedback: Community Feedback
+      organizing: "Hé ça."
+      planning: "Hé ça."
+      analyzing: "Hé ça."
+      implementing: "Hé ça."
+      reviewing: "Hé ça."
+      org:
+        partn:          "Hé ça."
+        fundr:          "Hé ça."
+        proje:          "Hé ça."
+        engage:         "Hé ça."
+      pla:
+        visio:          "Hé ça."
+        action:         "Hé ça."
+        proje:          "Hé ça."
+      ana:
+        assess:         "Hé ça."
+        compr:          "Hé ça."
+      imp:
+        natur:          "Hé ça."
+        cultu:          "Hé ça."
+        human:          "Hé ça."
+        socia:          "Hé ça."
+        gover:          "Hé ça."
+        finan:          "Hé ça."
+        commun:         "Hé ça."
+      rev:        
+        proje:      "Hé ça."
+        proce:      "Hé ça."
+        commun:     "Hé ça."
     topic:
-      people: People
-      green: Green
-      grow: Grow
-      balanced: Balanced
-      none: Not Specified
+      peop: "Hé ça."
+      gree: "Hé ça."
+      grow: "Hé ça."
+      bala: "Hé ça."
+      none: "Hé ça."
     where:
-      local: Local
-      municipal: Municipal
-      regional: Regional
-      rural: Rural
-      northern: Northern
-      urban: Urban
-      none: Not Specified
+      local: "Hé ça."
+      municipal: "Hé ça."
+      regional: "Hé ça."
+      rural: "Hé ça."
+      northern: "Hé ça."
+      urban: "Hé ça."
+      none: "Hé ça."
     expertise:
-      highschool: High School
-      college: College
-      uni: University
-      tech: Technical Certification
-      other: Other
-      none: Not Specified
+      highschool: "Hé ça."
+      college: "Hé ça."
+      uni: "Hé ça."
+      tech: "Hé ça."
+      other: "Hé ça."
+      none: "Hé ça."
   reviews:
-    title: CED Tool Review Form
-    subtitle: You are about to review
-    button_submit: Submit Review
+    title: "Hé ça."
+    subtitle: "Hé ça."
+    button_submit: "Hé ça."
     questions:
-      hi: High 
-      lo: Low
-      ns: Not Stated
-      comments: Comments
-      one: 1. What is your experience with this tool?
-      one_never: Never used it
-      one_tried: I've tried to use it
-      one_twice: Used it once or twice
-      one_regularly: Use it regularly
-      two: 2. Community Context
-      two_hi_a: Local/regional conditions to generate results from tool are clearly stated.
-      two_hi_b: Target users are identified.
-      two_hi_c: Underlying assumptions or conditions when and where the tool works are clearly presented.
-      two_lo_a: Local/regional conditions are vague or generalized.
-      two_lo_b: Target users are not clearly defined.
-      two_lo_c: Assumptions or conditions where or when to use the tool are vague.
-      two_ns_a: Community conditions are not presented.
-      two_ns_b: Target users are not identified.
-      two_ns_c: Conditions where or when to use the tool are not presented.
-      three: 3. Generates Results
-      three_hi_a: Goal/purpose of tool is clearly stated.
-      three_hi_b: Possible to implement by a local group.
-      three_hi_c: Tasks will achieve stated goal.
-      three_hi_d: Examples of results from tool are informative and helpful.
-      three_lo_a: Goal/purpose is unclear.
-      three_lo_b: Requires specialized knowledge or resources not readily available.
-      three_lo_c: Tasks do not clearly align with the goal.
-      three_lo_d: Examples are unhelpful.
-      three_ns_a: Goal/purpose is not stated.
-      three_ns_b: Tasks are unclear.
-      three_ns_c: Examples are not given.
-      four: 4. Resources Identified
-      four_hi_a: Other resources to use the tool are clearly specified, e.g. expertise, facilitator, technical, facilities.
-      four_lo_a: Other resources to use the tool are unclear.
-      four_ns_a: Resources to use the tool are not stated.
-      five: 5. Format/Presentation
-      five_hi_a: Text and descriptions are easy to understand.
-      five_hi_b: Uses plain language.
-      five_hi_c: Page layout is reader friendly.
-      five_hi_d: Visuals and graphics help in understanding how to use tool.
-      five_hi_e: Layout emphasizes what elements of the tool are most important.
-      five_lo_a: Text and descriptions are wordy and complicated.
-      five_lo_b: Uses difficult jargon.
-      five_lo_c: Visual aids are limited or unhelpful
-      five_lo_d: Layout does not emphasize what is important.
-      five_ns_a: Text and descriptions are impossible to understand.
-      five_ns_b: Layout is impossible to follow.
-      six: 6. Adaptable
-      six_hi_a: Limited expertise is needed to adapt activities to fit local circumstances.
-      six_hi_b: Examples of modified activities are helpful and easy to understand.
-      six_hi_c: Suggests how tool merges with other tools or activities.
-      six_lo_a: Special expertise or consultants are needed to adapt activities to fit local circumstances.
-      six_lo_b: Examples of modified activities are unhelpful.
-      six_ns_a: No mention of adapting activities.
-      seven: 7. Overall Comments
+      hi: "Hé ça."
+      lo: "Hé ça."
+      ns: "Hé ça."
+      comments: "Hé ça."
+      one: "Hé ça."
+      one_never: "Hé ça."
+      one_tried: "Hé ça."
+      one_twice: "Hé ça."
+      one_regularly: "Hé ça."
+      two: "Hé ça."
+      two_hi_a: "Hé ça."
+      two_hi_b: "Hé ça."
+      two_hi_c: "Hé ça."
+      two_lo_a: "Hé ça."
+      two_lo_b: "Hé ça."
+      two_lo_c: "Hé ça."
+      two_ns_a: "Hé ça."
+      two_ns_b: "Hé ça."
+      two_ns_c: "Hé ça."
+      three: "Hé ça."
+      three_hi_a: "Hé ça."
+      three_hi_b: "Hé ça."
+      three_hi_c: "Hé ça."
+      three_hi_d: "Hé ça."
+      three_lo_a: "Hé ça."
+      three_lo_b: "Hé ça."
+      three_lo_c: "Hé ça."
+      three_lo_d: "Hé ça."
+      three_ns_a: "Hé ça."
+      three_ns_b: "Hé ça."
+      three_ns_c: "Hé ça."
+      four: "Hé ça."
+      four_hi_a: "Hé ça."
+      four_lo_a: "Hé ça."
+      four_ns_a: "Hé ça."
+      five: "Hé ça."
+      five_hi_a: "Hé ça."
+      five_hi_b: "Hé ça."
+      five_hi_c: "Hé ça."
+      five_hi_d: "Hé ça."
+      five_hi_e: "Hé ça."
+      five_lo_a: "Hé ça."
+      five_lo_b: "Hé ça."
+      five_lo_c: "Hé ça."
+      five_lo_d: "Hé ça."
+      five_ns_a: "Hé ça."
+      five_ns_b: "Hé ça."
+      six: "Hé ça."
+      six_hi_a: "Hé ça."
+      six_hi_b: "Hé ça."
+      six_hi_c: "Hé ça."
+      six_lo_a: "Hé ça."
+      six_lo_b: "Hé ça."
+      six_ns_a: "Hé ça."
+      seven: "Hé ça."
     view:
-      title: CED Review
-      subtext_by: Reviewed by
-      subtext_on: Review submitted on
-      none: None 
+      title: "Hé ça."
+      subtext_by: "Hé ça."
+      subtext_on: "Hé ça."
+      none: "Hé ça."
     edit:
-      title: CED Tool Review Edit Form
-      subtitle: You are about to edit a review for
-      button_update: Update Review
+      title: "Hé ça."
+      subtitle: "Hé ça."
+      button_update: "Hé ça."
     notices:
-      edit_success: You have updated the review
-      activate: You activated the review
-      deactivate: You deactivated the review, other users will not be able to view it
-      change_error: You cannot change this review
-      submit_success: You have successfully submitted your tool review
-      need_login: You must login or sign up for an account to review a tool
+      edit_success: "Hé ça."
+      activate: "Hé ça."
+      deactivate: "Hé ça."
+      change_error: "Hé ça."
+      submit_success: "Hé ça."
+      need_login: "Hé ça."
   viewuser:
-    rev_list: Reviews
-    rev_none: This user has not reviewed any tools
-    heading_active: Active
-    heading_rating: Rating
-    heading_tool: Tool
-    heading_reviewer: Reviewed By
-    heading_date: Reviewed On
-    heading_actions: Actions
-    field_first: First Name
-    field_last: Last Name
-    field_role: Current Role/Job Title
-    field_org: Organization
-    field_city: Place of Work (City/Town)
-    field_state: Place of Work (State/Province)
-    field_country: Country
-    field_address: Address
-    field_years: Years of Experience in Community Development
-    field_prof: Professional Training or Accreditation
+    rev_list: "Hé ça."
+    rev_none: "Hé ça."
+    heading_active: "Hé ça."
+    heading_rating: "Hé ça."
+    heading_tool: "Hé ça."
+    heading_reviewer: "Hé ça."
+    heading_date: "Hé ça."
+    heading_actions: "Hé ça."
+    field_first: "Hé ça."
+    field_last: "Hé ça."
+    field_role: "Hé ça."
+    field_org: "Hé ça."
+    field_city: "Hé ça."
+    field_state: "Hé ça."
+    field_country: "Hé ça."
+    field_address: "Hé ça."
+    field_years: "Hé ça."
+    field_prof: "Hé ça."
   tic:
-    heading_desc: Description
-    heading_when: When
-    heading_why: Why
-    heading_details: Tool Details
-    norevs: This tool has not been reviewed
-    equipneeds: Equipment/Facilities Needed
-    expneeds: Expertise Needed
-    lang: Language
-    authors: Authors
-    editors: Editors
-    madein: This tool was made in
-    pub: Publisher
-    datecreated: Date Created
-    filesize: File Size
-    fileformat: File Format
-    sourcetitle: Source Document Title
-    sourceurl: Source Document URL
-    when_topic: Topic
-    when_who: Who
+    download:     "Hé ça."
+    review:       "Hé ça."
+    heading_desc: "Hé ça."
+    heading_when: "Hé ça."
+    heading_why: "Hé ça."
+    heading_details: "Hé ça."
+    norevs: "Hé ça."
+    equipneeds: "Hé ça."
+    expneeds: "Hé ça."
+    lang: "Hé ça."
+    authors: "Hé ça."
+    editors: "Hé ça."
+    madein: "Hé ça."
+    pub: "Hé ça."
+    datecreated: "Hé ça."
+    filesize: "Hé ça."
+    fileformat: "Hé ça."
+    sourcetitle: "Hé ça."
+    sourceurl: "Hé ça."
+    when_topic: "Hé ça."
+    when_who: "Hé ça."
   months:
-    jan: January
-    feb: February
-    mar: March
-    apr: April
-    may: May
-    jun: June
-    jul: July
-    aug: August
-    sep: September
-    oct: October
-    nov: November
-    dec: December
+    jan: "Hé ça."
+    feb: "Hé ça."
+    mar: "Hé ça."
+    apr: "Hé ça."
+    may: "Hé ça."
+    jun: "Hé ça."
+    jul: "Hé ça."
+    aug: "Hé ça."
+    sep: "Hé ça."
+    oct: "Hé ça."
+    nov: "Hé ça."
+    dec: "Hé ça."
   admin:
-    title: Admin
-    subtitle: Manage the website
-    sec_tools: Tools
-    sec_accounts: Accounts
-    sec_stats: Statistics
-    access_err: You have to be an administrator
+    title: "Hé ça."
+    subtitle: "Hé ça."
+    sec_tools: "Hé ça."
+    sec_accounts: "Hé ça."
+    sec_stats: "Hé ça."
+    access_err: "Hé ça."
     tools:
-      subtitle: Create, edit, and delete tools
-      button_new: Submit New Tool
-      heading_id: ID
-      heading_title: Title
-      heading_author: Author
-      heading_date: Date Created
-      heading_subby: Submitted By
-      heading_actions: Actions
+      subtitle: "Hé ça."
+      button_new: "Hé ça."
+      heading_id: "Hé ça."
+      heading_title: "Hé ça."
+      heading_author: "Hé ça."
+      heading_date: "Hé ça."
+      heading_subby: "Hé ça."
+      heading_actions: "Hé ça."
     newtool:
-      title: Tool Submission Form
-      button_new: Create New Tool
-      tooltitle: Tool Title
-      sourcefile: Source Document File
-      lang_instruct: Please select the language in which the tool is written
-      phase_instruct: Please select the main phase the tool is used for
-      topic_instruct: Please select the topic that applies to this tool
-      exp_instruct: Please select the expertise needed to use this tool
-      when: When (At what phase of the CED project cycle is this tool most useful?) 
-      why: Why (What is the purpose of using this particular tool?) 
-      where: Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
-      which: The Country This Tool was Created in
-      topic: Topic (Which of the three categories of the triple bottom line does this tool apply to?)
-      expneeds: Expertise Needed (The education, technical training, or skills identified or suggested as required to use the tool)
-      resources: Resources Required
-      who: Who
-      who_placeholder: (Placeholder)
-      copy_holder: Copyright Holder
-      copy_check: Copyright 
-      copy_restr: Copyright Restrictions
-      copy_perm: Copyright Permissions
-      comments: Comments
+      title: "Hé ça."
+      button_new: "Hé ça."
+      tooltitle: "Hé ça."
+      sourcefile: "Hé ça."
+      lang_instruct: "Hé ça."
+      phase_instruct: "Hé ça."
+      topic_instruct: "Hé ça."
+      exp_instruct: "Hé ça."
+      when: "Hé ça."
+      why: "Hé ça."
+      where: "Hé ça."
+      which: "Hé ça."
+      topic: "Hé ça."
+      expneeds: "Hé ça."
+      resources: "Hé ça."
+      who: "Hé ça."
+      who_placeholder: "Hé ça."
+      copy_holder: "Hé ça."
+      copy_check: "Hé ça."
+      copy_restr: "Hé ça."
+      copy_perm: "Hé ça."
+      comments: "Hé ça."
     accounts: 
-      subtitle: All users with login credentials
-      button_new: Create New Account
-      heading_id: ID
-      heading_active: Active?
-      heading_user: Username
-      heading_revs: Active Reviews
-      heading_name: Display Name
-      heading_email: Email
-      heading_admin: Admin?
-      heading_date: Date Created
-      heading_actions: Actions
-      subtitle_new: Create a new user account
-      title_edit: Edit user account
-      button_edit: Update Account
+      subtitle: "Hé ça."
+      button_new: "Hé ça."
+      heading_id: "Hé ça."
+      heading_active: "Hé ça."
+      heading_user: "Hé ça."
+      heading_revs: "Hé ça."
+      heading_name: "Hé ça."
+      heading_email: "Hé ça."
+      heading_admin: "Hé ça."
+      heading_date: "Hé ça."
+      heading_actions: "Hé ça."
+      subtitle_new: "Hé ça."
+      title_edit: "Hé ça."
+      button_edit: "Hé ça."

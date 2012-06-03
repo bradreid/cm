@@ -17,7 +17,7 @@
         %br
       - if (['edit', 'update'].include? params[:action]) && current_user == @user
         %br
-        Current password
+        =t :password, :scope=>[:activerecord,:attributes,:user]
         <br>
         = f.password_field :current_password
       %p    
