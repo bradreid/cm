@@ -11,6 +11,13 @@ module Cm
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    
+    config.app_name = 'The Choice Matrix'
+    if Rails.env == 'development'
+      config.app_domain = 'localhost:3000'
+    else
+      config.app_domain = 'cm.beyondthecube.ca'    
+    end
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib/ #{config.root}/lib/reports/)
@@ -25,7 +32,6 @@ module Cm
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = 'Central Time (US & Canada)'
-    config.active_record.default_timezone = 'Central Time (US & Canada)'
     
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.

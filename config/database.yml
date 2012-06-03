@@ -4,8 +4,8 @@ development:
     adapter: postgresql
     host: localhost
     port: 5432
-    username: bohuie
-    password: Matsuda3
+    username: bradreid
+    password: 3mu4jjVz
     database: cm_development
     schema_search_path: public
     encoding: utf8
@@ -21,7 +21,12 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: bradreid
+  password: 3mu4jjVz
+  database: cm_development
+  schema_search_path: public
+  encoding: utf8
+  template: template0

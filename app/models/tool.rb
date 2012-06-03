@@ -1,4 +1,7 @@
 class Tool < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, :use => :slugged
+    
   has_attached_file :source_document, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => "/:style/:filename"
   
   validates_presence_of :name, :source_document_name, :source_url, :author, :language, :description, :when, :why, :topic, :copyright
@@ -29,4 +32,16 @@ class Tool < ActiveRecord::Base
       self.save!
     end
   end
+  
+  def twitter_message
+    begin
+      b = Bitly.new('symingtonroad', 'R_50ed08c79b7d216360e2403ac3000528')
+      url = Rails.application.routes.url_helpers.tool_url('en', self, :host => Rails.configuration.app_domain) 
+      short = b.shorten(url)
+      text = "New Tool: #{self.name}"[0..125]
+      "#{text} #{short.short_url}"     
+    rescue Exception => e
+      nil
+    end    
+  end  
 end
