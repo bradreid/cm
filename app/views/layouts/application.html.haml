@@ -3,13 +3,13 @@
   %head
     %title
       = @tool.try(:name) || 'The Choice Matrix'
-    %meta{:name => 'description', :content => 'The Choice Matrix Website'}
+    %meta{:name => 'description', :content => @tool.try(:description) || 'The Choice Matrix Website'}
     
     %meta{:property => 'og:title', :content => @tool.try(:name) || 'The Choice Matrix'}
-    %meta{:property => 'og:description', :content => @tool.try(:description) || 'The Choice Matrix'}    
+    %meta{:property => 'og:description', :content => @tool.try(:description) || 'The Choice Matrix Website'}    
     %meta{:property => 'og:type', :content => 'university'}
     %meta{:property => 'og:image', :content => "#{image_url('RDI_Logo1.bmp')}"}
-    %meta{:property => 'og:url', :content => "#{request.protocol}#{request.host_with_port}/"}    
+    %meta{:property => 'og:url', :content => "#{request.url}"}    
     %meta{:property => 'og:site_name', :content => 'Rural Development Institute - The Choice Matrix'}
     %meta{:property => 'fb:admins', :content => '654461060'}    
     
