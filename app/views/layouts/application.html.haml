@@ -6,6 +6,7 @@
     %meta{:name => 'description', :content => 'The Choice Matrix'}
     
     %meta{:property => 'og:title', :content => @tool.try(:name) || 'The Choice Matrix'}
+    %meta{:property => 'og:description', :content => @tool.try(:description) || 'The Choice Matrix'}    
     %meta{:property => 'og:type', :content => 'university'}
     %meta{:property => 'og:image', :content => "#{image_url('RDI_Logo1.bmp')}"}
     %meta{:property => 'og:url', :content => "#{request.protocol}#{request.host_with_port}/"}    
