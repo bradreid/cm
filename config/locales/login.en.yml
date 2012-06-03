@@ -16,6 +16,8 @@ en:
     first_name: First name
     last_name: Last name
     email: Email
+    email_new_tools:     Receive email updates for new tools
+    email_new_reviews:   Receive email updates for new tools
     send_reset_instructions: Send reset instructions
     back_to_login: Back to login
     create_an_account: Create an account
@@ -31,8 +33,8 @@ en:
     will_not_be_displayed: Will not be displayed = Do not Display Information; (information is data-based for administrative and research use only).
     current_role: Current Role / Job Title
     organization: Organization
-    city_town: "Place of work: City/Town"
-    state_province: "Place of work: State/Province"
+    city_town: "Place of work: City / Town"
+    state_province: "Place of work: State / Province"
     country: Country
     address: Address
     years_of_experience: Years of experience in Community Development
