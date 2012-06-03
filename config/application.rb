@@ -11,6 +11,13 @@ module Cm
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    
+    config.app_name = 'The Choice Matrix'
+    if Rails.env == 'development'
+      config.app_domain = 'localhost:3000'
+    else
+      config.app_domain = 'cm.beyondthecube.ca'    
+    end
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib/ #{config.root}/lib/reports/)

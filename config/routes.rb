@@ -64,6 +64,8 @@ Cm::Application.routes.draw do
       end
     end
     resources :admin
+    
+    resource :ping
 
     resources :tools do
       get :downloadtic

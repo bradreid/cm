@@ -14,6 +14,18 @@ class Review < ActiveRecord::Base
     c = [self.comment, self.community_context_comment, self.generates_results_comment, self.resources_identified_comment, self.format_presentation_comment, self.adaptable_comment]
     c.compact.join('. ').gsub(/\.\./, '.')[0..250]
   end
+  
+  def twitter_message
+    begin
+      b = Bitly.new('symingtonroad', 'R_50ed08c79b7d216360e2403ac3000528')
+      url = Rails.application.routes.url_helpers.tool_review_url('en', self.tool,self, :host => Rails.configuration.app_domain) 
+      short = b.shorten(url)
+      text = "#{self.rating} stars,  #{self.tool.name}"[0..125]
+      "#{text} #{short.short_url}"     
+    rescue Exception => e
+      nil
+    end    
+  end  
    
 private
 

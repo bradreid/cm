@@ -32,4 +32,16 @@ class Tool < ActiveRecord::Base
       self.save!
     end
   end
+  
+  def twitter_message
+    begin
+      b = Bitly.new('symingtonroad', 'R_50ed08c79b7d216360e2403ac3000528')
+      url = Rails.application.routes.url_helpers.tool_url('en', self, :host => Rails.configuration.app_domain) 
+      short = b.shorten(url)
+      text = "New Tool: #{self.name}"[0..125]
+      "#{text} #{short.short_url}"     
+    rescue Exception => e
+      nil
+    end    
+  end  
 end
