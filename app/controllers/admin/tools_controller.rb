@@ -2,8 +2,7 @@ class Admin::ToolsController < AdminController
   
   def index
     if params[:search]
-      search_tools
-      @tools = @tools.paginate default_pagination_params.merge(:order => 'name asc')
+      @tools = Tool.search_by_name_or_description(params[:search], params[:search]).paginate default_pagination_params
     else
       @tools = Tool.paginate default_pagination_params.merge(:order => 'name asc')
     end
@@ -35,7 +34,7 @@ class Admin::ToolsController < AdminController
     @tool = Tool.new(params[:tool].merge(:created_by => current_user))
     if @tool.save
       flash[:notice] = t(:tool_create,:scope=>[:notices])+ " #{@tool.name}"
-      redirect_to admin_tools_path
+      redirect_to admin_tool_path(@tool)
     else
       render 'new'
     end

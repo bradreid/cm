@@ -31,7 +31,7 @@
         %td
           =tool.id
         %td
-          =tool.name
+          =link_to query_highlight(tool.name,params[:search]).html_safe, tool_path(tool), :class => 'search_hit_title'
         %td
           =tool.author
         %td
@@ -43,4 +43,4 @@
             =action_images [:admin, tool], :exclude => [:index]
     %tr
       %td{:colspan => 6}
-        = will_paginate @tools, :renderer => 'WillPaginateHelper::LinkRenderer'    
+        = will_paginate @tools, :renderer => 'WillPaginateHelper::LinkRenderer'
