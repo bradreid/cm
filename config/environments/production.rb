@@ -38,19 +38,21 @@ Cm::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
   #TODO set url for production env
 
-  config.action_mailer.default_url_options = { :host => 'cm.beyondthecube.ca' }
-
-  config.action_mailer.delivery_method = :smtp  
-  config.action_mailer.raise_delivery_errors = true
-  config.mailer_sender = "admin@rdi.ca"
+  config.action_mailer.default_url_options = { :host => Rails.configuration.app_domain } 
   ActionMailer::Base.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address  => "smtp.gmail.com",
-    :port  => 587,
-    :user_name  => "brad@beyondthecube.ca",
-    :password  => "brad6726847",
-    :authentication  => :plain
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
   }
+  ActionMailer::Base.delivery_method = :smtp
+  
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[CM Exception] ",
+    :sender_address => %{"Exception Notifier" <support@cm.beyondthecube.ca>},
+    :exception_recipients => %w{bradreid20@gmail.com}  
   
 
   # Enable threaded mode

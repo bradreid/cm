@@ -15,7 +15,7 @@
         %br
         =f.check_box :active    
         %br
-      - if (['edit', 'update'].include? params[:action]) && current_user == @user
+      - if !self.controller.is_a? AdminController
         %br
         =t :password, :scope=>[:activerecord,:attributes,:user]
         <br>
@@ -44,6 +44,18 @@
       <br>
       = f.email_field :email
       %p
+      
+      <br>
+      ="#{t(:email_new_tools, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
+      <br>
+      = f.check_box :email_new_tools
+      %p
+      
+      <br>
+      ="#{t(:email_new_reviews, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
+      <br>
+      = f.check_box :email_new_reviews
+      %p            
       
       <br>
       ="#{t(:password, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe

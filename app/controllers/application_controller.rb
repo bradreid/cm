@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end  
   
   def set_locale
-    I18n.locale = params[:locale] || request.compatible_language_from(%w{en fr}).to_sym || I18n.default_locale
+    I18n.locale = params[:locale] || request.compatible_language_from(%w{en fr}).try(:to_sym) || I18n.default_locale
   end  
   
   # Use basic authentication in my realm to get a user object.
