@@ -34,8 +34,13 @@ GEM
       mime-types
       xml-simple
     bcrypt-ruby (3.0.1)
+    bitly (0.7.0)
+      crack (>= 0.1.4)
+      httparty (>= 0.7.6)
+      oauth2 (~> 0.5.0)
     builder (2.1.2)
     cocaine (0.2.1)
+    crack (0.3.1)
     devise (1.5.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -44,9 +49,14 @@ GEM
       abstract (>= 1.0.0)
     exception_notification (2.6.1)
       actionmailer (>= 3.0.4)
+    faraday (0.8.1)
+      multipart-post (~> 1.1)
     friendly_id (4.0.6)
     haml (3.1.4)
     http_accept_language (1.0.2)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
     i18n (0.5.0)
     jquery-rails (1.0.19)
       railties (~> 3.0)
@@ -58,6 +68,12 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.18)
+    multi_json (1.3.6)
+    multi_xml (0.5.1)
+    multipart-post (1.1.5)
+    oauth2 (0.5.2)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
     orm_adapter (0.0.7)
     paperclip (2.3.12)
       activerecord (>= 2.3.0)
@@ -90,6 +106,7 @@ GEM
       json (~> 1.4)
     rmagick (2.12.2)
     sass (3.1.16)
+    simple_oauth (0.1.8)
     sqlite3 (1.3.6)
     stemmer (1.0.1)
     texticle (1.0.3)
@@ -97,6 +114,10 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    twitter (2.5.0)
+      faraday (~> 0.8)
+      multi_json (~> 1.3)
+      simple_oauth (~> 0.1.6)
     tzinfo (0.3.33)
     warden (1.1.1)
       rack (>= 1.0)
@@ -108,6 +129,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3
+  bitly
   devise
   exception_notification
   friendly_id
@@ -125,4 +147,5 @@ DEPENDENCIES
   sqlite3
   stemmer
   texticle (= 1.0.3)
+  twitter (> 2.0.0)
   will_paginate (~> 3.0.3)

@@ -22,6 +22,8 @@ gem 'http_accept_language'
 gem 'pg', '=0.12.2'
 gem 'exception_notification', :require => 'exception_notifier'
 gem "friendly_id"
+gem 'bitly'
+gem 'twitter', ">2.0.0"
 
 # Use unicorn as the web server
 # gem 'unicorn'
