@@ -4,7 +4,7 @@
 %table{:border => 0, :width => '100%'}
   %tr
     %td{:width => '50%', :valign => 'top'}
-      -if current_user.try(:is_admin?)
+      -if current_user.try(:is_admin?) && current_user != @user
         %br
         =t(:is_admin?, :scope => :devise)
         %br
@@ -55,7 +55,14 @@
       ="#{t(:email_new_reviews, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
       <br>
       = f.check_box :email_new_reviews
-      %p            
+      %p      
+      
+      -if @user.is_admin?
+        <br>
+        ="#{t(:email_new_user, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
+        <br>
+        = f.check_box :email_new_user
+        %p              
       
       <br>
       ="#{t(:password, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe

@@ -12,22 +12,23 @@ class Notifier < ActionMailer::Base
   
   def new_user(user)
     @user = user   
+    users = User.where(:email_new_users => true, :active => true).map(&:email).uniq.compact
     subject = "A new user signed up for #{Rails.configuration.app_name}"
-    mail(:subject => subject)    
+    mail(:to => nil, :bcc => users, :subject => subject)    
   end
   
   def new_tool(tool)
     @tool = tool
-    users = User.where(:email_new_tools => true, :active => true, :is_admin => false).map(&:email).uniq.compact
+    users = User.where(:email_new_tools => true, :active => true).map(&:email).uniq.compact
     subject = "A new tool was created: #{@tool.name}"
-    mail(:bcc => users, :subject => subject)      
+    mail(:to => nil, :bcc => users, :subject => subject)      
   end
   
   def new_review(review)
     @review = review
-    users = User.where(:email_new_reviews => true, :active => true, :is_admin => false).map(&:email).uniq.compact
+    users = User.where(:email_new_reviews => true, :active => true).map(&:email).uniq.compact
     subject = "A tool was reviewed: #{@review.tool.name}"
-    mail(:bcc => users, :subject => subject)    
+    mail(:to => nil, :bcc => users, :subject => subject)    
   end
   
 end
