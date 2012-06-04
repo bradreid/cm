@@ -5,6 +5,7 @@ class Review < ActiveRecord::Base
   belongs_to :user
   before_save :add_rating
   after_save :update_tool_stars
+  after_create :send_email
   
   named_scope :active, :conditions => {:active => true}
   named_scope :active_by_user, lambda { |user_id| {:conditions => ["active = ? OR user_id = ?", true, user_id]} }
@@ -41,4 +42,8 @@ private
   def update_tool_stars
     self.tool.recalc_stars    
   end
+  
+  def send_email
+    Notifier.new_review(self).deliver
+  end  
 end
