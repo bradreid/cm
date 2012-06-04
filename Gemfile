@@ -11,7 +11,7 @@ gem 'haml'
 gem 'sass'
 gem "jquery-rails"
 gem 'devise'
-gem 'will_paginate', '~> 3.0.3'
+gem 'will_paginate'
 gem 'paperclip', '=2.3.12'
 gem 'rmagick', '=2.12.2'
 gem 'aws-s3'
@@ -24,6 +24,8 @@ gem 'exception_notification', :require => 'exception_notifier'
 gem "friendly_id"
 gem 'bitly'
 gem 'twitter', ">2.0.0"
+gem 'will-paginate-i18n'
+gem 'rails-i18n'
 
 # Use unicorn as the web server
 # gem 'unicorn'
