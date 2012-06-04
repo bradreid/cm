@@ -1,9 +1,6 @@
 %h1
-  ="A tool was reviewed (#{@review.stars} stars): #{@review.tool.name}"
+  ="A tool was reviewed (#{@review.rating} stars): #{@review.tool.name}"
 
-%h4
-  Description
-=@tool.description  
 %p
 =" To view this review just follow this link: #{tool_review_url('en', @review.tool, @review)}"
 

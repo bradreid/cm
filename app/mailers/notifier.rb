@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default :from => "#{Rails.configuration.app_name} <no-reply@#{Rails.configuration.app_domain}>", 
+  default :from => "#{Rails.configuration.app_name} no-reply@#{Rails.configuration.app_domain}", 
           :to => User.where(:is_admin => true).map(&:email), 
           "Reply-To" =>  "#{Rails.configuration.app_name} <no-reply@#{Rails.configuration.app_domain}>" 
   
@@ -26,7 +26,7 @@ class Notifier < ActionMailer::Base
   def new_review(review)
     @review = review
     users = User.where(:email_new_reviews => true, :active => true, :is_admin => false).map(&:email).uniq.compact
-    subject = "A tool was reviewed: #{@tool.name}"
+    subject = "A tool was reviewed: #{@review.tool.name}"
     mail(:bcc => users, :subject => subject)    
   end
   

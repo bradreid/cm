@@ -9,6 +9,8 @@ class Tool < ActiveRecord::Base
   belongs_to :created_by, :class_name => 'User', :foreign_key => 'created_by'
   has_many :reviews, :dependent => :destroy 
   
+  after_create :send_email
+  
   def recalc_stars
     Tool.transaction do
       self.lock!
@@ -44,4 +46,10 @@ class Tool < ActiveRecord::Base
       nil
     end    
   end  
+  
+private
+
+  def send_email
+    Notifier.new_tool(self).deliver
+  end
 end
