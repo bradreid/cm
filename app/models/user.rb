@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :is_admin, :active, :first_name, :last_name,
                   :professional_training_and_accreditation, :years_of_experience, :address, :country, :state_province, :city_town,
-                  :organization, :current_role, :email_new_tools, :email_new_reviews
+                  :organization, :current_role, :email_new_tools, :email_new_reviews, :email_new_user
   
   validates_presence_of :username, :current_role
   validates_uniqueness_of :username
