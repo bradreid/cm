@@ -12,7 +12,7 @@ class Notifier < ActionMailer::Base
   
   def new_user(user)
     @user = user   
-    users = User.where(:email_new_users => true, :active => true).map(&:email).uniq.compact
+    users = User.where(:email_new_user => true, :active => true, :is_admin => true).map(&:email).uniq.compact
     subject = "A new user signed up for #{Rails.configuration.app_name}"
     mail(:to => nil, :bcc => users, :subject => subject)    
   end
