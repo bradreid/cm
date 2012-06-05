@@ -55,7 +55,7 @@
         %td
           =status_image u.is_admin? 
         %td
-          =u.created_at.to_formatted_s(:short_with_year)
+          =u.created_at.to_date.to_formatted_s(:short_with_year)
         %td
           %span{:style => 'white-space: nowrap'}
             =action_images [:admin, u], :exclude => [:index], :delete => {:title => t( (u.active? ? :alt_inact : :alt_act),:scope=>[:links]), :alt_text => t( (u.active? ? :alt_inact : :alt_act),:scope=>[:links]), :confirm => t( (u.active? ? :userdel_confirm : :useradd_confirm),:scope=>[:links]), :img_link=>(u.active? ? nil : 'link_icons/tick.png') }
