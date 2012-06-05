@@ -8,7 +8,7 @@
 %table{:width => '75%'}
   %tr
     %td{:align => 'left'}
-      -form_for [@review.tool, @review], :builder => CmFormBuilder, :html => {:class => 'form-stacked'} do |f|
+      =form_for [@review.tool, @review], :builder => CmFormBuilder, :html => {:class => 'form-stacked'} do |f|
         = f.error_messages
         = render :partial => "form", :object => f
         %br

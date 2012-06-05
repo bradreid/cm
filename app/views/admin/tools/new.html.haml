@@ -1,6 +1,6 @@
 %div.form
   %h2=t :title, :scope=>[:admin,:newtool]
-  - form_for [:admin, @tool], :builder => CmFormBuilder, :html => { :multipart => true }  do |f|
+  = form_for [:admin, @tool], :builder => CmFormBuilder, :html => { :multipart => true }  do |f|
     = f.error_messages
     = render :partial => "form", :object => f
     %br

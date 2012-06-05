@@ -3,7 +3,7 @@
   =link_to_function t(:button_show,:scope=>[:search,:search,:advanced]), "$('#advanced_saearch_fiels').show('slow');$(this).hide();$('#hide_fields').show();", :style => "display:#{@tools ? '' : 'none'}", :class => 'btn success', :id => 'show_fields'
   =link_to_function t(:button_hide,:scope=>[:search,:search,:advanced]), "$('#advanced_saearch_fiels').hide('slow');$(this).hide();$('#show_fields').show();", :style => "display:none", :class => 'btn success', :id => 'hide_fields'
 #advanced_saearch_fiels{:style => "display:#{@tools ? 'none' : ''}"}
-  - form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
+  = form_tag tools_path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
     = hidden_field_tag :advanced, true
     %br
     %br

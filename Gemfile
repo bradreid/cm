@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.2.5'
 gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
@@ -8,8 +8,9 @@ gem 'rake', '0.8.7'
 
 gem 'sqlite3'
 gem 'haml'
-gem 'sass'
-gem "jquery-rails"
+gem 'sass-rails'
+gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'jquery-rails', :git => 'git://github.com/indirect/jquery-rails.git'
 gem 'devise'
 gem 'will_paginate'
 gem 'paperclip', '=2.3.12'
@@ -26,6 +27,7 @@ gem 'bitly'
 gem 'twitter', ">2.0.0"
 gem 'will-paginate-i18n'
 gem 'rails-i18n'
+gem 'simple_form'
 
 # Use unicorn as the web server
 # gem 'unicorn'

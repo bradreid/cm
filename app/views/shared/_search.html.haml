@@ -1,5 +1,5 @@
 %br
 %br
-- form_tag path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
+= form_tag path, :method => :get, :class => 'not_dirty', :id => 'returns_form' do
   = text_field_tag(:search, ( params[:search] ? params[:search] : "" ), :title => "Search text in Tool Card")
   =image_tag 'Search.png', :width => 30, :height => 30, :onclick => "$('#returns_form').submit();"
