@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   end
   
   def default_log_hash
-    cookies[:id] ||= ActiveSupport::SecureRandom.base64(8).gsub("/","_").gsub(/=+$/,"")
+    cookies[:id] ||= SecureRandom.base64(8).gsub("/","_").gsub(/=+$/,"")
     { :user => current_user, :session_id => cookies[:id], :tic => @log_tic, :section => @log_section, 
       :review => @log_review, :search => params[:search], :referrer => self.referrer}
   end
