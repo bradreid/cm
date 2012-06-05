@@ -13,8 +13,9 @@
     %meta{:property => 'og:site_name', :content => 'Rural Development Institute - The Choice Matrix'}
     %meta{:property => 'fb:admins', :content => '654461060'}    
     
-    = stylesheet_link_tag :all
-    = javascript_include_tag 'jquery', 'jquery_ujs', 'application', 'jquery.spinner', 'daterangepicker.jQuery', 'highcharts'
+    = stylesheet_link_tag :application   
+    = javascript_include_tag :application, '/javascripts/jwplayer.js'
+        
     = yield(:head)    
     = csrf_meta_tag  
     
