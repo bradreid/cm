@@ -59,6 +59,7 @@ GEM
     builder (3.0.0)
     cocaine (0.2.1)
     commonjs (0.2.6)
+    country_select (1.0.0)
     crack (0.3.1)
     devise (2.1.0)
       bcrypt-ruby (~> 3.0)
@@ -174,6 +175,7 @@ PLATFORMS
 DEPENDENCIES
   aws-s3
   bitly
+  country_select
   devise
   exception_notification
   friendly_id
