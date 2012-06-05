@@ -7,4 +7,4 @@ en:
           other: "Sorry, %{count} errors prevented your form from being saved"
     attributes:
       user:
-        password: Current passowrd
+        password: Current password
