@@ -11,6 +11,6 @@
           %i.icon-arrow-left
           =t :back_users, :scope=>[:nav_buttons]
 
-= form_for [:admin, @user], :builder => CmFormBuilder do |f| 
+= simple_form_for [:admin, @user], :html=>{:class=>'form-horizontal', :method => :put} do |f| 
   = render :partial => 'form', :locals => {:f => f, :text => t(:button_edit,:scope=>[:admin,:accounts])}
   =link_to t(:button_cancel), admin_users_path, :class => 'btn error'

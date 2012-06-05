@@ -1,133 +1,60 @@
-%table{:border => 0, :width => '100%'}
+%table{:width=>'100%'}
   %tr
-    %td{:width => '50%', :valign => 'top'}
+    %td{:width=>'50%', :valign=>'top'}
       -if current_user.try(:is_admin?) && current_user != @user
-        %br
-        =t(:is_admin?, :scope => :devise)
-        %br
-        =f.check_box :is_admin
-
-        %br
-        =t :active?, :scope => :devise
-        %br
-        =f.check_box :active    
-        %br
+        =f.input :is_admin, :label => t(:is_admin?, :scope => :devise)
+        =f.input :active,   :label => t(:active?,   :scope => :devise)
+        
       - if !self.controller.is_a? AdminController
-        %br
-        =t :password, :scope=>[:activerecord,:attributes,:user]
-        <br>
-        = f.password_field :current_password
-      %p    
-      <br>
-      ="#{t(:username, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-      <br>
-      = f.text_field :username
-      %p
+        =f.input :current_password, :label => t(:password, :scope=>[:activerecord,:attributes,:user])
+       
+      =f.input :username, :label=> t(:username, :scope=>[:devise]), :required => true
       
-      %br
-      ="#{t(:first_name, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_field :first_name
-      %p
-
-      %br
-      ="#{t(:last_name, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_field :last_name
-      %p      
-
-      <br>
-      ="#{t(:email, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-      <br>
-      = f.email_field :email
-      %p
+      =f.input :first_name, :label=> t(:first_name, :scope => :devise)
+      =f.input :last_name,  :label => t(:last_name, :scope => :devise)
       
-      <br>
-      ="#{t(:email_new_tools, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-      <br>
-      = f.check_box :email_new_tools
-      %p
+      =f.input :email, :label => t(:email, :scope =>[:devise]), :required => true
       
-      <br>
-      ="#{t(:email_new_reviews, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-      <br>
-      = f.check_box :email_new_reviews
-      %p      
+      =f.input :email_new_tools, :label => t(:email_new_tools, :scope => :devise)
+      
+      =f.input :email_new_reviews, :label => t(:email_new_reviews, :scope => :devise)
       
       -if @user.is_admin?
-        <br>
-        ="#{t(:email_new_user, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-        <br>
-        = f.check_box :email_new_user
-        %p              
+        =f.input :email_new_user, :label => t(:email_new_user, :scope => :devise)
       
-      <br>
-      ="#{t(:password, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-      <br>
-      = f.password_field :password
-      %p
-      <br>
+      - if @user.new_record? 
+        =f.input :password, :label => t(:password, :scope => :devise), :required => true
+        =f.input :password_confirmation, :label => t(:confirm_password, :scope => :devise), :required => true
+      - else
+        .bold
+          Leave these fields blank if you do not want to change your password:
+        %p
+        %br
+        =f.input :password, :label => t(:password, :scope => :devise) 
+        =f.input :password_confirmation, :label => t(:confirm_password, :scope => :devise)
+      
+    %td{:width=>'50%', :valign=>'top'}
+      =f.input :current_role, :label => t(:current_role, :scope => :devise), :required => true
+      
+      =f.input :organization, :label => t(:organization, :scope => :devise)
+      =f.input :city_town,    :label => t(:city_town, :scope => :devise)
+      
+      =f.input :state_province, :label => t(:state_province,:scope => :devise)
+      =f.input :country,        :label => t(:country, :scope => :devise), :priority => ['Canada']
+      
+      =f.input :address, :input_html=>{ :rows => 3}, :label => t(:address, :scope => :devise)
+      
+      =f.input :years_of_experience,:label => t(:years_of_experience, :scope => :devise)
+      
+      =f.input :professional_training_and_accreditation, :input_html=>{:rows => 3}, :label => t(:professional_training, :scope => :devise)
+      
+%br
+- if @user.new_record? 
+  %p
+  =t :in_the_future, :scope => :devise
+  %p
+  =t :rdi_appreciates, :scope => :devise
+  %p
+%br
 
-      ="#{t(:confirm_password, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe
-      <br>
-      = f.password_field :password_confirmation
-      %p
-           
-      
-      
-    %td{:width => '50%', :valign => 'top'}
-      
-      %br
-      ="#{t(:current_role, :scope => :devise)} (#{t :mandatory_field, :scope => :devise})".html_safe      
-      %br
-      = f.text_field :current_role
-      %p 
-      
-      
-      %br
-      ="#{t(:organization, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_field :organization
-      %p  
-      
-      %br
-      ="#{t(:city_town, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_field :city_town
-      %p
-      
-      
-      %br
-      ="#{t(:state_province, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe      
-      %br
-      = f.text_field :state_province
-      %p   
-      
-      %br
-      ="#{t(:country, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_field :country
-      %p     
-      
-      %br
-      ="#{t(:address, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_area :address, :rows => 3
-      %p      
-      
-      
-      %br
-      ="#{t(:years_of_experience, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe
-      %br
-      = f.text_field :years_of_experience, :rows => 3
-      %p 
-      
-      %br
-      ="#{t(:professional_training, :scope => :devise)} (#{t :optional_field, :scope => :devise})".html_safe      
-      %br
-      = f.text_area :professional_training_and_accreditation, :rows => 3
-      %p                    
-      
-    
- 
-= f.submit text, :class => 'btn primary'
+= f.submit text, :class => 'btn btn-primary'
