@@ -18,6 +18,7 @@ fr:
     email: french
     email_new_tools:         french
     email_new_reviews:       french
+    email_new_user:          french
     send_reset_instructions: french
     back_to_login: french
     create_an_account: french

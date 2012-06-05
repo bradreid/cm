@@ -17,7 +17,8 @@ en:
     last_name: Last name
     email: Email
     email_new_tools:     Receive email updates for new tools
-    email_new_reviews:   Receive email updates for new tools
+    email_new_reviews:   Receive email updates for new reviews
+    email_new_user:      Receive email updates for new users
     send_reset_instructions: Send reset instructions
     back_to_login: Back to login
     create_an_account: Create an account
