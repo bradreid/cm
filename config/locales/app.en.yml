@@ -34,6 +34,9 @@ en:
   alt_anal: Tools to identify community needs, priorities, and feasibility
   alt_impl: Tools to coordinate and complete a project
   alt_rev:  Tools to evaluate project achievements and results
+  nav_buttons:
+    back_admin: Back to Admin
+    back_users: Back to Users
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
@@ -97,7 +100,7 @@ en:
         datecreated: Date Created
         datecreated_subtext: Return tools published between
         datecreated_eg: e.g. 1996
-        button_search: Searches
+        button_search: Search
         button_hide: Hide Search Fields
         button_show: Show Search Fields
     phases:
