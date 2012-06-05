@@ -16,62 +16,73 @@
   
 %br
 %br      
-%h3
-  =t :one, :scope=>[:reviews,:questions]
--if @review.experience == 'never'
-  =t :one_never, :scope=>[:reviews,:questions]
--elsif @review.experience == 'once'
-  =t :one_tried, :scope=>[:reviews,:questions]
--elsif @review.experience == 'twice'
-  =t :one_twice, :scope=>[:reviews,:questions]
--else @review.experience == 'regularly'
-  =t :one_regularly, :scope=>[:reviews,:questions]
+%table{:border=>'0', :cellpadding=>'10'}
+  %tr
+    %td{:width=>'40%', :valign=>'top'}
+      .title4.bold.big
+        =t :one, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      -if @review.experience == 'never'
+        =t :one_never, :scope=>[:reviews,:questions]
+      -elsif @review.experience == 'once'
+        =t :one_tried, :scope=>[:reviews,:questions]
+      -elsif @review.experience == 'twice'
+        =t :one_twice, :scope=>[:reviews,:questions]
+      -else @review.experience == 'regularly'
+        =t :one_regularly, :scope=>[:reviews,:questions]
+  %tr
+    %td{:valign=>'top'}
+      .title4.bold.big
+        =t :two, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      =ranking_text(@review.community_context)
+      %p
+      =simple_format('Comment: ' + @review.community_context_comment).html_safe if @review.community_context_comment.present?
 
-
-%h3
-  =t :two, :scope=>[:reviews,:questions]
-%p
-  =ranking_text(@review.community_context)
-%p
-  =simple_format('Comment: ' + @review.community_context_comment).html_safe if @review.community_context_comment.present?
-
-%h3
-  =t :three, :scope=>[:reviews,:questions]
-%p
-  =ranking_text(@review.generates_results)
-
-%p
-  =simple_format('Comment: ' + @review.generates_results_comment).html_safe if @review.generates_results_comment.present?
+  %tr
+    %td{:valign=>'top'}
+      .title4.bold.big
+        =t :three, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      =ranking_text(@review.generates_results)
+      %p
+      =simple_format('Comment: ' + @review.generates_results_comment).html_safe if @review.generates_results_comment.present?
   
+  %tr
+    %td{:valign=>'top'}
+      .title4.bold.big
+        =t :four, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      =ranking_text(@review.resources_identified)
+      %p
+      =simple_format('Comment: ' + @review.resources_identified_comment).html_safe if @review.resources_identified_comment.present?
 
-%h3
-  =t :four, :scope=>[:reviews,:questions]
-%p
-  =ranking_text(@review.resources_identified)
-%p
-  =simple_format('Comment: ' + @review.resources_identified_comment).html_safe if @review.resources_identified_comment.present?
+  %tr
+    %td{:valign => 'top'}
+      .title4.bold.big
+        =t :five, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      =ranking_text(@review.format_presentation)
+      %p
+      =simple_format('Comment: ' + @review.format_presentation_comment).html_safe if @review.format_presentation_comment.present?
+      
 
-%h3
-  =t :five, :scope=>[:reviews,:questions]
-%p
-  =ranking_text(@review.format_presentation)
-%p
-  =simple_format('Comment: ' + @review.format_presentation_comment).html_safe if @review.format_presentation_comment.present?
+  %tr
+    %td{:valign => 'top'}
+      .title4.bold.big
+        =t :six, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      =ranking_text(@review.adaptable)
+      %p
+      =simple_format('Comment: ' + @review.adaptable_comment).html_safe if @review.adaptable_comment.present?
+      
 
-
-%h3
-  =t :six, :scope=>[:reviews,:questions]
-%p
-  =ranking_text(@review.adaptable)
-%p
-  =simple_format('Comment: ' + @review.adaptable_comment).html_safe if @review.adaptable_comment.present?
-
-
-
-%h3
-  =t :seven, :scope=>[:reviews,:questions]
-%p
-- if @review.comment.present?
-  =simple_format(@review.comment).html_safe
-- else 
-  =t :none, :scope=>[:reviews,:view]
+  %tr
+    %td{:valign => 'top'}
+      .title4.bold.big
+        =t :seven, :scope=>[:reviews,:questions]
+    %td{:valign=>'top'}
+      - if @review.comment.present?
+        =simple_format(@review.comment).html_safe
+      - else 
+        =t :none, :scope=>[:reviews,:view]
