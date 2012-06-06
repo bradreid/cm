@@ -8,6 +8,6 @@
   %br
   = f.email_field :email 
   %p
-  %p= f.submit(t(:send_reset_instructions, :scope => :devise), :class => 'btn primary')
+  %p= f.submit(t(:send_reset_instructions, :scope => :devise), :class => 'btn btn-primary')
 
 = link_to t(:back_to_login, :scope => :devise), new_session_path(resource_name) 

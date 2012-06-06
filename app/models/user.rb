@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include ActionView::Helpers::TranslationHelper
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -54,6 +55,6 @@ protected
   end    
   
   def set_user_description
-    self.user_description = "#{first_name} #{last_name} #{current_role} #{organization}"
+    self.user_description = "#{first_name} #{last_name} #{username} #{current_role} #{organization}"
   end
 end

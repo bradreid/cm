@@ -49,19 +49,19 @@
         %table
           %tr
             %td
-              =link_to( t(:download,:scope=>[:tic]), tool_downloadtic_path(@tool), :class => 'btn success') if @tool.source_document_file_name
+              =link_to( t(:download,:scope=>[:tic]), tool_downloadtic_path(@tool), :class => 'btn btn-success') if @tool.source_document_file_name
             %td
               &nbsp;
             %td
               =link_to(image_tag('icon_review.png', :height => 35, :alt => t(:review,:scope=>[:tic])), new_tool_review_path(@tool), :title => t(:review,:scope=>[:tic]))
 
         -if self.controller.is_a? AdminController
-          = link_to admin_tools_path, :class => 'btn' do
-            %i.icon-arrow-left
-            Back to tools
           = link_to admin_index_path, :class => 'btn' do
             %i.icon-arrow-left
-            Back to admin        
+            =t :back_admin, :scope=>[:nav_buttons]
+          = link_to admin_tools_path, :class => 'btn' do
+            %i.icon-arrow-left
+            =t :back_tools, :scope=>[:nav_buttons]
   
 %br
 =render :partial => 'shared/like_buttons'

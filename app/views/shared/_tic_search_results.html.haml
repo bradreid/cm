@@ -5,14 +5,14 @@
     = page_entries_info @tools, :model => 'Tool'
   %br
   %br
-  %table#search_results{:width => '100%', :border => '0', :cellspacing => 0}
+  %table#search_results{:border => '0', :cellspacing => 0}
     %tbody#tools_body
       -@tools.each do |tool|
         %tr
           %td{:align => 'left', :valign => 'top', :style => 'padding-bottom:20px'}
             %p    
               =rating_stars(tool)                                                
-          %td{:valign => 'top'}
+          %td{:valign => 'top', :width => 35}
             &nbsp;
             =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(tool), :title => 'Review Tool')
             &nbsp; 
@@ -21,7 +21,7 @@
             =link_to query_highlight(tool.name,params[:search]).html_safe, tool_path(tool), :class => 'search_hit_title'
             %p
               =query_highlight(tool.description, params[:search]).html_safe
-          %td{:valign => 'top', :style => 'padding-bottom:20px'}
+          %td{:valign => 'top', :style => 'padding-bottom:20px', :width => 75}
             %p{:style => 'white-space:nowrap;'}
               =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(tool), :title => 'Tool Information Card')
               =link_to(image_tag('icon_pdf.png', :height => 35, :alt => 'Download Source Document'), tool.source_document.url, :title => 'Download Source Document') if tool.source_document_file_name
