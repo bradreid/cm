@@ -3,6 +3,10 @@
     =t :sec_stats, :scope=>[:admin]
     %small
       =t :subtitle, :scope=>[:admin,:stats]
+      .btn-group.pull-right
+        = link_to admin_index_path, :class => 'btn' do
+          %i.icon-arrow-left
+          =t :back_admin, :scope=>[:nav_buttons]
 
 %ul
   %li

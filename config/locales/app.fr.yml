@@ -37,6 +37,7 @@ fr:
   nav_buttons:
     back_admin: Back to Admin
     back_users: Back to Users
+    back_tools: Back to Tools
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
@@ -310,6 +311,7 @@ fr:
       heading_date: "Hé ça."
       heading_subby: "Hé ça."
       heading_actions: "Hé ça."
+      update:          "Hé ça."
     newtool:
       title: "Hé ça."
       button_new: "Hé ça."
