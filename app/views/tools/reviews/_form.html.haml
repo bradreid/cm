@@ -1,213 +1,223 @@
 %fieldset
-  .clearfix.required
-    = form.label :experience, t(:one,:scope=>[:reviews,:questions]), :class => 'big'
-    .input
-      %table
-        %tr
-          %td{:align => 'left'}
-            =form.radio_button :experience, 'never'
-            =t(:one_never,:scope=>[:reviews,:questions])
-            %br
-            =form.radio_button :experience, 'tried'
-            =t(:one_tried,:scope=>[:reviews,:questions])
-            %br
-            =form.radio_button :experience, 'twice'
-            =t(:one_twice,:scope=>[:reviews,:questions])
-            %br
-            =form.radio_button :experience, 'regularly'
-            =t(:one_regularly,:scope=>[:reviews,:questions])
-
-
 
   .clearfix.required
-    = form.label :community_context, t(:two,:scope=>[:reviews,:questions]), :class => 'big'
+    = form.label :community_context, t(:q_one,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
-      %table.border
+      %table{:width => '100%'}
         %tr
-          %th{:align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_2').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_2').attr('checked', true);"}
             =form.radio_button :community_context, '2'
+            &nbsp; 
+            &nbsp; 
             =t :hi, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_1').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :valign => 'middle', :onclick => "$('#review_community_context_1').attr('checked', true);"}
             =form.radio_button :community_context, '1'
+            &nbsp; 
+            &nbsp; 
             =t :lo, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_community_context_0').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_community_context_0').attr('checked', true);"}
             =form.radio_button :community_context, '0'
+            &nbsp; 
+            &nbsp; 
             =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :two_hi_a, :scope=>[:reviews,:questions]
-              %li=t :two_hi_b, :scope=>[:reviews,:questions]
-              %li=t :two_hi_c, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :chi_one,  :scope=>[:reviews,:questions]
                 
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :two_lo_a, :scope=>[:reviews,:questions]
-              %li=t :two_lo_b, :scope=>[:reviews,:questions]
-              %li=t :two_lo_c, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :clo_one,  :scope=>[:reviews,:questions]
 
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :two_ns_a, :scope=>[:reviews,:questions]
-              %li=t :two_ns_b, :scope=>[:reviews,:questions]
-              %li=t :two_ns_c, :scope=>[:reviews,:questions]
-        %tr
-          %td{:colspan => 3, :align => 'left'}
-            =form.label :community_context_comment, t(:comments,:scope=>[:reviews,:questions])
-            =form.text_area :community_context_comment, :rows => 3, :cols => 40, :style => 'width:99%'
-              
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :cna_one,  :scope=>[:reviews,:questions]
       
       
   .clearfix.required
-    = form.label :generates_results, t(:three,:scope=>[:reviews,:questions]), :class => 'big'
+    = form.label :generates_results, t(:q_two,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
-      %table.border
+      %table{:width => '100%'}
         %tr
-          %th{:align => 'left', :onclick => "$('#review_generates_results_2').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_generates_results_2').attr('checked', true);"}
             =form.radio_button :generates_results, '2'
+            &nbsp; 
+            &nbsp; 
             =t :hi, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_generates_results_1').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_generates_results_1').attr('checked', true);"}
             =form.radio_button :generates_results, '1'
+            &nbsp; 
+            &nbsp; 
             =t :lo, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_generates_results_0').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_generates_results_0').attr('checked', true);"}
             =form.radio_button :generates_results, '0'
+            &nbsp; 
+            &nbsp; 
             =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :three_hi_a, :scope=>[:reviews,:questions]
-              %li=t :three_hi_b, :scope=>[:reviews,:questions]
-              %li=t :three_hi_c, :scope=>[:reviews,:questions]
-              %li=t :three_hi_d, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :chi_two, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :three_lo_a, :scope=>[:reviews,:questions]
-              %li=t :three_lo_b, :scope=>[:reviews,:questions]
-              %li=t :three_lo_c, :scope=>[:reviews,:questions]
-              %li=t :three_lo_d, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :clo_two, :scope=>[:reviews,:questions]
                 
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :three_ns_a, :scope=>[:reviews,:questions]
-              %li=t :three_ns_b, :scope=>[:reviews,:questions]
-              %li=t :three_ns_c, :scope=>[:reviews,:questions]
-        %tr
-          %td{:colspan => 3, :align => 'left'}
-            =form.label :generates_results_comment, t(:comments,:scope=>[:reviews,:questions])
-            =form.text_area :generates_results_comment, :rows => 3, :cols => 40, :style => 'width:99%'                                   
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :cna_two, :scope=>[:reviews,:questions]
                   
-                  
+  %br
                   
   .clearfix.required
-    = form.label :resources_identified, t(:four,:scope=>[:reviews,:questions]), :class => 'big'
+    = form.label :resources_identified, t(:q_thr,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
-      %table.border
+      %table{:width => '100%'}
         %tr
-          %th{:align => 'left', :onclick => "$('#review_resources_identified_2').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_resources_identified_2').attr('checked', true);"}
             =form.radio_button :resources_identified, '2'
+            &nbsp; 
+            &nbsp; 
             =t :hi, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_resources_identified_1').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_resources_identified_1').attr('checked', true);"}
             =form.radio_button :resources_identified, '1'
+            &nbsp; 
+            &nbsp; 
             =t :lo, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_resources_identified_0').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_resources_identified_0').attr('checked', true);"}
             =form.radio_button :resources_identified, '0'
+            &nbsp; 
+            &nbsp; 
             =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :four_hi_a, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :chi_thr, :scope=>[:reviews,:questions]
 
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :four_lo_a, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :clo_thr, :scope=>[:reviews,:questions]
 
 
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :four_ns_a, :scope=>[:reviews,:questions]
-        %tr
-          %td{:colspan => 3, :align => 'left'}
-            =form.label :resources_identified_comment, t(:comments,:scope=>[:reviews,:questions])
-            =form.text_area :resources_identified_comment, :rows => 3, :cols => 40, :style => 'width:99%'        
-
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :cna_thr, :scope=>[:reviews,:questions]
 
 
   .clearfix.required
-    = form.label :format_presentation, t(:five,:scope=>[:reviews,:questions]), :class => 'big'
+    = form.label :format_presentation, t(:q_fou,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
-      %table.border
+      %table{:width => '100%'}
         %tr
-          %th{:align => 'left', :onclick => "$('#review_format_presentation_2').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_format_presentation_2').attr('checked', true);"}
             =form.radio_button :format_presentation, '2'
+            &nbsp; 
+            &nbsp; 
             =t :hi, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_format_presentation_1').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_format_presentation_1').attr('checked', true);"}
             =form.radio_button :format_presentation, '1'
+            &nbsp; 
+            &nbsp; 
             =t :lo, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_format_presentation_0').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_format_presentation_0').attr('checked', true);"}
             =form.radio_button :format_presentation, '0'
+            &nbsp; 
+            &nbsp; 
             =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :five_hi_a, :scope=>[:reviews,:questions]
-              %li=t :five_hi_b, :scope=>[:reviews,:questions]
-              %li=t :five_hi_c, :scope=>[:reviews,:questions]
-              %li=t :five_hi_d, :scope=>[:reviews,:questions]
-              %li=t :five_hi_e, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :chi_fou, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :five_lo_a, :scope=>[:reviews,:questions]
-              %li=t :five_lo_b, :scope=>[:reviews,:questions]
-              %li=t :five_lo_c, :scope=>[:reviews,:questions]
-              %li=t :five_lo_d, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :clo_fou, :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :five_ns_a, :scope=>[:reviews,:questions]
-              %li=t :five_ns_b, :scope=>[:reviews,:questions]
-        %tr
-          %td{:colspan => 3, :align => 'left'}
-            =form.label :format_presentation_comment, t(:comments,:scope=>[:reviews,:questions])
-            =form.text_area :format_presentation_comment, :rows => 3, :cols => 40, :style => 'width:99%'         
-                              
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :cna_fou, :scope=>[:reviews,:questions]
 
 
+  %br
   .clearfix.required
-    = form.label :adaptable, t(:six,:scope=>[:reviews,:questions]), :class => 'big'
+    = form.label :adaptable, t(:q_fiv,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
-      %table.border
+      %table{:width=>'100%'}
         %tr
-          %th{:align => 'left', :onclick => "$('#review_adaptable_2').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_adaptable_2').attr('checked', true);"}
             =form.radio_button :adaptable, '2'
+            &nbsp; 
+            &nbsp; 
             =t :hi, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_adaptable_1').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_adaptable_1').attr('checked', true);"}
             =form.radio_button :adaptable, '1'
+            &nbsp; 
+            &nbsp; 
             =t :lo, :scope=>[:reviews,:questions]
-          %th{:align => 'left', :onclick => "$('#review_adaptable_0').attr('checked', true);"}
+          %th{:width=>'33%', :align => 'left', :onclick => "$('#review_adaptable_0').attr('checked', true);"}
             =form.radio_button :adaptable, '0'
+            &nbsp; 
+            &nbsp; 
             =t :ns, :scope=>[:reviews,:questions]
         %tr
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :six_hi_a, :scope=>[:reviews,:questions]
-              %li=t :six_hi_b, :scope=>[:reviews,:questions]
-              %li=t :six_hi_c, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :chi_fiv,  :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :six_lo_a, :scope=>[:reviews,:questions]
-              %li=t :six_lo_b, :scope=>[:reviews,:questions]
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :clo_fiv,  :scope=>[:reviews,:questions]
           %td{:align => 'left', :valign => 'top'}
-            %ul
-              %li=t :six_ns_a, :scope=>[:reviews,:questions]
-        %tr
-          %td{:colspan => 3, :align => 'left'}
-            =form.label :adaptable_comment, t(:comments,:scope=>[:reviews,:questions])
-            =form.text_area :adaptable_comment, :rows => 3, :cols => 40, :style => 'width:99%'          
+            %table 
+              %tr
+                %td{:width=>'25'}
+                %td
+                  =t :cna_fiv,  :scope=>[:reviews,:questions]
 
-
+  %br
   .clearfix.required
     %table{:width => '100%'}
       %tr
         %td{:align => 'left'}
-          = form.label :comment, t(:seven,:scope=>[:reviews,:questions]), :class => 'big'
+          = form.label :comment, t(:q_six,:scope=>[:reviews,:questions]), :class => 'big'
+          %p
           .input
             =form.text_area :comment, :rows => 3, :cols => 40, :style => 'width:99%'

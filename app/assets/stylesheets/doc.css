@@ -28,6 +28,17 @@ body {
 .field_with_errors {
   display: inline; }
 
+table.outter {
+  border-style: solid;
+  border-width: 2px;
+  border-collapse: collapse; }
+
+table.outter td {
+  border-style: none; }
+
+table.outter th {
+  border-style: none; }
+
 table.border {
   border-style: solid;
   border-width: 2px;
