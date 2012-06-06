@@ -19,6 +19,19 @@ set :use_sudo, false
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
+namespace(:customs) do
+  task :config, :roles => :app do
+    run <<-CMD
+      ln -nfs #{shared_path}/system/database.yml #{release_path}/config/database.yml
+    CMD
+  end
+  task :symlink, :roles => :app do
+    run <<-CMD
+      ln -nfs #{shared_path}/system/uploads #{release_path}/public/uploads
+    CMD
+  end
+end
+
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
@@ -30,3 +43,7 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+after "deploy:update_code", "customs:config"
+after "deploy:symlink","customs:symlink"
+after "deploy", "deploy:cleanup"
