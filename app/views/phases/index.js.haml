@@ -1,0 +1,2 @@
+$('#search_results').html("#{escape_javascript(render(:partial => '/shared/tic_search_results', :locals => {:remote => true}))}");
+$.Spinner.unspin();

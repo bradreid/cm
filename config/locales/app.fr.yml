@@ -3,7 +3,55 @@ fr:
   switchenglish: English
   button_cancel: "Hé ça."
   check_yes: "Hé ça."
-  check_no: "Hé ça."
+  check_no:  "Hé ça."
+  alt_people:           "Hé ça."
+  alt_green:            "Hé ça."
+  alt_grow:             "Hé ça."
+  alt_balanced:         "Hé ça."
+  alt_search:           "Hé ça."
+  alt_phases:           "Hé ça."
+  alt_org_partnership:  "Hé ça."
+  alt_org_fundraising:  "Hé ça."
+  alt_org_teambuilding: "Hé ça."
+  alt_org_engagement:   "Hé ça."
+  alt_plan_vis:         "Hé ça."
+  alt_plan_act:         "Hé ça."
+  alt_plan_man:         "Hé ça."
+  alt_anal_ass:         "Hé ça."
+  alt_anal_comp:        "Hé ça."
+  alt_impl_natural:     "Hé ça."
+  alt_impl_cultural:    "Hé ça."
+  alt_impl_hr:          "Hé ça."
+  alt_impl_social:      "Hé ça."
+  alt_impl_gov:         "Hé ça."
+  alt_impl_financial:   "Hé ça."
+  alt_impl_comm:        "Hé ça."
+  alt_rev_proj:         "Hé ça."
+  alt_rev_proc:         "Hé ça."
+  alt_rev_feedback:     "Hé ça." 
+  alt_org:              "Hé ça."
+  alt_plan:             "Hé ça."
+  alt_anal:             "Hé ça."
+  alt_impl:             "Hé ça."
+  alt_rev:              "Hé ça."
+  nav_buttons:
+    back_admin: Back to Admin
+    back_users: Back to Users
+    back_tools: Back to Tools
+  notices:
+    tool_edit: You successfully updated the tool named
+    tool_create: You successfully created the new tool named
+    tool_del: You successfully deleted the tool named
+    need_login: You must login or sign up for an account to review a tool.
+    rev_act: You have successfully activated the review.
+    rev_deact: You have deactivated the review, other users will not be able to view it.
+    rev_chgerr: You cannot change this review.
+    rev_submit: You have successfully submitted your tool review.
+    rev_edit: You have updated the review.
+    user_act: You have successfully activated the user.
+    user_deact: You have successfully inactivated the user.
+    user_edit: You successfully updated the user account.
+    user_create: You successfully created a new user account.
   stars:
     one_rev: "Hé ça."
     multi_rev: "Hé ça."
@@ -248,6 +296,7 @@ fr:
     nov: "Hé ça."
     dec: "Hé ça."
   admin:
+    full_title: "Hé ça."
     title: "Hé ça."
     subtitle: "Hé ça."
     sec_tools: "Hé ça."
@@ -263,6 +312,9 @@ fr:
       heading_date: "Hé ça."
       heading_subby: "Hé ça."
       heading_actions: "Hé ça."
+      update:          "Hé ça."
+      subat:            "Hé ça."
+      upat:             "Hé ça."
     newtool:
       title: "Hé ça."
       button_new: "Hé ça."
@@ -270,8 +322,10 @@ fr:
       sourcefile: "Hé ça."
       lang_instruct: "Hé ça."
       phase_instruct: "Hé ça."
+      purp_instruct:  "Hé ça."
       topic_instruct: "Hé ça."
       exp_instruct: "Hé ça."
+      loc_instruct: "Hé ça."
       when: "Hé ça."
       why: "Hé ça."
       where: "Hé ça."

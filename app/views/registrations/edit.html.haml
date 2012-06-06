@@ -8,10 +8,9 @@
   =t :account_creation_message, :scope=>[:devise]
   
   
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }, :builder => CmFormBuilder) do |f| 
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'form-horizontal', :method => :put } ) do |f| 
 
-  =render :partial => 'admin/users/form', :locals => {:f => f, :text => t(:button_edit, :scope=>[:accounts, :admin])}
+  =render :partial => 'admin/users/form', :locals => {:f => f, :text => t(:button_edit, :scope=>[:admin, :accounts])}
 
-  =link_to t(:button_cancel), root_path, :class => 'btn error'
+  =link_to t(:button_cancel), root_path, :class => 'btn btn-danger'
 
-= render :partial => "devise/shared/links"  

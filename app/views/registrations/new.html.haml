@@ -7,29 +7,9 @@
 %p
   =t :account_creation_message, :scope => :devise
 
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :builder => CmFormBuilder) do |f| 
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html=>{:class=>'form-horizontal'}) do |f| 
   
   =render :partial => 'admin/users/form', :locals => {:f => f, :text => t(:sign_up, :scope => :devise)}
   
-  =link_to t(:cancel, :scope => :devise), root_path, :class => 'btn error'
+  =link_to t(:cancel, :scope => :devise), root_path, :class => 'btn btn-danger'
 
-= render :partial => "devise/shared/links" 
-
-
-
-%br
-%br
-%p
-=t :in_the_future, :scope => :devise
-%p
-=t :rdi_appreciates, :scope => :devise
-%p
-=t :legend, :scope => :devise
-%p
-=t :mandatory, :scope => :devise
-%p
-=t :optional, :scope => :devise
-%p
-=t :will_be_displayed, :scope => :devise
-%p
-=t :will_not_be_displayed, :scope => :devise
