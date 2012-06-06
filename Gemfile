@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
-gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -17,15 +16,15 @@ gem 'rmagick', '=2.12.2'
 gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
-gem 'texticle', :require => 'texticle/rails'
+gem 'texticle', '=1.0.3'
 gem 'http_accept_language'
 gem 'pg', '=0.12.2'
 gem 'exception_notification', :require => 'exception_notifier'
 gem "friendly_id"
 gem 'bitly'
 gem 'twitter', ">2.0.0"
-gem 'will-paginate-i18n'
-gem 'rails-i18n'
+# gem 'will-paginate-i18n'
+# gem 'rails-i18n'
 
 # Use unicorn as the web server
 # gem 'unicorn'
