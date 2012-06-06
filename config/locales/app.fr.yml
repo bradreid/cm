@@ -325,6 +325,7 @@ fr:
       purp_instruct:  "Hé ça."
       topic_instruct: "Hé ça."
       exp_instruct: "Hé ça."
+      loc_instruct: "Hé ça."
       when: "Hé ça."
       why: "Hé ça."
       where: "Hé ça."

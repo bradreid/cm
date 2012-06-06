@@ -327,6 +327,7 @@ en:
       purp_instruct:  Please select the purpose for the tool
       topic_instruct: Please select the topic that applies to this tool
       exp_instruct: Please select the expertise needed to use this tool
+      loc_instruct: Please select the geography coverage for this tool
       when_q: At what phase of the CED project cycle is this tool most useful?
       when: When 
       why_q: What is the purpose of using this particular tool?

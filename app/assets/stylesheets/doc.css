@@ -185,3 +185,10 @@ td.splash {
 .calendar {
   padding: 0 0 0 22px;
   background: url(../images/icons/calendar.png) no-repeat 0 30%; }
+
+.simple_form label {
+  float: left;
+  text-align: left; 
+}
+
+

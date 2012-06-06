@@ -73,7 +73,7 @@
         =t(:where_q,:scope=>[:admin, :newtool]) 
 %p
 = form.input :where, :label=>t(:where,:scope=>[:admin, :newtool]) do
-  = form.select :where, FormConstants.where.map{|r| [r,r]}   
+  = form.select :where, FormConstants.where.map{|r| [r,r]}, {:include_blank => t(:loc_instruct, :scope=>[:admin, :newtool]) }
 
 =form.input :where_created, :label=>t(:which,:scope=>[:admin,:newtool])
 
@@ -101,30 +101,16 @@
 = form.input :who, :label=>t(:who,:scope=>[:admin,:newtool]), :placeholder=>t(:who_placeholder,:scope=>[:admin, :newtool])
 = form.input :copyright_holder, :label=>t(:copy_holder,:scope=>[:admin,:newtool])
 
-%fieldset      
-  .clearfix
-    = form.label :copyright, t(:copy_check,:scope=>[:admin,:newtool])
-    .input
-      =t :check_yes
-      =form.radio_button :copyright, '1', :class => 'copyright_button'    
-      &nbsp;
-      =t :check_no
-      =form.radio_button :copyright, '0', :class => 'copyright_button' 
+= form.input :copyright, 
+  :as => :radio, 
+  :collection => [ [t(:check_yes), '1'], [t(:check_no), '0'] ], 
+  :label=>t(:copy_check,:scope=>[:admin,:newtool]) ,
+  :input_html => {:class => 'copyright_button'}
 
-  .clearfix.copyright_restrictions_area{:style => "#{@tool.copyright == '1' ? 'display:display' : 'display:none'}"}
-    = form.label :copyright_restrictions, t(:copy_restr,:scope=>[:admin,:newtool])
-    .input
-      = form.text_field :copyright_restrictions, :maxlength => 255       
+.copyright_restrictions_area{:style => "#{@tool.copyright == '1' ? 'display:display' : 'display:none'}"}
+  = form.input :copyright_restrictions, :label=> t(:copy_restr,:scope=>[:admin,:newtool])
 
-  .clearfix
-    = form.label :copyright_permissions, t(:copy_perm,:scope=>[:admin,:newtool])
-    .input
-      =t :check_yes
-      =form.radio_button :copyright_permissions, '1'   
-      &nbsp;       
-      =t :check_no
-      =form.radio_button :copyright_permissions, '0'
-      %br
+= form.input :copyright_permissions, :as => :radio, :collection => [ [t(:check_yes), '1'], [t(:check_no), '0'] ], :label=>t(:copy_perm,:scope=>[:admin,:newtool])
 
 = form.input :comments, :input_html=>{:rows=>5}, :label=>t(:comments,:scope=>[:admin,:newtool])
 
