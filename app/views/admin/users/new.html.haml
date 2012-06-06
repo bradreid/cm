@@ -3,4 +3,4 @@
 
 = simple_form_for [:admin, @user], :html=>{:class=>'form-horizontal'} do |f| 
   = render :partial => 'form', :locals => {:f => f, :text => t(:button_new,:scope=>[:admin,:accounts])}
-  =link_to t(:button_cancel), admin_users_path, :class => 'btn error'
+  =link_to t(:button_cancel), admin_users_path, :class => 'btn btn-danger'
