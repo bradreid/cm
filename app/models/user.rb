@@ -55,6 +55,6 @@ protected
   end    
   
   def set_user_description
-    self.user_description = "#{first_name} #{last_name} #{current_role} #{organization}"
+    self.user_description = "#{first_name} #{last_name} #{username} #{current_role} #{organization}"
   end
 end
