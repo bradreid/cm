@@ -25,8 +25,8 @@ gem 'exception_notification', :require => 'exception_notifier'
 gem "friendly_id"
 gem 'bitly'
 gem 'twitter', ">2.0.0"
-gem 'will-paginate-i18n'
-gem 'rails-i18n'
+# gem 'will-paginate-i18n'
+# gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
 
