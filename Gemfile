@@ -14,7 +14,6 @@ gem 'jquery-rails'                #, :git => 'git://github.com/indirect/jquery-r
 gem 'devise'
 gem 'will_paginate'
 gem 'paperclip', '=2.3.12'
-gem 'rmagick', '=2.12.2'
 gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
