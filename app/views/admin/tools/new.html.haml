@@ -1,7 +1,6 @@
 %div.form
   %h2=t :title, :scope=>[:admin,:newtool]
   = simple_form_for [:admin, @tool], :html => { :class=>'form-horizontal', :multipart => true }  do |f|
-    = f.error_messages
     = render :partial => "form", :object => f
     %br
     = submit_tag t(:button_new,:scope=>[:admin,:newtool]), :class => "btn btn-primary"

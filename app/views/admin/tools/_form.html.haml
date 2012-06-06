@@ -37,30 +37,47 @@
 
 = form.input :description, :input_html=>{:rows=>5, :class=>'xxlarge'}, :label=>t(:heading_desc,:scope=>[:tic])
 
+.big.bold
+  =t(:when_q,:scope=>[:admin, :newtool]) 
+%p
+
 = form.input :when, :label=>t(:when,:scope=>[:admin, :newtool]) do
   = form.select :when, FormConstants.when.map{|r| [r,r]}, :include_blank => t(:phase_instruct,:scope=>[:admin,:newtool]) 
       
+.big.bold
+  =t(:why_q,:scope=>[:admin, :newtool]) 
+%p
+
 = form.input :why, :label=>t(:why,:scope=>[:admin, :newtool]) do
-  = form.select :why, FormConstants.organizing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Organizing' ? '' : 'display:none'}", :id => 'organizing_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.planning_purpose.map{|r| [r,r]},{:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Planning' ? '' : 'display:none'}", :id => 'planning_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.analyzing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'} , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.implementing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => 'Please select the purpose for the tool'}, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
+  = form.select :why, FormConstants.organizing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Organizing' ? '' : 'display:none'}", :id => 'organizing_purpose', :class => 'purpose'
+  = form.select :why, FormConstants.planning_purpose.map{|r| [r,r]},{:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Planning' ? '' : 'display:none'}", :id => 'planning_purpose', :class => 'purpose'
+  = form.select :why, FormConstants.analyzing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) } , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
+  = form.select :why, FormConstants.implementing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
+  = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
 
       
+.big.bold
+  =t(:where_q,:scope=>[:admin, :newtool]) 
+%p
 = form.input :where, :label=>t(:where,:scope=>[:admin, :newtool]) do
   = form.select :where, FormConstants.where.map{|r| [r,r]}   
 
 =form.input :where_created, :label=>t(:which,:scope=>[:admin,:newtool])
 
+.big.bold
+  =t(:topic_q,:scope=>[:admin, :newtool]) 
+%p
 = form.input :topic, :label=>t(:topic,:scope=>[:admin, :newtool]) do
   = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => t(:topic_instruct,:scope=>[:admin,:newtool])
       
+.big.bold
+  =t(:expneeds_q, :scope=>[:admin, :newtool]) 
+%p
 = form.input :expertise_needed, :label=>t(:expneeds,:scope=>[:admin, :newtool]) do
   = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [r,r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])      
       
 = form.input :special_equipment_facilities, :label=>t(:resources,:scope=>[:admin,:newtool])
-= form.input :who, :label=>t(:who,:scope=>[:admin,:newtool]), :placeholder=>'Placeholder'
+= form.input :who, :label=>t(:who,:scope=>[:admin,:newtool]), :placeholder=>t(:who_placeholder,:scope=>[:admin, :newtool])
 = form.input :copyright_holder, :label=>t(:copy_holder,:scope=>[:admin,:newtool])
 
 %fieldset      
@@ -89,12 +106,6 @@
       %br
   
 = form.input :copyright_permissions, :as=>:radio_buttons, :collection=> [t(:check_yes),t(:check_no)], :label=>t(:copy_perm,:scope=>[:admin,:newtool])
+
 = form.input :comments, :input_html=>{:rows=>5}, :label=>t(:comments,:scope=>[:admin,:newtool])
 
-
-
-       
-       
-
-                                         
-                    

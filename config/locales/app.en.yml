@@ -298,6 +298,7 @@ en:
     nov: November
     dec: December
   admin:
+    full_title: Admin
     title: Admin
     subtitle: Manage the website
     sec_tools: Tools
@@ -314,6 +315,8 @@ en:
       heading_subby: Submitted By
       heading_actions: Actions
       update:          Update Tool
+      subat:         Submitted On
+      upat:          Updated On
     newtool:
       title: Tool Submission Form
       button_new: Create New Tool
@@ -321,14 +324,20 @@ en:
       sourcefile: Source Document File
       lang_instruct: Please select the language in which the tool is written
       phase_instruct: Please select the main phase the tool is used for
+      purp_instruct:  Please select the purpose for the tool
       topic_instruct: Please select the topic that applies to this tool
       exp_instruct: Please select the expertise needed to use this tool
-      when: When (At what phase of the CED project cycle is this tool most useful?) 
-      why: Why (What is the purpose of using this particular tool?) 
-      where: Where (What geographical coverage of the community and/or type of community is intended to be impacted?) 
+      when_q: At what phase of the CED project cycle is this tool most useful?
+      when: When 
+      why_q: What is the purpose of using this particular tool?
+      why: Why 
+      where_q: What geographical coverage of the community and/or type of community is intended to be impacted?
+      where: Where 
       which: The Country This Tool was Created in
-      topic: Topic (Which of the three categories of the triple bottom line does this tool apply to?)
-      expneeds: Expertise Needed (The education, technical training, or skills identified or suggested as required to use the tool)
+      topic_q: Which of the three categories of the triple bottom line does this tool apply to?
+      topic: Topic 
+      expneeds_q: The education, technical training, or skills identified or suggested as required to use the tool
+      expneeds: Expertise Needed 
       resources: Resources Required
       who: Who
       who_placeholder: (Placeholder)

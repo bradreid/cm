@@ -1,46 +1,52 @@
 =render 'shared/tic'  
 %br
 %h3
-  Administration
+  =t :full_title, :scope=>:admin
 %br
 %ul.show_list
   %li
-    .label_for_list Topic
+    .label_for_list 
+      =t :when_topic, :scope=>:tic
     =@tool.topic
     &nbsp;
   %li
-    .label_for_list Copyright
-    =@tool.copyright=='1' ? "Yes" : "No"
+    .label_for_list 
+      =t :copy_check, :scope=>[:admin, :newtool]
+    =@tool.copyright=='1' ? t(:check_yes) : t(:check_no)
     &nbsp;    
   %li
-    .label_for_list Copyright Holder
+    .label_for_list 
+      =t :copy_holder, :scope=>[:admin, :newtool]
     =@tool.copyright_holder
     &nbsp;
   %li
-    .label_for_list Copyright Restrictions
+    .label_for_list 
+      =t :copy_restr, :scope=>[:admin, :newtool]
     =@tool.copyright_restrictions
     &nbsp;
   %li
-    .label_for_list Copyright Permissions
-    =@tool.copyright_permissions=='1' ? "Yes" : "No"
+    .label_for_list 
+      =t :copy_perm, :scope=>[:admin, :newtool]
+    =@tool.copyright_permissions=='1' ? t(:check_yes) : t(:check_no)
     &nbsp;
   %li
-    .label_for_list Submitted at
+    .label_for_list 
+      =t :subat, :scope=>[:admin, :tools]
     =@tool.created_at.strftime("%A, %B %d, %Y at %l:%M%p")
     &nbsp;    
   %li
-    .label_for_list Submitted by
+    .label_for_list 
+      =t :heading_subby, :scope=>[:admin, :tools]
     =@tool.created_by.try(:username)
     &nbsp;
   %li
-    .label_for_list Updated at
+    .label_for_list 
+      =t :upat, :scope=>[:admin, :tools]
     =@tool.updated_at.strftime("%A, %B %d, %Y at %l:%M%p")
     &nbsp;  
   %li
-    .label_for_list Comments
+    .label_for_list 
+      =t :comments, :scope=>[:admin, :newtool]
     =simple_format @tool.comments
     &nbsp;        
 
-.clear
-%div.actions_footer.clear
-  = action_links [:admin, @tool], :exclude => [:show]
