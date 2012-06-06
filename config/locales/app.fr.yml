@@ -3,7 +3,7 @@ fr:
   switchenglish: English
   button_cancel: "Hé ça."
   check_yes: "Hé ça."
-  check_no: "Hé ça."
+  check_no:  "Hé ça."
   alt_people:           "Hé ça."
   alt_green:            "Hé ça."
   alt_grow:             "Hé ça."
@@ -296,6 +296,7 @@ fr:
     nov: "Hé ça."
     dec: "Hé ça."
   admin:
+    full_title: "Hé ça."
     title: "Hé ça."
     subtitle: "Hé ça."
     sec_tools: "Hé ça."
@@ -312,6 +313,8 @@ fr:
       heading_subby: "Hé ça."
       heading_actions: "Hé ça."
       update:          "Hé ça."
+      subat:            "Hé ça."
+      upat:             "Hé ça."
     newtool:
       title: "Hé ça."
       button_new: "Hé ça."
@@ -319,6 +322,7 @@ fr:
       sourcefile: "Hé ça."
       lang_instruct: "Hé ça."
       phase_instruct: "Hé ça."
+      purp_instruct:  "Hé ça."
       topic_instruct: "Hé ça."
       exp_instruct: "Hé ça."
       when: "Hé ça."
