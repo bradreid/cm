@@ -37,6 +37,7 @@ en:
   nav_buttons:
     back_admin: Back to Admin
     back_users: Back to Users
+    back_tools: Back to Tools
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
@@ -312,6 +313,7 @@ en:
       heading_date: Date Created
       heading_subby: Submitted By
       heading_actions: Actions
+      update:          Update Tool
     newtool:
       title: Tool Submission Form
       button_new: Create New Tool
