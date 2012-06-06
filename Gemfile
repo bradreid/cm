@@ -6,7 +6,6 @@ gem 'rake', '0.8.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'haml'
 gem 'sass-rails'
 gem "twitter-bootstrap-rails"     #, :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
