@@ -1,32 +1,29 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.5'
-gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'haml'
 gem 'sass-rails'
-gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'jquery-rails', :git => 'git://github.com/indirect/jquery-rails.git'
+gem "twitter-bootstrap-rails"     #, :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'jquery-rails'                #, :git => 'git://github.com/indirect/jquery-rails.git'
 gem 'devise'
 gem 'will_paginate'
 gem 'paperclip', '=2.3.12'
-gem 'rmagick', '=2.12.2'
 gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
-gem 'texticle', :require => 'texticle/rails'
+gem 'texticle', '=1.0.3'
 gem 'http_accept_language'
 gem 'pg', '=0.12.2'
 gem 'exception_notification', :require => 'exception_notifier'
 gem "friendly_id"
 gem 'bitly'
 gem 'twitter', ">2.0.0"
-gem 'will-paginate-i18n'
-gem 'rails-i18n'
+# gem 'will-paginate-i18n'
+# gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
 
