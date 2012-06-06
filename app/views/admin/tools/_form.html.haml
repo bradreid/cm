@@ -31,7 +31,7 @@
 = form.input :author, :label=> t(:authors,:scope=>[:tic])
 = form.input :editor, :label=> t(:editors,:scope=>[:tic])
 = form.input :publisher, :label=> t(:pub,:scope=>[:tic])
-= form.input :date_created, :as=>'date', :label=>t(:datecreated,:scope=>[:tic])
+= form.input :date_created, :as=>'date', :label=>t(:datecreated,:scope=>[:tic]), :discard_day => true, :order => [:month, :year]
 = form.input :language, :label=>t(:lang,:scope=>[:tic]) do
   = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])
 
@@ -104,8 +104,6 @@
       =t :check_no
       =form.radio_button :copyright_permissions, '0'
       %br
-  
-= form.input :copyright_permissions, :as=>:radio_buttons, :collection=> [t(:check_yes),t(:check_no)], :label=>t(:copy_perm,:scope=>[:admin,:newtool])
 
 = form.input :comments, :input_html=>{:rows=>5}, :label=>t(:comments,:scope=>[:admin,:newtool])
 
