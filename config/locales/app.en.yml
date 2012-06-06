@@ -234,6 +234,27 @@ en:
       six_lo_b: Examples of modified activities are unhelpful.
       six_ns_a: No mention of adapting activities.
       seven: 7. Overall Comments
+      q_one: 1. How applicable was the tool?
+      chi_one: The tool is clear about its purpose and achieves its goals.
+      clo_one: The tool is not very clear about the purpose and/or is not applicable to the situation.
+      cna_one: The tool is not designed to be used in any particular situation. 
+      q_two: 2. Was the tool clear?
+      chi_two: The tool is well written and precise in its instruction.
+      clo_two: The tool is difficult to follow and/or incorrectly implemented.
+      cna_two: The clarity of the tool is unimportant.
+      q_thr: 3. Does the tool illustrate the resources required?
+      chi_thr: The tool illustrates the resources needed to implement it.
+      clo_thr: The tool is unclear as to what is necessary to use it.
+      cna_thr: The resources needed to implement this tool are unimportant.
+      q_fou: 4. Is the tool useful in different contexts?
+      chi_fou: The tool is useful in many situations. 
+      clo_fou: The tool is only useful in a few situations.
+      cna_fou: The flexibility of the tool is unimportant.
+      q_fiv: 5. Is the tool easy to use?
+      chi_fiv: The tool is easy to use. 
+      clo_fiv: The tool is difficult to use.
+      cna_fiv: The ease of use is unimportant.
+      q_six: 6. Additional Comments
     view:
       title: CED Review
       subtext_by: Reviewed by
