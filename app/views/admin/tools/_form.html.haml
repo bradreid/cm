@@ -24,6 +24,7 @@
     });
   });
 
+%p
 = form.input :name, :label => t(:tooltitle,:scope=>[:admin,:newtool])
 = form.input :source_document_name, :label => t(:sourcetitle,:scope=>[:tic])
 = form.input :source_document, :label => t(:sourcefile,:scope=>[:admin,:newtool])
@@ -37,15 +38,23 @@
 
 = form.input :description, :input_html=>{:rows=>5, :class=>'xxlarge'}, :label=>t(:heading_desc,:scope=>[:tic])
 
-.big.bold
-  =t(:when_q,:scope=>[:admin, :newtool]) 
+%table
+  %tr
+    %td{:width=>'160'}
+    %td
+      .big.bold
+        =t(:when_q,:scope=>[:admin, :newtool]) 
 %p
 
 = form.input :when, :label=>t(:when,:scope=>[:admin, :newtool]) do
   = form.select :when, FormConstants.when.map{|r| [r,r]}, :include_blank => t(:phase_instruct,:scope=>[:admin,:newtool]) 
       
-.big.bold
-  =t(:why_q,:scope=>[:admin, :newtool]) 
+%table
+  %tr
+    %td{:width=>'160'}
+    %td
+      .big.bold
+        =t(:why_q,:scope=>[:admin, :newtool]) 
 %p
 
 = form.input :why, :label=>t(:why,:scope=>[:admin, :newtool]) do
@@ -56,22 +65,34 @@
   = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
 
       
-.big.bold
-  =t(:where_q,:scope=>[:admin, :newtool]) 
+%table
+  %tr
+    %td{:width=>'160'}
+    %td
+      .big.bold
+        =t(:where_q,:scope=>[:admin, :newtool]) 
 %p
 = form.input :where, :label=>t(:where,:scope=>[:admin, :newtool]) do
   = form.select :where, FormConstants.where.map{|r| [r,r]}   
 
 =form.input :where_created, :label=>t(:which,:scope=>[:admin,:newtool])
 
-.big.bold
-  =t(:topic_q,:scope=>[:admin, :newtool]) 
+%table
+  %tr
+    %td{:width=>'160'}
+    %td
+      .big.bold
+        =t(:topic_q,:scope=>[:admin, :newtool]) 
 %p
 = form.input :topic, :label=>t(:topic,:scope=>[:admin, :newtool]) do
   = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => t(:topic_instruct,:scope=>[:admin,:newtool])
       
-.big.bold
-  =t(:expneeds_q, :scope=>[:admin, :newtool]) 
+%table
+  %tr
+    %td{:width=>'160'}
+    %td
+      .big.bold
+        =t(:expneeds_q, :scope=>[:admin, :newtool]) 
 %p
 = form.input :expertise_needed, :label=>t(:expneeds,:scope=>[:admin, :newtool]) do
   = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [r,r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])      
