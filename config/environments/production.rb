@@ -39,15 +39,15 @@ Cm::Application.configure do
   #TODO set url for production env
 
   config.action_mailer.default_url_options = { :host => Rails.configuration.app_domain } 
+  config.action_mailer.delivery_method = :smtp  
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com'
+    :enable_starttls_auto => true,
+    :address  => "smtp.gmail.com",
+    :port  => 587,
+    :user_name  => "brad@beyondthecube.ca",
+    :password  => "brad6726847",
+    :authentication  => :plain
   }
-  ActionMailer::Base.delivery_method = :smtp
   
   config.middleware.use ExceptionNotifier,
     :email_prefix => "[CM Exception] ",
