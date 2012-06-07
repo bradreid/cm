@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default :from => "#{Rails.configuration.app_name} no-reply@#{Rails.configuration.app_domain}", 
+  default :from => "#{Rails.configuration.app_name} <no-reply@#{Rails.configuration.app_domain}>", 
           :to => User.where(:is_admin => true).map(&:email), 
           "Reply-To" =>  "#{Rails.configuration.app_name} <no-reply@#{Rails.configuration.app_domain}>" 
   
