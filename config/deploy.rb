@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 set :application, "The Choice Matrix"
 set :repository,  "git@github.com:bradreid/cm.git"
 set :user, "btc"
@@ -44,19 +46,7 @@ namespace :deploy do
   end
 end
 
-namespace :bundler do
-  task :create_symlink, :roles => :app do
-    shared_dir = File.join(shared_path, 'bundle')
-    release_dir = File.join(current_release, '.bundle')
-    run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_dir}")
-  end
  
-  task :bundle_new_release, :roles => :app do
-    bundler.create_symlink
-    run "cd #{release_path} && bundle install --without test"
-  end
-end
- 
-after "deploy:update_code", "customs:config", 'bundler:bundle_new_release'
+after "deploy:update_code", "customs:config"
 after "deploy:symlink","customs:symlink"
 after "deploy", "deploy:cleanup"
