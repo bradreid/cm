@@ -27,6 +27,13 @@ gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
 
+
+
+group :assets do
+  gem 'therubyracer'
+  gem 'uglifier'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
