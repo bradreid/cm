@@ -18,69 +18,46 @@
 %br      
 %table{:border=>'0', :cellpadding=>'10'}
   %tr
-    %td{:width=>'40%', :valign=>'top'}
-      .title4.bold.big
-        =t :one, :scope=>[:reviews,:questions]
-    %td{:valign=>'top'}
-      -if @review.experience == 'never'
-        =t :one_never, :scope=>[:reviews,:questions]
-      -elsif @review.experience == 'once'
-        =t :one_tried, :scope=>[:reviews,:questions]
-      -elsif @review.experience == 'twice'
-        =t :one_twice, :scope=>[:reviews,:questions]
-      -else @review.experience == 'regularly'
-        =t :one_regularly, :scope=>[:reviews,:questions]
-  %tr
     %td{:valign=>'top'}
       .title4.bold.big
-        =t :two, :scope=>[:reviews,:questions]
+        =t :q_one, :scope=>[:reviews,:questions]
     %td{:valign=>'top'}
       =ranking_text(@review.community_context)
-      %p
-      =simple_format('Comment: ' + @review.community_context_comment).html_safe if @review.community_context_comment.present?
 
   %tr
     %td{:valign=>'top'}
       .title4.bold.big
-        =t :three, :scope=>[:reviews,:questions]
+        =t :q_two, :scope=>[:reviews,:questions]
     %td{:valign=>'top'}
       =ranking_text(@review.generates_results)
-      %p
-      =simple_format('Comment: ' + @review.generates_results_comment).html_safe if @review.generates_results_comment.present?
   
   %tr
     %td{:valign=>'top'}
       .title4.bold.big
-        =t :four, :scope=>[:reviews,:questions]
+        =t :q_thr, :scope=>[:reviews,:questions]
     %td{:valign=>'top'}
       =ranking_text(@review.resources_identified)
-      %p
-      =simple_format('Comment: ' + @review.resources_identified_comment).html_safe if @review.resources_identified_comment.present?
 
   %tr
     %td{:valign => 'top'}
       .title4.bold.big
-        =t :five, :scope=>[:reviews,:questions]
+        =t :q_fou, :scope=>[:reviews,:questions]
     %td{:valign=>'top'}
       =ranking_text(@review.format_presentation)
-      %p
-      =simple_format('Comment: ' + @review.format_presentation_comment).html_safe if @review.format_presentation_comment.present?
       
 
   %tr
     %td{:valign => 'top'}
       .title4.bold.big
-        =t :six, :scope=>[:reviews,:questions]
+        =t :q_fiv, :scope=>[:reviews,:questions]
     %td{:valign=>'top'}
       =ranking_text(@review.adaptable)
-      %p
-      =simple_format('Comment: ' + @review.adaptable_comment).html_safe if @review.adaptable_comment.present?
       
 
   %tr
     %td{:valign => 'top'}
       .title4.bold.big
-        =t :seven, :scope=>[:reviews,:questions]
+        =t :q_six, :scope=>[:reviews,:questions]
     %td{:valign=>'top'}
       - if @review.comment.present?
         =simple_format(@review.comment).html_safe
