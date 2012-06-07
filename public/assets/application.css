@@ -9860,7 +9860,7 @@ body {
 @font-face {
   font-family: 'FontAwesome';
   src: url('/assets/fontawesome-webfont.eot');
-  src: url('/assets/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fontawesome-webfont.woff') format('woff'), url('/assets/fontawesome-webfont.ttf') format('truetype'), url('/assets/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), url('/assets/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+  src: url('@{@fontAwesomeEotPath}?#iefix') format('embedded-opentype'), url('/assets/fontawesome-webfont.woff') format('woff'), url('/assets/fontawesome-webfont.ttf') format('truetype'), url('@{@fontAwesomeSvgzPath}#FontAwesomeRegular') format('svg'), url('@{@fontAwesomeSvgPath}#FontAwesomeRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -10385,6 +10385,17 @@ body {
 .field_with_errors {
   display: inline; }
 
+table.outter {
+  border-style: solid;
+  border-width: 2px;
+  border-collapse: collapse; }
+
+table.outter td {
+  border-style: none; }
+
+table.outter th {
+  border-style: none; }
+
 table.border {
   border-style: solid;
   border-width: 2px;
@@ -10542,6 +10553,13 @@ td.splash {
 .calendar {
   padding: 0 0 0 22px;
   background: url(../images/icons/calendar.png) no-repeat 0 30%; }
+
+.simple_form label {
+  float: left;
+  text-align: left; 
+}
+
+
 form div.field_with_errors > label, form div.field_with_errors span.help-inline, form div.field_with_errors span.help-block {
   color: #9d261d; }
 
