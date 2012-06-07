@@ -5,7 +5,7 @@
         =f.input :is_admin, :label => t(:is_admin?, :scope => :devise)
         =f.input :active,   :label => t(:active?,   :scope => :devise)
         
-      - if !self.controller.is_a? AdminController
+      - if !self.controller.is_a?(AdminController) && !@user.new_record?
         =f.input :current_password, :label => t(:password, :scope=>[:activerecord,:attributes,:user])
        
       =f.input :username, :label=> t(:username, :scope=>[:devise]), :required => true
