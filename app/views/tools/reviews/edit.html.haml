@@ -1,9 +1,11 @@
+.right
+  =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(@review.tool), :title => 'Tool Information Card')
 .page-header
   %h1
     =t :title, :scope=>[:reviews,:edit]
     %small
       =t :subtitle, :scope=>[:reviews,:edit]
-      =@review.tool.name
+      =@review.tool.name    
 
 %table{:width => '75%'}
   %tr
