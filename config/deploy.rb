@@ -11,7 +11,7 @@ role :db,  "rditools.brandonu.ca", :primary => true # This is where Rails migrat
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-set :deploy_to, "/srv/www/vhosts/rdi-tools-inventory"
+set :deploy_to, "/srv/www/vhosts/rdi-tools-inventory/"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
