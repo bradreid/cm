@@ -190,6 +190,7 @@ PLATFORMS
 DEPENDENCIES
   aws-s3
   bitly
+  capistrano
   country_select
   daemons
   delayed_job_active_record
