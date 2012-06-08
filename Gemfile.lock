@@ -49,6 +49,7 @@ GEM
     commonjs (0.2.6)
     country_select (1.0.0)
     crack (0.3.1)
+    daemons (1.1.8)
     delayed_job (3.0.3)
       activesupport (~> 3.0)
     delayed_job_active_record (0.3.2)
@@ -190,6 +191,7 @@ DEPENDENCIES
   aws-s3
   bitly
   country_select
+  daemons
   delayed_job_active_record
   devise
   exception_notification
