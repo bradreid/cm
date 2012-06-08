@@ -44,6 +44,6 @@ private
   end
   
   def send_email
-    Notifier.new_review(self).deliver
+    Notifier.delay.new_review(self)
   end  
 end

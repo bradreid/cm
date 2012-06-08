@@ -50,8 +50,8 @@ protected
   end
 
   def send_welcome_emails
-    Notifier.welcome(self).deliver rescue nil
-    Notifier.new_user(self).deliver rescue nil
+    Notifier.delay.welcome(self)
+    Notifier.delay.new_user(self)
   end    
   
   def set_user_description

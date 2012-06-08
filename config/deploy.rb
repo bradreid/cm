@@ -1,4 +1,5 @@
 require 'bundler/capistrano'
+require "delayed/recipes" 
 
 set :application, "The Choice Matrix"
 set :repository,  "git@github.com:bradreid/cm.git"
@@ -50,3 +51,6 @@ end
 after "deploy:update_code", "customs:config"
 after "deploy:symlink","customs:symlink"
 after "deploy", "deploy:cleanup"
+after "deploy:stop",    "delayed_job:stop"
+after "deploy:start",   "delayed_job:start"
+after "deploy:restart", "delayed_job:restart"
