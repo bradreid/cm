@@ -26,6 +26,7 @@ gem 'will-paginate-i18n'
 gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
+gem 'delayed_job_active_record'
 
 
 

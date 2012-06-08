@@ -50,6 +50,6 @@ class Tool < ActiveRecord::Base
 private
 
   def send_email
-    Notifier.new_tool(self).deliver
+    Notifier.delay.new_tool(self)
   end
 end
