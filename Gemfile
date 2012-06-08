@@ -27,9 +27,13 @@ gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
 gem 'delayed_job_active_record'
-gem 'rvm-capistrano'
 gem 'daemons'
-gem 'capistrano'
+
+
+group :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
 
 
 
