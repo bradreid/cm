@@ -29,6 +29,7 @@ gem 'country_select'
 gem 'delayed_job_active_record'
 gem 'rvm-capistrano'
 gem 'daemons'
+gem 'capistrano'
 
 
 
