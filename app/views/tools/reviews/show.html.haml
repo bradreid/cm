@@ -9,7 +9,8 @@
 
 
 =t :subtext_by, :scope=>[:reviews,:view]
-=@review.user ? link_to(@review.user.display_name, user_path(@review.user)) :  'Anonymous'
+=@review.user ? link_to(@review.user.display_name, user_path(@review.user)) : "#{@review.full_name} (#{@review.role})"
+
 %p
 =t :subtext_on, :scope=>[:reviews,:view]
 =@review.created_at.strftime("%A, %B %d, %Y, %l:%M%p")    

@@ -206,13 +206,13 @@
         %td
           =review_stars(r)
         %th
-          = r.user ? link_to(r.user.display_name, user_path(r.user)) : 'Anonymous'
+          = r.user ? link_to(r.user.display_name, user_path(r.user)) : r.full_name
         %td
           =r.created_at.strftime("%A, %B %d, %Y, %l:%M%p")
         %td
           %span{:style => 'white-space:nowrap'}
             =view_link tool_review_path(@tool, r) 
-            -if current_user.try(:is_admin?) || r.user == current_user
+            -if current_user.try(:is_admin?) || (current_user && r.user == current_user)
               |
               =edit_link [@tool, r]
               |
