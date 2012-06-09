@@ -1,6 +1,7 @@
 class Review < ActiveRecord::Base
   
   validates_presence_of :tool_id, :community_context, :generates_results, :resources_identified, :format_presentation, :adaptable
+  validates_presence_of :full_name, :role , :unless =>'user.present?'
   belongs_to :tool
   belongs_to :user
   before_save :add_rating
