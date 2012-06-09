@@ -1,3 +1,0 @@
-rvm use ruby-1.9.2-p318
-rvm gemset create cm
-rvm gemset use cm

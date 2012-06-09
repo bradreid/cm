@@ -1,3 +1,8 @@
+require 'bundler/capistrano'
+require "delayed/recipes" 
+require "rvm/capistrano" 
+
+set :rvm_ruby_string, '1.9.2@cm'
 set :application, "The Choice Matrix"
 set :repository,  "git@github.com:bradreid/cm.git"
 set :user, "btc"
@@ -32,6 +37,16 @@ namespace(:customs) do
   end
 end
 
+desc "remotely console"
+task :console, :roles => :app do
+  input = ''
+  run "cd #{current_path} && rvm use 1.9.2@cm && rails console #{ENV['RAILS_ENV']}" do |channel, stream, data|
+    next if data.chomp == input.chomp || data.chomp == ''
+    print data
+    channel.send_data(input = $stdin.gets) if data =~ /:\d{3}:\d+(\*|>)/
+  end
+end
+
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
@@ -44,6 +59,10 @@ namespace :deploy do
   end
 end
 
+ 
 after "deploy:update_code", "customs:config"
 after "deploy:symlink","customs:symlink"
 after "deploy", "deploy:cleanup"
+after "deploy:stop",    "delayed_job:stop"
+after "deploy:start",   "delayed_job:start"
+after "deploy:restart", "delayed_job:restart"

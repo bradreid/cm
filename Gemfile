@@ -15,17 +15,32 @@ gem 'paperclip', '=2.3.12'
 gem 'aws-s3'
 gem 'json'
 gem 'stemmer'
-gem 'texticle', '=1.0.3'
+gem 'texticle', '~> 2.0', :require => 'texticle/rails'
 gem 'http_accept_language'
 gem 'pg', '=0.12.2'
 gem 'exception_notification', :require => 'exception_notifier'
 gem "friendly_id"
 gem 'bitly'
 gem 'twitter', ">2.0.0"
-# gem 'will-paginate-i18n'
-# gem 'rails-i18n'
+gem 'will-paginate-i18n'
+gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
+gem 'delayed_job_active_record'
+gem 'daemons'
+
+
+group :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
+
+
+
+group :assets do
+  gem 'therubyracer'
+  gem 'uglifier'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
