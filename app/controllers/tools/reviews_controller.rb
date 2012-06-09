@@ -1,6 +1,6 @@
 class Tools::ReviewsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show]
-  prepend_before_filter :authenticate_message, :except => [:show]
+  before_filter :authenticate_user!, :except => [:show,:new,:create]
+  prepend_before_filter :authenticate_message, :except => [:show,:new,:create]
   
   def show
     @tool = Tool.find(params[:tool_id])   

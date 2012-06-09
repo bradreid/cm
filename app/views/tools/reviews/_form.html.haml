@@ -1,5 +1,16 @@
 %fieldset
 
+  -unless current_user
+    .clearfix.required
+      = form.label :full_name, 'Name:', :class => 'big'
+      = form.text_field :full_name
+  
+    %br
+    .clearfix.required
+      = form.label :role, 'Role:', :class => 'big'
+      = form.text_field :role 
+  
+  %br
   .clearfix.required
     = form.label :community_context, t(:q_one,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
