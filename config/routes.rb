@@ -10,6 +10,8 @@ Cm::Application.routes.draw do
       resource :stats do
         scope :module => 'stats' do
           resource :page_requests
+          resource :sections
+          resource :referrals
         end
       end
     end

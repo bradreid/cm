@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   end  
   
   def referrer
-    (request.env['HTTP_REFERER'] =~ /localhost|beyondthecube/).nil? ? request.env['HTTP_REFERRER'] : nil
+    (request.env['HTTP_REFERER'] =~ /localhost|rditools/).nil? ? request.referrer : nil
   end
   
   def default_log_hash
