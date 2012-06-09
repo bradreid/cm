@@ -19,8 +19,8 @@ private
   def set_date(range)
     begin
       unless range
-        @from_local = 1.year.ago + 1.day
-        @to_local = Time.now
+        @from_local = 1.year.ago
+        @to_local = Time.now + 1.day
         @from = @from_local
         @to = @to_local
         return 
