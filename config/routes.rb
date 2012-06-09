@@ -12,6 +12,7 @@ Cm::Application.routes.draw do
           resource :page_requests
           resource :sections
           resource :referrals
+          resource :search_terms
         end
       end
     end
