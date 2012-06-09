@@ -16,7 +16,7 @@
 - if @users
   = page_entries_info @users, :model => 'User' 
 %br
-%table.table
+%table.table{:border => 0}
   %thead
     %tr
       %th
@@ -56,10 +56,10 @@
           =status_image u.is_admin? 
         %td
           =u.created_at.to_date.to_formatted_s(:short_with_year)
-        %td
+        %td{:width => 80}
           %span{:style => 'white-space: nowrap'}
             =action_images [:admin, u], :exclude => [:index], :delete => {:title => t( (u.active? ? :alt_inact : :alt_act),:scope=>[:links]), :alt_text => t( (u.active? ? :alt_inact : :alt_act),:scope=>[:links]), :confirm => t( (u.active? ? :userdel_confirm : :useradd_confirm),:scope=>[:links]), :img_link=>(u.active? ? nil : 'link_icons/tick.png') }
       %tr
-    %td{:colspan => 5}
+    %td{:colspan => 10}
       = will_paginate @users, :renderer => 'WillPaginateHelper::LinkRenderer'          
           
