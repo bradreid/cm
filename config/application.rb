@@ -16,7 +16,7 @@ module Cm
     if Rails.env == 'development'
       config.app_domain = 'localhost:3000'
     else
-      config.app_domain = 'cm.beyondthecube.ca'    
+      config.app_domain = 'rditools.brandonu.ca'    
     end
 
     # Custom directories with classes and modules you want to be autoloadable.
