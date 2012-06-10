@@ -46,6 +46,7 @@ class ToolsController < ApplicationController
   end
   
   def show
+    @log_section = 'tic'
     @tool = Tool.find(params[:id])
     @log_tic = @tool # this is for the server request logs and reporting
     if params[:to_pdf].present?
