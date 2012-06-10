@@ -4,7 +4,7 @@ class PageRequestReport < Report
     today = @to.to_date
     d = {}
     (0..num_days).each do |day|
-      d.merge! today.to_s => [0,0]
+      d.merge! today.to_s => [0,0,0]
       today = today.yesterday
     end
     offset = 'America/Winnipeg'
