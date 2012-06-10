@@ -3,6 +3,7 @@ class Tools::ReviewsController < ApplicationController
   prepend_before_filter :authenticate_message, :except => [:show,:new,:create]
   
   def show
+    @log_section = 'tic review'
     @tool = Tool.find(params[:tool_id])   
     @review = @tool.reviews.find(params[:id]) 
     @log_review = @review # this is for the server request logs and reporting

@@ -4,6 +4,7 @@
     $(document).ready(function() {
       data = eval("#{@data.to_json}");
       data2 = eval("#{@data2.to_json}");
+      data3 = eval("#{@unique_users.to_json}");
     	chart = new Highcharts.Chart({
     		chart: {
     			renderTo: 'container',
@@ -72,6 +73,13 @@
     			pointInterval: 24 * 3600 * 1000,
     			pointStart: Date.UTC("#{@start_date.year}", "#{@start_date.month - 1}", "#{@start_date.day}"),
     			data: data2
+    		},
+        {
+    			type: 'spline',
+    			name: 'Unique Logged In users',
+    			pointInterval: 24 * 3600 * 1000,
+    			pointStart: Date.UTC("#{@start_date.year}", "#{@start_date.month - 1}", "#{@start_date.day}"),
+    			data: data3
     		}    		
     		]
     	});
