@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     {:page => params[:page], :per_page => 20}
   end
   
+  def shared_url
+    request.url.gsub(/\/(en|fr)/, '')
+  end
+
   protected
   
   def default_url_options(options={})
