@@ -1,7 +1,11 @@
+:javascript
+  // this is here so we can render a tab from a controller.  see MyPages#edit
+  anchor = "#{params[:anchor]}";
+
 .page-header
   %h1
     =t :title, :scope => [:search, :search]
     %small
       =t :subtitle, :scope => [:search, :search]
 =render :partial => 'search'
-=render :partial => 'shared/tic_search_results'
+

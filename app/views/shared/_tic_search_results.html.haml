@@ -5,8 +5,8 @@
     = page_entries_info @tools, :model => 'Tool'
   %br
   %br
-  %table#search_results{:border => '0', :cellspacing => 0}
-    %tbody#tools_body
+  %table.table
+    %tbody
       -@tools.each do |tool|
         %tr
           %td{:align => 'left', :valign => 'top', :style => 'padding-bottom:20px'}

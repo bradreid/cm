@@ -19,59 +19,47 @@
     = yield(:head)    
     = csrf_meta_tag  
     
-%body
+%body{:style => 'padding-left:0px'}
+  =render :partial => 'layouts/topbar'
   =render :partial => 'shared/facebook_js'
-  .clear_both
-  =render :partial => 'shared/users'
-  .clear_both  
   %center
     %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
-      %tr
-        %td#header{:align => 'center'}
-          -#-if current_user.try(:is_admin?)
-          -#  =link_to image_tag('template/header_title_short.png',:width => 498, :height => 116, :style => 'margin:0px;padding:0px;float:left;'), root_path           
-          -#-else
-          -#  =link_to image_tag('template/header_title.png', :style => 'margin:0px;padding:0px;float:left;'), root_path
-          =link_to image_tag('template/header_title_short.png',:width => 498, :height => 116, :style => 'margin:0px;padding:0px;float:left;'), root_path           
-          =link_to image_tag('template/header_people.png', :style => 'margin:0px;padding:0px;float:left;'), people_path
-          =link_to image_tag('template/header_green.png', :style => 'margin:0px;padding:0px;float:left;'), green_path
-          =link_to image_tag('template/header_grow.png', :style => 'margin:0px;padding:0px;float:left;'), grow_path        
-          =link_to image_tag('template/header_balanced.png', :style => 'margin:0px;padding:0px;float:left;'), balanced_path
-          =link_to image_tag('template/header_search.png', :style => 'margin:0px;padding:0px;float:left;'), search_path
-          -#- if current_user.try(:is_admin?)
-          -#  =link_to image_tag('template/header_phases_middle.png', :style => 'margin:0px;padding:0px;float:left;'), phases_path            
-          -#  =link_to image_tag('template/header_admin.png', :style => 'margin:0px;padding:0px;float:left;'), admin_index_path 
-          -#-else
-          -#  =link_to image_tag('template/header_phases.png', :style => 'margin:0px;padding:0px;float:left;'), phases_path
-          =link_to image_tag('template/header_phases.png', :style => 'margin:0px;padding:0px;float:left;'), phases_path
       %tr
         -if @splash
           %td.splash{:align => 'left'}
             .container
-              %br
-              %br
-              %br
-              #content
-                =render :partial => 'shared/flashes'  
+              =render :partial => 'shared/flashes'  
+              #content.well
+                %center
+                  %h3
+                    Easy to find Community Economic Development (CED) tools for you and your project. 
+                %br
+                %br
                 %center
                   =render :partial => 'shared/like_buttons'
                 %center
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}
                     %tr
-                      %td
+                      %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_people.png', :width => 200, :title=> t(:alt_people), :style => 'margin:0px;padding:0px;float:left;'), people_path                 
-                      %td
+                        %h1.front_page People
+                      %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_green.png', :width => 200, :title=> t(:alt_green), :style => 'margin:0px;padding:0px;float:left;'), green_path              
-                      %td
+                        %h1.front_page Green
+                      %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_grow.png', :width => 200, :title=> t(:alt_grow), :style => 'margin:0px;padding:0px;float:left;'), grow_path                    
+                        %h1.front_page Grow
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}                        
                     %tr
-                      %td
+                      %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_balanced.png', :width => 200, :title=> t(:alt_balanced), :style => 'margin:0px;padding:0px;float:left;'), balanced_path                  
-                      %td
+                        %h1.front_page Balanced                        
+                      %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_search.png', :width => 200, :title=> t(:alt_search), :style => 'margin:0px;padding:0px;float:left;'), search_path                  
-                      %td
+                        %h1.front_page Search                        
+                      %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_phases.png', :width => 200, :title=> t(:alt_phases), :style => 'margin:0px;padding:0px;float:left;'), phases_path                 
+                        %h1.front_page Phases                        
                       -#- if current_user.try(:is_admin?)
                       -#  %td
                       -#    =link_to image_tag('template/splash_button_admin.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), admin_index_path                 
@@ -81,16 +69,13 @@
                 =yield                     
         -else
           %td.body{:align => 'left'}
-            .container
-              %br
-              %br
-                #content
-                  =render :partial => 'shared/flashes'
-                  %br
-                  = yield          
+            =render :partial => 'shared/flashes'
+            .container.well
+              #content
+                = yield          
       %tr
         %td#footer{:height => 200, :valign => 'top'}
-          =link_to image_tag('template/footer.png'), 'http://www.beyondthecube.ca'
+          =render :partial => 'layouts/footer'
 
 
           

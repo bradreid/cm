@@ -7,6 +7,12 @@
       =t :subtitle, :scope=>[:reviews]
       =@tool.name
 
+- if !flash[:error_tic].blank?
+  %div.alert.alert-error
+    =link_to 'x', '#', :class => 'close'
+    %p
+      = flash[:error_tic]
+
 %table{:width => '75%'}
   %tr
     %td{:align => 'left'}

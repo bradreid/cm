@@ -11,7 +11,7 @@
       = form.text_field :role 
   
   %br
-  .clearfix.required
+  .clearfix.control-group.required
     = form.label :community_context, t(:q_one,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table{:width => '100%'}
@@ -51,7 +51,7 @@
                   =t :cna_one,  :scope=>[:reviews,:questions]
       
   %br    
-  .clearfix.required
+  .clearfix.control-group.required
     = form.label :generates_results, t(:q_two,:scope=>[:reviews,:questions]), :class => 'big'
     .input      
       %table{:width => '100%'}

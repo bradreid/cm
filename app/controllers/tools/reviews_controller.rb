@@ -60,6 +60,7 @@ class Tools::ReviewsController < ApplicationController
       flash[:notice] = t(:rev_submit,:scope=>[:notices])
       redirect_to tool_path(@tool)
     else
+      flash[:error_tic] = "Please correct the following:"
       render 'new'
     end
   end

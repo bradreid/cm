@@ -43,6 +43,12 @@ class ToolsController < ApplicationController
          @tools = arel_start.where("date_created <= ?", Date.parse("12/31/#{params[:to]}"))
       end      
       
+      if params[:advanced].present?
+        @atools = @tools
+        @tools = nil
+        params[:anchor] = 'advanced_search'
+      end
+      
   end
   
   def show
