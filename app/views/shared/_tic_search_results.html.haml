@@ -18,9 +18,9 @@
               =query_highlight(tool.description, params[:search]).html_safe
           %td{:valign => 'top', :style => 'padding-bottom:20px', :width => 75}
             %p{:style => 'white-space:nowrap;'}
-              =link_to(image_tag('icon_tic.png', :height => 35, :alt => 'Tool Information Card'), tool_path(tool), :title => 'Tool Information Card')
-              =link_to(image_tag('icon_pdf.png', :height => 35, :alt => 'Download Source Document'), tool.source_document.url, :title => 'Download Source Document') if tool.source_document_file_name
-              =link_to(image_tag('icon_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(tool), :title => 'Review Tool')
+              =link_to(image_tag('tools_info.png', :height => 35, :alt => 'Tool Information Card'), tool_path(tool), :title => 'Tool Information Card')
+              =link_to(image_tag('tools_pdf.png', :height => 35, :alt => 'Download Source Document'), tool.source_document.url, :title => 'Download Source Document') if tool.source_document_file_name
+              =link_to(image_tag('tools_review.png', :height => 35, :alt => 'Review Tool'), new_tool_review_path(tool), :title => 'Review Tool')
               &nbsp;
 
       %tr
