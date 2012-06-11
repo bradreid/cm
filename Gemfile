@@ -7,8 +7,8 @@ gem 'rails', '3.2.5'
 
 gem 'haml'
 gem 'sass-rails'
-gem "twitter-bootstrap-rails"     , :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'jquery-rails'                , :git => 'git://github.com/indirect/jquery-rails.git'
+gem "twitter-bootstrap-rails", "=2.0.7"
+gem 'jquery-rails'            
 gem 'devise'
 gem 'will_paginate'
 gem 'paperclip', '=2.3.12'

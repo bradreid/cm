@@ -63,7 +63,7 @@ module LinkHelper
     a << [ view_link(context, options.merge(options[:show] || {}))] unless options[:exclude].include?(:show)
     a << [ edit_link(context, options.merge(options[:edit] || {}))] unless options[:exclude].include?(:edit)
     a << [ delete_link(context, options[:delete])] unless options[:exclude].include?(:delete) 
-    a.flatten.compact.join( ' | ').html_safe
+    a.flatten.compact.join( ' ').html_safe
   end
   
   def delete_link_text(context, new_opts = {}, path_opts = {})
@@ -95,7 +95,7 @@ module LinkHelper
     a << [ view_link_text(context, options.merge(options[:show] || {}))] unless options[:exclude].include?(:show)
     a << [ edit_link_text(context, options.merge(options[:edit] || {}))] unless options[:exclude].include?(:edit)
     a << [ delete_link_text(context, options.merge(options[:delete] || {}))] unless options[:exclude].include?(:delete) 
-    a.flatten.compact.join( ' | ').html_safe
+    a.flatten.compact.join( ' ').html_safe
   end
   
   def exclude_actions(exclude=nil)

@@ -1,18 +1,18 @@
 #flashes
   - if !flash[:notice].blank?
-    %div.alert-message.success
+    %div.alert.alert-success
       =link_to 'x', '#', :class => 'close'
       %p
         = flash[:notice]
 
   - if !flash[:error].blank?
-    %div.alert-message.error
+    %div.alert.alert-error
       =link_to 'x', '#', :class => 'close'
       %p
         = flash[:error]
         
   - if !flash[:warn].blank?
-    %div.alert-message.warn
+    %div.alert.alert-block
       =link_to 'x', '#', :class => 'close'
       %p
         = flash[:warn]        

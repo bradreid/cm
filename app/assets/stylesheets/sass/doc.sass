@@ -1,23 +1,36 @@
+.field_with_errors label
+  color: #B94A48
+.front_page
+  color: #104B69
+.navbar a.brand
+  color: white
+  &:hover
+    color: lightgray
+.navbar .nav li a
+  color: white
+  &:hover
+    color: lightgray
 
+.navbar .nav li .dropdown-menu a 
+  color: black
+  &:hover
+    color: white
 
-.container
-  :width 940px
 .highlight1row
-  :background-color #D2B9D3     
+  :background-color #e1eafe     
 .highlight2row
-  :background-color #D2B9D3     
+  :background-color #e1eafe     
 .step1clickable
   :cursor default
 .step1clickable:hover 
-  :background-color #e1eafe
+  :background-color white
   
 .step2clickable  
   :cursor default
 .step2clickable:hover 
-  :background-color #e1eafe 
+  :background-color white 
    
 body
-  :background-image url(image-path('template/bg.jpg'))
   :padding-top 0px
 .highlight
   :background #fff
@@ -153,18 +166,11 @@ table.hover tbody td:hover
   :overflow visible
   :font-size 120%
   :padding 10px
-  a
-    :color white
-    :text-decoration underline
 #content
   :min-height 300px
   :height auto!important
   :height 500px  
 
-td.body
-  :background-image url(image-path('template/body.png'))
-td.splash
-  :background-image url(image-path('template/body.png'))
   
 .calendar
   :padding 0 0 0 22px

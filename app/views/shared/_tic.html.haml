@@ -185,7 +185,7 @@
 -if !reviews.any?
   =t :norevs, :scope=>[:tic]
 -else
-  %table.data
+  %table.table
     %tr
       -if current_user.try(:is_admin?) || @tool.reviews.inactive_by_user(current_user).any?
         %th
@@ -213,9 +213,9 @@
           %span{:style => 'white-space:nowrap'}
             =view_link tool_review_path(@tool, r) 
             -if current_user.try(:is_admin?) || (current_user && r.user == current_user)
-              |
+              
               =edit_link [@tool, r]
-              |
+              
               =delete_link toggle_active_tool_review_path(r.tool, r), :confirm => t(:rusure,:scope=>[:links]) + ' ' + (r.active? ? t(:revdel_confirm,:scope=>[:links]) : t(:revadd_confirm,:scope=>[:links])), :title => (r.active? ? t(:alt_deact,:scope=>[:links]) : t(:alt_act,:scope=>[:links])), :alt_text => (r.active? ? t(:alt_deact,:scope=>[:links]) : t(:alt_act,:scope=>[:links])), :method => :get, :img_link => (r.active? ? nil : 'link_icons/tick.png')
 
 %br
