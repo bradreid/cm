@@ -397,11 +397,11 @@ fr:
       section:      "Section du Site Internet"
       percent:      "Pourcentage"
       generate:     "Générer Un Rapport"
-      date_seven:   Last 7 Days
-      date_fourt:   Last 14 Days
-      date_lastday: Last 30 Days
-      date_month:   Month to Date
-      date_lastmth: Previous Month
-      date_year:    Year to Date
-      date_lastyr:  Previous Year
+      date_seven:   "7 Derniers Jours"
+      date_fourt:   "14 Derniers Jours"
+      date_lastday: "30 Derniers Jours"
+      date_month:   "Mois à Ce Jour"
+      date_lastmth: "Mois Précédent"
+      date_year:    "Année à Ce Jour"
+      date_lastyr:  "Année Précédente"
       date_custom:  "Plage de Dates Personnalisée"

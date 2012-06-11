@@ -3,15 +3,15 @@
   $(document).ready(function(){
     var x = $(".report_generation #from");
     var presetRanges = [
-      {text: 'Last 7 days', dateStart: 'today-7days', dateEnd: 'today' },
-      {text: 'Last 14 days', dateStart: 'today-14days', dateEnd: 'today' },
-      {text: 'Last 30 Days', dateStart: 'Today-30', dateEnd: 'Today' },
+      {text: "#{t(:date_seven,:scope=>[:admin,:stats])}", dateStart: 'today-7days', dateEnd: 'today' },
+      {text: "#{t(:date_fourt,:scope=>[:admin,:stats])}", dateStart: 'today-14days', dateEnd: 'today' },
+      {text: "#{t(:date_lastday,:scope=>[:admin,:stats])}", dateStart: 'Today-30', dateEnd: 'Today' },
 
-      {text: 'Month to date', dateStart: function(){ return Date.parse('today').moveToFirstDayOfMonth();  }, dateEnd: 'today' },
-      {text: 'Previous Month', dateStart: function(){ return Date.parse('1 month ago').moveToFirstDayOfMonth();  }, dateEnd: function(){ return Date.parse('1 month ago').moveToLastDayOfMonth();  } },
+      {text: "#{t(:date_month,:scope=>[:admin,:stats])}", dateStart: function(){ return Date.parse('today').moveToFirstDayOfMonth();  }, dateEnd: 'today' },
+      {text: "#{t(:date_lastmth,:scope=>[:admin,:stats])}", dateStart: function(){ return Date.parse('1 month ago').moveToFirstDayOfMonth();  }, dateEnd: function(){ return Date.parse('1 month ago').moveToLastDayOfMonth();  } },
 
-      {text: 'Year to date', dateStart: function(){ var x= Date.parse('today'); x.setMonth(0); x.setDate(1); return x; }, dateEnd: 'today' },
-      {text: 'Previous year', dateStart: function(){ return Date.parse('Jan 01 ' + (Date.today().getFullYear() - 1) + ' 00:00:00 GMT-0600') }, dateEnd: function(){ return Date.parse('Dec 31 ' + (Date.today().getFullYear() - 1) + ' 23:59:59 GMT-0600') } }
+      {text: "#{t(:date_year,:scope=>[:admin,:stats])}", dateStart: function(){ var x= Date.parse('today'); x.setMonth(0); x.setDate(1); return x; }, dateEnd: 'today' },
+      {text: "#{t(:date_lastyr,:scope=>[:admin,:stats])}", dateStart: function(){ return Date.parse('Jan 01 ' + (Date.today().getFullYear() - 1) + ' 00:00:00 GMT-0600') }, dateEnd: function(){ return Date.parse('Dec 31 ' + (Date.today().getFullYear() - 1) + ' 23:59:59 GMT-0600') } }
     ];
 
     x.daterangepicker({
