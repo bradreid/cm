@@ -1,4 +1,5 @@
-
+.page-header
+  %h1=t(:login,:scope=>[:devise])
 = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html=>{:class=>'form-horizontal'} ) do |f| 
   %br
   = f.input :login, :label => t(:username, :scope => :devise)
