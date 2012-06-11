@@ -19,7 +19,7 @@
         %ul.nav.pull-right{:style => 'font-size: 120%;color:white'}
           - if current_user.try(:is_admin?) 
             %li= link_to( t(:title,:scope=>[:admin]), admin_index_path , :class => 'nav_link')
-          - if (current_user.try(:is_admin?) || Rails.env == 'development') && !['update', 'create'].include?(params[:action])
+          - if !['update', 'create'].include?(params[:action])
             - if I18n.locale != :fr
               %li= link_to t(:switchfrench), url_for(:locale => :fr), :class => 'nav_link'
             -else
