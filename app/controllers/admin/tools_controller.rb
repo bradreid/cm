@@ -44,7 +44,7 @@ class Admin::ToolsController < AdminController
     @tool = Tool.find(params[:id])
     @tool.destroy
     flash[:notice] = t(:tool_del, :scope=>[:notices])+ " #{@tool.name}"
-    redirect_to admin_tools_path
+    redirect_to :back
   end
   
 private
