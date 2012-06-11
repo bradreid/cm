@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   after_filter :log_request 
   
-  helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?
+  helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?, :shared_url
   
 
   def default_pagination_params
