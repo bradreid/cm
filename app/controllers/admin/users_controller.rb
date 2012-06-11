@@ -22,7 +22,7 @@ class Admin::UsersController < AdminController
     @user = User.find(params[:id])
     @user.update_attribute(:active, !@user.active)
     flash[:notice] = t( (@user.active? ? :user_act: :user_deact),:scope=>[:notices])+" #{@user.login}" 
-    redirect_to admin_users_path
+    redirect_to :back
   end
   
   def update
