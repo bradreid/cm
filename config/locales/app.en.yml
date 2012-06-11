@@ -404,3 +404,11 @@ en:
       section:      Website Section
       percent:      Percentage
       generate:     Generate Report
+      date_seven:   Last 7 Days
+      date_fourt:   Last 14 Days
+      date_lastday: Last 30 Days
+      date_month:   Month to Date
+      date_lastmth: Previous Month
+      date_year:    Year to Date
+      date_lastyr:  Previous Year
+      date_custom:  Custom Dage Range
