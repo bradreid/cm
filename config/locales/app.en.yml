@@ -1,4 +1,6 @@
 en:
+  dev:          "Developed by"
+  logo:         "THE CHOICE MATRIX"
   switchfrench: "Français"
   switchenglish: English
   button_cancel: Cancel
@@ -38,6 +40,7 @@ en:
     back_admin: Back to Admin
     back_users: Back to Users
     back_tools: Back to Tools
+    back_stats: Back to Stats
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
@@ -94,10 +97,10 @@ en:
         author_subtext: Return tools written by
         language: Language
         language_subtext: Return tools written in this language
-        language_instruct: Please select the language in which the tool is written
+        language_instruct: Please select a language 
         rating: Rating
         rating_subtext: Tools with at least this rating
-        rating_instruct: Please select the rating to search by
+        rating_instruct: Please select a rating 
         datecreated: Date Created
         datecreated_subtext: Return tools published between
         datecreated_eg: e.g. 1996
@@ -290,7 +293,7 @@ en:
     heading_when: When
     heading_why: Why
     heading_details: Tool Details
-    norevs: This tool has not been reviewed
+    norevs: This tool has not been reviewed.
     equipneeds: Equipment/Facilities Needed
     expneeds: Expertise Needed
     lang: Language
@@ -321,6 +324,7 @@ en:
   admin:
     full_title: Admin
     title: Admin
+    edit_profile: Edit My Profile
     subtitle: Manage the website
     sec_tools: Tools
     sec_accounts: Accounts
@@ -384,7 +388,19 @@ en:
       title_edit: Edit user account
       button_edit: Update Account
     stats: 
-      subtitle: View site reports
-      pagereqs: Page Requests
-      pagereqs_sub: View summary of page requests
-      otherstats: View other statistics
+      subtitle:     View site reports
+      otherstats:   View other statistics
+      pagereqs:     "Site Traffic: Page Requests and Unique Visitors"
+      pagereqs_sub: View traffic over time
+      sections:     Preferred Usage By Sections
+      sections_sub: View accumulative usage
+      referrals:    How Visitors Get Here
+      referral_sub: Pages Users Come From
+      referer:      Referral Page
+      search:       Most Frequently Used Search Terms 
+      search_sub:   View accumulative searches
+      term:         Search Term
+      count:        Count
+      section:      Website Section
+      percent:      Percentage
+      generate:     Generate Report

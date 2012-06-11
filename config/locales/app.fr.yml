@@ -1,9 +1,11 @@
 fr:
-  switchfrench: "Hé ça."
+  dev:          "Développé par"
+  logo:         "LA MATRICE DE CHOIX"
+  switchfrench:  French
   switchenglish: English
   button_cancel: "Hé ça."
-  check_yes: "Hé ça."
-  check_no:  "Hé ça."
+  check_yes: "Oui"
+  check_no:  "Non"
   alt_people:           "Hé ça."
   alt_green:            "Hé ça."
   alt_grow:             "Hé ça."
@@ -35,9 +37,10 @@ fr:
   alt_impl:             "Hé ça."
   alt_rev:              "Hé ça."
   nav_buttons:
-    back_admin: Back to Admin
-    back_users: Back to Users
-    back_tools: Back to Tools
+    back_admin: "Retour à l'Admin"
+    back_users: "Retour à des Utilisateurs"
+    back_tools: "Retour à Outils"
+    back_stats: "Retour à Statistique"
   notices:
     tool_edit: You successfully updated the tool named
     tool_create: You successfully created the new tool named
@@ -62,19 +65,19 @@ fr:
     alt_del: "Hé ça."
   search:
     people:
-      title: "Hé ça."
+      title:    "Personnes"
       subtitle: "Hé ça."
     green:
-      title: "Hé ça."
+      title:    "Vert"
       subtitle: "Hé ça."
     grow:
-      title: "Hé ça."
+      title:    "Croître"
       subtitle: "Hé ça."
     balanced:
-      title: "Hé ça."
+      title:    "Équilibré"
       subtitle: "Hé ça."
     search:
-      title: "Hé ça."
+      title:    "Rechercher"
       subtitle: "Hé ça."
       button_basic: "Hé ça."
       button_advanced: "Hé ça."
@@ -96,7 +99,7 @@ fr:
         button_hide: "Hé ça."
         button_show: "Hé ça."
     phases:
-      title: "Hé ça."
+      title:    "Phases"
       subtitle: "Hé ça."
       step_one: "Hé ça."
       step_one_text: "Hé ça."
@@ -145,11 +148,11 @@ fr:
         proce:      "Hé ça."
         commun:     "Hé ça."
     topic:
-      peop: "Hé ça."
-      gree: "Hé ça."
-      grow: "Hé ça."
-      bala: "Hé ça."
-      none: "Hé ça."
+      peop: "Personnes"
+      gree: "Vert"
+      grow: "Croître"
+      bala: "Équilibré"
+      none: "Aucun"
     where:
       local: "Hé ça."
       municipal: "Hé ça."
@@ -317,8 +320,9 @@ fr:
     nov: "Hé ça."
     dec: "Hé ça."
   admin:
-    full_title: "Hé ça."
-    title: "Hé ça."
+    full_title:   "Admin"
+    title:        "Admin"
+    edit_profile: "Modifier Mon Profil"
     subtitle: "Hé ça."
     sec_tools: "Hé ça."
     sec_accounts: "Hé ça."
@@ -376,3 +380,20 @@ fr:
       subtitle_new: "Hé ça."
       title_edit: "Hé ça."
       button_edit: "Hé ça."
+    stats: 
+      subtitle:     View site reports
+      otherstats:   View other statistics
+      pagereqs:     "Site Traffic: Page Requests and Unique Visitors"
+      pagereqs_sub: View traffic over time
+      sections:     "Utilisation Privilégiée Par Les Sections"
+      sections_sub: "Afficher L'utilisation Cumulative"
+      referrals:    How Visitors Get Here
+      referral_sub: Pages Users Come From
+      referer:      Referral Page
+      search:       Most Frequently Used Search Terms 
+      search_sub:   "Hé ça."
+      term:         "Hé ça."
+      count:        "Compter"
+      section:      "Section du Site Internet"
+      percent:      "Pourcentage"
+      generate:     "Générer Un Rapport"

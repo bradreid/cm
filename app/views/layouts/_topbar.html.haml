@@ -6,16 +6,16 @@
         %span.icon-bar
         %span.icon-bar
 
-      = link_to 'THE CHOICE MATRIX', root_path, :id=>"logo", :class=>"brand nav_link", :style => 'font-size:24px;color:white;'
+      = link_to t(:logo), root_path, :id=>"logo", :class=>"brand nav_link", :style => 'font-size:24px;color:white;'
 
       .nav-collapse
         %ul.nav{:style => 'font-size: 120%'}
-          %li= link_to "People",   people_path, :class => 'nav_link'
-          %li= link_to "Green",    green_path, :class => 'nav_link'
-          %li= link_to "Grow", grow_path, :class => 'nav_link'
-          %li= link_to "Balanced", balanced_path, :class => 'nav_link'
-          %li= link_to "Search", search_path, :class => 'nav_link'
-          %li= link_to "Phases", phases_path, :class => 'nav_link'
+          %li= link_to t(:title,:scope=>[:search,:people]),   people_path, :class => 'nav_link'
+          %li= link_to t(:title,:scope=>[:search,:green]),    green_path, :class => 'nav_link'
+          %li= link_to t(:title,:scope=>[:search,:grow]), grow_path, :class => 'nav_link'
+          %li= link_to t(:title,:scope=>[:search,:balanced]), balanced_path, :class => 'nav_link'
+          %li= link_to t(:title,:scope=>[:search,:search]), search_path, :class => 'nav_link'
+          %li= link_to t(:title,:scope=>[:search,:phases]), phases_path, :class => 'nav_link'
         %ul.nav.pull-right{:style => 'font-size: 120%;color:white'}
           - if current_user.try(:is_admin?) 
             %li= link_to( t(:title,:scope=>[:admin]), admin_index_path , :class => 'nav_link')
@@ -33,9 +33,9 @@
                 %b.caret
               %ul.dropdown-menu
                 %li
-                  =link_to 'Edit My Profile', edit_user_registration_path                                       
+                  =link_to t(:edit_profile,:scope=>[:admin]), edit_user_registration_path                                       
                 %li
-                  =link_to 'Sign out', destroy_user_session_path
+                  =link_to t(:logout,:scope=>[:devise]), destroy_user_session_path
             -else  
               %li=link_to( t(:login,:scope=>[:devise]), new_user_session_path )        
      

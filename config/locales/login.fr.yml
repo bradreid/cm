@@ -3,8 +3,8 @@ fr:
     username: french
     password: french
     confirm_password: french
-    login: french
-    logout: french
+    login:       "Connectez-Vous"
+    logout:      "Déconnectez-Vous"
     remember_me: french
     sign_up: french
     cancel: french

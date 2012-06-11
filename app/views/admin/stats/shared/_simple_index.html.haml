@@ -26,5 +26,5 @@
         %div.calendar.left_float
           = text_field_tag :from, params[:from] || "#{1.year.ago.strftime('%m/%d/%Y')} - #{(Time.now + 1.day).strftime('%m/%d/%Y')}", {:id => "from" }
       %td
-        = submit_tag 'Generate Report', :class => "btn btn-primary"
+        = submit_tag t(:generate, :scope=>[:admin,:stats]), :class => "btn btn-primary"
 

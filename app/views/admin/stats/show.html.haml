@@ -8,12 +8,15 @@
           %i.icon-arrow-left
           =t :back_admin, :scope=>[:nav_buttons]
 
-%ul
+%ul.big
   %li
     =link_to t(:pagereqs,:scope=>[:admin,:stats]), new_admin_stats_page_requests_path
+  %br
   %li
-    =link_to 'Sections', new_admin_stats_sections_path    
+    =link_to t(:sections,:scope=>[:admin,:stats]), new_admin_stats_sections_path    
+  %br
   %li
-    =link_to 'Referrals', new_admin_stats_referrals_path
+    =link_to t(:referrals,:scope=>[:admin,:stats]), new_admin_stats_referrals_path
+  %br
   %li
-    =link_to 'Search Terms', new_admin_stats_search_terms_path
+    =link_to t(:search,:scope=>[:admin,:stats]), new_admin_stats_search_terms_path
