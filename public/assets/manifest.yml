@@ -4,9 +4,9 @@ Search.png: Search-239e57574e540d76d6a74b1038e27b56.png
 bg_white80.png: bg_white80-26fca33fbf342b5178ddd917581f2a10.png
 check_mark.png: check_mark-7f497414a864c9e80654b160316c782e.png
 grid-18px.png: grid-18px-51df583e2de3a6ddc17d5f0e934f2d49.png
-icon_pdf.png: icon_pdf-999bd3d8398cd1d50e53426f4743407d.png
-icon_review.png: icon_review-8f61fc0058670c56013e23e35961eef5.png
-icon_tic.png: icon_tic-d5ab982e9006ab89ec15cc03318395ba.png
+icon_old_pdf.png: icon_old_pdf-999bd3d8398cd1d50e53426f4743407d.png
+icon_old_review.png: icon_old_review-8f61fc0058670c56013e23e35961eef5.png
+icon_old_tic.png: icon_old_tic-d5ab982e9006ab89ec15cc03318395ba.png
 icons/calendar.png: icons/calendar-a54425b6e0745578397358737e428fa9.png
 jquery-ui-theme-custom/ui-bg_diagonals-medium_60_e3eef4_40x40.png: jquery-ui-theme-custom/ui-bg_diagonals-medium_60_e3eef4_40x40-e9f438f5699ced5b69245a926e92d292.png
 jquery-ui-theme-custom/ui-bg_flat_0_308abb_40x100.png: jquery-ui-theme-custom/ui-bg_flat_0_308abb_40x100-ccccfab67264f8d944d40d8aaf7b9bd3.png
@@ -76,6 +76,9 @@ template/splash_button_grow.png: template/splash_button_grow-4de10b764decdeddae5
 template/splash_button_people.png: template/splash_button_people-444adf0ac404a0f3fae1f920ea03e6df.png
 template/splash_button_phases.png: template/splash_button_phases-5d35e5f9bc3a21067a2b314d1f425bce.png
 template/splash_button_search.png: template/splash_button_search-c50689cc79ab81c0027c6ce515eea559.png
+tools_info.png: tools_info-583f6bff073f5521f8e3279a59c24c2e.png
+tools_pdf.png: tools_pdf-1aad1d7ea399ea82f91117ecb1ea58e3.png
+tools_review.png: tools_review-3784b07b194d41e1cb98aa75fd05b317.png
 topbar.jpg: topbar-e8ce52a706692a9abc9169e8e5a10aa2.jpg
 application.js: application-7b61c587aac176334cef4f2b030c3712.js
 application.css: application-cd8e980fdc47fec44f6441d0e258be01.css
