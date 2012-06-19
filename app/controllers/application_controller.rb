@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   protected
   
   def redirect_in_production
-    if Rails.env == 'development' && request.env['HTTP_HOST'] =~ /(cm\.beyondthecube\.ca)/
+    if Rails.env == 'production' && request.env['HTTP_HOST'] =~ /(cm\.beyondthecube\.ca)/
       redirect_to 'http://www.choicematrix.ca'
       return false
     end
