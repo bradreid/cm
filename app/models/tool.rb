@@ -2,8 +2,8 @@ class Tool < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
     
-  has_attached_file :source_document, :path => "/:style/:filename", :url => "/system/:style/:filename"
-  # has_attached_file :source_document, :path => '/system/tools/:id/:style/:filename'
+  #has_attached_file :source_document, :path => "/:style/:filename", :url => "/system/:style/:filename"
+  has_attached_file :source_document, :path => ':rails_root/public/system/tools/:id/:style/:filename', :url => '/system/tools/:id/:style/:filename'
   
   validates_presence_of :name, :source_document_name, :source_url, :author, :language, :description, :when, :why, :topic, :copyright
   validates_uniqueness_of :name
