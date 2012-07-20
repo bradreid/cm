@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    errors:
+      template:
+        header:
+          one:   "Nos excuses, 1 erreur a empêché la sauvegarde du formulaire"
+          other: "Nos excuses, %{count} erreurs ont empêché la sauvegarde du formulaire."
+    attributes:
+      user:
+        password: Current password

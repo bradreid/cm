@@ -1,48 +1,48 @@
 fr:
   devise:
-    username: french
-    password: french
-    confirm_password: french
-    login:       "Connectez-Vous"
-    logout:      "Déconnectez-Vous"
-    remember_me: french
-    sign_up: french
-    cancel: french
-    is_admin?: french
-    active?: french
-    forgot_your_password?: french
-    mandatory_field: french
-    optional_field: french
-    first_name: french
-    last_name: french
-    email: french
-    email_new_tools:         french
-    email_new_reviews:       french
-    email_new_user:          french
-    send_reset_instructions: french
-    back_to_login: french
-    create_an_account: french
-    account_edit_title: french
-    account_edit_subtitle: french
-    account_creation_message: french
-    in_the_future: french
-    rdi_appreciates: french
-    legend: french
-    mandatory: french
-    optional: french
-    will_be_displayed: french
-    will_not_be_displayed: french
-    current_role: french
-    organization: french
-    city_town: french
-    state_province: french
-    country: french
-    address: french
-    years_of_experience: french
-    professional_training: french
-    hello: french
-    reset_request: french
-    change_my_password: french
-    didnt_request: french
-    wont_change: french
+    username: "Nom d’utilisateur"
+    password: "Mot de passe"
+    confirm_password: "Confirmer le mot de passe"
+    login:       "Ouverture de session"
+    logout:      "Fermeture de session"
+    remember_me: Se souvenir de moi
+    sign_up:     Vous inscrire
+    cancel:      Annuler
+    is_admin?:   Est-ce admin?
+    active?:     Actif?
+    forgot_your_password?: Oublier votre mot de passe?
+    mandatory_field:       Obligatoire
+    optional_field:        En option
+    first_name:            "Prénom"
+    last_name:             Surnom
+    email:                    Courriel
+    email_new_tools:          to be translated
+    email_new_reviews:        to be translated
+    email_new_user:           to be translated
+    send_reset_instructions:  "Envoyer les instructions de réinitialisation"
+    back_to_login:            "Retour à l’inscription"
+    create_an_account:        "Créer un compte"
+    account_edit_title:       to be translated
+    account_edit_subtitle:    to be translated
+    account_creation_message: "En s’incrivant pour évaluer un Outil de développement économique, l’évaluateur donne son consentement en donnant son nom, le nom de l’organisation et son / titre et accepte que cet information devienne publique avec la révision de l’outil."
+    in_the_future:            "Tout évaluateur d’outil qui voudra à l’avenir soit modifier une révision d’un outil qu’il a déjà évalué ou pour supprimer une évaluation déjà sur le site web, pourra informer la Rural Development Institute de sa décision par courriel au  <rdi@brandonu.ca> . L :es évaluateurs sont priés d’inclure le sujet Révision de outils CED." 
+    rdi_appreciates:          "La Rural Development Institute apprécie sincèrement les efforts des personnes contribuant à l’évaluation des outils de développement communautaire."
+    legend:                   "Légende"
+    mandatory:                "Obligatoire = Le champ doit être rempli."
+    optional:                 "En option = L’examinateur consent à donner de l’information dans ce champ."
+    will_be_displayed:        "Sera affiché = Affiche l’information avec l’outil révisé (afficher dans un texte simple, petite boîte de  texte, tout information fourni par l’examinateur."
+    will_not_be_displayed:    "Ne sera pas affiché = Ne pas afficher l’information;(L’information représente les données pour l’administration et recherches seulement)."
+    current_role:             "Rôle actuel/Titre"
+    organization:             "Organisation"
+    city_town:                "Lieu de travail: Ville/Village"
+    state_province:           "Place de travail: État/Province"
+    country:                  "Pays"
+    address:                  "Adresse"
+    years_of_experience:      "Années d’expérience dans le développement communautaire"
+    professional_training:    "Formation professionnelle ou accréditation dans le développement communautaire ou autre domaine"
+    hello:                    Bienvenue
+    reset_request:            "Quelqu’un a demandé un lien pour changer votre mot de passe, et vous pouvez le faire par l’intermédiaire  du lien ci-dessous."
+    change_my_password:       to be translated
+    didnt_request:            "Si vous n’avez pas demandé cela, veuillez ignorer ce courriel."
+    wont_change:              "Votre mot de passe ne changera pas jusqu’à vous accédez ce lien."
     

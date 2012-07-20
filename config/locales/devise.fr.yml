@@ -1,0 +1,51 @@
+en:
+  errors:
+    messages:
+      expired:           "a expiré, s’il vous plait en demander un nouveau"
+      not_found:         "pas trouvée"
+      already_confirmed: "a déjà été confirmée, veuillez essayer de vous connecter"
+      not_locked:        "n’a pas été verrouillé"
+      not_saved:
+        one:   "1 erreur a empèché cette %{resource} d’être sauvegardée:"
+        other: "%{count} erreurs on tempêchées cette %{resource} d’être sauvegardée:"
+
+  devise:
+    failure:
+      already_authenticated: "Vous êtes déjà connecté."
+      unauthenticated:       "Vous devez vous connecter ou inscrivez-vous avant de continuer."
+      unconfirmed:   "Vous devez confirmer votre compte avant de continuer."
+      locked:        "Votre compte est verouillé."
+      invalid:       "Courriel ou mot de passé invalide."
+      invalid_token: "Jeton d’autenthification valide."
+      timeout:       "Votre session a expiré, veuillez vous connecter à nouveau pour continuer."
+      inactive:      "Votre compte n’a pas encore été activé."
+    sessions:
+      signed_in:     "Connecté avec succès."
+      signed_out:    "Déconnecté avec succès."
+    passwords:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions sur la façon de réinitialiser votre mot de passe dans quelques minutes."
+      updated:           "Votre mot de passé a été change avec succès. Vous pouvez maintenant vous connecter."
+      send_paranoid_instructions: "Si votre courriel existe sur notre base de données, vous recevrez un lien de récupération de mot de passe sur votre adresse."
+    confirmations:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions sur la façon de confirmer votre compte en quelques minutes."
+      send_paranoid_instructions: "Si votre e-mail existe sur notre base de données, vous recevrez un email avec des instructions sur la façon de confirmer votre compte en quelques minutes."
+      confirmed:         "Votre compte a été confirmé avec succès. Vous êtes maintenant inscrit."
+    registrations:
+      signed_up:          "Bienvenue! Vous vous êtes inscrit avec succès."
+      inactive_signed_up: "Vous êtes inscrit avec succès. Cependant, nous ne pouvions pas vous connecter car votre compte est %{reason}."
+      updated:            "Vous avez mis à jour votre compte avec succès."
+      destroyed:          "Votre compte a été annulé. Nous espérons vous revoir bientôt."
+    unlocks:
+      send_instructions:  "Vous allez recevoir un email avec des instructions sur la façon de déverrouiller votre compte en quelques minutes."
+      unlocked:           "Votre compte a été débloqué. Vous êtes maintenant inscrit."
+      send_paranoid_instructions: "Si votre compte existe, vous recevrez un courriel avec des instructions sur la façon de le débloquer en quelques minutes."
+    omniauth_callbacks:
+      success:  "Autorisé avec succès de %{kind} account."
+      failure:  "Nous ne pouvons pas vous autoriser %{kind} à cause "%{reason}"."
+    mailer:
+      confirmation_instructions:
+        subject:    "Autorisation de confirmation"
+      reset_password_instructions:
+        subject:    "Les instructions de réinitialisation de mot de passe"
+      unlock_instructions:
+        subject:    "Instructions pour déverouiller"
