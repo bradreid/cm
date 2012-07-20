@@ -6,36 +6,36 @@ fr:
   button_cancel: Annuler
   check_yes:     Oui
   check_no:      Non
-  alt_people:           "Hé ça."
-  alt_green:            "Hé ça."
-  alt_grow:             "Hé ça."
-  alt_balanced:         "Hé ça."
-  alt_search:           "Hé ça."
-  alt_phases:           "Hé ça."
-  alt_org_partnership:  "Hé ça."
-  alt_org_fundraising:  "Hé ça."
-  alt_org_teambuilding: "Hé ça."
-  alt_org_engagement:   "Hé ça."
-  alt_plan_vis:         "Hé ça."
-  alt_plan_act:         "Hé ça."
-  alt_plan_man:         "Hé ça."
-  alt_anal_ass:         "Hé ça."
-  alt_anal_comp:        "Hé ça."
-  alt_impl_natural:     "Hé ça."
-  alt_impl_cultural:    "Hé ça."
-  alt_impl_hr:          "Hé ça."
-  alt_impl_social:      "Hé ça."
-  alt_impl_gov:         "Hé ça."
-  alt_impl_financial:   "Hé ça."
-  alt_impl_comm:        "Hé ça."
-  alt_rev_proj:         "Hé ça."
-  alt_rev_proc:         "Hé ça."
-  alt_rev_feedback:     "Hé ça." 
-  alt_org:              "Hé ça."
-  alt_plan:             "Hé ça."
-  alt_anal:             "Hé ça."
-  alt_impl:             "Hé ça."
-  alt_rev:              "Hé ça."
+  alt_people:           to be translated
+  alt_green:            to be translated
+  alt_grow:             to be translated
+  alt_balanced:         to be translated
+  alt_search:           to be translated
+  alt_phases:           to be translated
+  alt_org_partnership:  to be translated
+  alt_org_fundraising:  to be translated
+  alt_org_teambuilding: to be translated
+  alt_org_engagement:   to be translated
+  alt_plan_vis:         to be translated
+  alt_plan_act:         to be translated
+  alt_plan_man:         to be translated
+  alt_anal_ass:         to be translated
+  alt_anal_comp:        to be translated
+  alt_impl_natural:     to be translated
+  alt_impl_cultural:    to be translated
+  alt_impl_hr:          to be translated
+  alt_impl_social:      to be translated
+  alt_impl_gov:         to be translated
+  alt_impl_financial:   to be translated
+  alt_impl_comm:        to be translated
+  alt_rev_proj:         to be translated
+  alt_rev_proc:         to be translated
+  alt_rev_feedback:     to be translated
+  alt_org:              to be translated
+  alt_plan:             to be translated
+  alt_anal:             to be translated
+  alt_impl:             to be translated
+  alt_rev:              to be translated
   nav_buttons:
     back_admin: "Retour à l'Admin"
     back_users: "Retour à des Utilisateurs"
@@ -84,7 +84,7 @@ fr:
       subtitle: "Visionner outils de croissance"
     balanced:
       title:    "Équilibré"
-      subtitle: "Hé ça."
+      subtitle: to be translated
     search:
       title:    "Recherche"
       subtitle: "Trouver l'outil que vous cherchez"
@@ -237,27 +237,27 @@ fr:
       six_lo_b:   "Les exemples d'activités modifiées sont peu utiles."
       six_ns_a:   "Aucune mention d'adapter les activités."
       seven:       "Observations générales"
-      q_one:   "1. Hé ça." 
-      chi_one: "Hé ça."
-      clo_one: "Hé ça."
-      cna_one: "Hé ça."
-      q_two:   "2. Hé ça." 
-      chi_two: "Hé ça." 
-      clo_two: "Hé ça."
-      cna_two: "Hé ça."
-      q_thr:   "3. Hé ça." 
-      chi_thr: "Hé ça."
-      clo_thr: "Hé ça."
-      cna_thr: "Hé ça."
-      q_fou:   "4. Hé ça." 
-      chi_fou: "Hé ça."
-      clo_fou: "Hé ça."
-      cna_fou: "Hé ça."
-      q_fiv:   "5. Hé ça." 
-      chi_fiv: "Hé ça."
-      clo_fiv: "Hé ça."
-      cna_fiv: "Hé ça."
-      q_six:   "6. Hé ça." 
+      q_one:   "1. to be translated" 
+      chi_one: to be translated
+      clo_one: to be translated
+      cna_one: to be translated
+      q_two:   "2. to be translated" 
+      chi_two: to be translated
+      clo_two: to be translated
+      cna_two: to be translated
+      q_thr:   "3. to be translated" 
+      chi_thr: to be translated
+      clo_thr: to be translated
+      cna_thr: to be translated
+      q_fou:   "4. to be translated" 
+      chi_fou: to be translated
+      clo_fou: to be translated
+      cna_fou: to be translated
+      q_fiv:   "5. to be translated" 
+      chi_fiv: to be translated
+      clo_fiv: to be translated
+      cna_fiv: to be translated
+      q_six:   "6. to be translated" 
     view:
       title:      "Révision du CED"
       subtext_by: "Révisé par"
@@ -267,13 +267,6 @@ fr:
       title:         "Formulaire de révision d'outils CED"
       subtitle:      "Vous êtes sur le point de modifier une révision pour"
       button_update: "Mettre à jour la révision"
-    notices:
-      edit_success:   to be translated
-      activate:       to be translated
-      deactivate:     to be translated
-      change_error:   to be translated
-      submit_success: to be translated
-      need_login:     to be translated
   viewuser:
     rev_list:         "Révisions"
     rev_none:         "Cet utilisateur n’a pas révisé les outils"
@@ -296,7 +289,7 @@ fr:
   tic:
     download:        to be translated
     review:          to be translated
-    heading_desc:    "Description
+    heading_desc:    "Description"
     heading_when:    "Quand"
     heading_why:     "Pourquoi"
     heading_details: "Détails de l'outil"
@@ -395,18 +388,18 @@ fr:
       title_edit:      "Modifier le compte d'utilisateur"
       button_edit:     "Mettre à jour le compte"
     stats: 
-      subtitle:     View site reports
-      otherstats:   View other statistics
-      pagereqs:     "Site Traffic: Page Requests and Unique Visitors"
-      pagereqs_sub: View traffic over time
+      subtitle:     to be translated
+      otherstats:   to be translated
+      pagereqs:     to be translated
+      pagereqs_sub: to be translated
       sections:     "Utilisation Privilégiée Par Les Sections"
       sections_sub: "Afficher L'utilisation Cumulative"
-      referrals:    How Visitors Get Here
-      referral_sub: Pages Users Come From
-      referer:      Referral Page
-      search:       Most Frequently Used Search Terms 
-      search_sub:   "Hé ça."
-      term:         "Hé ça."
+      referrals:    to be translated
+      referral_sub: to be translated
+      referer:      to be translated
+      search:       to be translated
+      search_sub:   to be translated
+      term:         to be translated
       count:        "Compter"
       section:      "Section du Site Internet"
       percent:      "Pourcentage"

@@ -41,7 +41,7 @@ en:
       send_paranoid_instructions: "Si votre compte existe, vous recevrez un courriel avec des instructions sur la façon de le débloquer en quelques minutes."
     omniauth_callbacks:
       success:  "Autorisé avec succès de %{kind} account."
-      failure:  "Nous ne pouvons pas vous autoriser %{kind} à cause "%{reason}"."
+      failure:  "Nous ne pouvons pas vous autoriser %{kind} à cause %{reason}."
     mailer:
       confirmation_instructions:
         subject:    "Autorisation de confirmation"

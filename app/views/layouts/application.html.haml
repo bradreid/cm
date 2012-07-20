@@ -32,15 +32,15 @@
               #content.well
                 %center
                   %h1{:style => 'font-size:300%'}
-                    =Rails.configuration.app_name
+                    =t :cm 
                   %p
                   %h2
-                    Easy to find Community Economic Development (CED) tools for you and your project. 
-                  %p
-                  %br
-                  .big.front_page
-                    New to this site? 
-                    Click here to find out what this site has to offer!
+                    =t :home_sub, :scope=>[:misc]
+                  -#%p
+                  -#%br
+                  -#.big.front_page
+                  -#  New to this site? 
+                  -#  Click here to find out what this site has to offer!
                 %br
                 %br
                 %center
@@ -50,24 +50,30 @@
                     %tr
                       %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_people.png', :width => 200, :title=> t(:alt_people), :style => 'margin:0px;padding:0px;float:left;'), people_path                 
-                        %h1.front_page People
+                        %h1.front_page 
+                          =t :title, :scope=>[:search,:people]
                       %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_green.png', :width => 200, :title=> t(:alt_green), :style => 'margin:0px;padding:0px;float:left;'), green_path              
-                        %h1.front_page Green
+                        %h1.front_page 
+                          =t :title, :scope=>[:search,:green]
                       %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_grow.png', :width => 200, :title=> t(:alt_grow), :style => 'margin:0px;padding:0px;float:left;'), grow_path                    
-                        %h1.front_page Grow
+                        %h1.front_page 
+                          =t :title, :scope=>[:search,:grow]
                   %table{:cellpadding => 0, :cellspacing => 0, :border => 0}                        
                     %tr
                       %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_balanced.png', :width => 200, :title=> t(:alt_balanced), :style => 'margin:0px;padding:0px;float:left;'), balanced_path                  
-                        %h1.front_page Balanced                        
+                        %h1.front_page 
+                          =t :title, :scope=>[:search,:balanced]
                       %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_search.png', :width => 200, :title=> t(:alt_search), :style => 'margin:0px;padding:0px;float:left;'), search_path                  
-                        %h1.front_page Search                        
+                        %h1.front_page 
+                          =t :title, :scope=>[:search,:search]
                       %td{:align => 'center'}
                         =link_to image_tag('template/splash_button_phases.png', :width => 200, :title=> t(:alt_phases), :style => 'margin:0px;padding:0px;float:left;'), phases_path                 
-                        %h1.front_page Phases                        
+                        %h1.front_page 
+                          =t :title, :scope=>[:search,:phases]
                       -#- if current_user.try(:is_admin?)
                       -#  %td
                       -#    =link_to image_tag('template/splash_button_admin.png', :width => 200, :style => 'margin:0px;padding:0px;float:left;'), admin_index_path                 

@@ -1,0 +1,6 @@
+1       Receive email updates for new tools
+2       Receive email updates for new reviews
+3       Receive email updates for new users
+4       Edit your account
+5       Change account settings
+6       Change my password.

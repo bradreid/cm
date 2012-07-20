@@ -7,4 +7,4 @@ en:
           other: "Nos excuses, %{count} erreurs ont empêché la sauvegarde du formulaire."
     attributes:
       user:
-        password: Current password
+        password: to be translated
