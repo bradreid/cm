@@ -53,7 +53,7 @@
             %td
               &nbsp;
             %td
-              =link_to(image_tag('icon_review.png', :height => 35, :alt => t(:review,:scope=>[:tic])), new_tool_review_path(@tool), :title => t(:review,:scope=>[:tic]))
+              =link_to(image_tag('tools_review.png', :height => 35, :alt => t(:review,:scope=>[:tic])), new_tool_review_path(@tool), :title => t(:review,:scope=>[:tic]))
 
         -if self.controller.is_a? AdminController
           = link_to admin_index_path, :class => 'btn' do

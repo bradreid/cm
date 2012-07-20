@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter  :set_locale
+  before_filter  :redirect_in_production, :set_locale
 
   after_filter :log_request 
   
@@ -17,6 +17,13 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+  
+  def redirect_in_production
+    if Rails.env == 'production' && !(request.host =~ /(cm\.beyondthecube\.ca)/).nil?
+      redirect_to 'http://www.choicematrix.ca'
+      return false
+    end
+  end
   
   def default_url_options(options={})
     (current_user.try(:is_admin?) || Rails.env == 'development') ? { :locale => I18n.locale } : { :locale => :en}    
@@ -36,7 +43,7 @@ class ApplicationController < ActionController::Base
   end  
   
   def referrer
-    (request.env['HTTP_REFERER'] =~ /localhost|rditools/).nil? ? request.referrer : nil
+    (request.env['HTTP_REFERER'] =~ /(localhost)|(rditools)|(choicematrix\.ca)/).nil? ? request.referrer : nil
   end
   
   def default_log_hash

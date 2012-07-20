@@ -1,3 +1,4 @@
+public/system/*
 config/database.yml
 tmp/pids/server.pid
 db/development.sqlite3
