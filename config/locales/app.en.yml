@@ -123,9 +123,9 @@ en:
     rating:
       one: 1 Star
       two: 2 Stars
-      three: 3 Stars
-      four: 4 Stars
-      five: 5 Stars
+      thr: 3 Stars
+      fou: 4 Stars
+      fiv: 5 Stars
     when:
       organi: Organizing
       planni: Planning

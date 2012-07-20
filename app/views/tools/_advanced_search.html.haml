@@ -33,7 +33,7 @@
         %td{:align => 'left'}
           =t :language_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          = select_tag :language, options_for_select(FormConstants.language.map{|r| [r,r]}, params[:language]), :prompt=> t(:language_instruct,:scope=>[:search,:search,:advanced])
+          = select_tag :language, options_for_select(FormConstants.language.map{|r| [t("#{r[0..1]}".downcase.to_sym, :scope=>[:formconstants, :language]),r]}, params[:language]), :prompt=> t(:language_instruct,:scope=>[:search,:search,:advanced])
       %tr
         %td{:align => 'left'}
           .bold
@@ -41,7 +41,7 @@
         %td{:align => 'left'}
           =t :rating_subtext, :scope =>[:search, :search, :advanced]
         %td{:align => 'left'}
-          = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [r,r]}, params[:rating]), :prompt=> t(:rating_instruct,:scope=>[:search,:search,:advanced])
+          = select_tag :rating, options_for_select(FormConstants.rating.map{|r| [t("#{r[0..2]}".downcase.to_sym, :scope=>[:formconstants, :rating]),r]}, params[:rating]), :prompt=> t(:rating_instruct,:scope=>[:search,:search,:advanced])
 
 
       %tr

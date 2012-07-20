@@ -121,11 +121,11 @@ fr:
       bi: "Bilingue"
       bo: "Les deux langues disponibles"
     rating:
-      one:   "1 Étoile"
-      two:   "2 Étoiles"
-      three: "3 Étoiles"
-      four:  "4 Étoiles"
-      five:  "5 Étoiles"
+      one:  "1 Étoile"
+      two:  "2 Étoiles"
+      thr:  "3 Étoiles"
+      fou:  "4 Étoiles"
+      fiv:  "5 Étoiles"
     when:
       organi:   "Organiser"
       planni:   "Planification"

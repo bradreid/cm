@@ -7,7 +7,7 @@ class FormConstants
   end  
   
   def self.rating
-    [ '1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars' ]
+    [ 'One Star', 'Two Stars', 'Three Stars', 'Four Stars', 'Five Stars' ]
   end  
   
   def self.when

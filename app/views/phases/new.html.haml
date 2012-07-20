@@ -66,7 +66,8 @@
   - FormConstants.when.each do |r| 
     %tr.step1clickable{:show_table => r}
       %td{:width => '30%'}
-        #{r} (#{Tool.count(:conditions => {:when => r})})
+        =t("#{r[0..5]}".downcase.to_sym, :scope=>[:formconstants, :when]) 
+        (#{Tool.count(:conditions => {:when => r})})
       %td
         #{FormConstants.whendefns[ii]}
         - ii = ii + 1;
@@ -84,7 +85,8 @@
   - FormConstants.organizing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
       %td{:width => '30%'}
-        #{r} (#{Tool.count(:conditions => {:why => r})})
+        =t( "#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :org] )
+        (#{Tool.count(:conditions => {:why => r})})
       %td
         #{FormConstants.orgdefns[ii]}
         - ii = ii + 1;
@@ -93,7 +95,8 @@
   - FormConstants.planning_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
       %td{:width => '30%'}
-        #{r} (#{Tool.count(:conditions => {:why => r})})
+        =t( "#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :pla] )
+        (#{Tool.count(:conditions => {:why => r})})
       %td
         #{FormConstants.plandefns[ii]}
         - ii = ii + 1;
@@ -102,7 +105,8 @@
   - FormConstants.analyzing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
       %td{:width => '30%'}
-        #{r} (#{Tool.count(:conditions => {:why => r})})
+        =t( "#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :ana] )
+        (#{Tool.count(:conditions => {:why => r})})
       %td
         #{FormConstants.analdefns[ii]}
         - ii = ii + 1;
@@ -111,7 +115,8 @@
   - FormConstants.implementing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
       %td{:width => '30%'}
-        #{r} (#{Tool.count(:conditions => {:why => r})})
+        =t( "#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :imp] )
+        (#{Tool.count(:conditions => {:why => r})})
       %td
         #{FormConstants.impldefns[ii]}
         - ii = ii + 1;
@@ -120,7 +125,8 @@
   - FormConstants.reviewing_purpose.each do |r|
     %tr.step2clickable{:show_rez => r}
       %td{:width => '30%'}
-        #{r} (#{Tool.count(:conditions => {:why => r})})
+        =t( "#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :rev] )
+        (#{Tool.count(:conditions => {:why => r})})
       %td
         #{FormConstants.revdefns[ii]}
         - ii = ii + 1;
