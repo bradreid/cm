@@ -127,22 +127,22 @@ fr:
       four:  "4 Étoiles"
       five:  "5 Étoiles"
     when:
-      organizing:   "Organiser"
-      planning:     "Planification"
-      analyzing:    "Analyser"
-      implementing: "Mise en application"
-      reviewing:    "Révision"
+      organi:   "Organiser"
+      planni:   "Planification"
+      analyz:   "Analyser"
+      implem:   "Mise en application"
+      review:   "Révision"
       org:
         partn:          "Établissements de partenariats"
         fundr:          "Collecte de fonds"
         proje:          "Projet renforcement d'équipe"
-        engage:         "Engagement"
+        engag:          "Engagement"
       pla:
         visio:          "Création d'une vision"
-        action:         "Création de plans d'action"
+        actio:          "Création de plans d'action"
         proje:          "Gestion de projets"
       ana:
-        assess:         "Évaluation"
+        asses:          "Évaluation"
         compr:          "Analyse exhaustive"
       imp:
         natur:          "Ressources naturelles"
@@ -151,32 +151,32 @@ fr:
         socia:          "Capital social"
         gover:          "Gouvernance"
         finan:          "Finances"
-        commun:         "Infrastructure communautaire"
+        commu:          "Infrastructure communautaire"
       rev:        
         proje:      "Évaluation de projet"
         proce:      "Évaluation  du processus"
-        commun:     "Rétroaction de la  communauté"
+        commu:      "Rétroaction de la  communauté"
     topic:
-      peop: "Personnes"
-      gree: "Vert"
-      grow: Croissance
-      bala: "Équilibré"
-      none: "Non spécifié"
+      peo: "Personnes"
+      gre: "Vert"
+      gro: Croissance
+      bal: "Équilibré"
+      not: "Non spécifié"
     where:
-      local:     Local
-      municipal: Municipal
-      regional:  "Régional"
-      rural:     Rural
-      northern:  Le Nord
-      urban:     Urbain
-      none:      Non Spécifié
+      loc:  Local
+      mun:  Municipal
+      reg:  "Régional"
+      rur:  Rural
+      nor:  Le Nord
+      urb:  Urbain
+      not:  Non Spécifié
     expertise:
-      highschool: Secondaire
-      college:    "Collège"
-      uni:        "Université"
-      tech:       Certification  Technique
-      other:      Autre
-      none:       Non Spécifié
+      hig:    Secondaire
+      col:    "Collège"
+      uni:    "Université"
+      tec:    Certification  Technique
+      oth:    Autre
+      not:    Non Spécifié
   reviews:
     title:         "Formulaire de révision d'outils CED" 
     subtitle:      "Vous êtes sur le point d'effectuer une révision"

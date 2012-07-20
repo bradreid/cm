@@ -15,15 +15,15 @@
   = form_tag new_admin_stats_referrals_path, :method => :get do
     = render :partial => 'admin/stats/shared/simple_index'
 
-%table.table
+%table.table{:width=>'100%'}
   %tr
-    %th
+    %th{:width=>'90%'}
       =t :referer, :scope=>[:admin,:stats]
-    %th
+    %th{:width=>'10%'}
       =t :count, :scope=>[:admin,:stats]
   -@data.each do |d|
     %tr
-      %td
+      %td{:width=>'90%'}
         =link_to d[0], d[0]
-      %td
+      %td{:width=>'10%'}
         =d[1]

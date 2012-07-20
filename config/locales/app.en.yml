@@ -127,22 +127,22 @@ en:
       four: 4 Stars
       five: 5 Stars
     when:
-      organizing: Organizing
-      planning: Planning
-      analyzing: Analyzing
-      implementing: Implementing
-      reviewing: Reviewing 
+      organi: Organizing
+      planni: Planning
+      analyz: Analyzing
+      implem: Implementing
+      review: Reviewing 
       org:
         partn:          Partnership Building
         fundr:          Fundraising
         proje:          Project Team Building
-        engage:         Engagement
+        engag:          Engagement
       pla:
         visio:          Visioning
-        action:         Action Planning
+        actio:          Action Planning
         proje:          Project Management
       ana:
-        assess:         Assessment
+        asses:          Assessment
         compr:          Comprehensive Analysis
       imp:
         natur:            Natural Resources
@@ -151,32 +151,32 @@ en:
         socia:            Social Capital
         gover:            Governance
         finan:            Financial
-        commun:           Community Infrastructure
+        commu:            Community Infrastructure
       rev:        
         proje:      Project Evaluation
         proce:      Process Evaluation
-        commun:     Community Feedback
+        commu:      Community Feedback
     topic:
-      peop: People
-      gree: Green
-      grow: Grow
-      bala: Balanced
-      none: Not Specified
+      peo: People
+      gre: Green
+      gro: Grow
+      bal: Balanced
+      not: Not Specified
     where:
-      local: Local
-      municipal: Municipal
-      regional: Regional
-      rural: Rural
-      northern: Northern
-      urban: Urban
-      none: Not Specified
+      loc: Local
+      mun: Municipal
+      reg: Regional
+      rur: Rural
+      nor: Northern
+      urb: Urban
+      not: Not Specified
     expertise:
-      highschool: High School
-      college: College
+      hig: High School
+      col: College
       uni: University
-      tech: Technical Certification
-      other: Other
-      none: Not Specified
+      tec: Technical Certification
+      oth: Other
+      not: Not Specified
   reviews:
     title: CED Tool Review Form
     subtitle: You are about to review
@@ -412,6 +412,10 @@ en:
       date_year:    Year to Date
       date_lastyr:  Previous Year
       date_custom:  Custom Date Range
+      pagereqs_chart_title:  "Page Requests and Unique Visitors"
+      pagereqs_chart_instr:  "Click and drag in the plot area to zoom in"
+      pagereqs_chart_instr2: "Drag your finger over the plot to zoom in"
   misc:
     home_sub:  Easy to find Community Economic Development (CED) tools for you and your project. 
+    pwd_change: "Leave these fields blank if you do not want to change your password:"
   cm:          The Choice Matrix

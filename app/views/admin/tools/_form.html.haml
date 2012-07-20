@@ -34,7 +34,7 @@
 = form.input :publisher, :label=> t(:pub,:scope=>[:tic])
 = form.input :date_created, :as=>'date', :label=>t(:datecreated,:scope=>[:tic]), :discard_day => true, :order => [:month, :year]
 = form.input :language, :label=>t(:lang,:scope=>[:tic]) do
-  = form.select :language, FormConstants.language.map{|r| [r,r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])
+  = form.select :language, FormConstants.language.map{|r| [t( "#{r[0..1]}".downcase.to_sym, :scope=>[:formconstants, :language] ),r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])
 
 = form.input :description, :input_html=>{:rows=>5, :class=>'xxlarge'}, :label=>t(:heading_desc,:scope=>[:tic])
 
@@ -47,7 +47,7 @@
 %p
 
 = form.input :when, :label=>t(:when,:scope=>[:admin, :newtool]) do
-  = form.select :when, FormConstants.when.map{|r| [r,r]}, :include_blank => t(:phase_instruct,:scope=>[:admin,:newtool]) 
+  = form.select :when, FormConstants.when.map{|r| [t("#{r[0..5]}".downcase.to_sym, :scope=>[:formconstants,:when]),r]}, :include_blank => t(:phase_instruct,:scope=>[:admin,:newtool]) 
       
 %table
   %tr
@@ -58,11 +58,16 @@
 %p
 
 = form.input :why, :label=>t(:why,:scope=>[:admin, :newtool]) do
-  = form.select :why, FormConstants.organizing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Organizing' ? '' : 'display:none'}", :id => 'organizing_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.planning_purpose.map{|r| [r,r]},{:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Planning' ? '' : 'display:none'}", :id => 'planning_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.analyzing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) } , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.implementing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
-  = form.select :why, FormConstants.reviewing_purpose.map{|r| [r,r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
+
+  = form.select :why, FormConstants.organizing_purpose.map{  |r| [t("#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :org]),r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Organizing' ? '' : 'display:none'}", :id => 'organizing_purpose', :class => 'purpose'
+
+  = form.select :why, FormConstants.planning_purpose.map{    |r| [t("#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :pla]),r]},{:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Planning' ? '' : 'display:none'}", :id => 'planning_purpose', :class => 'purpose'
+
+  = form.select :why, FormConstants.analyzing_purpose.map{   |r| [t("#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :ana]),r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) } , :style => "#{@tool.when == 'Analyzing' ? '' : 'display:none'}", :id => 'analyzing_purpose', :class => 'purpose'
+
+  = form.select :why, FormConstants.implementing_purpose.map{|r| [t("#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :imp]),r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Implementing' ? '' : 'display:none'}", :id => 'implementing_purpose', :class => 'purpose'
+
+  = form.select :why, FormConstants.reviewing_purpose.map{   |r| [t("#{r[0..4]}".downcase.to_sym, :scope=>[:formconstants, :when, :rev]),r]}, {:include_blank => t(:purp_instruct, :scope=>[:admin, :newtool]) }, :style => "#{@tool.when == 'Reviewing' ? '' : 'display:none'}", :id => 'reviewing_purpose', :class => 'purpose'
 
       
 %table
@@ -73,7 +78,7 @@
         =t(:where_q,:scope=>[:admin, :newtool]) 
 %p
 = form.input :where, :label=>t(:where,:scope=>[:admin, :newtool]) do
-  = form.select :where, FormConstants.where.map{|r| [r,r]}, {:include_blank => t(:loc_instruct, :scope=>[:admin, :newtool]) }
+  = form.select :where, FormConstants.where.map{|r| [t("#{r[0..2]}".downcase.to_sym, :scope=>[:formconstants, :where]),r]}, {:include_blank => t(:loc_instruct, :scope=>[:admin, :newtool]) }
 
 =form.input :where_created, :label=>t(:which,:scope=>[:admin,:newtool])
 
@@ -85,7 +90,7 @@
         =t(:topic_q,:scope=>[:admin, :newtool]) 
 %p
 = form.input :topic, :label=>t(:topic,:scope=>[:admin, :newtool]) do
-  = form.select :topic, FormConstants.topic.map{|r| [r,r]}, :include_blank => t(:topic_instruct,:scope=>[:admin,:newtool])
+  = form.select :topic, FormConstants.topic.map{|r| [t("#{r[0..2]}".downcase.to_sym, :scope=>[:formconstants, :topic]),r]}, :include_blank => t(:topic_instruct,:scope=>[:admin,:newtool])
       
 %table
   %tr
@@ -95,7 +100,7 @@
         =t(:expneeds_q, :scope=>[:admin, :newtool]) 
 %p
 = form.input :expertise_needed, :label=>t(:expneeds,:scope=>[:admin, :newtool]) do
-  = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [r,r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])      
+  = form.select :expertise_needed, FormConstants.expertise_needed.map{|r| [t("#{r[0..2]}".downcase.to_sym, :scope=>[:formconstants, :expertise]),r]}, :include_blank => t(:lang_instruct,:scope=>[:admin,:newtool])      
       
 = form.input :special_equipment_facilities, :label=>t(:resources,:scope=>[:admin,:newtool])
 = form.input :who, :label=>t(:who,:scope=>[:admin,:newtool]), :placeholder=>t(:who_placeholder,:scope=>[:admin, :newtool])

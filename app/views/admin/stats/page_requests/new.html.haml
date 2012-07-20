@@ -12,12 +12,12 @@
     			type: 'spline'
     		},
     		title: {
-    			text: 'Pages Requests and Unique Visitors'
+  			text: "#{t(:pagereqs_chart_title,:scope=>[:admin,:stats])}"
     		},
     		subtitle: {
     			text: document.ontouchstart === undefined ?
-    				'Click and drag in the plot area to zoom in' :
-    				'Drag your finger over the plot to zoom in'
+  			    "#{t(:pagereqs_chart_title,:scope=>[:admin,:stats])}" :
+  			    "#{t(:pagereqs_chart_title2,:scope=>[:admin,:stats])}"
     		},
     		xAxis: {
     			type: 'datetime',

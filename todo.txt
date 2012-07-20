@@ -1,5 +1,12 @@
 views/tools/_advanced_search.html.haml
-  search, advanced search: language and rating drop down boxes (form_constants)
+  language drop down boxes (form_constants)
+  rating drop down boxes (form_constants)
 
 views/phases/new.html.haml
   headings before the number in the table
+
+views/admin/tools/_form.html.haml
+  ALL drop down boxes (form_constants)
+
+form error
+  cannot be blank

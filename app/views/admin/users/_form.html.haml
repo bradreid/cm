@@ -27,7 +27,7 @@
         =f.input :password_confirmation, :label => t(:confirm_password, :scope => :devise), :required => true
       - else
         .bold
-          Leave these fields blank if you do not want to change your password:
+          =t :pwd_change, :scope=>[:misc]
         %p
         %br
         =f.input :password, :label => t(:password, :scope => :devise) 
