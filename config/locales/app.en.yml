@@ -418,4 +418,5 @@ en:
   misc:
     home_sub:  Easy to find Community Economic Development (CED) tools for you and your project. 
     pwd_change: "Leave these fields blank if you do not want to change your password:"
+    correct:    "Please correct the following: "
   cm:          The Choice Matrix

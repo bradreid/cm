@@ -1,5 +1,6 @@
 Current password
 cannot be blank
+"Please correct the following:"
 
 "Page Requests and Unique Visitors"
 "Click and drag in the plot area to zoom in"

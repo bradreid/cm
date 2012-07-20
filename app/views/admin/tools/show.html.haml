@@ -7,7 +7,8 @@
   %li
     .label_for_list 
       =t :when_topic, :scope=>:tic
-    =@tool.topic
+    - r = @tool.topic
+    =t("#{r[0..2]}".downcase.to_sym, :scope=>[:formconstants, :topic] )
     &nbsp;
   %li
     .label_for_list 

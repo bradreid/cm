@@ -88,10 +88,10 @@
           -size = FormConstants.send("#{w}_purpose".downcase).size
           %tr
             %td.notop.noleft{:rowspan => size}
-              =t( w.downcase.to_sym, :scope=>[:formconstants, :when] )
+              =t( w[0..5].downcase.to_sym, :scope=>[:formconstants, :when] )
             %td.notop.noright.min_height
               -purp = FormConstants.send("#{w}_purpose".downcase).sort.first 
-              =t( purp[0..5].downcase.to_sym, :scope=>[:formconstants, :when, w.downcase[0..2].to_sym] )
+              =t( purp[0..4].downcase.to_sym, :scope=>[:formconstants, :when, w.downcase[0..2].to_sym] )
             %td.noleft.notop.noright{:align => 'center'}
               =image_tag 'check_mark.png', :height => 25 if @tool.why == FormConstants.send("#{w}_purpose".downcase).sort.first
           -(1..(size - 1)).each do |i|
@@ -107,7 +107,7 @@
           %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:when_topic, :scope=>[:tic])
           %td.notop.noleft.min_height.noright
             -tt = @tool.topic 
-            =t( tt.downcase[0..3].to_sym, :scope=>[:formconstants,:topic])
+            =t( tt.downcase[0..2].to_sym, :scope=>[:formconstants,:topic])
         %tr
           %td.notop.noleft.noright.big.bold{:width => '40%'}=t(:heading_details, :scope=>[:tic])
           %td.notop.noleft.min_height.noright
