@@ -17,13 +17,13 @@
 
 %table.table{:width=>'100%'}
   %tr
-    %th{:width=>'90%'}
+    %th{:width=>'80%'}
       =t :referer, :scope=>[:admin,:stats]
-    %th{:width=>'10%'}
+    %th{:width=>'20%'}
       =t :count, :scope=>[:admin,:stats]
   -@data.each do |d|
     %tr
-      %td{:width=>'90%'}
+      %td{:width=>'80%'}
         =link_to d[0], d[0]
-      %td{:width=>'10%'}
+      %td{:width=>'20%'}
         =d[1]
