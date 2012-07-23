@@ -415,6 +415,10 @@ en:
       pagereqs_chart_title:  "Page Requests and Unique Visitors"
       pagereqs_chart_instr:  "Click and drag in the plot area to zoom in"
       pagereqs_chart_instr2: "Drag your finger over the plot to zoom in"
+      accumulative_sums:     Accumulative Totals for the Selected Period
+      page_requests:         Page Requests
+      all_visitors:          All Visitors 
+      logged_in_users:       Logged In Users
   misc:
     home_sub:  Easy to find Community Economic Development (CED) tools for you and your project. 
     pwd_change: "Leave these fields blank if you do not want to change your password:"

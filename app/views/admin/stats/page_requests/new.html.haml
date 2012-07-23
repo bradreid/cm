@@ -106,4 +106,26 @@
 
 #container
 
+%table.table{:width=>'100%'}
+  %tr
+    %th{:width=>'90%'}
+      =t :accumulative_sums, :scope=>[:admin,:stats]
+    %th{:width=>'10%'}
+      =t :count, :scope=>[:admin,:stats]
+  %tr
+    %td
+      =t :page_requests, :scope=>[:admin,:stats]
+    %td
+      =@data.inject(:+)
+  %tr
+    %td
+      =t :all_visitors, :scope=>[:admin,:stats]
+    %td
+      =@data2.inject(:+)
+  %tr
+    %td
+      =t :logged_in_users, :scope=>[:admin,:stats]
+    %td
+      =@unique_users.inject(:+)
+
 = render :partial => 'admin/stats/shared/footer'
