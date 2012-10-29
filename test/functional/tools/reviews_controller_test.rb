@@ -50,6 +50,36 @@ class Tools::ReviewsControllerTest < ActionController::TestCase
       @tool = create :tool
     end
 
+    context 'successful review creation' do
+      should 'create the review when the user is logged in' do
+        sign_in @admin_user_to_email
+        assert_difference 'Review.count' do
+          post :create, tool_id: @tool.to_param, review: attributes_for(:review)
+        end
+        assert_response :redirect
+        assert_redirected_to tool_path(@tool)
+      end
+
+      should 'create the review when the user is not logged but is currently verifying the captcha' do
+        @controller.stubs(:verify_recaptcha).returns(true)
+        assert_difference 'Review.count' do
+          post :create, tool_id: @tool.to_param, review: attributes_for(:review)
+        end
+        assert_response :redirect
+        assert_redirected_to tool_path(@tool)
+      end
+
+      should 'create the review when the user is not logged and previously verified the captcha' do
+        @request.session[:captcha_verified] = true
+        @controller.stubs(:verify_recaptcha).returns(false)
+        assert_difference 'Review.count' do
+          post :create, tool_id: @tool.to_param, review: attributes_for(:review)
+        end
+        assert_response :redirect
+        assert_redirected_to tool_path(@tool)
+      end
+    end
+
     context 'captcha' do
       should 'render the new form with a captcha when the user is not logged in and has not previously verified a captcha' do
         @controller.expects(:verify_recaptcha).returns(false)
@@ -67,14 +97,13 @@ class Tools::ReviewsControllerTest < ActionController::TestCase
       end
 
       should 'NOT render the captcha when the user is logged in' do
-        @controller.expects(:verify_recaptcha).returns(false)
         sign_in @admin_user_to_email
         post :create, tool_id: @tool.to_param, review: {}
         assert_template 'new'
         assert_select "textarea[name='recaptcha_challenge_field']", 0
       end
 
-      should 'NOT render teh captcha when the user is not logged in but previously verified a captcha' do
+      should 'NOT render the captcha when the user is not logged in but previously verified a captcha' do
         @controller.stubs(:verify_recaptcha).returns(false)
         @request.session[:captcha_verified] = true
         post :create, tool_id: @tool.to_param, review: {}

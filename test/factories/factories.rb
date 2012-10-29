@@ -1,12 +1,12 @@
 FactoryGirl.define do
 
   factory :user do
-    email 'test@test.com'
+    sequence(:email){ |n| "test#{n}@test.com" }
     password 'thisismypassword'
     password_confirmation 'thisismypassword'
     is_admin true
     active true
-    username 'testuser'
+    sequence(:username){ |n| "test#{n}" }
     email_new_tools true
     email_new_reviews true
     email_new_user true
@@ -17,8 +17,23 @@ FactoryGirl.define do
     end
   end
 
+  factory :review do
+    association :tool
+    community_context 'true'
+    generates_results 'true'
+    resources_identified 'true'
+    format_presentation 'true'
+    adaptable 'true'
+    full_name 'Brad Reid'
+    role 'Software Dev'
+
+    factory :review_and_user do
+      association :user
+    end
+  end
+
   factory :tool do |t|
-    name 'My crazy test tool'
+    sequence(:name) { |n| "My crazy test tool: #{n}" }
     source_document_name 'test.pdf'
     source_url 'http://test.com/test.pdf'
     author 'Brad Reid'

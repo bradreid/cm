@@ -56,7 +56,7 @@ class Tools::ReviewsController < ApplicationController
   def create
     @tool = Tool.find(params[:tool_id])
     @review = @tool.reviews.build(params[:review].merge(:user => current_user))
-    if !captcha_verified? && verify_recaptcha(model: @review)
+    if current_user || captcha_verified? || verify_recaptcha(model: @review)
       session[:captcha_verified] = true
       if @review.save
         flash[:notice] = t(:rev_submit,:scope=>[:notices])
