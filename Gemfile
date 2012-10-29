@@ -28,11 +28,24 @@ gem 'simple_form'
 gem 'country_select'
 gem 'delayed_job_active_record'
 gem 'daemons'
+gem "recaptcha", :require => "recaptcha/rails"
 
 
 group :development do
   gem 'capistrano'
   gem 'rvm-capistrano'
+  gem 'debugger'
+end
+
+group :test do
+  gem 'debugger'
+  gem 'sqlite3'
+  gem 'mocha', '~> 0.12.1', require: false
+  gem 'shoulda-context', '~> 1.0.0'
+  gem 'timecop', '~> 0.3.4'
+  gem 'testrbl'
+  gem 'database_cleaner', '~> 0.8.0'
+  gem 'factory_girl'
 end
 
 

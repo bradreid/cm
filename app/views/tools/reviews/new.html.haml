@@ -19,6 +19,11 @@
       =form_for [@review.tool, @review], :builder => CmFormBuilder, :html => {:class => 'form-stacked'} do |f|
         = render :partial => "form", :object => f
         %br
+        %br
+        -if !current_user && !captcha_verified?
+          %span#captcha_div
+            =recaptcha_tags
+            %br
         = submit_tag t(:button_submit,:scope=>[:reviews]), :class => "btn btn-primary"
   
         = link_to t(:button_cancel), tool_path(@tool), :class => "btn btn-danger"

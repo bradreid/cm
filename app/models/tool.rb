@@ -1,17 +1,17 @@
 class Tool < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
-    
+
   #has_attached_file :source_document, :path => "/:style/:filename", :url => "/system/:style/:filename"
   has_attached_file :source_document, :path => ':rails_root/public/system/tools/:id/:style/:filename', :url => '/system/tools/:id/:style/:filename'
-  
+
   validates_presence_of :name, :source_document_name, :source_url, :author, :language, :description, :when, :why, :topic, :copyright
   validates_uniqueness_of :name
   belongs_to :created_by, :class_name => 'User', :foreign_key => 'created_by'
   has_many :reviews, :dependent => :destroy 
-  
+
   after_create :send_email
-  
+
   def recalc_stars
     Tool.transaction do
       self.lock!
@@ -21,7 +21,7 @@ class Tool < ActiveRecord::Base
       self.save!
       self.reviews.active.each{|r| self.add_rating(r.rating) }
     end
-      
+
   end
 
   def add_rating(rating)
@@ -35,7 +35,7 @@ class Tool < ActiveRecord::Base
       self.save!
     end
   end
-  
+
   def twitter_message
     begin
       b = Bitly.new('symingtonroad', 'R_50ed08c79b7d216360e2403ac3000528')
@@ -47,8 +47,8 @@ class Tool < ActiveRecord::Base
       nil
     end    
   end  
-  
-private
+
+  private
 
   def send_email
     Notifier.delay.new_tool(self)

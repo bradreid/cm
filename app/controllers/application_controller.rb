@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   after_filter :log_request 
   
-  helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?, :shared_url
+  helper_method :admin_selected?, :about_selected?, :search_selected?, :reviews_selected?, :guided_selected?, :shared_url, :captcha_verified?
   
 
   def default_pagination_params
@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def captcha_verified?
+    session[:captcha_verified]
+  end
   
   def redirect_in_production
     if Rails.env == 'production' && !(request.host =~ /(cm\.beyondthecube\.ca)/).nil?
@@ -26,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
   
   def default_url_options(options={})
-    (current_user.try(:is_admin?) || Rails.env == 'development') ? { :locale => I18n.locale } : { :locale => :en}    
+    { :locale => I18n.locale }
   end  
   
   def set_locale

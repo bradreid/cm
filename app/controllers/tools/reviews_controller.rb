@@ -56,16 +56,25 @@ class Tools::ReviewsController < ApplicationController
   def create
     @tool = Tool.find(params[:tool_id])
     @review = @tool.reviews.build(params[:review].merge(:user => current_user))
-    if @review.save
-      flash[:notice] = t(:rev_submit,:scope=>[:notices])
-      redirect_to tool_path(@tool)
+    if !captcha_verified? && verify_recaptcha(model: @review)
+      session[:captcha_verified] = true
+      if @review.save
+        flash[:notice] = t(:rev_submit,:scope=>[:notices])
+        redirect_to tool_path(@tool)
+      else
+        flash[:error_tic] = t(:correct, :scope=>[:misc])
+        render 'new'
+      end
     else
       flash[:error_tic] = t(:correct, :scope=>[:misc])
+      flash[:error_tic] += " " + @review.errors[:base].first if @review.errors[:base].first
       render 'new'
     end
   end
+
   
 private
+
   def authenticate_message
     flash[:warn] = t(:need_login,:scope=>[:notices]) unless current_user
   end

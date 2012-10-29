@@ -8,49 +8,49 @@ class ToolsController < ApplicationController
   end
 
   def index
-      
-      @log_section = 'search'  #log this request as a search 
-      
-      unless params[:search].blank?
-        search_tools
-      end 
-      
-      unless params[:language].blank?
-        @tools = arel_start.where(:language => params[:language])
+
+    @log_section = 'search'  #log this request as a search 
+
+    unless params[:search].blank?
+      search_tools
+    end 
+
+    unless params[:language].blank?
+      @tools = arel_start.where(:language => params[:language])
+    end
+
+    unless params[:author].blank?
+      begin
+        @tools = arel_start.search_by_author(params[:author]).paginate default_pagination_params
+      rescue
+        @tools = arel_start.where(["UPPER(author) like UPPER(?)", "%#{params[:author]}%"])
       end
-      
-      unless params[:author].blank?
-        begin
-          @tools = arel_start.search_by_author(params[:author]).paginate default_pagination_params
-        rescue
-          @tools = arel_start.where(["UPPER(author) like UPPER(?)", "%#{params[:author]}%"])
-        end
-      end
-      
-      unless params[:time_to_use_as_seconds].blank?
-        @tools = arel_start.where("time_to_use_as_seconds <= ?", params[:time_to_use_as_seconds].to_i.send(params[:time_to_use_type].downcase).seconds.to_i)
-      end
-      
-      unless params[:rating].blank?
-        @tools = arel_start.where("rating >= ?", params[:rating].to_i)
-      end
-      
-      unless params[:from].blank?
-        @tools = arel_start.where("date_created >= ?", Date.parse("1/1/#{params[:from]}"))
-      end
-      
-      unless params[:to].blank?
-         @tools = arel_start.where("date_created <= ?", Date.parse("12/31/#{params[:to]}"))
-      end      
-      
-      if params[:advanced].present?
-        @atools = @tools
-        @tools = nil
-        params[:anchor] = 'advanced_search'
-      end
-      
+    end
+
+    unless params[:time_to_use_as_seconds].blank?
+      @tools = arel_start.where("time_to_use_as_seconds <= ?", params[:time_to_use_as_seconds].to_i.send(params[:time_to_use_type].downcase).seconds.to_i)
+    end
+
+    unless params[:rating].blank?
+      @tools = arel_start.where("rating >= ?", params[:rating].to_i)
+    end
+
+    unless params[:from].blank?
+      @tools = arel_start.where("date_created >= ?", Date.parse("1/1/#{params[:from]}"))
+    end
+
+    unless params[:to].blank?
+      @tools = arel_start.where("date_created <= ?", Date.parse("12/31/#{params[:to]}"))
+    end      
+
+    if params[:advanced].present?
+      @atools = @tools
+      @tools = nil
+      params[:anchor] = 'advanced_search'
+    end
+
   end
-  
+
   def show
     @log_section = 'tic'
     @tool = Tool.find(params[:id])
@@ -66,8 +66,8 @@ class ToolsController < ApplicationController
   end
 
 
-private
-  
+  private
+
   def arel_start
     @tools ||= Tool.paginate default_pagination_params
   end

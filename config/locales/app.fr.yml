@@ -1,4 +1,9 @@
 fr:
+  recaptcha:
+    errors:
+      verification_failed: "Réponse de vérification du mot est incorrect, s'il vous plaît essayer à nouveau."
+  misc:
+    correct: "S'il vous plaît corriger les suivantes:"
   dev:           "Développé par"
   logo:          "LA MATRICE DE CHOIX"
   switchfrench:  "Français"
